@@ -1,2 +1,3 @@
-# shen-shanshan.github.io
-personal blog.
+# Shanshan's website
+
+Welcome to my personal website! :smile:
