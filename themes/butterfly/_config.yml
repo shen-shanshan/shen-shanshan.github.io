@@ -103,7 +103,7 @@ cover:
   archives_enable: true
   # When cover is not set, the default cover is displayed
   default_cover:
-    # - xxx.jpg
+    - /img/404.jpg
 
 # Replace Broken Images
 error_img:
