@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Shanshan's Blog
+title: SSS不知-道的个人博客
 subtitle:
 description:
 keywords:
@@ -11,8 +11,8 @@ keywords:
   - 读书笔记
   - 音乐创作
   - 生活记录
-author: Shanshan Shen
-language: zh
+author: SSS不知-道
+language: zh-CN
 timezone: Asia/Shanghai
 
 # URL
@@ -49,14 +49,14 @@ relative_link: false
 future: true
 syntax_highlighter: highlight.js
 highlight:
-  line_number: true
+  line_number: false
   auto_detect: false
   tab_replace: ''
   wrap: true
   hljs: false
 prismjs:
   preprocess: true
-  line_number: true
+  line_number: false
   tab_replace: ''
 
 # Home page setting
@@ -65,7 +65,7 @@ prismjs:
 # order_by: Posts order. (Order by date descending by default)
 index_generator:
   path: ''
-  per_page: 10
+  per_page: 12
   order_by: -date
 
 # Category & Tag
@@ -88,7 +88,7 @@ updated_option: 'mtime'
 
 # Pagination
 ## Set per_page to 0 to disable pagination
-per_page: 10
+per_page: 12
 pagination_dir: page
 
 # Include / Exclude file(s)
@@ -100,7 +100,7 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: butterfly
 
 # Server
 ## Hexo uses Connect as a server
@@ -123,3 +123,9 @@ markdown:
     images:
       prepend_root: true
       post_asset: true
+
+# A simple 404 page
+error_404:
+  enable: true
+  subtitle: '页面没有找到'
+  background:
