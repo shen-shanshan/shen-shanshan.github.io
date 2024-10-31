@@ -3,17 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 'Shanshan's Blog'
-subtitle: ''
-description: ''
-keywords: 
-  - '技术分享'
-  - '读书笔记'
-  - '音乐创作'
-  - '生活记录'
-author: 'Shanshan Shen'
-language: 'zh'
-timezone: 'Asia/Shanghai'
+title: Shanshan's Blog
+subtitle:
+description:
+keywords:
+  - 技术分享
+  - 读书笔记
+  - 音乐创作
+  - 生活记录
+author: Shanshan Shen
+language: zh
+timezone: Asia/Shanghai
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
