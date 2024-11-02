@@ -3,9 +3,9 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: SSS不知-道的个人博客
-subtitle:
-description:
+title: SSS不知-道
+subtitle: 副标题
+description: 描述
 keywords:
   - 技术分享
   - 读书笔记
@@ -19,7 +19,7 @@ timezone: Asia/Shanghai
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 url: https://shen-shanshan.github.io
 root: /
-permalink: :category/:title/
+permalink: :year-:month-:day-:title/
 permalink_defaults:
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks

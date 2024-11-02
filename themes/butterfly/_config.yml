@@ -17,10 +17,11 @@ nav:
   fixed: false
 
 menu:
-首页: / || fas fa-home
-文章: /_posts/ || fas fa-archive
-标签: /tags/ || fas fa-tags
-分类: /categories/ || fas fa-folder-open
+  首页: / || fas fa-home
+  文章: /archives/ || fas fa-book
+  分类: /categories/ || fas fa-folder-open
+  标签: /tags/ || fas fa-tags
+  个人介绍: /about/ || fas fa-user
 
 # --------------------------------------
 # Code Blocks Settings
@@ -29,27 +30,29 @@ menu:
 code_blocks:
   # Code block theme: darker / pale night / light / ocean / false
   theme: light
-  macStyle: false
+  macStyle: true
   # Code block height limit (unit: px)
-  height_limit: false
-  word_wrap: false
+  height_limit: 200
+  word_wrap: true
 
   # Toolbar
   copy: true
   language: true
   # true: shrink the code blocks | false: expand the code blocks | none: expand code blocks and hide the button
-  shrink: true
+  shrink: false
   fullpage: false
-  highlight_shrink: false  # 代码框不展开，需点击 '>' 打开
-  code_word_wrap: true
-  highlight_height_limit: 200
+  # highlight_shrink: false  # 代码框不展开，需点击 '>' 打开
+  # code_word_wrap: true
+  # highlight_height_limit: 200
 
 # Social media links
 # Formal:
-#   icon: link || the description || color
+#   icon: link || the description || color: #24292e 黑色，#4a7dbe 蓝色
 social:
-  fab fa-github: https://github.com/shen-shanshan || Github || '#24292e'
-  # fas fa-envelope: mailto:xxxxxx@gmail.com || Email || '#4a7dbe'
+  # fab fa-github: https://github.com/shen-shanshan || Github || '#24292e'
+  # fab fa-zhihu: https://www.zhihu.com/people/sss-53-26 || 知乎 || '#24292e'
+  # fab fa-bilibili: https://space.bilibili.com/14112152?spm_id_from=333.1007.0.0 || B站 || '#24292e'
+  # fas fa-envelope: 467638484@qq.com || Email || '#24292e'
 
 # --------------------------------------
 # Image Settings
@@ -59,10 +62,10 @@ favicon: /img/favicon.png
 
 avatar:
   img: /images/logo.jpg
-  effect: true
+  effect: false
 
 # Disable all banner images
-disable_top_img: false
+disable_top_img: true
 
 # If the banner of page not setting, it will show the default_top_img
 default_top_img:
@@ -90,7 +93,7 @@ category_img:
 category_per_img:
 
 # The background image of footer
-footer_img: false
+footer_img: /images/foot4.png
 
 # Website Background
 # Can set it to color or image url
@@ -124,13 +127,13 @@ post_meta:
     # Choose: date / relative
     date_format: date
     categories: true
-    tags: false
+    tags: true
     label: true
   post:
     # Choose: left / center
     position: left
     # Choose: created / updated / both
-    date_type: both
+    date_type: created
     # Choose: date / relative
     date_format: date
     categories: true
@@ -166,6 +169,7 @@ subtitle:
   source: false
   # If you close the typewriter effect, the subtitle will only show the first line of sub
   sub:
+    - 救赎之道，就在其中。
 
 # Article layout on the homepage
 # 1: Cover on the left, info on the right
@@ -183,9 +187,9 @@ index_layout: 3
 # 3: auto_excerpt (default)
 # false: do not show the article introduction
 index_post_content:
-  method: 3
+  method: 1
   # If you set method to 2 or 3, the length need to config
-  length: 500
+  # length:
 
 # --------------------------------------
 # Post Settings
@@ -193,16 +197,16 @@ index_post_content:
 
 toc:
   post: true
-  page: false
-  number: true
-  expand: false
+  page: true
+  number: false
+  expand: true
   # Only for post
-  style_simple: false
-  scroll_percent: true
+  style_simple: true
+  scroll_percent: false
 
 post_copyright:
-  enable: true
-  decode: false
+  enable: false
+  decode: true
   author_href:
   license: CC BY-NC-SA 4.0
   license_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
@@ -239,7 +243,7 @@ related_post:
 # 1: The 'next post' will link to old post
 # 2: The 'next post' will link to new post
 # false: disable pagination
-post_pagination: 1
+post_pagination: false
 
 # Displays outdated notice for a post
 noticeOutdate:
@@ -258,11 +262,11 @@ noticeOutdate:
 # --------------------------------------
 footer:
   owner:
-    enable: true
-    since: 2019
+    enable: false
+    since: 2023
   custom_text:
   # Copyright of theme and framework
-  copyright: true
+  copyright: false
 
 # --------------------------------------
 # Aside Settings
@@ -278,21 +282,21 @@ aside:
   position: right
   display:
     archive: true
-    tag: true
     category: true
+    tag: true
   card_author:
     enable: true
-    description:
+    description: 菊厂牛马一枚，搬砖中😥……
     button:
       enable: true
       icon: fab fa-github
-      text: Follow Me
-      link: https://github.com/xxxxxx
+      text: follow me
+      link: https://github.com/shen-shanshan
   card_announcement:
     enable: true
-    content: This is my Blog
+    content: Welcome to my Blog! # 微信二维码，HTML
   card_recent_post:
-    enable: true
+    enable: false
     # If set 0 will show all
     limit: 5
     # Sort: date / updated
@@ -310,7 +314,7 @@ aside:
     # If set 0 will show all
     limit: 8
     # Choose: none / true / false
-    expand: none
+    expand: true
     sort_order:
   card_tags:
     enable: true
@@ -318,9 +322,9 @@ aside:
     limit: 40
     color: false
     # Order of tags, random/name/length
-    orderby: random
+    orderby: length
     # Sort of order. 1, asc for ascending; -1, desc for descending
-    order: 1
+    order: -1
     sort_order:
   card_archives:
     enable: true
@@ -412,7 +416,7 @@ anchor:
   # Click the headline to scroll and update the anchor
   click_to_scroll: false
 
-photofigcaption: false
+photofigcaption: true
 
 copy:
   enable: true
@@ -427,9 +431,9 @@ wordcount:
   # Display the word count of the article in post meta
   post_wordcount: true
   # Display the time to read the article in post meta
-  min2read: true
+  min2read: false
   # Display the total word count of the website in aside's webinfo
-  total_wordcount: true
+  total_wordcount: false
 
 # Busuanzi count for PV / UV in site
 busuanzi:
@@ -501,7 +505,7 @@ search:
 share:
   # Choose: sharejs / addtoany
   # Leave it empty if you don't need share
-  use: sharejs
+  use: # sharejs
 
   # Share.js
   # https://github.com/overtrue/share.js
@@ -775,11 +779,11 @@ mask:
 
 # Loading Animation
 preloader:
-  enable: false
+  enable: true
   # source
   # 1. fullpage-loading
   # 2. pace (progress bar)
-  source: 1
+  source: 2
   # pace theme (see https://codebyzach.github.io/pace/)
   pace_css_url:
 
@@ -833,13 +837,13 @@ activate_power_mode:
 # canvas_ribbon
 # See: https://github.com/hustcc/ribbon.js
 canvas_ribbon:
-  enable: false
+  enable: true
   # The size of ribbon
   size: 150
   # The opacity of ribbon (0 ~ 1)
   alpha: 0.6
   zIndex: -1
-  click_to_change: false
+  click_to_change: true
   mobile: false
 
 # Fluttering Ribbon
@@ -891,7 +895,7 @@ clickShowText:
 # https://github.com/francoischalifour/medium-zoom
 # https://fancyapps.com/fancybox/
 # Leave it empty if you don't need lightbox
-lightbox:
+lightbox: medium_zoom
 
 # --------------------------------------
 # Tag Plugins settings
@@ -976,10 +980,10 @@ aplayerInject:
 # https://github.com/polonel/SnackBar
 # position: top-left / top-center / top-right / bottom-left / bottom-center / bottom-right
 snackbar:
-  enable: false
-  position: bottom-left
+  enable: true
+  position: top-center
   # The background color of Toast Notification in light mode and dark mode
-  bg_light: '#49b1f5'
+  bg_light: '#24292e' # '#49b1f5'
   bg_dark: '#1f1f1f'
 
 # Instant.page
