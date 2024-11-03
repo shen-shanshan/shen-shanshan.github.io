@@ -3,15 +3,15 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: SSS不知-道
-subtitle: 副标题
-description: 描述
+title: 	Shanshan's Blog
+subtitle:
+description:
 keywords:
   - 技术分享
   - 读书笔记
   - 音乐创作
   - 生活记录
-author: SSS不知-道
+author: Shanshan Shen
 language: zh-CN
 timezone: Asia/Shanghai
 
@@ -49,14 +49,14 @@ relative_link: false
 future: true
 syntax_highlighter: highlight.js
 highlight:
-  line_number: false
+  line_number: true
   auto_detect: false
   tab_replace: ''
   wrap: true
   hljs: false
 prismjs:
   preprocess: true
-  line_number: false
+  line_number: true
   tab_replace: ''
 
 # Home page setting

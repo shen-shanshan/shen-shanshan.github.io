@@ -17,11 +17,11 @@ nav:
   fixed: false
 
 menu:
-  首页: / || fas fa-home
-  文章: /archives/ || fas fa-book
-  分类: /categories/ || fas fa-folder-open
-  标签: /tags/ || fas fa-tags
-  个人介绍: /about/ || fas fa-user
+  Home: / || fas fa-home
+  Posts: /archives/ || fas fa-book
+  Categories: /categories/ || fas fa-folder-open
+  Tags: /tags/ || fas fa-tags
+  About Me: /about/ || fas fa-user
 
 # --------------------------------------
 # Code Blocks Settings
@@ -29,7 +29,7 @@ menu:
 
 code_blocks:
   # Code block theme: darker / pale night / light / ocean / false
-  theme: light
+  theme: darker
   macStyle: true
   # Code block height limit (unit: px)
   height_limit: 200
@@ -42,17 +42,19 @@ code_blocks:
   shrink: false
   fullpage: false
   # highlight_shrink: false  # 代码框不展开，需点击 '>' 打开
-  # code_word_wrap: true
+  code_word_wrap: true
   # highlight_height_limit: 200
 
 # Social media links
 # Formal:
 #   icon: link || the description || color: #24292e 黑色，#4a7dbe 蓝色
 social:
-  # fab fa-github: https://github.com/shen-shanshan || Github || '#24292e'
-  # fab fa-zhihu: https://www.zhihu.com/people/sss-53-26 || 知乎 || '#24292e'
-  # fab fa-bilibili: https://space.bilibili.com/14112152?spm_id_from=333.1007.0.0 || B站 || '#24292e'
-  # fas fa-envelope: 467638484@qq.com || Email || '#24292e'
+  fab fa-github: https://github.com/shen-shanshan || Github || '#4b0082'
+  fas fa-c: https://blog.csdn.net/weixin_44162047?type=blog || CSDN || '#ff6347'
+  fab fa-zhihu: https://www.zhihu.com/people/sss-53-26 || 知乎 || '#00008b'
+  fab fa-bilibili: https://space.bilibili.com/14112152?spm_id_from=333.1007.0.0 || Bilibili || '#1e90ff'
+  fas fa-music: https://music.163.com/#/artist?id=62054947 || 网易云音乐 || '#b22222'
+  fas fa-envelope: 467638484@qq.com || Email || '#708090'
 
 # --------------------------------------
 # Image Settings
@@ -97,7 +99,8 @@ footer_img: /images/foot4.png
 
 # Website Background
 # Can set it to color or image url
-background:
+# '#faf0e6'
+background: '#fffaf0'
 
 cover:
   # Disable the cover or not
@@ -281,19 +284,19 @@ aside:
   # Position: left / right
   position: right
   display:
-    archive: true
-    category: true
-    tag: true
+    archive: false
+    tag: false
+    category: false
   card_author:
     enable: true
     description: 菊厂牛马一枚，搬砖中😥……
     button:
-      enable: true
+      enable: false
       icon: fab fa-github
       text: follow me
       link: https://github.com/shen-shanshan
   card_announcement:
-    enable: true
+    enable: false
     content: Welcome to my Blog! # 微信二维码，HTML
   card_recent_post:
     enable: false
@@ -416,7 +419,7 @@ anchor:
   # Click the headline to scroll and update the anchor
   click_to_scroll: false
 
-photofigcaption: true
+photofigcaption: false
 
 copy:
   enable: true
@@ -808,13 +811,13 @@ beautify:
 font:
   global_font_size:
   code_font_size:
-  font_family:
-  code_font_family:
+  font_family: "Microsoft YaHei"
+  code_font_family: consolas
 
 # Font settings for the site title and site subtitle
 blog_title_font:
   font_link:
-  font_family:
+  font_family: "Microsoft YaHei"
 
 # The setting of divider icon
 hr_icon:
@@ -837,7 +840,7 @@ activate_power_mode:
 # canvas_ribbon
 # See: https://github.com/hustcc/ribbon.js
 canvas_ribbon:
-  enable: true
+  enable: false
   # The size of ribbon
   size: 150
   # The opacity of ribbon (0 ~ 1)
