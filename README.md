@@ -1,6 +1,6 @@
 # Shanshan's blogs
 
-Welcome to my personal [<u>blogs</u>](https://shen-shanshan.github.io/)! :smile:
+Welcome to my personal [<u>blog</u>](https://shen-shanshan.github.io/)! :smile:
 
 ## Roadmap
 
@@ -8,6 +8,7 @@ Welcome to my personal [<u>blogs</u>](https://shen-shanshan.github.io/)! :smile:
 - [ ] 上传读书笔记
 - [ ] 增加相册展示
 - [ ] 增加搜索功能
+- [ ] 增加网站 logo
 
 ## 参考素材
 
