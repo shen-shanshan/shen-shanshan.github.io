@@ -1,13 +1,13 @@
-# Shanshan Shen's blogs
+# Shanshan's blogs
 
-Welcome to my personal blogs! :smile:
+Welcome to my personal [<u>blogs</u>](https://shen-shanshan.github.io/)! :smile:
 
 ## Roadmap
 
-- [ ] 增加相册展示
-- [ ] 增加搜索功能
 - [ ] 完善个人介绍
 - [ ] 上传读书笔记
+- [ ] 增加相册展示
+- [ ] 增加搜索功能
 
 ## 参考素材
 
