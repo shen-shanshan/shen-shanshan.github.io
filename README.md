@@ -13,7 +13,7 @@ hexo new -p <dir_name>/<post_name> "post title"
 > [!NOTE]
 > post_name 不带 `.md` 后缀，post_name 中间有空格时使用双引号包裹，如：dir_name/"post name"。
 
-## TODO
+## Roadmap
 
 - [ ] 完善个人介绍（Books）
 - [ ] 上传读书笔记
@@ -21,6 +21,7 @@ hexo new -p <dir_name>/<post_name> "post title"
 - [ ] 增加搜索功能
 - [ ] 增加评论功能
 - [ ] 添加网站 logo
+- [ ] 增加图片压缩功能
 
 ## 参考素材
 
