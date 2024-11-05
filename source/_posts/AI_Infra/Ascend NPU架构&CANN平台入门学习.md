@@ -6,8 +6,8 @@ tags:
   - NPU
   - CANN
   - Ascend
-top_img: /images/covers/AI_Infra.jpg
-cover: /images/covers/AI_Infra.jpg
+top_img: /images/Covers/AI_Infra.jpg
+cover: /images/Covers/AI_Infra.jpg
 ---
 
 ## 一、概述

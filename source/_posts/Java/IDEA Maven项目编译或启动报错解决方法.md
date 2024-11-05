@@ -5,8 +5,8 @@ categories: Java
 tags:
   - IDEA
   - Maven
-top_img: /images/covers/Java.jpg
-cover: /images/covers/Java.jpg
+top_img: /images/Covers/Java.jpg
+cover: /images/Covers/Java.jpg
 ---
 
 ## 一、拉取最新依赖
