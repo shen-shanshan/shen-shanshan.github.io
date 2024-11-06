@@ -22,6 +22,7 @@ hexo new -p <dir_name>/<post_name> "post title"
 - [ ] 增加评论功能
 - [ ] 添加网站 logo
 - [ ] 增加图片压缩功能
+- [ ] 增加已读书单总览
 
 ## 参考素材
 
