@@ -4,8 +4,8 @@ date: 2024-11-03 15:49:42
 categories: Git
 tags:
   - Git
-top_img: /images/Covers/Git.jpg
-cover: /images/Covers/Git.jpg
+top_img: /images/covers/Git.jpg
+cover: /images/covers/Git.jpg
 ---
 
 ## 一、概述
