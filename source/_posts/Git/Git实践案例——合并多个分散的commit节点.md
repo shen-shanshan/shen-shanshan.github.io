@@ -1,7 +1,7 @@
 ---
 title: Git 实践案例——合并多个分散的 commit 节点
 date: 2024-11-03 15:49:42
-categories: Git
+categories: [计算机, Git]
 tags:
   - Git
 top_img: /images/covers/Git.jpg

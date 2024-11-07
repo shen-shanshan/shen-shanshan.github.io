@@ -15,7 +15,7 @@ hexo new -p <dir_name>/<post_name> "post title"
 
 ## Roadmap
 
-- [ ] 完善个人介绍（Books）
+- [ ] 完善个人介绍
 - [ ] 上传读书笔记
 - [ ] 增加相册展示
 - [ ] 增加搜索功能

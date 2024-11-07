@@ -1,7 +1,7 @@
 ---
 title: NVIDIA GPU 架构 & CUDA 平台入门学习
 date: 2024-11-03 15:12:08
-categories: AI Infra
+categories: [计算机, AI Infra]
 tags:
   - GPU
   - CUDA

@@ -1,7 +1,7 @@
 ---
 title: Ascend aclnn 算子开发入门
 date: 2024-11-03 15:52:36
-categories: AI Infra
+categories: [计算机, AI Infra]
 tags:
   - NPU
   - CANN

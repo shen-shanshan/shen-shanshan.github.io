@@ -1,7 +1,7 @@
 ---
 title: IDEA Maven 项目编译或启动报错解决方法
 date: 2024-11-03 15:41:42
-categories: Java
+categories: [计算机, Java]
 tags:
   - IDEA
   - Maven

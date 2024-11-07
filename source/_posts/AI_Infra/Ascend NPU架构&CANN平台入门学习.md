@@ -1,7 +1,7 @@
 ---
 title: Ascend NPU 架构 & CANN 平台入门学习
 date: 2024-11-03 15:35:00
-categories: AI Infra
+categories: [计算机, AI Infra]
 tags:
   - NPU
   - CANN
