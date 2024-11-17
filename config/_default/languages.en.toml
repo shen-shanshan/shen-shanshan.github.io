@@ -1,0 +1,31 @@
+disabled = false
+languageCode = "en"
+languageName = "English"
+weight = 1
+title = "Home"
+
+[params]
+  displayName = "EN"
+  isoCode = "en"
+  rtl = false
+  dateFormat = "2006-01-02"
+  # logo = "images/logo.jpg"
+  # secondaryLogo = "images/logo.jpg"
+  # description = "description"
+  # copyright = "Copy, _right?_ :thinking_face:"
+
+[params.author]
+  name = "Shanshan Shen"
+  email = "youremail@example.com"
+  image = "images/logo.jpg"
+  imageQuality = 96
+  headline = "Salvation lies within." # Salvation lies within.
+  bio = "A programmer ingaging in AI Infra."
+  links = [
+      { github = "https://github.com/shen-shanshan" },
+      { gitee = "https://gitee.com/shenshanshan0918" },
+      { csdn = "https://blog.csdn.net/weixin_44162047?type=blog" },
+      { zhihu = "https://www.zhihu.com/people/sss-53-26" },
+      { bilibili = "https://space.bilibili.com/14112152?spm_id_from=333.1007.0.0" },
+      { music = "https://music.163.com/#/artist?id=62054947" },
+  ]

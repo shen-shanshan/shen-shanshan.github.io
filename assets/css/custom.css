@@ -1,0 +1,13 @@
+/* .max-w-fit, .max-w-pose {
+    max-width: 100%;
+} */
+
+/* 自定义字体 */
+@font-face {
+    font-family: font;
+    src: url('/font/Yozai-Regular.ttf');  /* static/fonts */
+}
+html {
+    font-family: font;
+    font-size: 16;
+}

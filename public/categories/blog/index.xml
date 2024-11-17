@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog on Home</title>
+    <link>http://localhost:1313/categories/blog/</link>
+    <description>Recent content in Blog on Home</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>youremail@example.com (Shanshan Shen)</managingEditor>
+    <webMaster>youremail@example.com (Shanshan Shen)</webMaster>
+    <copyright>© 2024 Shanshan Shen</copyright>
+    <lastBuildDate>Sun, 17 Nov 2024 18:57:54 +0800</lastBuildDate><atom:link href="http://localhost:1313/categories/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Roadmap</title>
+      <link>http://localhost:1313/roadmap/</link>
+      <pubDate>Sun, 17 Nov 2024 18:57:54 +0800</pubDate>
+      <author>youremail@example.com (Shanshan Shen)</author>
+      <guid>http://localhost:1313/roadmap/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>About me</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Sat, 02 Nov 2024 23:54:20 +0000</pubDate>
+      <author>youremail@example.com (Shanshan Shen)</author>
+      <guid>http://localhost:1313/about/</guid>
+      <description></description>
+      
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Home</title>
+    <link>https://shen-shanshan.github.io/categories/</link>
+    <description>Recent content in Categories on Home</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>youremail@example.com (Shanshan Shen)</managingEditor>
+    <webMaster>youremail@example.com (Shanshan Shen)</webMaster>
+    <copyright>© 2024 Shanshan Shen</copyright>
+    <lastBuildDate>Sat, 10 Aug 2024 10:28:06 +0000</lastBuildDate><atom:link href="https://shen-shanshan.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Reading</title>
+      <link>https://shen-shanshan.github.io/categories/reading/</link>
+      <pubDate>Sat, 10 Aug 2024 10:28:06 +0000</pubDate>
+      <author>youremail@example.com (Shanshan Shen)</author>
+      <guid>https://shen-shanshan.github.io/categories/reading/</guid>
+      <description></description>
+      
+    </item>
+    
+  </channel>
+</rss>
