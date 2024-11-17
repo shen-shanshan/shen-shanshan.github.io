@@ -6,6 +6,7 @@
 @font-face {
     font-family: font;
     src: url('/font/Yozai-Regular.ttf');  /* static/fonts */
+    /* font-size: 30; */
 }
 html {
     font-family: font;
