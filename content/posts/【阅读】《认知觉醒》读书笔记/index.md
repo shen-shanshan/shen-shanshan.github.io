@@ -1,7 +1,7 @@
 ---
 title: 《认知觉醒》读书笔记 | 开启心智，掌控自己的生活
 date: 2024-06-05 23:19:24
-categories: "Reading"
+categories: "阅读"
 tags: ["个人成长", "学习方法"]
 ---
 

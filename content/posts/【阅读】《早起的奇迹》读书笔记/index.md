@@ -1,7 +1,7 @@
 ---
 title: 《早起的奇迹》读书笔记 | 制定你的早起计划
 date: 2024-07-09 10:03:51
-categories: "Reading"
+categories: "阅读"
 tags: ["个人成长", "个人健康"]
 ---
 
