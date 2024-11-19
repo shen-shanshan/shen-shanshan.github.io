@@ -1,33 +1,20 @@
 ---
 title: 《睡眠革命》读书笔记 | 了解你的昼夜节律
-date: 2024-07-09 11:11:14
+date: 2024-07-19 11:11:14
 categories: "阅读"
 tags: ["个人健康"]
 ---
 
 ## 一、关于本书
 
-<table border=0 class="bg_colour"
-    style="padding:20px;width:100%;border:0px;border-spacing:0px;border-collapse:collapse;margin-right:auto;margin-left:auto;">
-    <tbody>
-        <tr>
-            <td style="padding:10px;width:25%;vertical-align:middle;border-color:transparent">
-                <div class="one">
-                    <img src='./cover.jpg' width="120">
-                </div>
-            </td>
-            <td style="padding:0px;width:75%;vertical-align:top;border-color:transparent">
-                <papertitle style="color:gray"><big><b>作者：尼克·利特尔黑尔斯</b></big> </papertitle>
-                <papertitle><big> |<b>《睡眠革命》</b></big></papertitle>
-                <br>
-                于 2024 年 07 月读完
-                <br>
-                <br>
-                <p>简介：本书的作者是英超曼联的运动睡眠教练，专门负责帮助运动员解决睡眠难题、改善睡眠质量。他将自己多年总结的方法论在书中进行了讲解，让人们能够正确认识人体的昼夜戒律并合理安排自己的睡眠周期。通过书中的方法，我们就能够彻底改善自己的睡眠质量，实现最大限度的身心修复，提高生活效率，让你自信且快乐地度过每一天。</p>
-            </td>
-        </tr>
-    </tbody>
-</table>
+{{< timeline >}}
+
+{{< timelineItem icon="tag" header="《睡眠革命》" badge="个人健康" subheader="作者：尼克·利特尔黑尔斯" >}}
+简介：本书的作者是英超曼联的运动睡眠教练，专门负责帮助运动员解决睡眠难题、改善睡眠质量。他将自己多年总结的方法论在书中进行了讲解，让人们能够正确认识人体的昼夜戒律并合理安排自己的睡眠周期。通过书中的方法，我们就能够彻底改善自己的睡眠质量，实现最大限度的身心修复，提高生活效率，让你自信且快乐地度过每一天。
+<img src="./cover.jpg" width="120" alt="book cover">
+{{< /timelineItem >}}
+
+{{< /timeline >}}
 
 ## 二、内容分享
 

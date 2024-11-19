@@ -7,27 +7,14 @@ tags: ["经济学", "投资理财"]
 
 ## 一、关于本书
 
-<table border=0 class="bg_colour"
-    style="padding:20px;width:100%;border:0px;border-spacing:0px;border-collapse:collapse;margin-right:auto;margin-left:auto;">
-    <tbody>
-        <tr>
-            <td style="padding:10px;width:25%;vertical-align:middle;border-color:transparent">
-                <div class="one">
-                    <img src='./cover.jpg' width="120">
-                </div>
-            </td>
-            <td style="padding:0px;width:75%;vertical-align:top;border-color:transparent">
-                <papertitle style="color:gray"><big><b>作者：罗伯特·清崎</b></big> </papertitle>
-                <papertitle><big> |<b>《富爸爸 穷爸爸》</b></big></papertitle>
-                <br>
-                于 2024 年 05 月读完
-                <br>
-                <br>
-                <p>简介：本书是我读过的第一本理财相关的书籍，它不仅让我第一次认识到了财商教育的重要性，也让我明白了什么是好的消费观和理财观。书中关于“应该以什么样的态度来对待工作和生活”的部分，让我获益匪浅。通过阅读本书，我们可以对自己当下的消费方式有一个更加清醒的了解和认识。</p>
-            </td>
-        </tr>
-    </tbody>
-</table>
+{{< timeline >}}
+
+{{< timelineItem icon="tag" header="《富爸爸 穷爸爸》" badge="投资理财" subheader="作者：罗伯特·清崎" >}}
+简介：本书是我读过的第一本理财相关的书籍，它不仅让我第一次认识到了财商教育的重要性，也让我明白了什么是好的消费观和理财观。书中关于“应该以什么样的态度来对待工作和生活”的部分，让我获益匪浅。通过阅读本书，我们可以对自己当下的消费方式有一个更加清醒的了解和认识。
+<img src="./cover.jpg" width="120" alt="book cover">
+{{< /timelineItem >}}
+
+{{< /timeline >}}
 
 ## 二、内容分享
 

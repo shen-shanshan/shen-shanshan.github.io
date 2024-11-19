@@ -40,6 +40,7 @@ You can see the roadmap of this site at [<u>here</u>](https://shen-shanshan.gith
 - [<u>Blowfish | Comments</u>](https://blowfish.page/docs/partials/#comments)
 - [<u>Blowfish | Homepage Layout</u>](https://blowfish.page/docs/homepage-layout/)
 - [<u>Blowfish | Icons</u>](https://blowfish.page/samples/icons/)
+- [<u>Blowfish | Math Symbols</u>](https://blowfish.page/zh-cn/samples/mathematical-notation/)
 
 ## Materials
 
@@ -51,6 +52,14 @@ You can see the roadmap of this site at [<u>here</u>](https://shen-shanshan.gith
 - [<u>Color Code | Tailwind</u>](https://tailwindcss.com/docs/customizing-colors#color-palette-reference)
 - [<u>Color Code 1</u>](https://blog.csdn.net/u010403387/article/details/45392917)
 - [<u>Color Code 2</u>](https://www.colordic.org/)
+- [<u>Math Symbols | Katex</u>](https://katex.org/docs/supported)
+
+> ![NOTE]
+>
+> Remember to convert math symbols:
+>
+> - `\\` -> `\\\`
+> - `_` -> `\_`
 
 ## Reference
 

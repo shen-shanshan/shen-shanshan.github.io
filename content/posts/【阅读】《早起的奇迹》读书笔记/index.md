@@ -7,27 +7,14 @@ tags: ["个人成长", "个人健康"]
 
 ## 一、关于本书
 
-<table border=0 class="bg_colour"
-    style="padding:20px;width:100%;border:0px;border-spacing:0px;border-collapse:collapse;margin-right:auto;margin-left:auto;">
-    <tbody>
-        <tr>
-            <td style="padding:10px;width:25%;vertical-align:middle;border-color:transparent">
-                <div class="one">
-                    <img src='./cover.jpg' width="120">
-                </div>
-            </td>
-            <td style="padding:0px;width:75%;vertical-align:top;border-color:transparent">
-                <papertitle style="color:gray"><big><b>作者：哈尔·埃尔罗德</b></big> </papertitle>
-                <papertitle><big> |<b>《早起的奇迹》</b></big></papertitle>
-                <br>
-                于 2024 年 07 月读完
-                <br>
-                <br>
-                <p>简介：这本书讲述了作者在遭遇了人生的重大挫折之后，通过每天坚持早起并执行“SAVERS”人生拯救计划，从而实现了人生的奇迹。本书对“SAVERS”人生拯救计划的内容进行了详细的介绍，通过长期实践该计划，就能彻底改变你的人生、健康、财富和人际关系。</p>
-            </td>
-        </tr>
-    </tbody>
-</table>
+{{< timeline >}}
+
+{{< timelineItem icon="tag" header="《早起的奇迹》" badge="个人成长" subheader="作者：哈尔·埃尔罗德" >}}
+简介：这本书讲述了作者在遭遇了人生的重大挫折之后，通过每天坚持早起并执行“SAVERS”人生拯救计划，从而实现了人生的奇迹。本书对“SAVERS”人生拯救计划的内容进行了详细的介绍，通过长期实践该计划，就能彻底改变你的人生、健康、财富和人际关系。
+<img src="./cover.jpg" width="120" alt="book cover">
+{{< /timelineItem >}}
+
+{{< /timeline >}}
 
 ## 二、内容分享
 

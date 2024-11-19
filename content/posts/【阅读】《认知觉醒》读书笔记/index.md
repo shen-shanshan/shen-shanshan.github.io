@@ -7,27 +7,14 @@ tags: ["个人成长", "学习方法"]
 
 ## 一、关于本书
 
-<table border=0 class="bg_colour"
-    style="padding:20px;width:100%;border:0px;border-spacing:0px;border-collapse:collapse;margin-right:auto;margin-left:auto;">
-    <tbody>
-        <tr>
-            <td style="padding:10px;width:25%;vertical-align:middle;border-color:transparent">
-                <div class="one">
-                    <img src='./cover.jpg' width="120">
-                </div>
-            </td>
-            <td style="padding:0px;width:75%;vertical-align:top;border-color:transparent">
-                <papertitle style="color:gray"><big><b>作者：周岭</b></big> </papertitle>
-                <papertitle><big> |<b>《认知觉醒》</b></big></papertitle>
-                <br>
-                于 2024 年 06 月读完
-                <br>
-                <br>
-                <p>简介：这是一本非常全面的个人成长指南，它打开了我的视野，提出了关于生活各个方面的认知方法，同时也解释了许多自己之前遇到过，却并不知道其底层原理的现象，让我从一个更高的维度认识到了许多事情的本质。当然，就像书中提到的，了解到这些知识只是开始，如何将学到的知识落实到行动，进而改变自己的生活才是最重要的。通过阅读本书，我们将从根本的认知上完成觉醒，进而开启不一样的人生。</p>
-            </td>
-        </tr>
-    </tbody>
-</table>
+{{< timeline >}}
+
+{{< timelineItem icon="tag" header="《认知觉醒》" badge="个人成长" subheader="作者：周岭" >}}
+简介：这是一本非常全面的个人成长指南，它打开了我的视野，提出了关于生活各个方面的认知方法，同时也解释了许多自己之前遇到过，却并不知道其底层原理的现象，让我从一个更高的维度认识到了许多事情的本质。当然，就像书中提到的，了解到这些知识只是开始，如何将学到的知识落实到行动，进而改变自己的生活才是最重要的。通过阅读本书，我们将从根本的认知上完成觉醒，进而开启不一样的人生。
+<img src="./cover.jpg" width="120" alt="book cover">
+{{< /timelineItem >}}
+
+{{< /timeline >}}
 
 ## 二、内容分享
 

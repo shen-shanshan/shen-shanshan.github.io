@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Java on Home</title>
+    <link>http://localhost:1313/categories/java/</link>
+    <description>Recent content in Java on Home</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>youremail@example.com (Shanshan Shen)</managingEditor>
+    <webMaster>youremail@example.com (Shanshan Shen)</webMaster>
+    <copyright>© 2024 Shanshan Shen</copyright>
+    <lastBuildDate>Sun, 03 Nov 2024 15:41:42 +0000</lastBuildDate><atom:link href="http://localhost:1313/categories/java/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>IDEA Maven 项目编译或启动报错解决方法</title>
+      <link>http://localhost:1313/articles/idea-maven-%E9%A1%B9%E7%9B%AE%E7%BC%96%E8%AF%91%E6%88%96%E5%90%AF%E5%8A%A8%E6%8A%A5%E9%94%99%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Sun, 03 Nov 2024 15:41:42 +0000</pubDate>
+      <author>youremail@example.com (Shanshan Shen)</author>
+      <guid>http://localhost:1313/articles/idea-maven-%E9%A1%B9%E7%9B%AE%E7%BC%96%E8%AF%91%E6%88%96%E5%90%AF%E5%8A%A8%E6%8A%A5%E9%94%99%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</guid>
+      <description></description>
+      
+    </item>
+    
+  </channel>
+</rss>

@@ -7,27 +7,14 @@ tags: ["心理学", "个人成长", "职场之道"]
 
 ## 一、关于本书
 
-<table border=0 class="bg_colour"
-    style="padding:20px;width:100%;border:0px;border-spacing:0px;border-collapse:collapse;margin-right:auto;margin-left:auto;">
-    <tbody>
-        <tr>
-            <td style="padding:10px;width:25%;vertical-align:middle;border-color:transparent">
-                <div class="one">
-                    <img src='./cover.jpg' width="120">
-                </div>
-            </td>
-            <td style="padding:0px;width:75%;vertical-align:top;border-color:transparent">
-                <papertitle style="color:gray"><big><b>作者：钱婧</b></big> </papertitle>
-                <papertitle><big> |<b>《我有自己的宇宙》</b></big></papertitle>
-                <br>
-                于 2024 年 08 月读完
-                <br>
-                <br>
-                <p>简介：本书的作者钱婧老师是一位北师大的职场心理学教授，通过与广大年轻人进行交流沟通，她用自己多年的知识和经验为读者解答了许多关于职场、学业、恋爱、赚钱、社交以及家庭等诸多方面的疑惑。本书提出了一种叫做“中庸我”的思维模式，能够让我们在职场的风风雨雨中，甚至在更漫长的人生路上，坚守自己的一点本心，能够沉下心来朝着自己的目标踏实地做点实事。本书让我获益匪浅，也坚定了我在职场中的行事原则，让我摆脱了焦虑和内耗，变得更加自信和从容。</p>
-            </td>
-        </tr>
-    </tbody>
-</table>
+{{< timeline >}}
+
+{{< timelineItem icon="tag" header="《我有自己的宇宙》" badge="心理学" subheader="作者：钱婧" >}}
+简介：本书的作者钱婧老师是一位北师大的职场心理学教授，通过与广大年轻人进行交流沟通，她用自己多年的知识和经验为读者解答了许多关于职场、学业、恋爱、赚钱、社交以及家庭等诸多方面的疑惑。本书提出了一种叫做“中庸我”的思维模式，能够让我们在职场的风风雨雨中，甚至在更漫长的人生路上，坚守自己的一点本心，能够沉下心来朝着自己的目标踏实地做点实事。本书让我获益匪浅，也坚定了我在职场中的行事原则，让我摆脱了焦虑和内耗，变得更加自信和从容。
+<img src="./cover.jpg" width="120" alt="book cover">
+{{< /timelineItem >}}
+
+{{< /timeline >}}
 
 ## 二、内容分享
 

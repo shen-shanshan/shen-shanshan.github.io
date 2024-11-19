@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>乐理 on Home</title>
+    <link>http://localhost:1313/tags/%E4%B9%90%E7%90%86/</link>
+    <description>Recent content in 乐理 on Home</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>youremail@example.com (Shanshan Shen)</managingEditor>
+    <webMaster>youremail@example.com (Shanshan Shen)</webMaster>
+    <copyright>© 2024 Shanshan Shen</copyright>
+    <lastBuildDate>Wed, 14 Feb 2018 23:52:08 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/%E4%B9%90%E7%90%86/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何看懂一篇乐谱的演奏顺序？</title>
+      <link>http://localhost:1313/articles/%E5%A6%82%E4%BD%95%E7%9C%8B%E6%87%82%E4%B8%80%E7%AF%87%E4%B9%90%E8%B0%B1%E7%9A%84%E6%BC%94%E5%A5%8F%E9%A1%BA%E5%BA%8F/</link>
+      <pubDate>Wed, 14 Feb 2018 23:52:08 +0000</pubDate>
+      <author>youremail@example.com (Shanshan Shen)</author>
+      <guid>http://localhost:1313/articles/%E5%A6%82%E4%BD%95%E7%9C%8B%E6%87%82%E4%B8%80%E7%AF%87%E4%B9%90%E8%B0%B1%E7%9A%84%E6%BC%94%E5%A5%8F%E9%A1%BA%E5%BA%8F/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/articles/%E5%A6%82%E4%BD%95%E7%9C%8B%E6%87%82%E4%B8%80%E7%AF%87%E4%B9%90%E8%B0%B1%E7%9A%84%E6%BC%94%E5%A5%8F%E9%A1%BA%E5%BA%8F/featured.jpg" />
+    </item>
+    
+  </channel>
+</rss>

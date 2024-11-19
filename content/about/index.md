@@ -1,7 +1,6 @@
 ---
 title: About me
 date: 2024-11-02 23:54:20
-# categories: "Blog"
 showAuthor: false
 showRelatedContent: false
 ---
@@ -42,6 +41,59 @@ Studying at School of Electronic and Information Engineering, majoring in commun
 
 ---
 
+## Programming Skills
+
+{{< gallery >}}
+  <img src="https://img.shields.io/badge/-Python-3f3f46?style=flat&logo=Python&logoColor=3776AB" class="grid-w20" />
+  <img src="https://img.shields.io/badge/-C++-3f3f46?style=flat&logo=cplusplus&logoColor=00599C" class="grid-w20" />
+  <img src="https://img.shields.io/badge/-Html-3f3f46?style=flat&logo=html5&logoColor=E34F26" class="grid-w20" />
+
+  <img src="https://img.shields.io/badge/-Linux-3f3f46?style=flat&logo=Linux&logoColor=FCC624" class="grid-w20" />
+
+  <img src="https://img.shields.io/badge/-PyTorch-3f3f46?style=flat&logo=PyTorch&logoColor=EE4C2C" class="grid-w20" />
+  <img src="https://img.shields.io/badge/-Spring-3f3f46?style=flat&logo=spring&logoColor=6DB33F" class="grid-w20" />
+  <img src="https://img.shields.io/badge/-SpringBoot-3f3f46?style=flat&logo=springboot&logoColor=6DB33F" class="grid-w20" />
+  
+  <img src="https://img.shields.io/badge/-MySQL-3f3f46?style=flat&logo=mysql&logoColor=4479A1" class="grid-w20" />
+  <img src="https://img.shields.io/badge/-PostgreSQL-3f3f46?style=flat&logo=postgresql&logoColor=4169E1" class="grid-w20" />
+  <img src="https://img.shields.io/badge/-Oracle-3f3f46?style=flat&logo=oracle&logoColor=F80000" class="grid-w20" />
+
+  <img src="https://img.shields.io/badge/-Git-3f3f46?style=flat&logo=git&logoColor=F05032" class="grid-w20" />
+  <img src="https://img.shields.io/badge/-GitHub-3f3f46?style=flat&logo=github&logoColor=181717" class="grid-w20" />
+  <img src="https://img.shields.io/badge/-Gitee-3f3f46?style=flat&logo=gitee&logoColor=C71D23" class="grid-w20" />
+
+  <img src="https://img.shields.io/badge/-Markdown-3f3f46?style=flat&logo=markdown&logoColor=000000" class="grid-w20" />
+  <img src="https://img.shields.io/badge/-Vim-3f3f46?style=flat&logo=vim&logoColor=019733" class="grid-w20" />
+  <img src="https://img.shields.io/badge/-Docker-3f3f46?style=flat&logo=docker&logoColor=2496ED" class="grid-w20" />
+  <img src="https://img.shields.io/badge/-CMake-3f3f46?style=flat&logo=cmake&logoColor=064F8C" class="grid-w20" />
+  <img src="https://img.shields.io/badge/-Wireshark-3f3f46?style=flat&logo=wireshark&logoColor=1679A7" class="grid-w20" />
+  <img src="https://img.shields.io/badge/-Anaconda-3f3f46?style=flat&logo=anaconda&logoColor=44A833" class="grid-w20" />
+
+  <img src="https://img.shields.io/badge/-IDEA-3f3f46?style=flat&logo=intellijidea&logoColor=000000" class="grid-w20" />
+  <img src="https://img.shields.io/badge/-PyCharm-3f3f46?style=flat&logo=pycharm&logoColor=000000" class="grid-w20" />
+
+  <img src="https://img.shields.io/badge/-LeetCode-3f3f46?style=flat&logo=leetcode&logoColor=FFA116" class="grid-w20" />
+  <img src="https://img.shields.io/badge/-CSDN-3f3f46?style=flat&logo=csdn&logoColor=FC5531" class="grid-w20" />
+
+  <img src="https://img.shields.io/badge/-Huawei-3f3f46?style=flat&logo=huawei&logoColor=FF0000" class="grid-w20" />
+  <img src="https://img.shields.io/badge/-IEEE-3f3f46?style=flat&logo=ieee&logoColor=00629B" class="grid-w20" />
+{{< /gallery >}}
+
+<!--
+模板：<img src="https://img.shields.io/badge/-...-3f3f46?style=flat&logo=...&logoColor=..." class="grid-w20" />
+-->
+
+---
+
+## Open Source Contribution
+
+I am a contributor to many open source projects on GitHub, which are showed below.
+
+{{< github repo="Ascend/docs" >}}<br>
+{{< github repo="2noise/ChatTTS" >}}
+
+---
+
 ## Hobbies
 
 In my spare time, I have many hobbies such as reading books, playing badminton and doing exercise. I am not only a programmer, but also a guitarist loving play both acoustic and electric guitars.
@@ -77,7 +129,7 @@ This is my favorite guitar which is made of Sitka Spruce (panel) and Indian Rose
 
 {{< /timeline >}}
 
----
+<!-- ---
 
 **Other recording gears I used:**
 
@@ -88,7 +140,7 @@ This is my favorite guitar which is made of Sitka Spruce (panel) and Indian Rose
 | Audio Card | Yamaha UR242 |
 | DAW | Studio One |
 | Plugins | Bias fx2 / Ozone / Lexicon / Waves / Slate Digital / Raum |
-| Video Editing | Video Studio Pro 2019 |
+| Video Editing | Video Studio Pro 2019 | -->
 
 ---
 
