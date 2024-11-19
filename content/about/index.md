@@ -90,8 +90,12 @@ Studying at School of Electronic and Information Engineering, majoring in commun
 I am a contributor to many open source projects on GitHub, which are showed below.
 
 {{< github repo="Ascend/docs" >}}
+
 <br>
+
 {{< github repo="2noise/ChatTTS" >}}
+
+<!-- <br> -->
 
 ---
 
