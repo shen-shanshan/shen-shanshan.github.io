@@ -54,9 +54,9 @@ You can see the roadmap of this site at [<u>here</u>](https://shen-shanshan.gith
 - [<u>Color Code 2</u>](https://www.colordic.org/)
 - [<u>Math Symbols | Katex</u>](https://katex.org/docs/supported)
 
-> ![NOTE]
+> [!NOTE]
 >
-> Remember to convert math symbols:
+> Remember to add `{{< katex >}}` just once and convert symbols for math syntax in markdown files:
 >
 > - `\\` -> `\\\`
 > - `_` -> `\_`

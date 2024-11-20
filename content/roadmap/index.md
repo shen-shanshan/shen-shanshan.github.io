@@ -19,6 +19,7 @@ showRelatedContent: false
 
 ## Contents
 
+- [ ] 梳理 Git Patch 用法
 - [ ] 梳理 LLM 不同 LoRA 微调方法的对比和微调全流程
 - [ ] 增加相册展示页
 - [ ] 增加网站导航页（分类嵌入文章）
