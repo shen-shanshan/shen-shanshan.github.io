@@ -3,20 +3,38 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
+    <loc>http://localhost:1313/articles/</loc>
+    <lastmod>2024-11-23T18:59:01+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2024-11-17T18:57:54+08:00</lastmod>
+    <lastmod>2024-11-23T18:59:01+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/articles/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0-%E6%80%BB%E8%A7%88/</loc>
+    <lastmod>2024-11-23T18:59:01+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/guide/</loc>
+    <lastmod>2024-11-23T16:30:52+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/articles/%E6%88%91%E7%9A%84%E4%B9%A6%E5%8D%95-%E6%80%BB%E8%A7%88/</loc>
+    <lastmod>2024-11-23T10:13:27+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>http://localhost:1313/roadmap/</loc>
     <lastmod>2024-11-17T18:57:54+08:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://localhost:1313/articles/</loc>
-    <lastmod>2024-11-13T17:05:40+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>

@@ -9,7 +9,27 @@
     <managingEditor>youremail@example.com (Shanshan Shen)</managingEditor>
     <webMaster>youremail@example.com (Shanshan Shen)</webMaster>
     <copyright>© 2024 Shanshan Shen</copyright>
-    <lastBuildDate>Wed, 13 Nov 2024 17:05:40 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 23 Nov 2024 18:59:01 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>博客汇总</title>
+      <link>http://localhost:1313/tags/%E5%8D%9A%E5%AE%A2%E6%B1%87%E6%80%BB/</link>
+      <pubDate>Sat, 23 Nov 2024 18:59:01 +0800</pubDate>
+      <author>youremail@example.com (Shanshan Shen)</author>
+      <guid>http://localhost:1313/tags/%E5%8D%9A%E5%AE%A2%E6%B1%87%E6%80%BB/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>书单汇总</title>
+      <link>http://localhost:1313/tags/%E4%B9%A6%E5%8D%95%E6%B1%87%E6%80%BB/</link>
+      <pubDate>Sat, 23 Nov 2024 10:13:27 +0800</pubDate>
+      <author>youremail@example.com (Shanshan Shen)</author>
+      <guid>http://localhost:1313/tags/%E4%B9%A6%E5%8D%95%E6%B1%87%E6%80%BB/</guid>
+      <description></description>
+      
+    </item>
+    
     <item>
       <title>AI</title>
       <link>http://localhost:1313/tags/ai/</link>
@@ -201,6 +221,16 @@
     </item>
     
     <item>
+      <title>读书笔记</title>
+      <link>http://localhost:1313/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Sat, 10 Aug 2024 10:28:06 +0000</pubDate>
+      <author>youremail@example.com (Shanshan Shen)</author>
+      <guid>http://localhost:1313/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
       <title>个人健康</title>
       <link>http://localhost:1313/tags/%E4%B8%AA%E4%BA%BA%E5%81%A5%E5%BA%B7/</link>
       <pubDate>Fri, 19 Jul 2024 11:11:14 +0000</pubDate>
@@ -256,6 +286,26 @@
       <pubDate>Wed, 14 Feb 2018 23:52:08 +0000</pubDate>
       <author>youremail@example.com (Shanshan Shen)</author>
       <guid>http://localhost:1313/tags/%E4%B9%90%E7%90%86/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>技术博客汇总</title>
+      <link>http://localhost:1313/tags/%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2%E6%B1%87%E6%80%BB/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (Shanshan Shen)</author>
+      <guid>http://localhost:1313/tags/%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2%E6%B1%87%E6%80%BB/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>技术文章汇总</title>
+      <link>http://localhost:1313/tags/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0%E6%B1%87%E6%80%BB/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (Shanshan Shen)</author>
+      <guid>http://localhost:1313/tags/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0%E6%B1%87%E6%80%BB/</guid>
       <description></description>
       
     </item>

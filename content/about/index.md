@@ -89,13 +89,15 @@ Studying at School of Electronic and Information Engineering, majoring in commun
 
 I am a contributor to many open source projects on GitHub, which are showed below.
 
-{{< github repo="Ascend/docs" >}}
+{{< github repo="gpustack/llama-box" >}}
+
+<br>
+
+{{< github repo="ggerganov/llama.cpp" >}}
 
 <br>
 
 {{< github repo="2noise/ChatTTS" >}}
-
-<!-- <br> -->
 
 ---
 
@@ -112,7 +114,9 @@ In my spare time, I have many hobbies such as reading books, playing badminton a
 
 ### 📚 Books
 
-**_TODO..._**
+I love reading books over last ten years, and here are books I highly recommended.
+
+{{< article link="/articles/%E6%88%91%E7%9A%84%E4%B9%A6%E5%8D%95-%E6%80%BB%E8%A7%88/" >}}
 
 ---
 
