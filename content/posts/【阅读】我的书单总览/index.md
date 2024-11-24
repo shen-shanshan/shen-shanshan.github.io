@@ -16,23 +16,6 @@ showRelatedContent: false
 
 ## 二、技术类书籍
 
-{{< gallery >}}
-  <img src="./images/Python编程.jpg" class="grid-w20" />
-  <img src="./images/C++Primer.jpg" class="grid-w20" />
-  <img src="./images/Java核心技术·卷I.jpg" class="grid-w20" />
-  <img src="./images/深入理解Java虚拟机.jpg" class="grid-w20" />
-  <img src="./images/图解HTTP.jpg" class="grid-w20" />
-  <img src="./images/图解TCP-IP.jpg" class="grid-w20" />
-  <img src="./images/鸟哥的Linux私房菜.jpg" class="grid-w20" />
-  <img src="./images/MySQL必知必会.jpg" class="grid-w20" />
-  <img src="./images/图解设计模式.jpg" class="grid-w20" />
-  <img src="./images/Maven实战.jpg" class="grid-w20" />
-  <img src="./images/统计学习方法.jpg" class="grid-w20" />
-  <img src="./images/深度学习入门.jpg" class="grid-w20" />
-  <img src="./images/深入浅出PyTorch从模型到源码.png" class="grid-w20" />
-  <img src="./images/AI系统.jpg" class="grid-w20" />
-{{< /gallery >}}
-
 |    分类    |                    书名                     |                        作者                        |
 | :--------- | :------------------------------------------ | :------------------------------------------------- |
 | Python     | 《Python 编程 - 从入门到实践》              | Eric Matthes                                       |
@@ -51,23 +34,24 @@ showRelatedContent: false
 | AI 框架    | 《深入浅出 PyTorch 从模型到源码》           | 张校捷                                             |
 | AI 系统    | 《AI 系统原理与架构》                       | ZOMI 酱                                            |
 
----
+{{< gallery >}}
+  <img src="./images/Python编程.jpg" class="grid-w20" />
+  <img src="./images/C++Primer.jpg" class="grid-w20" />
+  <img src="./images/Java核心技术·卷I.jpg" class="grid-w20" />
+  <img src="./images/深入理解Java虚拟机.jpg" class="grid-w20" />
+  <img src="./images/图解HTTP.jpg" class="grid-w20" />
+  <img src="./images/图解TCP-IP.jpg" class="grid-w20" />
+  <img src="./images/鸟哥的Linux私房菜.jpg" class="grid-w20" />
+  <img src="./images/MySQL必知必会.jpg" class="grid-w20" />
+  <img src="./images/图解设计模式.jpg" class="grid-w20" />
+  <img src="./images/Maven实战.jpg" class="grid-w20" />
+  <img src="./images/统计学习方法.jpg" class="grid-w20" />
+  <img src="./images/深度学习入门.jpg" class="grid-w20" />
+  <img src="./images/深入浅出PyTorch从模型到源码.png" class="grid-w20" />
+  <img src="./images/AI系统.jpg" class="grid-w20" />
+{{< /gallery >}}
 
 ## 三、人文社科类书籍
-
-{{< gallery >}}
-  <img src="./images/非暴力沟通.jpg" class="grid-w20" />
-  <img src="./images/娱乐至死.jpg" class="grid-w20" />
-  <img src="./images/我有自己的宇宙.jpg" class="grid-w20" />
-  <img src="./images/被讨厌的勇气.jpg" class="grid-w20" />
-  <img src="./images/富爸爸穷爸爸.jpg" class="grid-w20" />
-  <img src="./images/小岛经济学.jpg" class="grid-w20" />
-  <img src="./images/费曼学习法.jpg" class="grid-w20" />
-  <img src="./images/海绵阅读法.jpg" class="grid-w20" />
-  <img src="./images/认知觉醒.jpg" class="grid-w20" />
-  <img src="./images/早起的奇迹.jpg" class="grid-w20" />
-  <img src="./images/睡眠革命.jpg" class="grid-w20" />
-{{< /gallery >}}
 
 |   分类   |        书名        |          作者           |
 | :------- | :----------------- | :---------------------- |
@@ -83,7 +67,19 @@ showRelatedContent: false
 | 个人成长 | 《早起的奇迹》     | 哈尔·埃尔罗德           |
 | 个人健康 | 《睡眠革命》       | 尼克·利特尔黑尔斯       |
 
----
+{{< gallery >}}
+  <img src="./images/非暴力沟通.jpg" class="grid-w20" />
+  <img src="./images/娱乐至死.jpg" class="grid-w20" />
+  <img src="./images/我有自己的宇宙.jpg" class="grid-w20" />
+  <img src="./images/被讨厌的勇气.jpg" class="grid-w20" />
+  <img src="./images/富爸爸穷爸爸.jpg" class="grid-w20" />
+  <img src="./images/小岛经济学.jpg" class="grid-w20" />
+  <img src="./images/费曼学习法.jpg" class="grid-w20" />
+  <img src="./images/海绵阅读法.jpg" class="grid-w20" />
+  <img src="./images/认知觉醒.jpg" class="grid-w20" />
+  <img src="./images/早起的奇迹.jpg" class="grid-w20" />
+  <img src="./images/睡眠革命.jpg" class="grid-w20" />
+{{< /gallery >}}
 
 ## 四、读书笔记
 
@@ -92,13 +88,15 @@ showRelatedContent: false
 读书笔记
 {{< /button >}} -->
 
+### 4.1 心理学
+
 {{< article link="/articles/%E6%88%91%E6%9C%89%E8%87%AA%E5%B7%B1%E7%9A%84%E5%AE%87%E5%AE%99%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-%E5%B9%B4%E8%BD%BB%E4%BA%BA%E7%9A%84%E8%81%8C%E5%9C%BA%E7%94%9F%E5%AD%98%E4%B9%8B%E9%81%93/" >}}
 
-<br>
+### 4.2 经济学
 
-{{< article link="/articles/%E7%9D%A1%E7%9C%A0%E9%9D%A9%E5%91%BD%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-%E4%BA%86%E8%A7%A3%E4%BD%A0%E7%9A%84%E6%98%BC%E5%A4%9C%E8%8A%82%E5%BE%8B/" >}}
+{{< article link="/articles/%E5%AF%8C%E7%88%B8%E7%88%B8-%E7%A9%B7%E7%88%B8%E7%88%B8%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-%E8%B4%A2%E5%95%86%E6%95%99%E8%82%B2%E5%90%AF%E8%92%99%E4%B9%8B%E4%BD%9C/" >}}
 
-<br>
+### 4.3 个人成长
 
 {{< article link="/articles/%E6%97%A9%E8%B5%B7%E7%9A%84%E5%A5%87%E8%BF%B9%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-%E5%88%B6%E5%AE%9A%E4%BD%A0%E7%9A%84%E6%97%A9%E8%B5%B7%E8%AE%A1%E5%88%92/" >}}
 
@@ -106,6 +104,6 @@ showRelatedContent: false
 
 {{< article link="/articles/%E8%AE%A4%E7%9F%A5%E8%A7%89%E9%86%92%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-%E5%BC%80%E5%90%AF%E5%BF%83%E6%99%BA%E6%8E%8C%E6%8E%A7%E8%87%AA%E5%B7%B1%E7%9A%84%E7%94%9F%E6%B4%BB/" >}}
 
-<br>
+### 4.4 个人健康
 
-{{< article link="/articles/%E5%AF%8C%E7%88%B8%E7%88%B8-%E7%A9%B7%E7%88%B8%E7%88%B8%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-%E8%B4%A2%E5%95%86%E6%95%99%E8%82%B2%E5%90%AF%E8%92%99%E4%B9%8B%E4%BD%9C/" >}}
+{{< article link="/articles/%E7%9D%A1%E7%9C%A0%E9%9D%A9%E5%91%BD%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-%E4%BA%86%E8%A7%A3%E4%BD%A0%E7%9A%84%E6%98%BC%E5%A4%9C%E8%8A%82%E5%BE%8B/" >}}
