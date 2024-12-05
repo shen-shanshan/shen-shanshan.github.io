@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Xxx on Home</title>
+    <link>http://localhost:1313/categories/xxx/</link>
+    <description>Recent content in Xxx on Home</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>youremail@example.com (Shanshan Shen)</managingEditor>
+    <webMaster>youremail@example.com (Shanshan Shen)</webMaster>
+    <copyright>© 2024 Shanshan Shen</copyright>
+    <lastBuildDate>Thu, 05 Dec 2024 10:00:40 +0800</lastBuildDate><atom:link href="http://localhost:1313/categories/xxx/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>333</title>
+      <link>http://localhost:1313/articles/333/</link>
+      <pubDate>Thu, 05 Dec 2024 10:00:40 +0800</pubDate>
+      <author>youremail@example.com (Shanshan Shen)</author>
+      <guid>http://localhost:1313/articles/333/</guid>
+      <description></description>
+      
+    </item>
+    
+  </channel>
+</rss>

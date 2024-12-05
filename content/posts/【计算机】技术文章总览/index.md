@@ -36,6 +36,10 @@ showRelatedContent: false
 
 ### 3.1 大模型微调
 
+{{< article link="/articles/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%BE%AE%E8%B0%83%E7%9F%A5%E8%AF%86%E5%85%A8%E6%99%AF/" >}}
+
+<br>
+
 {{< article link="/articles/%E5%A4%A7%E6%A8%A1%E5%9E%8B-lora-%E5%BE%AE%E8%B0%83%E7%9A%84%E6%95%B0%E5%AD%A6%E5%8E%9F%E7%90%86/" >}}
 
 ## 四、Java

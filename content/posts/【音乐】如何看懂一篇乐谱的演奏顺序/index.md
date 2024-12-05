@@ -3,6 +3,7 @@ title: 如何看懂一篇乐谱的演奏顺序？
 date: 2018-02-14 23:52:08
 categories: "音乐"
 tags: ["乐理"]
+draft: true
 ---
 
 ## 一、引言

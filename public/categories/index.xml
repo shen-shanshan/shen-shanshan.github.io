@@ -9,11 +9,11 @@
     <managingEditor>youremail@example.com (Shanshan Shen)</managingEditor>
     <webMaster>youremail@example.com (Shanshan Shen)</webMaster>
     <copyright>© 2024 Shanshan Shen</copyright>
-    <lastBuildDate>Sat, 23 Nov 2024 18:59:01 +0800</lastBuildDate><atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 05 Dec 2024 10:00:40 +0800</lastBuildDate><atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>计算机</title>
       <link>http://localhost:1313/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/</link>
-      <pubDate>Sat, 23 Nov 2024 18:59:01 +0800</pubDate>
+      <pubDate>Thu, 05 Dec 2024 10:00:40 +0800</pubDate>
       <author>youremail@example.com (Shanshan Shen)</author>
       <guid>http://localhost:1313/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/</guid>
       <description></description>
@@ -26,16 +26,6 @@
       <pubDate>Sat, 23 Nov 2024 10:13:27 +0800</pubDate>
       <author>youremail@example.com (Shanshan Shen)</author>
       <guid>http://localhost:1313/categories/%E9%98%85%E8%AF%BB/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>音乐</title>
-      <link>http://localhost:1313/categories/%E9%9F%B3%E4%B9%90/</link>
-      <pubDate>Wed, 25 Jul 2018 00:35:37 +0000</pubDate>
-      <author>youremail@example.com (Shanshan Shen)</author>
-      <guid>http://localhost:1313/categories/%E9%9F%B3%E4%B9%90/</guid>
       <description></description>
       
     </item>

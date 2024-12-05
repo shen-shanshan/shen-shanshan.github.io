@@ -9,7 +9,17 @@
     <managingEditor>youremail@example.com (Shanshan Shen)</managingEditor>
     <webMaster>youremail@example.com (Shanshan Shen)</webMaster>
     <copyright>© 2024 Shanshan Shen</copyright>
-    <lastBuildDate>Sat, 23 Nov 2024 18:59:01 +0800</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 05 Dec 2024 10:00:40 +0800</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>大模型微调知识全景</title>
+      <link>http://localhost:1313/articles/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%BE%AE%E8%B0%83%E7%9F%A5%E8%AF%86%E5%85%A8%E6%99%AF/</link>
+      <pubDate>Thu, 05 Dec 2024 10:00:40 +0800</pubDate>
+      <author>youremail@example.com (Shanshan Shen)</author>
+      <guid>http://localhost:1313/articles/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%BE%AE%E8%B0%83%E7%9F%A5%E8%AF%86%E5%85%A8%E6%99%AF/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/articles/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%BE%AE%E8%B0%83%E7%9F%A5%E8%AF%86%E5%85%A8%E6%99%AF/featured.jpg" />
+    </item>
+    
     <item>
       <title>我的技术博客 | 总览</title>
       <link>http://localhost:1313/articles/%E6%88%91%E7%9A%84%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2-%E6%80%BB%E8%A7%88/</link>
@@ -178,26 +188,6 @@
       <guid>http://localhost:1313/articles/%E5%AF%8C%E7%88%B8%E7%88%B8-%E7%A9%B7%E7%88%B8%E7%88%B8%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-%E8%B4%A2%E5%95%86%E6%95%99%E8%82%B2%E5%90%AF%E8%92%99%E4%B9%8B%E4%BD%9C/</guid>
       <description></description>
       <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/articles/%E5%AF%8C%E7%88%B8%E7%88%B8-%E7%A9%B7%E7%88%B8%E7%88%B8%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-%E8%B4%A2%E5%95%86%E6%95%99%E8%82%B2%E5%90%AF%E8%92%99%E4%B9%8B%E4%BD%9C/featured.jpg" />
-    </item>
-    
-    <item>
-      <title>想让你的录音更好听吗？ | 吉他混音的一些经验分享</title>
-      <link>http://localhost:1313/articles/%E6%83%B3%E8%AE%A9%E4%BD%A0%E7%9A%84%E5%BD%95%E9%9F%B3%E6%9B%B4%E5%A5%BD%E5%90%AC%E5%90%97-%E5%90%89%E4%BB%96%E6%B7%B7%E9%9F%B3%E7%9A%84%E4%B8%80%E4%BA%9B%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/</link>
-      <pubDate>Wed, 25 Jul 2018 00:35:37 +0000</pubDate>
-      <author>youremail@example.com (Shanshan Shen)</author>
-      <guid>http://localhost:1313/articles/%E6%83%B3%E8%AE%A9%E4%BD%A0%E7%9A%84%E5%BD%95%E9%9F%B3%E6%9B%B4%E5%A5%BD%E5%90%AC%E5%90%97-%E5%90%89%E4%BB%96%E6%B7%B7%E9%9F%B3%E7%9A%84%E4%B8%80%E4%BA%9B%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/</guid>
-      <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/articles/%E6%83%B3%E8%AE%A9%E4%BD%A0%E7%9A%84%E5%BD%95%E9%9F%B3%E6%9B%B4%E5%A5%BD%E5%90%AC%E5%90%97-%E5%90%89%E4%BB%96%E6%B7%B7%E9%9F%B3%E7%9A%84%E4%B8%80%E4%BA%9B%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/featured.jpg" />
-    </item>
-    
-    <item>
-      <title>如何看懂一篇乐谱的演奏顺序？</title>
-      <link>http://localhost:1313/articles/%E5%A6%82%E4%BD%95%E7%9C%8B%E6%87%82%E4%B8%80%E7%AF%87%E4%B9%90%E8%B0%B1%E7%9A%84%E6%BC%94%E5%A5%8F%E9%A1%BA%E5%BA%8F/</link>
-      <pubDate>Wed, 14 Feb 2018 23:52:08 +0000</pubDate>
-      <author>youremail@example.com (Shanshan Shen)</author>
-      <guid>http://localhost:1313/articles/%E5%A6%82%E4%BD%95%E7%9C%8B%E6%87%82%E4%B8%80%E7%AF%87%E4%B9%90%E8%B0%B1%E7%9A%84%E6%BC%94%E5%A5%8F%E9%A1%BA%E5%BA%8F/</guid>
-      <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/articles/%E5%A6%82%E4%BD%95%E7%9C%8B%E6%87%82%E4%B8%80%E7%AF%87%E4%B9%90%E8%B0%B1%E7%9A%84%E6%BC%94%E5%A5%8F%E9%A1%BA%E5%BA%8F/featured.jpg" />
     </item>
     
   </channel>

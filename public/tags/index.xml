@@ -9,7 +9,47 @@
     <managingEditor>youremail@example.com (Shanshan Shen)</managingEditor>
     <webMaster>youremail@example.com (Shanshan Shen)</webMaster>
     <copyright>© 2024 Shanshan Shen</copyright>
-    <lastBuildDate>Sat, 23 Nov 2024 18:59:01 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 05 Dec 2024 10:00:40 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI</title>
+      <link>http://localhost:1313/tags/ai/</link>
+      <pubDate>Thu, 05 Dec 2024 10:00:40 +0800</pubDate>
+      <author>youremail@example.com (Shanshan Shen)</author>
+      <guid>http://localhost:1313/tags/ai/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>LLM</title>
+      <link>http://localhost:1313/tags/llm/</link>
+      <pubDate>Thu, 05 Dec 2024 10:00:40 +0800</pubDate>
+      <author>youremail@example.com (Shanshan Shen)</author>
+      <guid>http://localhost:1313/tags/llm/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>大模型微调</title>
+      <link>http://localhost:1313/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%BE%AE%E8%B0%83/</link>
+      <pubDate>Thu, 05 Dec 2024 10:00:40 +0800</pubDate>
+      <author>youremail@example.com (Shanshan Shen)</author>
+      <guid>http://localhost:1313/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%BE%AE%E8%B0%83/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>论文精读</title>
+      <link>http://localhost:1313/tags/%E8%AE%BA%E6%96%87%E7%B2%BE%E8%AF%BB/</link>
+      <pubDate>Thu, 05 Dec 2024 10:00:40 +0800</pubDate>
+      <author>youremail@example.com (Shanshan Shen)</author>
+      <guid>http://localhost:1313/tags/%E8%AE%BA%E6%96%87%E7%B2%BE%E8%AF%BB/</guid>
+      <description></description>
+      
+    </item>
+    
     <item>
       <title>博客汇总</title>
       <link>http://localhost:1313/tags/%E5%8D%9A%E5%AE%A2%E6%B1%87%E6%80%BB/</link>
@@ -26,46 +66,6 @@
       <pubDate>Sat, 23 Nov 2024 10:13:27 +0800</pubDate>
       <author>youremail@example.com (Shanshan Shen)</author>
       <guid>http://localhost:1313/tags/%E4%B9%A6%E5%8D%95%E6%B1%87%E6%80%BB/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>AI</title>
-      <link>http://localhost:1313/tags/ai/</link>
-      <pubDate>Wed, 13 Nov 2024 17:05:40 +0000</pubDate>
-      <author>youremail@example.com (Shanshan Shen)</author>
-      <guid>http://localhost:1313/tags/ai/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>LLM</title>
-      <link>http://localhost:1313/tags/llm/</link>
-      <pubDate>Wed, 13 Nov 2024 17:05:40 +0000</pubDate>
-      <author>youremail@example.com (Shanshan Shen)</author>
-      <guid>http://localhost:1313/tags/llm/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>大模型微调</title>
-      <link>http://localhost:1313/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%BE%AE%E8%B0%83/</link>
-      <pubDate>Wed, 13 Nov 2024 17:05:40 +0000</pubDate>
-      <author>youremail@example.com (Shanshan Shen)</author>
-      <guid>http://localhost:1313/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%BE%AE%E8%B0%83/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>论文精读</title>
-      <link>http://localhost:1313/tags/%E8%AE%BA%E6%96%87%E7%B2%BE%E8%AF%BB/</link>
-      <pubDate>Wed, 13 Nov 2024 17:05:40 +0000</pubDate>
-      <author>youremail@example.com (Shanshan Shen)</author>
-      <guid>http://localhost:1313/tags/%E8%AE%BA%E6%96%87%E7%B2%BE%E8%AF%BB/</guid>
       <description></description>
       
     </item>
@@ -266,26 +266,6 @@
       <pubDate>Tue, 07 May 2024 22:11:47 +0000</pubDate>
       <author>youremail@example.com (Shanshan Shen)</author>
       <guid>http://localhost:1313/tags/%E7%BB%8F%E6%B5%8E%E5%AD%A6/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>混音</title>
-      <link>http://localhost:1313/tags/%E6%B7%B7%E9%9F%B3/</link>
-      <pubDate>Wed, 25 Jul 2018 00:35:37 +0000</pubDate>
-      <author>youremail@example.com (Shanshan Shen)</author>
-      <guid>http://localhost:1313/tags/%E6%B7%B7%E9%9F%B3/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>乐理</title>
-      <link>http://localhost:1313/tags/%E4%B9%90%E7%90%86/</link>
-      <pubDate>Wed, 14 Feb 2018 23:52:08 +0000</pubDate>
-      <author>youremail@example.com (Shanshan Shen)</author>
-      <guid>http://localhost:1313/tags/%E4%B9%90%E7%90%86/</guid>
       <description></description>
       
     </item>

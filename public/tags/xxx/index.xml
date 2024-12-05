@@ -9,15 +9,15 @@
     <managingEditor>youremail@example.com (Shanshan Shen)</managingEditor>
     <webMaster>youremail@example.com (Shanshan Shen)</webMaster>
     <copyright>© 2024 Shanshan Shen</copyright>
-    <lastBuildDate>Sat, 23 Nov 2024 10:13:27 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/xxx/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 05 Dec 2024 10:00:40 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/xxx/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>我的书单 | 总览</title>
-      <link>http://localhost:1313/articles/%E6%88%91%E7%9A%84%E4%B9%A6%E5%8D%95-%E6%80%BB%E8%A7%88/</link>
-      <pubDate>Sat, 23 Nov 2024 10:13:27 +0800</pubDate>
+      <title>333</title>
+      <link>http://localhost:1313/articles/333/</link>
+      <pubDate>Thu, 05 Dec 2024 10:00:40 +0800</pubDate>
       <author>youremail@example.com (Shanshan Shen)</author>
-      <guid>http://localhost:1313/articles/%E6%88%91%E7%9A%84%E4%B9%A6%E5%8D%95-%E6%80%BB%E8%A7%88/</guid>
+      <guid>http://localhost:1313/articles/333/</guid>
       <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/articles/%E6%88%91%E7%9A%84%E4%B9%A6%E5%8D%95-%E6%80%BB%E8%A7%88/featured.jpg" />
+      
     </item>
     
   </channel>
