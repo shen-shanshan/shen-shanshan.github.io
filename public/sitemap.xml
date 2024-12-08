@@ -3,14 +3,20 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
+    <loc>http://localhost:1313/articles/%E8%A2%AB%E8%AE%A8%E5%8E%8C%E7%9A%84%E5%8B%87%E6%B0%94%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-%E6%8E%A5%E7%BA%B3%E8%87%AA%E6%88%91%E5%8B%87%E6%95%A2%E5%9C%B0%E6%84%9F%E5%8F%97%E7%94%9F%E6%B4%BB/</loc>
+    <lastmod>2024-12-07T11:34:17+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>http://localhost:1313/articles/</loc>
-    <lastmod>2024-12-05T10:00:40+08:00</lastmod>
+    <lastmod>2024-12-07T11:34:17+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2024-12-05T10:00:40+08:00</lastmod>
+    <lastmod>2024-12-07T11:34:17+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
