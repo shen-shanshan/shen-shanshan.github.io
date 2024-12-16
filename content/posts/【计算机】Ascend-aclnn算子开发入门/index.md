@@ -70,9 +70,9 @@ Task 或 Kernel，是 Device 上真正的任务执行体。
 
 > 参考资料：
 >
-> - [<u>Ascend 算子开发基本概念</u>](https://www.hiascend.com/doc_center/source/zh/CANNCommunityEdition/80RC3alpha001/devguide/appdevg/aclpythondevg/aclpythondevg_0004.html)；
-> - [<u>CUDA 基础</u>](https://www.cnblogs.com/LLW-NEU/p/16219611.html)；
-> - [<u>CUDA 介绍</u>](https://juniorprincewang.github.io/2018/01/12/CUDA-logic/)。
+> - [<u>Ascend 算子开发基本概念</u>](https://www.hiascend.com/doc_center/source/zh/CANNCommunityEdition/80RC3alpha001/devguide/appdevg/aclpythondevg/aclpythondevg_0004.html)
+> - [<u>CUDA 基础</u>](https://www.cnblogs.com/LLW-NEU/p/16219611.html)
+> - [<u>CUDA 介绍</u>](https://juniorprincewang.github.io/2018/01/12/CUDA-logic/)
 
 ## 三、单算子开发
 
@@ -102,8 +102,8 @@ Task 或 Kernel，是 Device 上真正的任务执行体。
 
 > 参考资料：
 >
-> - [<u>单算子调用基础知识</u>](https://www.hiascend.com/document/detail/zh/CANNCommunityEdition/80RC3alpha003/devguide/appdevg/aclcppdevg/aclcppdevg_000016.html)；
-> - [<u>Ascend 开源融合算子</u>](https://gitee.com/ascend/cann-ops-adv)。
+> - [<u>单算子调用基础知识</u>](https://www.hiascend.com/document/detail/zh/CANNCommunityEdition/80RC3alpha003/devguide/appdevg/aclcppdevg/aclcppdevg_000016.html)
+> - [<u>Ascend 开源融合算子</u>](https://gitee.com/ascend/cann-ops-adv)
 
 ## 四、代码实现
 
@@ -111,13 +111,13 @@ Task 或 Kernel，是 Device 上真正的任务执行体。
 
 > 更详细的 API 文档可以参考：
 >
-> - 加法算子：[<u>aclnnAdd</u>](https://www.hiascend.com/document/detail/zh/CANNCommunityEdition/80RC3alpha003/apiref/aolapi/context/common/aclnn_domains.md?sub_id=%2Fzh%2FCANNCommunityEdition%2F80RC3alpha003%2Fapiref%2Faolapi%2Fcontext%2FaclnnAdd%26aclnnInplaceAdd.md)；
-> - 乘法算子：[<u>aclnnMatmul</u>](https://www.hiascend.com/document/detail/zh/CANNCommunityEdition/80RC3alpha003/apiref/aolapi/context/aclnnMatmul.md)。
+> - 加法算子：[<u>aclnnAdd</u>](https://www.hiascend.com/document/detail/zh/CANNCommunityEdition/80RC3alpha003/apiref/aolapi/context/common/aclnn_domains.md?sub_id=%2Fzh%2FCANNCommunityEdition%2F80RC3alpha003%2Fapiref%2Faolapi%2Fcontext%2FaclnnAdd%26aclnnInplaceAdd.md)
+> - 乘法算子：[<u>aclnnMatmul</u>](https://www.hiascend.com/document/detail/zh/CANNCommunityEdition/80RC3alpha003/apiref/aolapi/context/aclnnMatmul.md)
 
 ### 4.1 环境搭建
 
-- [<u>快速安装昇腾环境</u>](https://ascend.github.io/docs/sources/ascend/quick_install.html)；
-- [<u>基于 EulerOS & Ascend NPU 搭建 PyTorch 远程开发环境</u>](https://blog.csdn.net/weixin_44162047/article/details/142502025?spm=1001.2014.3001.5502)。
+- [<u>快速安装昇腾环境</u>](https://ascend.github.io/docs/sources/ascend/quick_install.html)
+- [<u>基于 EulerOS & Ascend NPU 搭建 PyTorch 远程开发环境</u>](https://blog.csdn.net/weixin_44162047/article/details/142502025?spm=1001.2014.3001.5502)
 
 ### 4.2 单算子开发流程
 
@@ -604,7 +604,7 @@ result[8] is: 51.000000
 
 > 参考资料：
 >
-> - [<u>Ascend 算子开发指南</u>](https://github.com/wangshuai09/Notebook/blob/main/Ascend%E7%AE%97%E5%AD%90%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/aclnn%E7%AE%97%E5%AD%90%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97.md)；
-> - [<u>CANN 社区版开发文档</u>](https://www.hiascend.com/document/detail/zh/CANNCommunityEdition/80RC3alpha003/quickstart/quickstart/quickstart_18_0001.html)；
-> - [<u>调用 NN 算子接口示例代码</u>](https://www.hiascend.com/document/detail/zh/CANNCommunityEdition/80RC3alpha003/devguide/appdevg/aclcppdevg/aclcppdevg_000019.html)；
-> - [<u>算子加速库接口</u>](https://www.hiascend.com/document/detail/zh/CANNCommunityEdition/80RC3alpha003/apiref/aolapi/operatorlist_0001.html)。
+> - [<u>Ascend 算子开发指南</u>](https://github.com/wangshuai09/Notebook/blob/main/Ascend%E7%AE%97%E5%AD%90%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/aclnn%E7%AE%97%E5%AD%90%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97.md)
+> - [<u>CANN 社区版开发文档</u>](https://www.hiascend.com/document/detail/zh/CANNCommunityEdition/80RC3alpha003/quickstart/quickstart/quickstart_18_0001.html)
+> - [<u>调用 NN 算子接口示例代码</u>](https://www.hiascend.com/document/detail/zh/CANNCommunityEdition/80RC3alpha003/devguide/appdevg/aclcppdevg/aclcppdevg_000019.html)
+> - [<u>算子加速库接口</u>](https://www.hiascend.com/document/detail/zh/CANNCommunityEdition/80RC3alpha003/apiref/aolapi/operatorlist_0001.html)

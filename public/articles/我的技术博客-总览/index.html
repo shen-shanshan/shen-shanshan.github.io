@@ -110,7 +110,7 @@
     "keywords": ["博客汇总"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "127"
+    "wordCount": "109"
   }]
   </script>
 
@@ -616,7 +616,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2024-11-23T18:59:01&#43;08:00">2024-11-23</time><span class="px-2 text-primary-500">&middot;</span><span>127 words</span><span class="px-2 text-primary-500">&middot;</span>
+  <time datetime="2024-11-23T18:59:01&#43;08:00">2024-11-23</time><span class="px-2 text-primary-500">&middot;</span><span>109 words</span><span class="px-2 text-primary-500">&middot;</span>
 
 
 <script type="text/javascript" src="/js/zen-mode.min.63c8a202661f4a2063fdc2706685d668e8ea3da613da2224e9da527e5876e4f53dcac39ab60732626fb4151feae5d430d0cf44731e5d3c726522fcc1519c1547.js" integrity="sha512-Y8iiAmYfSiBj/cJwZoXWaOjqPaYT2iIk6dpSflh25PU9ysOatgcyYm&#43;0FR/q5dQw0M9Ecx5dPHJlIvzBUZwVRw=="></script>
@@ -717,29 +717,20 @@
     class="min-w-[220px] py-2 border-dotted ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#一前言">一、前言</a></li>
-    <li><a href="#二ai-infra">二、AI Infra</a>
+    <li><a href="#ai-infra">AI Infra</a>
       <ul>
-        <li><a href="#21-环境搭建">2.1 环境搭建</a></li>
-        <li><a href="#22-硬件架构">2.2 硬件架构</a></li>
-        <li><a href="#23-算子开发">2.3 算子开发</a></li>
+        <li><a href="#环境搭建">环境搭建</a></li>
+        <li><a href="#硬件架构">硬件架构</a></li>
+        <li><a href="#算子开发">算子开发</a></li>
       </ul>
     </li>
-    <li><a href="#三llm">三、LLM</a>
+    <li><a href="#llm">LLM</a>
       <ul>
-        <li><a href="#31-大模型微调">3.1 大模型微调</a></li>
+        <li><a href="#大模型微调">大模型微调</a></li>
       </ul>
     </li>
-    <li><a href="#四java">四、Java</a>
-      <ul>
-        <li><a href="#41-编译问题">4.1 编译问题</a></li>
-      </ul>
-    </li>
-    <li><a href="#五git">五、Git</a>
-      <ul>
-        <li><a href="#51-实践案例">5.1 实践案例</a></li>
-      </ul>
-    </li>
+    <li><a href="#java">Java</a></li>
+    <li><a href="#git">Git</a></li>
   </ul>
 </nav>
   </div>
@@ -753,29 +744,20 @@
     class="py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#一前言">一、前言</a></li>
-    <li><a href="#二ai-infra">二、AI Infra</a>
+    <li><a href="#ai-infra">AI Infra</a>
       <ul>
-        <li><a href="#21-环境搭建">2.1 环境搭建</a></li>
-        <li><a href="#22-硬件架构">2.2 硬件架构</a></li>
-        <li><a href="#23-算子开发">2.3 算子开发</a></li>
+        <li><a href="#环境搭建">环境搭建</a></li>
+        <li><a href="#硬件架构">硬件架构</a></li>
+        <li><a href="#算子开发">算子开发</a></li>
       </ul>
     </li>
-    <li><a href="#三llm">三、LLM</a>
+    <li><a href="#llm">LLM</a>
       <ul>
-        <li><a href="#31-大模型微调">3.1 大模型微调</a></li>
+        <li><a href="#大模型微调">大模型微调</a></li>
       </ul>
     </li>
-    <li><a href="#四java">四、Java</a>
-      <ul>
-        <li><a href="#41-编译问题">4.1 编译问题</a></li>
-      </ul>
-    </li>
-    <li><a href="#五git">五、Git</a>
-      <ul>
-        <li><a href="#51-实践案例">5.1 实践案例</a></li>
-      </ul>
-    </li>
+    <li><a href="#java">Java</a></li>
+    <li><a href="#git">Git</a></li>
   </ul>
 </nav>
   </div>
@@ -857,19 +839,8 @@
 
 
         <div class="article-content max-w-prose mb-20">
-          
-
-<h2 class="relative group">一、前言 
-    <div id="%E4%B8%80%E5%89%8D%E8%A8%80" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%E4%B8%80%E5%89%8D%E8%A8%80" aria-label="Anchor">#</a>
-    </span>        
-    
-</h2>
-<p>本文梳理了我的所有技术博客，并按技术领域进行了分类，主要聚焦于 AI Infra 和 LLM 领域，具体的内容如下所示。</p>
+          <!-- ## 一、前言 -->
+<!-- 本文梳理了我的所有技术博客，并按技术领域进行了分类，主要聚焦于 AI Infra 和 LLM 领域，具体的内容如下所示。 -->
 <!-- 
 <section class="space-y-10 w-full">
     
@@ -877,25 +848,25 @@
 </section> -->
 
 
-<h2 class="relative group">二、AI Infra 
-    <div id="%E4%BA%8Cai-infra" class="anchor"></div>
+<h2 class="relative group">AI Infra 
+    <div id="ai-infra" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%E4%BA%8Cai-infra" aria-label="Anchor">#</a>
+            style="text-decoration-line: none !important;" href="#ai-infra" aria-label="Anchor">#</a>
     </span>        
     
 </h2>
 
 
-<h3 class="relative group">2.1 环境搭建 
-    <div id="21-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA" class="anchor"></div>
+<h3 class="relative group">环境搭建 
+    <div id="%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#21-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA" aria-label="Anchor">#</a>
+            style="text-decoration-line: none !important;" href="#%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA" aria-label="Anchor">#</a>
     </span>        
     
 </h3>
@@ -1067,13 +1038,13 @@
 </section>
 
 
-<h3 class="relative group">2.2 硬件架构 
-    <div id="22-%E7%A1%AC%E4%BB%B6%E6%9E%B6%E6%9E%84" class="anchor"></div>
+<h3 class="relative group">硬件架构 
+    <div id="%E7%A1%AC%E4%BB%B6%E6%9E%B6%E6%9E%84" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#22-%E7%A1%AC%E4%BB%B6%E6%9E%B6%E6%9E%84" aria-label="Anchor">#</a>
+            style="text-decoration-line: none !important;" href="#%E7%A1%AC%E4%BB%B6%E6%9E%B6%E6%9E%84" aria-label="Anchor">#</a>
     </span>        
     
 </h3>
@@ -1412,13 +1383,13 @@
 </section>
 
 
-<h3 class="relative group">2.3 算子开发 
-    <div id="23-%E7%AE%97%E5%AD%90%E5%BC%80%E5%8F%91" class="anchor"></div>
+<h3 class="relative group">算子开发 
+    <div id="%E7%AE%97%E5%AD%90%E5%BC%80%E5%8F%91" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#23-%E7%AE%97%E5%AD%90%E5%BC%80%E5%8F%91" aria-label="Anchor">#</a>
+            style="text-decoration-line: none !important;" href="#%E7%AE%97%E5%AD%90%E5%BC%80%E5%8F%91" aria-label="Anchor">#</a>
     </span>        
     
 </h3>
@@ -1598,25 +1569,25 @@
 </section>
 
 
-<h2 class="relative group">三、LLM 
-    <div id="%E4%B8%89llm" class="anchor"></div>
+<h2 class="relative group">LLM 
+    <div id="llm" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%E4%B8%89llm" aria-label="Anchor">#</a>
+            style="text-decoration-line: none !important;" href="#llm" aria-label="Anchor">#</a>
     </span>        
     
 </h2>
 
 
-<h3 class="relative group">3.1 大模型微调 
-    <div id="31-%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%BE%AE%E8%B0%83" class="anchor"></div>
+<h3 class="relative group">大模型微调 
+    <div id="%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%BE%AE%E8%B0%83" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#31-%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%BE%AE%E8%B0%83" aria-label="Anchor">#</a>
+            style="text-decoration-line: none !important;" href="#%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%BE%AE%E8%B0%83" aria-label="Anchor">#</a>
     </span>        
     
 </h3>
@@ -1700,7 +1671,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2024-12-05T10:00:40&#43;08:00">2024-12-05</time><span class="px-2 text-primary-500">&middot;</span><span>1147 words</span>
+  <time datetime="2024-12-05T10:00:40&#43;08:00">2024-12-05</time><span class="px-2 text-primary-500">&middot;</span><span>1146 words</span>
   
 
   
@@ -1867,7 +1838,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2024-11-13T17:05:40&#43;00:00">2024-11-13</time><span class="px-2 text-primary-500">&middot;</span><span>532 words</span>
+  <time datetime="2024-11-13T17:05:40&#43;00:00">2024-11-13</time><span class="px-2 text-primary-500">&middot;</span><span>529 words</span>
   
 
   
@@ -1955,28 +1926,16 @@
 </section>
 
 
-<h2 class="relative group">四、Java 
-    <div id="%E5%9B%9Bjava" class="anchor"></div>
+<h2 class="relative group">Java 
+    <div id="java" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%E5%9B%9Bjava" aria-label="Anchor">#</a>
+            style="text-decoration-line: none !important;" href="#java" aria-label="Anchor">#</a>
     </span>        
     
 </h2>
-
-
-<h3 class="relative group">4.1 编译问题 
-    <div id="41-%E7%BC%96%E8%AF%91%E9%97%AE%E9%A2%98" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#41-%E7%BC%96%E8%AF%91%E9%97%AE%E9%A2%98" aria-label="Anchor">#</a>
-    </span>        
-    
-</h3>
 
 <section class="space-y-10 w-full">
     
@@ -2137,28 +2096,16 @@
 </section>
 
 
-<h2 class="relative group">五、Git 
-    <div id="%E4%BA%94git" class="anchor"></div>
+<h2 class="relative group">Git 
+    <div id="git" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%E4%BA%94git" aria-label="Anchor">#</a>
+            style="text-decoration-line: none !important;" href="#git" aria-label="Anchor">#</a>
     </span>        
     
 </h2>
-
-
-<h3 class="relative group">5.1 实践案例 
-    <div id="51-%E5%AE%9E%E8%B7%B5%E6%A1%88%E4%BE%8B" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#51-%E5%AE%9E%E8%B7%B5%E6%A1%88%E4%BE%8B" aria-label="Anchor">#</a>
-    </span>        
-    
-</h3>
 
 <section class="space-y-10 w-full">
     
@@ -2331,8 +2278,8 @@
           
         
       <script>
-        var oid = "views_posts\\【计算机】技术文章总览\\index.md"
-        var oid_likes = "likes_posts\\【计算机】技术文章总览\\index.md"
+        var oid = "views_posts\/【计算机】我的技术博客-总览\/index.md"
+        var oid_likes = "likes_posts\/【计算机】我的技术博客-总览\/index.md"
       </script>
       
       

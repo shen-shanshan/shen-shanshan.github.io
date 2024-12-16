@@ -261,8 +261,8 @@ conda list
 
 > 参考资料：
 >
-> - [<u>安装 miniconda aarch64 版本</u>](https://blog.csdn.net/Damien_J_Scott/article/details/136563747)；
-> - [<u>conda 环境启用 & 基本使用</u>](https://www.cnblogs.com/milton/p/18023969)。
+> - [<u>安装 miniconda aarch64 版本</u>](https://blog.csdn.net/Damien_J_Scott/article/details/136563747)
+> - [<u>conda 环境启用 & 基本使用</u>](https://www.cnblogs.com/milton/p/18023969)
 
 设置 miniconda 的 channel：
 
@@ -450,8 +450,8 @@ sudo /etc/init.d/ssh restart
 
 > 参考资料：
 >
-> - [<u>Ubuntu 安装 SSH SERVER</u>](https://blog.csdn.net/qq_39698985/article/details/136193187)；
-> - [<u>使用 Docker 容器配置 ssh 服务，远程直接进入容器</u>](https://blog.csdn.net/qq_33259057/article/details/124737659)。
+> - [<u>Ubuntu 安装 SSH SERVER</u>](https://blog.csdn.net/qq_39698985/article/details/136193187)
+> - [<u>使用 Docker 容器配置 ssh 服务，远程直接进入容器</u>](https://blog.csdn.net/qq_33259057/article/details/124737659)
 
 ### 5.2 配置 VSCode 客户端
 

@@ -193,6 +193,6 @@ $$
 
 ## 五、参考资料
 
-- [1] [<u>LoRA: Low-Rank Adaptation of Large Language Models</u>](https://arxiv.org/abs/2106.09685)
-- [2] [<u>《统计学习方法》</u>](https://book.douban.com/subject/33437381/)
-- [3] [<u>图解大模型微调系列之：大模型低秩适配器 LoRA（原理篇）</u>](https://zhuanlan.zhihu.com/p/646831196)
+- [<u>LoRA: Low-Rank Adaptation of Large Language Models</u>](https://arxiv.org/abs/2106.09685)
+- [<u>《统计学习方法》</u>](https://book.douban.com/subject/33437381/)
+- [<u>图解大模型微调系列之：大模型低秩适配器 LoRA（原理篇）</u>](https://zhuanlan.zhihu.com/p/646831196)

@@ -33,13 +33,13 @@ You can read the article showed below to get a whole picture of all the technica
 
 ### Reading notes
 
-You can read the article showed below to get a whole picture of all the books I have read, and the reading notes I have written are showed at the end of this article.
+You can read the article showed below to get a whole picture of all the books I have read, and the reading notes I have written are also showed here.
 
-{{< article link="/articles/%E6%88%91%E7%9A%84%E4%B9%A6%E5%8D%95-%E6%80%BB%E8%A7%88/" >}}
+{{< article link="/articles/%E6%88%91%E7%9A%84%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-%E6%80%BB%E8%A7%88/" >}}
 
 ### Others
 
-There are some other kinds of articles such as music learning notes, you can find them in the [Articles](https://shen-shanshan.github.io/articles/) page.
+There are some other kinds of articles such as some reflections in my life, you can find them in the [Articles](https://shen-shanshan.github.io/articles/) page.
 
 ---
 
