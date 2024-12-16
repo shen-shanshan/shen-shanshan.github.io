@@ -1,7 +1,7 @@
 ---
 title: 《小岛经济学》读书笔记 | 深入浅出经济学原理
 date: '2024-12-15T11:19:30+08:00'
-categories: "阅读
+categories: "阅读"
 tags: ["读书笔记", "经济学"]
 # summary: "xxx"
 # draft: false
