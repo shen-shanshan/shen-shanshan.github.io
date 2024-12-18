@@ -17,7 +17,7 @@ September 18th, 1998
     <img src="./images/me.jpg" width="180" alt="me">
 </center> -->
 
-Hello, I am currently a software engineer working at [Huawei Ascend](https://www.hiascend.com/), engaging in AI Infra and LLM. I have contributed to some open-source projects such as [vLLM](https://github.com/vllm-project/vllm), [SGLang](https://github.com/sgl-project/sglang) and [ChatTTS](https://github.com/2noise/ChatTTS), to build a easy-to-use software ecosystem for Ascend. Before this, I was a student at [Beijing Jiao Tong University](https://www.bjtu.edu.cn/) (BSc/MSc), majoring in communication engineering. You can see more projects at my [Github](https://github.com/shen-shanshan), or see my posts at [CSDN](https://blog.csdn.net/weixin_44162047?type=blog) and [Zhihu](https://www.zhihu.com/people/sss-53-26).
+Hello, I am currently a software engineer working at [Huawei Ascend](https://www.hiascend.com/), engaging in AI Infra and LLM. I have contributed to some open-source projects such as [vLLM](https://github.com/vllm-project/vllm), [llama.cpp](https://github.com/ggerganov/llama.cpp) and [ChatTTS](https://github.com/2noise/ChatTTS), to build a easy-to-use software ecosystem for Ascend. Before this, I was a student at [Beijing Jiao Tong University](https://www.bjtu.edu.cn/) (BSc/MSc), majoring in communication engineering. You can see more projects at my [Github](https://github.com/shen-shanshan), or see my posts at [CSDN](https://blog.csdn.net/weixin_44162047?type=blog) and [Zhihu](https://www.zhihu.com/people/sss-53-26).
 
 ---
 
@@ -87,7 +87,7 @@ Studying at School of Electronic and Information Engineering, majoring in commun
 
 ## Open Source Contribution
 
-I am a contributor to many open source projects on GitHub, which are showed below.
+I am a contributor to many open source projects on GitHub, which are shown below.
 
 {{< github repo="ggerganov/llama.cpp" >}}
 
@@ -118,7 +118,7 @@ I love reading books over last ten years, and here are books I highly recommende
 
 ### 🎸 Guitars
 
-I love listening to guitar music especially fingerstyle songs and may do some recordings myself when I come across some beautiful songs. My guitars and gears used for recording are showed below, and there are also my albums that have been published so far. You can find my music at <b><a href="https://space.bilibili.com/14112152">bilibili</a></b> or <b><a href="https://music.163.com/#/artist?id=62054947">NetEase Cloud Music</a></b>.
+I love listening to guitar music especially fingerstyle songs and may do some recordings myself when I come across some beautiful songs. My guitars and gears used for recording are shown below, and there are also my albums that have been published so far. You can find my music at <b><a href="https://space.bilibili.com/14112152">bilibili</a></b> or <b><a href="https://music.163.com/#/artist?id=62054947">NetEase Cloud Music</a></b>.
 
 {{< timeline >}}
 
@@ -171,7 +171,7 @@ This album is a collection of fingerstyle guitar and ukulele cover which contain
 
 ### 🏸 Badminton
 
-I love playing badminton and will participate in this activity 1~4 times a week. Awards I have received are showed below. Welcome to battle with me!
+I love playing badminton and will participate in this activity 1~4 times a week. Awards I have received are shown below. Welcome to battle with me!
 
 - <b><font color="#ff0000">Fourth place</font></b> in the Inter-Department Team Competition of Xian Huawei at 2024
 - <b><font color="#ff0000">Second place</font></b> in the Quality and Process IT Department Team Competition of Xian Huawei at 2024
