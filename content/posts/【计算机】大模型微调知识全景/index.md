@@ -56,6 +56,10 @@ tags: ["AI", "LLM", "大模型微调", "论文精读"]
 
 此外，还有一种不需要更新模型权重就可以完成微调的方法，叫做 **In-Context Learning**，通过在输入的 prompt 中提供与任务相关的上下文和例子，从而让模型能够更好地了理解我们的意图。
 
+**最新进展**：
+
+在 OpenAI 最新的发布会中，还提出了一种叫做 **RFT（Reinforcement Fine-Tuning）** 的微调技术，能够以奖励驱动的方式不断完善大模型所掌握的知识，更多细节可以参考这篇文章：[<u>What Is OpenAI's Reinforcement Fine-Tuning?</u>](https://www.datacamp.com/blog/reinforcement-fine-tuning)。
+
 ### 4.1 FFT 的优缺点
 
 **优点：**
@@ -106,7 +110,7 @@ tags: ["AI", "LLM", "大模型微调", "论文精读"]
 
 目前比较主流的几种参数高效微调方法包括：Prompt Tuning、Prefix Tuning、LoRA、QLoRA 等。
 
-论文[《Scaling Down to Scale Up: A Guide to Parameter-Efficient Fine-Tuning》](https://arxiv.org/abs/2303.15647)中展示了各类参数高效微调方法及其所属的类别，如下所示：
+论文[<u>《Scaling Down to Scale Up: A Guide to Parameter-Efficient Fine-Tuning》</u>](https://arxiv.org/abs/2303.15647)中展示了各类参数高效微调方法及其所属的类别，如下所示：
 
 ![1](./images/peft分类.png)
 
