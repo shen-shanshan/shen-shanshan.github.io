@@ -89,6 +89,10 @@ Studying at School of Electronic and Information Engineering, majoring in commun
 
 I am a contributor to many open source projects on GitHub, which are shown below.
 
+{{< github repo="vllm-project/vllm" >}}
+
+<br>
+
 {{< github repo="ggerganov/llama.cpp" >}}
 
 <br>
