@@ -7,9 +7,9 @@ showAuthor: false
 showRelatedContent: false
 ---
 
-## 年度书单
+## 读书报告
 
-{{< article link="/articles/2024-%E5%B9%B4%E5%BA%A6%E8%AF%BB%E4%B9%A6%E6%8A%A5%E5%91%8A/" >}}
+{{< article link="/articles/%E6%88%91%E7%9A%84-2024-%E5%B9%B4%E5%BA%A6%E8%AF%BB%E4%B9%A6%E6%8A%A5%E5%91%8A/" >}}
 
 ## 心理学
 

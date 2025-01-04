@@ -9,17 +9,7 @@
     <managingEditor>youremail@example.com (Shanshan Shen)</managingEditor>
     <webMaster>youremail@example.com (Shanshan Shen)</webMaster>
     <copyright>© 2025 Shanshan Shen</copyright>
-    <lastBuildDate>Fri, 03 Jan 2025 23:40:02 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>2024年度读书报告</title>
-      <link>http://localhost:1313/articles/2024%E5%B9%B4%E5%BA%A6%E8%AF%BB%E4%B9%A6%E6%8A%A5%E5%91%8A/</link>
-      <pubDate>Fri, 03 Jan 2025 23:40:02 +0800</pubDate>
-      <author>youremail@example.com (Shanshan Shen)</author>
-      <guid>http://localhost:1313/articles/2024%E5%B9%B4%E5%BA%A6%E8%AF%BB%E4%B9%A6%E6%8A%A5%E5%91%8A/</guid>
-      <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/articles/2024%E5%B9%B4%E5%BA%A6%E8%AF%BB%E4%B9%A6%E6%8A%A5%E5%91%8A/featured.jpg" />
-    </item>
-    
+    <lastBuildDate>Sun, 15 Dec 2024 11:19:30 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>《小岛经济学》读书笔记 | 深入浅出经济学原理</title>
       <link>http://localhost:1313/articles/%E5%B0%8F%E5%B2%9B%E7%BB%8F%E6%B5%8E%E5%AD%A6%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA%E7%BB%8F%E6%B5%8E%E5%AD%A6%E5%8E%9F%E7%90%86/</link>
@@ -38,6 +28,16 @@
       <guid>http://localhost:1313/articles/%E8%A2%AB%E8%AE%A8%E5%8E%8C%E7%9A%84%E5%8B%87%E6%B0%94%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-%E6%8E%A5%E7%BA%B3%E8%87%AA%E6%88%91%E5%8B%87%E6%95%A2%E5%9C%B0%E6%84%9F%E5%8F%97%E7%94%9F%E6%B4%BB/</guid>
       <description></description>
       <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/articles/%E8%A2%AB%E8%AE%A8%E5%8E%8C%E7%9A%84%E5%8B%87%E6%B0%94%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-%E6%8E%A5%E7%BA%B3%E8%87%AA%E6%88%91%E5%8B%87%E6%95%A2%E5%9C%B0%E6%84%9F%E5%8F%97%E7%94%9F%E6%B4%BB/featured.jpg" />
+    </item>
+    
+    <item>
+      <title>我的读书笔记 | 总览</title>
+      <link>http://localhost:1313/articles/%E6%88%91%E7%9A%84%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-%E6%80%BB%E8%A7%88/</link>
+      <pubDate>Sat, 23 Nov 2024 10:13:27 +0800</pubDate>
+      <author>youremail@example.com (Shanshan Shen)</author>
+      <guid>http://localhost:1313/articles/%E6%88%91%E7%9A%84%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-%E6%80%BB%E8%A7%88/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/articles/%E6%88%91%E7%9A%84%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-%E6%80%BB%E8%A7%88/featured.jpg" />
     </item>
     
     <item>
