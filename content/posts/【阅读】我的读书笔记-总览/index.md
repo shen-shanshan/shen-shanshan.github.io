@@ -2,11 +2,14 @@
 title: '我的读书笔记 | 总览'
 date: '2024-11-23T10:13:27+08:00'
 categories: "阅读"
-tags: ["书单汇总"]
-# summary: "xxx"
+tags: ["读书笔记", "书单"]
 showAuthor: false
 showRelatedContent: false
 ---
+
+## 年度书单
+
+{{< article link="/articles/2024-%E5%B9%B4%E5%BA%A6%E8%AF%BB%E4%B9%A6%E6%8A%A5%E5%91%8A/" >}}
 
 ## 心理学
 

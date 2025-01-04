@@ -116,7 +116,7 @@ In my spare time, I have many hobbies such as reading books, playing badminton a
 
 I love reading books over last ten years, and here are books I highly recommended.
 
-{{< article link="/articles/%E6%88%91%E7%9A%84%E4%B9%A6%E5%8D%95-%E6%80%BB%E8%A7%88/" >}}
+{{< article link="/articles/%E6%88%91%E7%9A%84%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-%E6%80%BB%E8%A7%88/" >}}
 
 ---
 
