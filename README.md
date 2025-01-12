@@ -107,8 +107,19 @@ You can see the roadmap of this site at [<u>here</u>](https://shen-shanshan.gith
 > - `\\` -> `\\\`
 > - `_` -> `\_`
 
+<!--
+
 ## References
 
 - [<u>jdhao's Blog</u>](https://jdhao.github.io/2018/10/10/hexo_to_hugo/)
 - [<u>Diara's Blog</u>](https://im.happytoo.cyou/)
 - [<u>ZSL's Blog</u>](https://www.zsl0621.cc/posts/hugo-blowfish-setup/)
+
+## 了解更多
+
+- 更多技术相关总结与分享欢迎查看我的个人博客：[<u>shen-shanshan.github.io</u>](https://github.com/shen-shanshan/shen-shanshan.github.io)
+- 一些零散的技术学习笔记与资料：[<u>cs-self-learning</u>](https://github.com/shen-shanshan/cs-self-learning)
+- 我的读书笔记：[<u>reading-makes-life-better</u>](https://github.com/shen-shanshan/reading-makes-life-better)
+- 近期工作：[<u>vllm-ascend</u>](https://github.com/cosdt/vllm-ascend)
+
+-->
