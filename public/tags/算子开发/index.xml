@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>算子开发 on Home</title>
-    <link>http://localhost:1313/tags/%E7%AE%97%E5%AD%90%E5%BC%80%E5%8F%91/</link>
+    <link>https://shen-shanshan.github.io/tags/%E7%AE%97%E5%AD%90%E5%BC%80%E5%8F%91/</link>
     <description>Recent content in 算子开发 on Home</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>youremail@example.com (Shanshan Shen)</managingEditor>
     <webMaster>youremail@example.com (Shanshan Shen)</webMaster>
     <copyright>© 2025 Shanshan Shen</copyright>
-    <lastBuildDate>Wed, 23 Oct 2024 15:52:36 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/%E7%AE%97%E5%AD%90%E5%BC%80%E5%8F%91/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 23 Oct 2024 15:52:36 +0000</lastBuildDate><atom:link href="https://shen-shanshan.github.io/tags/%E7%AE%97%E5%AD%90%E5%BC%80%E5%8F%91/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Ascend aclnn 算子开发入门</title>
-      <link>http://localhost:1313/articles/ascend-aclnn-%E7%AE%97%E5%AD%90%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/</link>
+      <link>https://shen-shanshan.github.io/articles/ascend-aclnn-%E7%AE%97%E5%AD%90%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/</link>
       <pubDate>Wed, 23 Oct 2024 15:52:36 +0000</pubDate>
       <author>youremail@example.com (Shanshan Shen)</author>
-      <guid>http://localhost:1313/articles/ascend-aclnn-%E7%AE%97%E5%AD%90%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/</guid>
+      <guid>https://shen-shanshan.github.io/articles/ascend-aclnn-%E7%AE%97%E5%AD%90%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/</guid>
       <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/articles/ascend-aclnn-%E7%AE%97%E5%AD%90%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/featured.jpg" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://shen-shanshan.github.io/articles/ascend-aclnn-%E7%AE%97%E5%AD%90%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/featured.jpg" />
     </item>
     
   </channel>
