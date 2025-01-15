@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Home</title>
-    <link>https://shen-shanshan.github.io/categories/</link>
+    <link>http://localhost:1313/categories/</link>
     <description>Recent content in Categories on Home</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>youremail@example.com (Shanshan Shen)</managingEditor>
     <webMaster>youremail@example.com (Shanshan Shen)</webMaster>
     <copyright>© 2025 Shanshan Shen</copyright>
-    <lastBuildDate>Fri, 03 Jan 2025 23:40:02 +0800</lastBuildDate><atom:link href="https://shen-shanshan.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 15 Jan 2025 15:02:45 +0800</lastBuildDate><atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>阅读</title>
-      <link>https://shen-shanshan.github.io/categories/%E9%98%85%E8%AF%BB/</link>
-      <pubDate>Fri, 03 Jan 2025 23:40:02 +0800</pubDate>
+      <title>计算机</title>
+      <link>http://localhost:1313/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/</link>
+      <pubDate>Wed, 15 Jan 2025 15:02:45 +0800</pubDate>
       <author>youremail@example.com (Shanshan Shen)</author>
-      <guid>https://shen-shanshan.github.io/categories/%E9%98%85%E8%AF%BB/</guid>
+      <guid>http://localhost:1313/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/</guid>
       <description></description>
       
     </item>
     
     <item>
-      <title>计算机</title>
-      <link>https://shen-shanshan.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/</link>
-      <pubDate>Thu, 05 Dec 2024 10:00:40 +0800</pubDate>
+      <title>阅读</title>
+      <link>http://localhost:1313/categories/%E9%98%85%E8%AF%BB/</link>
+      <pubDate>Fri, 03 Jan 2025 23:40:02 +0800</pubDate>
       <author>youremail@example.com (Shanshan Shen)</author>
-      <guid>https://shen-shanshan.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/</guid>
+      <guid>http://localhost:1313/categories/%E9%98%85%E8%AF%BB/</guid>
       <description></description>
       
     </item>

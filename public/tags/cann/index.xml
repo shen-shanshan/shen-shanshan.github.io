@@ -2,42 +2,42 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>CANN on Home</title>
-    <link>https://shen-shanshan.github.io/tags/cann/</link>
+    <link>http://localhost:1313/tags/cann/</link>
     <description>Recent content in CANN on Home</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>youremail@example.com (Shanshan Shen)</managingEditor>
     <webMaster>youremail@example.com (Shanshan Shen)</webMaster>
     <copyright>© 2025 Shanshan Shen</copyright>
-    <lastBuildDate>Wed, 23 Oct 2024 15:52:36 +0000</lastBuildDate><atom:link href="https://shen-shanshan.github.io/tags/cann/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 23 Oct 2024 15:52:36 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/cann/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Ascend aclnn 算子开发入门</title>
-      <link>https://shen-shanshan.github.io/articles/ascend-aclnn-%E7%AE%97%E5%AD%90%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/</link>
+      <link>http://localhost:1313/articles/ascend-aclnn-%E7%AE%97%E5%AD%90%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/</link>
       <pubDate>Wed, 23 Oct 2024 15:52:36 +0000</pubDate>
       <author>youremail@example.com (Shanshan Shen)</author>
-      <guid>https://shen-shanshan.github.io/articles/ascend-aclnn-%E7%AE%97%E5%AD%90%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/</guid>
+      <guid>http://localhost:1313/articles/ascend-aclnn-%E7%AE%97%E5%AD%90%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/</guid>
       <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://shen-shanshan.github.io/articles/ascend-aclnn-%E7%AE%97%E5%AD%90%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/featured.jpg" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/articles/ascend-aclnn-%E7%AE%97%E5%AD%90%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/featured.jpg" />
     </item>
     
     <item>
       <title>基于 EulerOS &amp; Ascend NPU 搭建 PyTorch 远程开发环境</title>
-      <link>https://shen-shanshan.github.io/articles/%E5%9F%BA%E4%BA%8E-euleros-ascend-npu-%E6%90%AD%E5%BB%BA-pytorch-%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/</link>
+      <link>http://localhost:1313/articles/%E5%9F%BA%E4%BA%8E-euleros-ascend-npu-%E6%90%AD%E5%BB%BA-pytorch-%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/</link>
       <pubDate>Tue, 24 Sep 2024 15:47:40 +0000</pubDate>
       <author>youremail@example.com (Shanshan Shen)</author>
-      <guid>https://shen-shanshan.github.io/articles/%E5%9F%BA%E4%BA%8E-euleros-ascend-npu-%E6%90%AD%E5%BB%BA-pytorch-%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/</guid>
+      <guid>http://localhost:1313/articles/%E5%9F%BA%E4%BA%8E-euleros-ascend-npu-%E6%90%AD%E5%BB%BA-pytorch-%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/</guid>
       <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://shen-shanshan.github.io/articles/%E5%9F%BA%E4%BA%8E-euleros-ascend-npu-%E6%90%AD%E5%BB%BA-pytorch-%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/featured.jpg" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/articles/%E5%9F%BA%E4%BA%8E-euleros-ascend-npu-%E6%90%AD%E5%BB%BA-pytorch-%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/featured.jpg" />
     </item>
     
     <item>
       <title>Ascend NPU 架构 &amp; CANN 平台入门学习</title>
-      <link>https://shen-shanshan.github.io/articles/ascend-npu-%E6%9E%B6%E6%9E%84-cann-%E5%B9%B3%E5%8F%B0%E5%85%A5%E9%97%A8%E5%AD%A6%E4%B9%A0/</link>
+      <link>http://localhost:1313/articles/ascend-npu-%E6%9E%B6%E6%9E%84-cann-%E5%B9%B3%E5%8F%B0%E5%85%A5%E9%97%A8%E5%AD%A6%E4%B9%A0/</link>
       <pubDate>Sat, 31 Aug 2024 15:35:00 +0000</pubDate>
       <author>youremail@example.com (Shanshan Shen)</author>
-      <guid>https://shen-shanshan.github.io/articles/ascend-npu-%E6%9E%B6%E6%9E%84-cann-%E5%B9%B3%E5%8F%B0%E5%85%A5%E9%97%A8%E5%AD%A6%E4%B9%A0/</guid>
+      <guid>http://localhost:1313/articles/ascend-npu-%E6%9E%B6%E6%9E%84-cann-%E5%B9%B3%E5%8F%B0%E5%85%A5%E9%97%A8%E5%AD%A6%E4%B9%A0/</guid>
       <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://shen-shanshan.github.io/articles/ascend-npu-%E6%9E%B6%E6%9E%84-cann-%E5%B9%B3%E5%8F%B0%E5%85%A5%E9%97%A8%E5%AD%A6%E4%B9%A0/featured.jpg" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/articles/ascend-npu-%E6%9E%B6%E6%9E%84-cann-%E5%B9%B3%E5%8F%B0%E5%85%A5%E9%97%A8%E5%AD%A6%E4%B9%A0/featured.jpg" />
     </item>
     
   </channel>

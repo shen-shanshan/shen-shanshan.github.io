@@ -31,6 +31,10 @@ showRelatedContent: false
 
 {{< article link="/articles/%E5%9F%BA%E4%BA%8E-euleros-ascend-npu-%E6%90%AD%E5%BB%BA-pytorch-%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/" >}}
 
+## Python
+
+{{< article link="/articles/%E6%B7%B1%E5%85%A5%E8%A7%A3%E6%9E%90-python-%E5%8C%85%E8%B0%83%E7%94%A8%E5%8E%9F%E7%90%86%E4%B8%8E%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/" >}}
+
 ## Git
 
 {{< article link="/articles/git-%E5%AE%9E%E8%B7%B5%E6%A1%88%E4%BE%8B-%E5%90%88%E5%B9%B6%E5%A4%9A%E4%B8%AA%E5%88%86%E6%95%A3%E7%9A%84-commit-%E8%8A%82%E7%82%B9/" >}}

@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>GPU on Home</title>
-    <link>https://shen-shanshan.github.io/tags/gpu/</link>
+    <link>http://localhost:1313/tags/gpu/</link>
     <description>Recent content in GPU on Home</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>youremail@example.com (Shanshan Shen)</managingEditor>
     <webMaster>youremail@example.com (Shanshan Shen)</webMaster>
     <copyright>© 2025 Shanshan Shen</copyright>
-    <lastBuildDate>Mon, 26 Aug 2024 15:12:08 +0000</lastBuildDate><atom:link href="https://shen-shanshan.github.io/tags/gpu/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 26 Aug 2024 15:12:08 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/gpu/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>NVIDIA GPU 架构 &amp; CUDA 平台入门学习</title>
-      <link>https://shen-shanshan.github.io/articles/nvidia-gpu-%E6%9E%B6%E6%9E%84-cuda-%E5%B9%B3%E5%8F%B0%E5%85%A5%E9%97%A8%E5%AD%A6%E4%B9%A0/</link>
+      <link>http://localhost:1313/articles/nvidia-gpu-%E6%9E%B6%E6%9E%84-cuda-%E5%B9%B3%E5%8F%B0%E5%85%A5%E9%97%A8%E5%AD%A6%E4%B9%A0/</link>
       <pubDate>Mon, 26 Aug 2024 15:12:08 +0000</pubDate>
       <author>youremail@example.com (Shanshan Shen)</author>
-      <guid>https://shen-shanshan.github.io/articles/nvidia-gpu-%E6%9E%B6%E6%9E%84-cuda-%E5%B9%B3%E5%8F%B0%E5%85%A5%E9%97%A8%E5%AD%A6%E4%B9%A0/</guid>
+      <guid>http://localhost:1313/articles/nvidia-gpu-%E6%9E%B6%E6%9E%84-cuda-%E5%B9%B3%E5%8F%B0%E5%85%A5%E9%97%A8%E5%AD%A6%E4%B9%A0/</guid>
       <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://shen-shanshan.github.io/articles/nvidia-gpu-%E6%9E%B6%E6%9E%84-cuda-%E5%B9%B3%E5%8F%B0%E5%85%A5%E9%97%A8%E5%AD%A6%E4%B9%A0/featured.jpg" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/articles/nvidia-gpu-%E6%9E%B6%E6%9E%84-cuda-%E5%B9%B3%E5%8F%B0%E5%85%A5%E9%97%A8%E5%AD%A6%E4%B9%A0/featured.jpg" />
     </item>
     
   </channel>

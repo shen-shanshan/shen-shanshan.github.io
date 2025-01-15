@@ -14,6 +14,7 @@ Welcome to my personal [<u>blog</u>](https://shen-shanshan.github.io/)! :smile:
 | NVIDIA GPU 架构 & CUDA 平台入门学习                 | 硬件架构   | [<u>Link</u>][1]  | [<u>Link</u>][2]  | [<u>Link</u>][3]  |
 | Ascend NPU 架构 & CANN 平台入门学习                 | 硬件架构   | [<u>Link</u>][6]  | [<u>Link</u>][7]  | [<u>Link</u>][8]  |
 | 基于 EulerOS & Ascend NPU 搭建 PyTorch 远程开发环境 | 环境搭建   | [<u>Link</u>][11] | [<u>Link</u>][12] | [<u>Link</u>][13] |
+| 深入解析 Python 包调用原理与最佳实践                | Python     | [<u>Link</u>][36] | [<u>Link</u>][37] | [<u>Link</u>][38] |
 | Git 实践案例——合并多个分散的 commit 节点            | Git        | [<u>Link</u>][16] | [<u>Link</u>][17] |                   |
 
 <!-- 01. NVIDIA GPU 架构 & CUDA 平台入门学习 -->
@@ -43,6 +44,10 @@ Welcome to my personal [<u>blog</u>](https://shen-shanshan.github.io/)! :smile:
 [31]: https://shen-shanshan.github.io/articles/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%BE%AE%E8%B0%83%E7%9F%A5%E8%AF%86%E5%85%A8%E6%99%AF/
 [32]: https://blog.csdn.net/weixin_44162047/article/details/144258549?spm=1001.2014.3001.5501
 [33]: https://zhuanlan.zhihu.com/p/10855721688
+<!-- 08. 深入解析 Python 库调用原理与最佳实践 -->
+[36]: https://shen-shanshan.github.io/articles/%E6%B7%B1%E5%85%A5%E8%A7%A3%E6%9E%90-python-%E5%8C%85%E8%B0%83%E7%94%A8%E5%8E%9F%E7%90%86%E4%B8%8E%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/
+[37]: https://blog.csdn.net/weixin_44162047/article/details/145161878?spm=1001.2014.3001.5501
+[38]: https://zhuanlan.zhihu.com/p/18440784749
 
 ### 📖 Reading Notes
 
