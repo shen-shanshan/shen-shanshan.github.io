@@ -25,7 +25,7 @@ showRelatedContent: false
 
 <br>
 
-{{< article link="/articles/%E5%AF%8C%E7%88%B8%E7%88%B8-%E7%A9%B7%E7%88%B8%E7%88%B8%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-%E8%B4%A2%E5%95%86%E6%95%99%E8%82%B2%E5%90%AF%E8%92%99%E4%B9%8B%E4%BD%9C/" >}}
+{{< article link="/articles/%E5%AF%8C%E7%88%B8%E7%88%B8%E7%A9%B7%E7%88%B8%E7%88%B8%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-%E8%B4%A2%E5%95%86%E6%95%99%E8%82%B2%E5%90%AF%E8%92%99%E4%B9%8B%E4%BD%9C/" >}}
 
 ## 个人成长
 
@@ -38,3 +38,7 @@ showRelatedContent: false
 ## 个人健康
 
 {{< article link="/articles/%E7%9D%A1%E7%9C%A0%E9%9D%A9%E5%91%BD%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-%E4%BA%86%E8%A7%A3%E4%BD%A0%E7%9A%84%E6%98%BC%E5%A4%9C%E8%8A%82%E5%BE%8B/" >}}
+
+## 历史文学
+
+……
