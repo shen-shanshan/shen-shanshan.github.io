@@ -2,7 +2,7 @@
 title: '照金滑雪一日游 ｜ 耳边呼啸而过的风是我逝去的自由'
 date: '2025-01-21T15:22:33+08:00'
 categories: "旅行"
-tags: ["雪山", "滑雪"]
+tags: ["滑雪"]
 # summary: "xxx"
 # draft: false
 ---
