@@ -378,6 +378,8 @@ QLoRA 的分页优化其实就是当显存不足时，将保存的部分梯度�
 
 ![1](./images/finetune-overview-1.png)
 
+<!--
+
 ## 六、大模型微调的框架有哪些
 
 - **huggingface/transformers**：提供了丰富的预训练模型和微调工具，支持大多数主流的 NLP 任务（如文本分类、序列标注、生成任务等），适合进行快速实验和生产部署；
@@ -386,11 +388,11 @@ QLoRA 的分页优化其实就是当显存不足时，将保存的部分梯度�
 - **hiyouga/LLaMA-Factory**：全栈微调工具，支持海量模型和各种主流微调方法；支持通过脚本微调、基于 Web 端微调（使用简单）；自带基础训练数据集；除微调外，支持增量预训练和全量微调；
 - **NVIDIA/Megatron-LM**：NVIDIA 开发的大模型训练框架，支持大规模的预训练和微调，适用于需要极高性能和规模的大模型训练和微调。
 
-<!-- **总结：**
+**总结：**
 
 - 快速实验选择 transformers；
 - 普通规模选择 LLaMA-Factory；
-- 超大规模选择 Megatron-LM。 -->
+- 超大规模选择 Megatron-LM。
 
 ## 七、如何在生产环境中进行微调
 
@@ -449,7 +451,9 @@ Kubeflow Ecosystem：
 
 > "The [<u>PyTorchJob</u>](https://www.kubeflow.org/docs/components/training/user-guides/pytorch/) is a Kubernetes custom resource to run PyTorch training jobs on Kubernetes. The Kubeflow implementation of the PyTorchJob is in the training-operator."
 
-## 八、参考资料
+-->
+
+## 六、参考资料
 
 - [<u>Scaling Down to Scale Up: A Guide to Parameter-Efficient Fine-Tuning</u>](https://arxiv.org/abs/2303.15647)
 - [<u>Prefix-Tuning: Optimizing Continuous Prompts for Generation</u>](https://arxiv.org/abs/2101.00190)

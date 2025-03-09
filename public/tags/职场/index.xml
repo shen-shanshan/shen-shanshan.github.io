@@ -11,13 +11,23 @@
     <copyright>© 2025 Shanshan Shen</copyright>
     <lastBuildDate>Sun, 02 Feb 2025 21:07:55 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/%E8%81%8C%E5%9C%BA/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>《长安的荔枝》读书笔记 | 一事功成万骨枯</title>
-      <link>http://localhost:1313/articles/%E9%95%BF%E5%AE%89%E7%9A%84%E8%8D%94%E6%9E%9D%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-%E4%B8%80%E4%BA%8B%E5%8A%9F%E6%88%90%E4%B8%87%E9%AA%A8%E6%9E%AF/</link>
+      <title>《长安的荔枝》读书笔记 | 披着历史外衣的职场生存指南</title>
+      <link>http://localhost:1313/articles/%E9%95%BF%E5%AE%89%E7%9A%84%E8%8D%94%E6%9E%9D%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-%E6%8A%AB%E7%9D%80%E5%8E%86%E5%8F%B2%E5%A4%96%E8%A1%A3%E7%9A%84%E8%81%8C%E5%9C%BA%E7%94%9F%E5%AD%98%E6%8C%87%E5%8D%97/</link>
       <pubDate>Sun, 02 Feb 2025 21:07:55 +0800</pubDate>
       <author>youremail@example.com (Shanshan Shen)</author>
-      <guid>http://localhost:1313/articles/%E9%95%BF%E5%AE%89%E7%9A%84%E8%8D%94%E6%9E%9D%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-%E4%B8%80%E4%BA%8B%E5%8A%9F%E6%88%90%E4%B8%87%E9%AA%A8%E6%9E%AF/</guid>
+      <guid>http://localhost:1313/articles/%E9%95%BF%E5%AE%89%E7%9A%84%E8%8D%94%E6%9E%9D%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-%E6%8A%AB%E7%9D%80%E5%8E%86%E5%8F%B2%E5%A4%96%E8%A1%A3%E7%9A%84%E8%81%8C%E5%9C%BA%E7%94%9F%E5%AD%98%E6%8C%87%E5%8D%97/</guid>
       <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/articles/%E9%95%BF%E5%AE%89%E7%9A%84%E8%8D%94%E6%9E%9D%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-%E4%B8%80%E4%BA%8B%E5%8A%9F%E6%88%90%E4%B8%87%E9%AA%A8%E6%9E%AF/featured.jpg" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/articles/%E9%95%BF%E5%AE%89%E7%9A%84%E8%8D%94%E6%9E%9D%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-%E6%8A%AB%E7%9D%80%E5%8E%86%E5%8F%B2%E5%A4%96%E8%A1%A3%E7%9A%84%E8%81%8C%E5%9C%BA%E7%94%9F%E5%AD%98%E6%8C%87%E5%8D%97/featured.jpg" />
+    </item>
+    
+    <item>
+      <title>《我有自己的宇宙》读书笔记 | 年轻人的职场生存之道</title>
+      <link>http://localhost:1313/articles/%E6%88%91%E6%9C%89%E8%87%AA%E5%B7%B1%E7%9A%84%E5%AE%87%E5%AE%99%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-%E5%B9%B4%E8%BD%BB%E4%BA%BA%E7%9A%84%E8%81%8C%E5%9C%BA%E7%94%9F%E5%AD%98%E4%B9%8B%E9%81%93/</link>
+      <pubDate>Sat, 10 Aug 2024 10:28:06 +0000</pubDate>
+      <author>youremail@example.com (Shanshan Shen)</author>
+      <guid>http://localhost:1313/articles/%E6%88%91%E6%9C%89%E8%87%AA%E5%B7%B1%E7%9A%84%E5%AE%87%E5%AE%99%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-%E5%B9%B4%E8%BD%BB%E4%BA%BA%E7%9A%84%E8%81%8C%E5%9C%BA%E7%94%9F%E5%AD%98%E4%B9%8B%E9%81%93/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/articles/%E6%88%91%E6%9C%89%E8%87%AA%E5%B7%B1%E7%9A%84%E5%AE%87%E5%AE%99%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-%E5%B9%B4%E8%BD%BB%E4%BA%BA%E7%9A%84%E8%81%8C%E5%9C%BA%E7%94%9F%E5%AD%98%E4%B9%8B%E9%81%93/featured.jpg" />
     </item>
     
   </channel>

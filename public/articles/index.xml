@@ -131,16 +131,6 @@
     </item>
     
     <item>
-      <title>基于 EulerOS &amp; Ascend NPU 搭建 PyTorch 远程开发环境</title>
-      <link>http://localhost:1313/articles/%E5%9F%BA%E4%BA%8E-euleros-ascend-npu-%E6%90%AD%E5%BB%BA-pytorch-%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/</link>
-      <pubDate>Tue, 24 Sep 2024 15:47:40 +0000</pubDate>
-      <author>youremail@example.com (Shanshan Shen)</author>
-      <guid>http://localhost:1313/articles/%E5%9F%BA%E4%BA%8E-euleros-ascend-npu-%E6%90%AD%E5%BB%BA-pytorch-%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/</guid>
-      <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/articles/%E5%9F%BA%E4%BA%8E-euleros-ascend-npu-%E6%90%AD%E5%BB%BA-pytorch-%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/featured.jpg" />
-    </item>
-    
-    <item>
       <title>Ascend NPU 架构 &amp; CANN 平台入门学习</title>
       <link>http://localhost:1313/articles/ascend-npu-%E6%9E%B6%E6%9E%84-cann-%E5%B9%B3%E5%8F%B0%E5%85%A5%E9%97%A8%E5%AD%A6%E4%B9%A0/</link>
       <pubDate>Sat, 31 Aug 2024 15:35:00 +0000</pubDate>

@@ -3,6 +3,7 @@ title: 基于 EulerOS & Ascend NPU 搭建 PyTorch 远程开发环境
 date: 2024-09-24 15:47:40
 categories: "计算机"
 tags: ["AI Infra", "Ascend", "NPU", "CANN"]
+draft: true
 ---
 
 ## 一、概述

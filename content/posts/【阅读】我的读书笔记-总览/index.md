@@ -7,10 +7,6 @@ showAuthor: false
 showRelatedContent: false
 ---
 
-## 读书报告
-
-{{< article link="/articles/%E6%88%91%E7%9A%84-2024-%E5%B9%B4%E5%BA%A6%E8%AF%BB%E4%B9%A6%E6%8A%A5%E5%91%8A/" >}}
-
 ## 心理学
 
 {{< article link="/articles/%E8%A2%AB%E8%AE%A8%E5%8E%8C%E7%9A%84%E5%8B%87%E6%B0%94%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-%E6%8E%A5%E7%BA%B3%E8%87%AA%E6%88%91%E5%8B%87%E6%95%A2%E5%9C%B0%E6%84%9F%E5%8F%97%E7%94%9F%E6%B4%BB/" >}}
@@ -27,6 +23,10 @@ showRelatedContent: false
 
 {{< article link="/articles/%E5%AF%8C%E7%88%B8%E7%88%B8%E7%A9%B7%E7%88%B8%E7%88%B8%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-%E8%B4%A2%E5%95%86%E6%95%99%E8%82%B2%E5%90%AF%E8%92%99%E4%B9%8B%E4%BD%9C/" >}}
 
+## 文学
+
+{{< article link="/articles/%E9%95%BF%E5%AE%89%E7%9A%84%E8%8D%94%E6%9E%9D%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-%E6%8A%AB%E7%9D%80%E5%8E%86%E5%8F%B2%E5%A4%96%E8%A1%A3%E7%9A%84%E8%81%8C%E5%9C%BA%E7%94%9F%E5%AD%98%E6%8C%87%E5%8D%97/" >}}
+
 ## 个人成长
 
 {{< article link="/articles/%E6%97%A9%E8%B5%B7%E7%9A%84%E5%A5%87%E8%BF%B9%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-%E5%88%B6%E5%AE%9A%E4%BD%A0%E7%9A%84%E6%97%A9%E8%B5%B7%E8%AE%A1%E5%88%92/" >}}
@@ -39,6 +39,6 @@ showRelatedContent: false
 
 {{< article link="/articles/%E7%9D%A1%E7%9C%A0%E9%9D%A9%E5%91%BD%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-%E4%BA%86%E8%A7%A3%E4%BD%A0%E7%9A%84%E6%98%BC%E5%A4%9C%E8%8A%82%E5%BE%8B/" >}}
 
-## 历史文学
+## 年度书单
 
-{{< article link="/articles/%E9%95%BF%E5%AE%89%E7%9A%84%E8%8D%94%E6%9E%9D%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-%E6%8A%AB%E7%9D%80%E5%8E%86%E5%8F%B2%E5%A4%96%E8%A1%A3%E7%9A%84%E8%81%8C%E5%9C%BA%E7%94%9F%E5%AD%98%E6%8C%87%E5%8D%97/" >}}
+{{< article link="/articles/%E6%88%91%E7%9A%84-2024-%E5%B9%B4%E5%BA%A6%E8%AF%BB%E4%B9%A6%E6%8A%A5%E5%91%8A/" >}}
