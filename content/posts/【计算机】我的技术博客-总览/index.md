@@ -1,11 +1,15 @@
 ---
-title: '我的技术博客 | 总览'
+title: '我的技术博客｜总览'
 date: '2024-11-23T18:59:01+08:00'
 categories: "计算机"
-tags: ["博客汇总"]
+tags: []
 showAuthor: false
 showRelatedContent: false
 ---
+
+## 大模型推理
+
+{{< article link="/articles/vllm-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0guided-decoding/" >}}
 
 ## 大模型微调
 
@@ -21,11 +25,11 @@ showRelatedContent: false
 
 ## 硬件架构
 
-{{< article link="/articles/nvidia-gpu-%E6%9E%B6%E6%9E%84-cuda-%E5%B9%B3%E5%8F%B0%E5%85%A5%E9%97%A8%E5%AD%A6%E4%B9%A0/" >}}
+{{< article link="/articles/nvidia-gpu-%E7%A1%AC%E4%BB%B6%E6%9E%B6%E6%9E%84%E5%85%A5%E9%97%A8/" >}}
 
 <br>
 
-{{< article link="/articles/ascend-npu-%E6%9E%B6%E6%9E%84-cann-%E5%B9%B3%E5%8F%B0%E5%85%A5%E9%97%A8%E5%AD%A6%E4%B9%A0/" >}}
+{{< article link="/articles/ascend-npu-%E7%A1%AC%E4%BB%B6%E6%9E%B6%E6%9E%84%E5%85%A5%E9%97%A8/" >}}
 
 ## Python
 
@@ -33,4 +37,4 @@ showRelatedContent: false
 
 ## Git
 
-{{< article link="/articles/git-%E5%AE%9E%E8%B7%B5%E6%A1%88%E4%BE%8B-%E5%90%88%E5%B9%B6%E5%A4%9A%E4%B8%AA%E5%88%86%E6%95%A3%E7%9A%84-commit-%E8%8A%82%E7%82%B9/" >}}
+{{< article link="/articles/git-%E5%AE%9E%E8%B7%B5%E6%A1%88%E4%BE%8B%E5%90%88%E5%B9%B6%E5%A4%9A%E4%B8%AA%E5%88%86%E6%95%A3%E7%9A%84-commit-%E8%8A%82%E7%82%B9/" >}}

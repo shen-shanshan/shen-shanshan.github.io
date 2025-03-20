@@ -1,5 +1,5 @@
 ---
-title: Git 实践案例 | 合并多个分散的 commit 节点
+title: Git 实践案例｜合并多个分散的 commit 节点
 date: 2024-10-18 15:49:42
 categories: "计算机"
 tags: ["Git"]

@@ -3,6 +3,7 @@ title: 'Roadmap'
 date: '2024-11-17T18:57:54+08:00'
 showAuthor: false
 showRelatedContent: false
+draft: true
 ---
 
 ---
@@ -18,7 +19,8 @@ showRelatedContent: false
 
 ## Contents
 
-<!-- TODO:
+<!--
+TODO:
 
 梳理个人技能树（增加【个人随笔】分类）
 参考：一个博士生接受怎样的训练是完整、全面的科研训练？ - 重剑无锋的回答 - 知乎（https://www.zhihu.com/question/384512106/answer/1879956380）
@@ -26,14 +28,15 @@ showRelatedContent: false
 迁移之前写的英语学习笔记到本站（增加英语分类）
 -->
 
+- [ ] 梳理 vLLM 学习笔记之 V1 Engine
 - [ ] 写 CUDA 编程入门教程
 - [ ] 梳理大模型推理知识全景
-- [ ] 梳理 vLLM 学习笔记
 - [ ] 增加相册展示页
 - [ ] 写《解忧杂货店》读书笔记
 - [ ] 写《蛤蟆先生去看心理医生》读书笔记
 - [ ] 写《非暴力沟通》读书笔记
 - [ ] 写《娱乐至死》读书笔记
+- [x] 2025-03-20: 梳理 vLLM 学习笔记之 Guided Decoding
 - [x] 2025-02-18: 写《长安的荔枝》读书笔记
 - [x] 2025-01-15: 梳理 Python import 原理与最佳实践
 - [x] 2025-01-04: 写 2024 年度读书报告

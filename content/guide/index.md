@@ -29,13 +29,13 @@ Most of the articles I have written and put on this site are about computer scie
 
 You can read the article shown below to get a whole picture of all the technical articles I have written.
 
-{{< article link="/articles/%E6%88%91%E7%9A%84%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2-%E6%80%BB%E8%A7%88/" >}}
+{{< article link="/articles/%E6%88%91%E7%9A%84%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2%E6%80%BB%E8%A7%88/" >}}
 
 ### Reading notes
 
 You can read the article shown below to get a whole picture of all the books I have read, and the reading notes I have written are also shown here.
 
-{{< article link="/articles/%E6%88%91%E7%9A%84%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-%E6%80%BB%E8%A7%88/" >}}
+{{< article link="/articles/%E6%88%91%E7%9A%84%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%E6%80%BB%E8%A7%88/" >}}
 
 ### Others
 

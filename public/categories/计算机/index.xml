@@ -9,7 +9,17 @@
     <managingEditor>youremail@example.com (Shanshan Shen)</managingEditor>
     <webMaster>youremail@example.com (Shanshan Shen)</webMaster>
     <copyright>© 2025 Shanshan Shen</copyright>
-    <lastBuildDate>Wed, 15 Jan 2025 15:02:45 +0800</lastBuildDate><atom:link href="http://localhost:1313/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 20 Mar 2025 11:44:20 +0800</lastBuildDate><atom:link href="http://localhost:1313/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>vLLM 学习笔记｜Guided Decoding</title>
+      <link>http://localhost:1313/articles/vllm-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0guided-decoding/</link>
+      <pubDate>Thu, 20 Mar 2025 11:44:20 +0800</pubDate>
+      <author>youremail@example.com (Shanshan Shen)</author>
+      <guid>http://localhost:1313/articles/vllm-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0guided-decoding/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/articles/vllm-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0guided-decoding/featured.png" />
+    </item>
+    
     <item>
       <title>深入解析 Python 包调用原理与最佳实践</title>
       <link>http://localhost:1313/articles/%E6%B7%B1%E5%85%A5%E8%A7%A3%E6%9E%90-python-%E5%8C%85%E8%B0%83%E7%94%A8%E5%8E%9F%E7%90%86%E4%B8%8E%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/</link>
@@ -31,13 +41,13 @@
     </item>
     
     <item>
-      <title>我的技术博客 | 总览</title>
-      <link>http://localhost:1313/articles/%E6%88%91%E7%9A%84%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2-%E6%80%BB%E8%A7%88/</link>
+      <title>我的技术博客｜总览</title>
+      <link>http://localhost:1313/articles/%E6%88%91%E7%9A%84%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2%E6%80%BB%E8%A7%88/</link>
       <pubDate>Sat, 23 Nov 2024 18:59:01 +0800</pubDate>
       <author>youremail@example.com (Shanshan Shen)</author>
-      <guid>http://localhost:1313/articles/%E6%88%91%E7%9A%84%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2-%E6%80%BB%E8%A7%88/</guid>
+      <guid>http://localhost:1313/articles/%E6%88%91%E7%9A%84%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2%E6%80%BB%E8%A7%88/</guid>
       <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/articles/%E6%88%91%E7%9A%84%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2-%E6%80%BB%E8%A7%88/featured.jpg" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/articles/%E6%88%91%E7%9A%84%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2%E6%80%BB%E8%A7%88/featured.jpg" />
     </item>
     
     <item>
@@ -61,33 +71,33 @@
     </item>
     
     <item>
-      <title>Git 实践案例 | 合并多个分散的 commit 节点</title>
-      <link>http://localhost:1313/articles/git-%E5%AE%9E%E8%B7%B5%E6%A1%88%E4%BE%8B-%E5%90%88%E5%B9%B6%E5%A4%9A%E4%B8%AA%E5%88%86%E6%95%A3%E7%9A%84-commit-%E8%8A%82%E7%82%B9/</link>
+      <title>Git 实践案例｜合并多个分散的 commit 节点</title>
+      <link>http://localhost:1313/articles/git-%E5%AE%9E%E8%B7%B5%E6%A1%88%E4%BE%8B%E5%90%88%E5%B9%B6%E5%A4%9A%E4%B8%AA%E5%88%86%E6%95%A3%E7%9A%84-commit-%E8%8A%82%E7%82%B9/</link>
       <pubDate>Fri, 18 Oct 2024 15:49:42 +0000</pubDate>
       <author>youremail@example.com (Shanshan Shen)</author>
-      <guid>http://localhost:1313/articles/git-%E5%AE%9E%E8%B7%B5%E6%A1%88%E4%BE%8B-%E5%90%88%E5%B9%B6%E5%A4%9A%E4%B8%AA%E5%88%86%E6%95%A3%E7%9A%84-commit-%E8%8A%82%E7%82%B9/</guid>
+      <guid>http://localhost:1313/articles/git-%E5%AE%9E%E8%B7%B5%E6%A1%88%E4%BE%8B%E5%90%88%E5%B9%B6%E5%A4%9A%E4%B8%AA%E5%88%86%E6%95%A3%E7%9A%84-commit-%E8%8A%82%E7%82%B9/</guid>
       <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/articles/git-%E5%AE%9E%E8%B7%B5%E6%A1%88%E4%BE%8B-%E5%90%88%E5%B9%B6%E5%A4%9A%E4%B8%AA%E5%88%86%E6%95%A3%E7%9A%84-commit-%E8%8A%82%E7%82%B9/featured.jpg" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/articles/git-%E5%AE%9E%E8%B7%B5%E6%A1%88%E4%BE%8B%E5%90%88%E5%B9%B6%E5%A4%9A%E4%B8%AA%E5%88%86%E6%95%A3%E7%9A%84-commit-%E8%8A%82%E7%82%B9/featured.jpg" />
     </item>
     
     <item>
-      <title>Ascend NPU 架构 &amp; CANN 平台入门学习</title>
-      <link>http://localhost:1313/articles/ascend-npu-%E6%9E%B6%E6%9E%84-cann-%E5%B9%B3%E5%8F%B0%E5%85%A5%E9%97%A8%E5%AD%A6%E4%B9%A0/</link>
+      <title>Ascend NPU 硬件架构入门</title>
+      <link>http://localhost:1313/articles/ascend-npu-%E7%A1%AC%E4%BB%B6%E6%9E%B6%E6%9E%84%E5%85%A5%E9%97%A8/</link>
       <pubDate>Sat, 31 Aug 2024 15:35:00 +0000</pubDate>
       <author>youremail@example.com (Shanshan Shen)</author>
-      <guid>http://localhost:1313/articles/ascend-npu-%E6%9E%B6%E6%9E%84-cann-%E5%B9%B3%E5%8F%B0%E5%85%A5%E9%97%A8%E5%AD%A6%E4%B9%A0/</guid>
+      <guid>http://localhost:1313/articles/ascend-npu-%E7%A1%AC%E4%BB%B6%E6%9E%B6%E6%9E%84%E5%85%A5%E9%97%A8/</guid>
       <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/articles/ascend-npu-%E6%9E%B6%E6%9E%84-cann-%E5%B9%B3%E5%8F%B0%E5%85%A5%E9%97%A8%E5%AD%A6%E4%B9%A0/featured.jpg" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/articles/ascend-npu-%E7%A1%AC%E4%BB%B6%E6%9E%B6%E6%9E%84%E5%85%A5%E9%97%A8/featured.jpg" />
     </item>
     
     <item>
-      <title>NVIDIA GPU 架构 &amp; CUDA 平台入门学习</title>
-      <link>http://localhost:1313/articles/nvidia-gpu-%E6%9E%B6%E6%9E%84-cuda-%E5%B9%B3%E5%8F%B0%E5%85%A5%E9%97%A8%E5%AD%A6%E4%B9%A0/</link>
+      <title>NVIDIA GPU 硬件架构入门</title>
+      <link>http://localhost:1313/articles/nvidia-gpu-%E7%A1%AC%E4%BB%B6%E6%9E%B6%E6%9E%84%E5%85%A5%E9%97%A8/</link>
       <pubDate>Mon, 26 Aug 2024 15:12:08 +0000</pubDate>
       <author>youremail@example.com (Shanshan Shen)</author>
-      <guid>http://localhost:1313/articles/nvidia-gpu-%E6%9E%B6%E6%9E%84-cuda-%E5%B9%B3%E5%8F%B0%E5%85%A5%E9%97%A8%E5%AD%A6%E4%B9%A0/</guid>
+      <guid>http://localhost:1313/articles/nvidia-gpu-%E7%A1%AC%E4%BB%B6%E6%9E%B6%E6%9E%84%E5%85%A5%E9%97%A8/</guid>
       <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/articles/nvidia-gpu-%E6%9E%B6%E6%9E%84-cuda-%E5%B9%B3%E5%8F%B0%E5%85%A5%E9%97%A8%E5%AD%A6%E4%B9%A0/featured.jpg" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/articles/nvidia-gpu-%E7%A1%AC%E4%BB%B6%E6%9E%B6%E6%9E%84%E5%85%A5%E9%97%A8/featured.jpg" />
     </item>
     
   </channel>

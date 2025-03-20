@@ -1,0 +1,1970 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth" data-default-appearance="dark"
+  data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  
+  <meta http-equiv="content-language" content="en" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  
+  <title>vLLM 学习笔记｜ Guided Decoding &middot; Home</title>
+  <meta name="title" content="vLLM 学习笔记｜ Guided Decoding &middot; Home" />
+  
+  
+  <meta name="keywords" content="AI, LLM, 模型推理, 论文精读, 源码分析, " />
+  
+  
+  <link rel="canonical" href="http://localhost:1313/articles/vllm-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-guided-decoding/" />
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <link type="text/css" rel="stylesheet" href="/css/main.bundle.min.c7683369d42ab0fa43c2faab379ff224b7030c0e984512cb4535d4888fb382e395322f3ef135ac80c0de62846aad770528c8a3cc249062ca58b1fb90c095bbcd.css"
+    integrity="sha512-x2gzadQqsPpDwvqrN5/yJLcDDA6YRRLLRTXUiI&#43;zguOVMi8&#43;8TWsgMDeYoRqrXcFKMijzCSQYspYsfuQwJW7zQ==" />
+  
+  
+  <script type="text/javascript" src="/js/appearance.min.516a16745bea5a9bd011138d254cc0fd3973cd55ce6e15f3dec763e7c7c2c7448f8fe7b54cca811cb821b0c7e12cd161caace1dd794ac3d34d40937cbcc9ee12.js"
+    integrity="sha512-UWoWdFvqWpvQERONJUzA/TlzzVXObhXz3sdj58fCx0SPj&#43;e1TMqBHLghsMfhLNFhyqzh3XlKw9NNQJN8vMnuEg=="></script>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script defer type="text/javascript" id="script-bundle" src="/js/main.bundle.min.a2d78d78672e549fbfc972ece871725b5478ba0b65708dda20cb97ab80a865eae6d247e1b05a4aec6ebbf78647ec3233bad8b2609ed98eee53cd58aa17128bc7.js"
+    integrity="sha512-oteNeGcuVJ&#43;/yXLs6HFyW1R4ugtlcI3aIMuXq4CoZerm0kfhsFpK7G6794ZH7DIzutiyYJ7Zju5TzViqFxKLxw==" data-copy="" data-copied=""></script>
+  
+  
+  
+  <script src="/lib/zoom/zoom.min.37d2094687372da3f7343a221a470f6b8806f7891aa46a5a03966af7f0ebd38b9fe536cb154e6ad28f006d184b294525a7c4054b6bbb4be62d8b453b42db99bd.js" integrity="sha512-N9IJRoc3LaP3NDoiGkcPa4gG94kapGpaA5Zq9/Dr04uf5TbLFU5q0o8AbRhLKUUlp8QFS2u7S&#43;Yti0U7QtuZvQ=="></script>
+  
+  
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:url" content="http://localhost:1313/articles/vllm-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-guided-decoding/">
+  <meta property="og:site_name" content="Home">
+  <meta property="og:title" content="vLLM 学习笔记｜ Guided Decoding">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-03-20T11:44:20+08:00">
+    <meta property="article:modified_time" content="2025-03-20T11:44:20+08:00">
+    <meta property="article:tag" content="AI">
+    <meta property="article:tag" content="LLM">
+    <meta property="article:tag" content="模型推理">
+    <meta property="article:tag" content="论文精读">
+    <meta property="article:tag" content="源码分析">
+    <meta property="og:image" content="http://localhost:1313/articles/vllm-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-guided-decoding/featured.png">
+
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://localhost:1313/articles/vllm-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-guided-decoding/featured.png">
+  <meta name="twitter:title" content="vLLM 学习笔记｜ Guided Decoding">
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Articles",
+    "name": "vLLM 学习笔记｜ Guided Decoding",
+    "headline": "vLLM 学习笔记｜ Guided Decoding",
+    
+    
+    "inLanguage": "en",
+    "url" : "http:\/\/localhost:1313\/articles\/vllm-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-guided-decoding\/",
+    "author" : {
+      "@type": "Person",
+      "name": "Shanshan Shen"
+    },
+    "copyrightYear": "2025",
+    "dateCreated": "2025-03-20T11:44:20\u002b08:00",
+    "datePublished": "2025-03-20T11:44:20\u002b08:00",
+    
+    "dateModified": "2025-03-20T11:44:20\u002b08:00",
+    
+    "keywords": ["AI","LLM","模型推理","论文精读","源码分析"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "1015"
+  }]
+  </script>
+
+
+  
+  
+  <meta name="author" content="Shanshan Shen" />
+  
+  
+  
+  <link href="https://github.com/shen-shanshan" rel="me" />
+  
+  
+  <link href="https://gitee.com/shenshanshan0918" rel="me" />
+  
+  
+  <link href="https://blog.csdn.net/weixin_44162047?type=blog" rel="me" />
+  
+  
+  <link href="https://www.zhihu.com/people/sss-53-26" rel="me" />
+  
+  
+  <link href="https://space.bilibili.com/14112152?spm_id_from=333.1007.0.0" rel="me" />
+  
+  
+  <link href="https://music.163.com/#/artist?id=62054947" rel="me" />
+  
+  
+  
+  
+
+<script src="/lib/jquery/jquery.slim.min.b0dca576e87d7eaa5850ae4e61759c065786cdb6489d68fcc82240539eebd5da522bdb4fda085ffd245808c8fe2acb2516408eb774ef26b5f6015fc6737c0ea8.js" integrity="sha512-sNylduh9fqpYUK5OYXWcBleGzbZInWj8yCJAU57r1dpSK9tP2ghf/SRYCMj&#43;KsslFkCOt3TvJrX2AV/Gc3wOqA=="></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  <meta name="theme-color"/>
+  
+  
+</head>
+<body
+  class="flex flex-col h-screen px-6 m-auto text-lg leading-7 max-w-7xl bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32 scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600">
+  <div id="the-top" class="absolute flex self-center">
+    <a class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+      href="#main-content"><span
+        class="font-bold text-primary-600 ltr:pr-2 rtl:pl-2 dark:text-primary-400">&darr;</span>Skip to main content</a>
+  </div>
+  
+  
+  <div class="min-h-[148px]"></div>
+<div class="fixed inset-x-0 min-h-[130px] opacity-65 pl-[24px] pr-[24px] bg-gradient-to-b from-neutral from-60% dark:from-neutral-800 to-transparent mix-blend-normal" style="z-index:80"></div>
+<div class="fixed inset-x-0 pl-[24px] pr-[24px]" style="z-index:100">
+  <div id="menu-blur" class="absolute opacity-0 inset-x-0 top-0 h-full single_hero_background nozoom backdrop-blur-2xl shadow-2xl"></div>
+  <div class="relative max-w-[64rem] ml-auto mr-auto">
+    <div style="padding-left:0;padding-right:0;padding-top:2px;padding-bottom:3px"
+    class="main-menu flex items-center justify-between px-4 py-6 sm:px-6 md:justify-start space-x-3">
+    
+    <div class="flex flex-1 items-center justify-between">
+        <nav class="flex space-x-3">
+
+            
+            <a href="/" class="text-base font-medium text-gray-500 hover:text-gray-900">Home</a>
+            
+
+        </nav>
+        <nav class="hidden md:flex items-center space-x-5 md:ml-12 h-12">
+
+            
+            
+            
+  <a href="/guide/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-base font-medium" title="">
+        Guide
+    </p>
+</a>
+
+
+
+            
+            
+  <a href="/articles/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-base font-medium" title="">
+        Articles
+    </p>
+</a>
+
+
+
+            
+            
+  <a href="/categories/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-base font-medium" title="">
+        Categories
+    </p>
+</a>
+
+
+
+            
+            
+  <a href="/tags/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-base font-medium" title="">
+        Tags
+    </p>
+</a>
+
+
+
+            
+            
+  <a href="/about/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-base font-medium" title="">
+        About
+    </p>
+</a>
+
+
+
+            
+            
+
+            
+
+
+            
+            <button id="search-button" aria-label="Search" class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+                title="">
+                
+
+  <span class="relative block icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+
+  </span>
+
+
+            </button>
+            
+
+
+            
+            
+            <div
+                class="ltr:mr-14 rtl:ml-14 flex items-center">
+                <button id="appearance-switcher" aria-label="Dark mode switcher" type="button" class="text-base hover:text-primary-600 dark:hover:text-primary-400">
+                    <div class="flex items-center justify-center dark:hidden">
+                        
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+
+  </span>
+
+
+                    </div>
+                    <div class="items-center justify-center hidden dark:flex">
+                        
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+
+  </span>
+
+
+                    </div>
+                </button>
+            </div>
+            
+
+        </nav>
+        <div class="flex md:hidden items-center space-x-5 md:ml-12 h-12">
+
+            <span></span>
+
+            
+
+
+            
+            <button id="search-button-mobile" aria-label="Search" class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+                title="">
+                
+
+  <span class="relative block icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+
+  </span>
+
+
+            </button>
+            
+
+            
+            
+            <button id="appearance-switcher-mobile" aria-label="Dark mode switcher" type="button" class="text-base hover:text-primary-600 dark:hover:text-primary-400" style="margin-right:5px">
+                <div class="flex items-center justify-center dark:hidden">
+                    
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+
+  </span>
+
+
+                </div>
+                <div class="items-center justify-center hidden dark:flex">
+                    
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+
+  </span>
+
+
+                </div>
+            </button>
+            
+
+        </div>
+    </div>
+    <div class="-my-2 -mr-2 md:hidden">
+
+        <label id="menu-button" class="block">
+            
+            <div class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400">
+                
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+
+  </span>
+
+
+            </div>
+            <div id="menu-wrapper" style="padding-top:5px;"
+                class="fixed inset-0 z-30 invisible w-screen h-screen m-0 overflow-auto transition-opacity opacity-0 cursor-default bg-neutral-100/50 backdrop-blur-sm dark:bg-neutral-900/50">
+                <ul
+                    class="flex space-y-2 mt-3 flex-col items-end w-full px-6 py-6 mx-auto overflow-visible list-none ltr:text-right rtl:text-left max-w-7xl">
+
+                    <li id="menu-close-button">
+                        <span
+                            class="cursor-pointer inline-block align-text-bottom hover:text-primary-600 dark:hover:text-primary-400">
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+
+  </span>
+
+</span>
+                    </li>
+
+                    
+
+                    
+  <li class="mt-1">
+    <a href="/guide/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <p class="text-bg font-bg" title="">
+            Guide
+        </p>
+    </a>
+</li>
+
+
+
+
+                    
+
+                    
+  <li class="mt-1">
+    <a href="/articles/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <p class="text-bg font-bg" title="">
+            Articles
+        </p>
+    </a>
+</li>
+
+
+
+
+                    
+
+                    
+  <li class="mt-1">
+    <a href="/categories/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <p class="text-bg font-bg" title="">
+            Categories
+        </p>
+    </a>
+</li>
+
+
+
+
+                    
+
+                    
+  <li class="mt-1">
+    <a href="/tags/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <p class="text-bg font-bg" title="">
+            Tags
+        </p>
+    </a>
+</li>
+
+
+
+
+                    
+
+                    
+  <li class="mt-1">
+    <a href="/about/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <p class="text-bg font-bg" title="">
+            About
+        </p>
+    </a>
+</li>
+
+
+
+
+                    
+
+                </ul>
+                
+                
+
+            </div>
+        </label>
+    </div>
+</div>
+
+
+
+
+<script>
+    (function () {
+        var $mainmenu = $('.main-menu');
+        var path = window.location.pathname;
+        $mainmenu.find('a[href="' + path + '"]').each(function (i, e) {
+            $(e).children('p').addClass('active');
+        });
+    })();
+</script>
+
+
+  </div>
+</div>
+<script>
+  window.addEventListener('scroll', function (e) {
+    var scroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    var background_blur = document.getElementById('menu-blur');
+    background_blur.style.opacity = (scroll / 300);
+  });
+</script>
+
+  
+  <div class="relative flex flex-col grow">
+    <main id="main-content" class="grow">
+      
+
+
+<article>
+  
+
+  <header id="single_header" class="mt-5 max-w-prose">
+    
+    <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+      vLLM 学习笔记｜ Guided Decoding
+    </h1>
+    <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+      
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  <time datetime="2025-03-20T11:44:20&#43;08:00">2025-03-20</time><span class="px-2 text-primary-500">&middot;</span>
+
+
+<script type="text/javascript" src="/js/zen-mode.min.63c8a202661f4a2063fdc2706685d668e8ea3da613da2224e9da527e5876e4f53dcac39ab60732626fb4151feae5d430d0cf44731e5d3c726522fcc1519c1547.js" integrity="sha512-Y8iiAmYfSiBj/cJwZoXWaOjqPaYT2iIk6dpSflh25PU9ysOatgcyYm&#43;0FR/q5dQw0M9Ecx5dPHJlIvzBUZwVRw=="></script>
+
+<span class="mb-[2px]">
+    <span id="zen-mode-button"
+          class="text-lg hover:text-primary-500"
+          title="Enable zen mode"
+          data-title-i18n-disable="Enable zen mode"
+          data-title-i18n-enable="Disable zen mode">
+        <span class="inline-block align-text-bottom">
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50px" height="50px">
+    <path fill="currentColor" d="M 12.980469 4 C 9.1204688 4 5.9804688 7.14 5.9804688 11 L 6 26 L 9.9804688 26 L 9.9804688 11 C 9.9804688 9.35 11.320469 8 12.980469 8 L 40.019531 8 C 41.679531 8 43.019531 9.35 43.019531 11 L 43.019531 39 C 43.019531 40.65 41.679531 42 40.019531 42 L 29 42 C 29 43.54 28.420938 44.94 27.460938 46 L 40.019531 46 C 43.879531 46 47.019531 42.86 47.019531 39 L 47.019531 11 C 47.019531 7.14 43.879531 4 40.019531 4 L 12.980469 4 z M 7 28 C 4.794 28 3 29.794 3 32 L 3 42 C 3 44.206 4.794 46 7 46 L 23 46 C 25.206 46 27 44.206 27 42 L 27 32 C 27 29.794 25.206 28 23 28 L 7 28 z M 7 32 L 23 32 L 23.001953 42 L 7 42 L 7 32 z"/>
+</svg>
+  </span>
+
+</span>
+    </span>
+</span>
+  
+
+  
+  
+</div>
+
+
+
+
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  
+  
+  
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/&#34;,'_self');">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    计算机
+  </span>
+</span>
+  </span>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/ai/&#34;,'_self');">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    AI
+  </span>
+</span>
+  </span>
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/llm/&#34;,'_self');">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    LLM
+  </span>
+</span>
+  </span>
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/%E6%A8%A1%E5%9E%8B%E6%8E%A8%E7%90%86/&#34;,'_self');">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    模型推理
+  </span>
+</span>
+  </span>
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/%E8%AE%BA%E6%96%87%E7%B2%BE%E8%AF%BB/&#34;,'_self');">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    论文精读
+  </span>
+</span>
+  </span>
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/&#34;,'_self');">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    源码分析
+  </span>
+</span>
+  </span>
+  
+  
+  
+  
+</div>
+
+
+
+
+    </div>
+
+    
+    
+    
+    
+    
+
+    
+
+    
+
+  </header>
+  
+  <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+    
+     <div
+      class="order-first lg:ml-auto px-0 lg:order-last ltr:lg:pl-8 rtl:lg:pr-8">
+      <div class="toc ltr:pl-5 rtl:pr-5 print:hidden lg:sticky lg:top-[140px]">
+
+         <details open id="TOCView"
+  class="toc-right mt-0 overflow-y-scroll overscroll-contain scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600 rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 hidden lg:block">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="min-w-[220px] py-2 border-dotted ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#一引言">一、引言</a></li>
+    <li><a href="#二什么是-guided-decoding">二、什么是 Guided Decoding？</a></li>
+    <li><a href="#三outlines-原理详解">三、Outlines 原理详解</a>
+      <ul>
+        <li><a href="#31-fsm-的工作原理">3.1 FSM 的工作原理</a></li>
+        <li><a href="#32-fsm-的构建过程">3.2 FSM 的构建过程</a></li>
+        <li><a href="#33-总结">3.3 总结</a></li>
+      </ul>
+    </li>
+    <li><a href="#四vllm-guided-decoding-源码解读">四、vLLM Guided Decoding 源码解读</a>
+      <ul>
+        <li><a href="#41-加载-logitsprocessor">4.1 加载 LogitsProcessor</a></li>
+        <li><a href="#42-整体推理流程">4.2 整体推理流程</a></li>
+        <li><a href="#43-计算-mask">4.3 计算 Mask</a></li>
+        <li><a href="#44-支持-reasoning">4.4 支持 Reasoning</a></li>
+      </ul>
+    </li>
+    <li><a href="#五sglang-jump-forward-decoding">五、SGLang Jump-Forward Decoding</a></li>
+    <li><a href="#六参考资料">六、参考资料</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+<details class="toc-inside mt-0 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 lg:hidden">
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#一引言">一、引言</a></li>
+    <li><a href="#二什么是-guided-decoding">二、什么是 Guided Decoding？</a></li>
+    <li><a href="#三outlines-原理详解">三、Outlines 原理详解</a>
+      <ul>
+        <li><a href="#31-fsm-的工作原理">3.1 FSM 的工作原理</a></li>
+        <li><a href="#32-fsm-的构建过程">3.2 FSM 的构建过程</a></li>
+        <li><a href="#33-总结">3.3 总结</a></li>
+      </ul>
+    </li>
+    <li><a href="#四vllm-guided-decoding-源码解读">四、vLLM Guided Decoding 源码解读</a>
+      <ul>
+        <li><a href="#41-加载-logitsprocessor">4.1 加载 LogitsProcessor</a></li>
+        <li><a href="#42-整体推理流程">4.2 整体推理流程</a></li>
+        <li><a href="#43-计算-mask">4.3 计算 Mask</a></li>
+        <li><a href="#44-支持-reasoning">4.4 支持 Reasoning</a></li>
+      </ul>
+    </li>
+    <li><a href="#五sglang-jump-forward-decoding">五、SGLang Jump-Forward Decoding</a></li>
+    <li><a href="#六参考资料">六、参考资料</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+<script>
+
+  var margin = 200;
+  var marginError = 50;
+
+  (function () {
+    var $window = $(window);
+    var $toc = $('#TOCView');
+    var tocHeight = $toc.height();
+
+    function onResize() {
+      var windowAndMarginHeight = $window.height() - margin;
+      if(tocHeight >= windowAndMarginHeight) {
+        $toc.css("overflow-y", "scroll")
+        $toc.css("max-height", (windowAndMarginHeight + marginError) + "px")
+      } else {
+        $toc.css("overflow-y", "hidden")
+        $toc.css("max-height", "9999999px")
+      }
+    }
+
+    $window.on('resize', onResize);
+    $(document).ready(onResize);
+  })();
+
+
+
+  (function () {
+    var $toc = $('#TableOfContents');
+    if ($toc.length > 0) {
+      var $window = $(window);
+
+      function onScroll() {
+        var currentScroll = $window.scrollTop();
+        var h = $('.anchor');
+        var id = "";
+        h.each(function (i, e) {
+          e = $(e);
+          if (e.offset().top - $(window).height()/3 <= currentScroll) {
+            id = decodeURIComponent(e.attr('id'));
+          }
+        });
+        var active = $toc.find('a.active');      
+        if (active.length == 1 && active.eq(0).attr('href') == '#' + id) return true;
+
+        active.each(function (i, e) {
+          
+            $(e).removeClass('active');
+          
+        });
+        $toc.find('a[href="#' + id + '"]').addClass('active')
+        $toc.find('a[href="#' + id + '"]').parentsUntil('#TableOfContents').each(function (i, e) {
+          $(e).children('a').parents('ul').show();          
+        });
+      }
+
+      $window.on('scroll', onScroll);
+      $(document).ready(function () {
+        
+        onScroll();
+      });
+    }
+  })();
+
+
+</script>
+   </div>
+      </div>
+      
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+        
+
+
+        <div class="article-content max-w-prose mb-20">
+          
+
+<h2 class="relative group">一、引言 
+    <div id="%E4%B8%80%E5%BC%95%E8%A8%80" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E4%B8%80%E5%BC%95%E8%A8%80" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<p>目前，在大模型推理领域中，Guided Decoding 技术广泛用于生成一些特定格式的输出，如：SQL、JSON 等。本文将基于 vLLM 以及 Outlines 后端，深入解析 Guided Decoding 背后的技术原理。</p>
+
+
+<h2 class="relative group">二、什么是 Guided Decoding？ 
+    <div id="%E4%BA%8C%E4%BB%80%E4%B9%88%E6%98%AF-guided-decoding" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E4%BA%8C%E4%BB%80%E4%B9%88%E6%98%AF-guided-decoding" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<p>一般来说，LLM 的输出通常是一段符合人类表达习惯的文本序列，这让我们可以利用 LLM 来回答问题或是创作内容。然而，当我们需要 LLM 的输出符合特定的格式（如：JSON、SQL、正则表达式等）时——例如希望 LLM 根据我们的需求生成查询数据库的 SQL 语句，通过微调的方法通常很难达到我们预期的效果。这时，就需要用到 Guided Decoding 技术，它可以通过影响模型输出层的 Logits 分布（施加 Mask 过滤不满足要求的 Token）来达到规范模型输出格式的效果。</p>
+<p><strong>🌰 举个例子：</strong></p>
+<p>我们可以向 LLM 输入一个 Prompt 以及对应的格式数据：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># Guided decoding by JSON using Pydantic schema</span>
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">CarType</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">Enum</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">sedan</span> <span class="o">=</span> <span class="s2">&#34;sedan&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">suv</span> <span class="o">=</span> <span class="s2">&#34;SUV&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">truck</span> <span class="o">=</span> <span class="s2">&#34;Truck&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">coupe</span> <span class="o">=</span> <span class="s2">&#34;Coupe&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">CarDescription</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">brand</span><span class="p">:</span> <span class="nb">str</span>
+</span></span><span class="line"><span class="cl">    <span class="n">model</span><span class="p">:</span> <span class="nb">str</span>
+</span></span><span class="line"><span class="cl">    <span class="n">car_type</span><span class="p">:</span> <span class="n">CarType</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">json_schema</span> <span class="o">=</span> <span class="n">CarDescription</span><span class="o">.</span><span class="n">model_json_schema</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">prompt</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&#34;Generate a JSON with the brand, model and car_type of&#34;</span>
+</span></span><span class="line"><span class="cl">          <span class="s2">&#34;the most iconic car from the 90&#39;s, think in 100 tokens&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><p>此时，LLM 就会根据我们的要求生成一个 JSON 格式的输出：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="err">content:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;brand&#34;</span><span class="p">:</span> <span class="s2">&#34;Levels&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;model&#34;</span><span class="p">:</span> <span class="s2">&#34;racing equation&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;car_type&#34;</span><span class="p">:</span> <span class="s2">&#34;sedan&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div>
+
+<h2 class="relative group">三、Outlines 原理详解 
+    <div id="%E4%B8%89outlines-%E5%8E%9F%E7%90%86%E8%AF%A6%E8%A7%A3" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E4%B8%89outlines-%E5%8E%9F%E7%90%86%E8%AF%A6%E8%A7%A3" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<p>目前，实现了 Guided Decoding 支持的后端有 <code>outlines</code>、<code>xgrammar</code> 以及 <code>lm-format-enforcer</code> 等，下面将以 Outlines 为例，深入介绍 Guided Decoding 背后的实现原理。</p>
+<p><strong>Outlines 的核心技术点包括：</strong></p>
+<ul>
+<li><strong>基于 FSM（Finite-State Machine，有限状态机）</strong>，实现了当前输入与对应状态的匹配，并可以根据状态转移函数确定对应的 Mask；</li>
+<li><strong>建立了 FSM 的状态与其可接受 Token 的 Map</strong>，并为这些 Token 建立索引，从而避免了在每次 Decode 中遍历整个 Vocabulary 进行匹配，加快了匹配的速度。</li>
+</ul>
+<p>
+    <figure>
+      <img class="my-0 rounded-md" loading="lazy" src="./images/fsm.png" alt="" />
+      
+    </figure>
+</p>
+<p>下面，为了让大家更快速、更直观地理解 Outlines 的原理，本文将尽力避免大段公式和算法的罗列，而是尽量使用具体的例子进行讲解。</p>
+
+
+<h3 class="relative group">3.1 FSM 的工作原理 
+    <div id="31-fsm-%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#31-fsm-%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p><strong>🌰 举个例子：</strong></p>
+<p>假设我们需要模型输出一个浮点小数，即输出需要匹配的正则表达式为 <code>([0-9]*)?\.?[0-9]*</code>，并给定一个仅包含 <code>A</code>、<code>.</code>、<code>42</code>、<code>.2</code> 和 <code>1</code> 的 Vocabulary。</p>
+<blockquote>
+<p>“正则表达式”符号说明：</p>
+<ul>
+<li><code>*</code>：匹配前面的子表达式零次或多次；</li>
+<li><code>?</code>：匹配前面的子表达式零次或一次；</li>
+<li><code>.</code>：匹配除换行符 <code>\n</code> 之外的任何单字符；</li>
+<li><code>\.</code>：匹配小数点符号 <code>.</code>（需要使用 <code>\</code> 进行转义）。</li>
+</ul>
+</blockquote>
+<p>当 LLM 开始 Decode 时，FSM 位于初始状态（<code>0</code>，用整数表示不同的状态），根据状态 <code>0</code> 的转移函数可知，当前状态可以接受的字符模式为 <code>[0-9]</code> 和 <code>[.]</code>，而在我们所给的词表中，只有 <code>A</code> 不符合，此时 FSM 会针对词表 <code>['A', '.', '42', '.2', '1']</code> 生成一个值为 <code>[0, 1, 1, 1, 1]</code> 的 Mask，即模型在本轮迭代进行采样时会排除掉 <code>A</code>（图中用黑色表示），如下图所示。</p>
+<p>
+    <figure>
+      <img class="my-0 rounded-md" loading="lazy" src="./images/outlines-fsm-1.png" alt="" />
+      
+    </figure>
+</p>
+<p>接下来，有两种情况：</p>
+<ol>
+<li><strong>模型本轮的采样值为 <code>.2</code>（图中用红色表示）</strong>，此时 <code>.2</code> 同时满足从状态 <code>0</code> 过渡到状态 <code>2</code> 再到状态 <code>3</code> 的条件，因此 FSM 的当前状态会跳转到状态 <code>3</code> 并生成下一次采样的 Mask。由于状态 <code>3</code> 可接受的字符模式仅为 <code>[0-9]</code>，只有 <code>42</code> 和 <code>1</code> 满足，因此此时的 Mask 为 <code>[0, 0, 1, 0, 1]</code>；</li>
+<li><strong>模型本轮的采样值为 <code>1</code>（图中用黄色表示）</strong>，同理，此时 FSM 会跳转到状态 <code>1</code> 并生成对应的 Mask，其值为 <code>[0, 1, 1, 1, 1]</code>。</li>
+</ol>
+<p>不断循环此过程，最终就能得到满足该正则表达式的输出。</p>
+<blockquote>
+<p>补充：在 vLLM 的实现中，其 Mask 使用 <code>0</code> 表示接受的 Token，用 <code>-inf</code>（负无穷）表示要排除的 Token，然后再将输出的 Logits 分布与 Mask 相加，从而达到屏蔽不满足要求的 Token 的效果。</p>
+</blockquote>
+
+
+<h3 class="relative group">3.2 FSM 的构建过程 
+    <div id="32-fsm-%E7%9A%84%E6%9E%84%E5%BB%BA%E8%BF%87%E7%A8%8B" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#32-fsm-%E7%9A%84%E6%9E%84%E5%BB%BA%E8%BF%87%E7%A8%8B" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>在了解了 Outlines 中 FSM 的基本工作原理之后，接下来我们再看下，针对一个给定的正则表达式与 Vocabulary，Outlines 是如何构建这个 FSM 的。</p>
+<p>FSM 的构建过程主要分为两步：</p>
+<ol>
+<li><strong>收集每个 Token 能够匹配的状态转换路径</strong>：给定一个 Token，遍历所有状态，并从每一个状态开始，看是否存在能够完整接受该 Token 的路径，若存在，则将该路径记录到该 Token 对应的列表中；若不存在这样一条路径，则跳过当前状态，继续收集以下一个状态作为开始状态的可能路径；</li>
+<li><strong>收集每个状态能够接受的所有 Token</strong>：遍历每一个 Token，并针对该 Token 执行步骤一，获取该 Token 能够匹配的状态转换路径，然后遍历每一条路径并取路径中的第一个节点（开始状态），将该状态与该 Token 进行绑定（将该 Token 添加到该状态的集合中）。</li>
+</ol>
+<p><strong>🌰 举个例子：</strong></p>
+<p>这里我们继续使用上面的例子进行说明：</p>
+<p>
+    <figure>
+      <img class="my-0 rounded-md" loading="lazy" src="./images/outlines-fsm-2.png" alt="" />
+      
+    </figure>
+</p>
+<p><strong>对于 Token <code>A</code>，遍历每个状态：</strong></p>
+<ol>
+<li>从状态 <code>0</code> 开始，不满足，pass；</li>
+<li>从状态 <code>1</code> 开始，不满足，pass；</li>
+<li>从状态 <code>2</code> 开始，不满足，pass；</li>
+<li>从状态 <code>3</code> 开始，不满足，pass。</li>
+</ol>
+<p><strong>对于 Token <code>.</code>，遍历每个状态：</strong></p>
+<ol>
+<li>从状态 <code>0</code> 开始，可以转换到状态 <code>2</code>，记录路径 <code>0 -&gt; 2</code>；</li>
+<li>从状态 <code>1</code> 开始，可以转换到状态 <code>2</code>，记录路径 <code>1 -&gt; 2</code>；</li>
+<li>从状态 <code>2</code> 开始，不满足，pass；</li>
+<li>从状态 <code>3</code> 开始，不满足，pass。</li>
+</ol>
+<p>此时，我们可以收集到对于 Token <code>.</code>，其所能匹配到的所有状态转换路径集合：</p>
+<pre tabindex="0"><code>0 -&gt; 2
+1 -&gt; 2
+</code></pre><p>然后，将每条路径的起始状态与该 Token 进行绑定（一个 HashMap）：</p>
+<pre tabindex="0"><code>状态 0 &lt;-&gt; set(&#34;.&#34;)
+状态 1 &lt;-&gt; set(&#34;.&#34;)
+</code></pre><p><strong>对于 Token <code>42</code>，遍历每个状态：</strong></p>
+<ol>
+<li>从状态 <code>0</code> 开始，可以转换到状态 <code>1</code>，记录路径 <code>0 -&gt; 1</code>；</li>
+<li>从状态 <code>1</code> 开始，可以转换到状态 <code>1</code>，记录路径 <code>1</code>；</li>
+<li>从状态 <code>2</code> 开始，可以转换到状态 <code>3</code>，记录路径 <code>2 -&gt; 3</code>；</li>
+<li>从状态 <code>3</code> 开始，可以转换到状态 <code>3</code>，记录路径 <code>3</code>。</li>
+</ol>
+<p>Token <code>42</code> 能匹配到的所有路径集合如下：</p>
+<pre tabindex="0"><code>0 -&gt; 1
+1
+2 -&gt; 3
+3
+</code></pre><p>同理，将所有起始状态与该 Token 进行绑定：</p>
+<pre tabindex="0"><code>状态 0 &lt;-&gt; set(&#34;.&#34;, &#34;42&#34;)
+状态 1 &lt;-&gt; set(&#34;.&#34;, &#34;42&#34;)
+状态 2 &lt;-&gt; set(&#34;42&#34;)
+状态 3 &lt;-&gt; set(&#34;42&#34;)
+</code></pre><p><strong>对于 Token <code>.2</code>，遍历每个状态：</strong></p>
+<ol>
+<li>从状态 <code>0</code> 开始，记录路径 <code>0 -&gt; 2 -&gt; 3</code>；</li>
+<li>从状态 <code>1</code> 开始，记录路径 <code>1 -&gt; 2 -&gt; 3</code>；</li>
+<li>从状态 <code>2</code> 开始，不满足，pass；</li>
+<li>从状态 <code>3</code> 开始，不满足，pass。</li>
+</ol>
+<p>绑定状态与 Token：</p>
+<pre tabindex="0"><code>状态 0 &lt;-&gt; set(&#34;.&#34;, &#34;42&#34;, &#34;.2&#34;)
+状态 1 &lt;-&gt; set(&#34;.&#34;, &#34;42&#34;, &#34;.2&#34;)
+状态 2 &lt;-&gt; set(&#34;42&#34;)
+状态 3 &lt;-&gt; set(&#34;42&#34;)
+</code></pre><p><strong>对于 Token <code>1</code>，遍历每个状态：</strong></p>
+<ol>
+<li>从状态 <code>0</code> 开始，记录路径 <code>0 -&gt; 1</code>；</li>
+<li>从状态 <code>1</code> 开始，记录路径 <code>1</code>；</li>
+<li>从状态 <code>2</code> 开始，记录路径 <code>2 -&gt; 3</code>；</li>
+<li>从状态 <code>3</code> 开始，记录路径 <code>3</code>。</li>
+</ol>
+<p>绑定状态与 Token：</p>
+<pre tabindex="0"><code>状态 0 &lt;-&gt; set(&#34;.&#34;, &#34;42&#34;, &#34;.2&#34;, &#34;1&#34;)
+状态 1 &lt;-&gt; set(&#34;.&#34;, &#34;42&#34;, &#34;.2&#34;, &#34;1&#34;)
+状态 2 &lt;-&gt; set(&#34;42&#34;, &#34;1&#34;)
+状态 3 &lt;-&gt; set(&#34;42&#34;, &#34;1&#34;)
+</code></pre><p>最后，我们就得到了每个 FSM 状态能够匹配的所有 Token 集合。</p>
+<p>在实际过程中，当 LLM 生成的内容进行到某一个状态时（比如：状态 <code>2</code>），Outlines 就能快速通过该 Map 获取到当前状态所能接受生成的 Token 集合（<code>42</code> 和 <code>1</code>），搜索的时间复杂度为 <code>O(1)</code>，并生成下一步 Decode 的 Mask（为 <code>[0, 0, 1, 0, 1]</code>，即过滤掉了其它 3 个 Token）。</p>
+
+
+<h3 class="relative group">3.3 总结 
+    <div id="33-%E6%80%BB%E7%BB%93" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#33-%E6%80%BB%E7%BB%93" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p><strong>Outlines 的优缺点：</strong></p>
+<ul>
+<li><strong>优点：不会引入额外的推理延迟</strong>。FSM Map 的构建过程会在真正进行 Decode 之前就完成，因此并不会给实际运行时的推理过程引入太多额外的延迟（引入的额外计算仅包括生成 Mask 等，几乎可以忽略）；</li>
+<li><strong>缺点：会引入额外的内存占用</strong>。保存并加载这个 Map 会带来额外的内存占用，因此在实际应用中，我们需要对推理速度和内存占用这两方面做一个权衡。</li>
+</ul>
+<p>另外，Outlines 不仅可以支持使用正则表达式来限定模型的输出，还支持 <strong>CFGs（Context-Free Grammars，上下文无关文法）</strong>，比如：JSON、SQL 以及 Python 等语言。关于 CFGs 生成的原理，这里不再详细展开，感兴趣的读者可以自行阅读 Outlines 的<a href="https://arxiv.org/abs/2307.09702" target="_blank"><u>论文</u></a>与<a href="https://github.com/dottxt-ai/outlines" target="_blank"><u>源码</u></a>。</p>
+
+
+<h2 class="relative group">四、vLLM Guided Decoding 源码解读 
+    <div id="%E5%9B%9Bvllm-guided-decoding-%E6%BA%90%E7%A0%81%E8%A7%A3%E8%AF%BB" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E5%9B%9Bvllm-guided-decoding-%E6%BA%90%E7%A0%81%E8%A7%A3%E8%AF%BB" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<p>目前，vLLM 的 Guided Decoding 功能支持 <code>outlines</code>、<code>xgrammar</code> 以及 <code>lm-format-enforcer</code> 这三种后端。下面，我们将使用 <code>Qwen2.5-7B-Instruct</code> 模型，并基于 <code>outlines</code> 后端，详细讲解 Guided Decoding 的整体流程及其代码实现。</p>
+
+
+<h3 class="relative group">4.1 加载 LogitsProcessor 
+    <div id="41-%E5%8A%A0%E8%BD%BD-logitsprocessor" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#41-%E5%8A%A0%E8%BD%BD-logitsprocessor" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>当 <code>LLMEngine</code> 初始化时，会在 <code>_build_logits_processors()</code> 方法中调用 <code>get_local_guided_decoding_logits_processor()</code> 方法获取当前可用后端对应的 <code>LogitsProcessor</code>（位于 <code>vllm/model_executor/guided_decoding</code> 目录下）。</p>
+<p>此时，需要传入 Guided Decoding 相关的参数 <code>GuidedDecodingParams</code>，这些参数位于 <code>SamplingParams</code> 中，可以在启动 vLLM 时进行指定。最后，所有被成功加载的各种 <code>LogitsProcessor</code> 都会被存放到 <code>SamplingParams</code> 中。</p>
+<p>部分代码如下：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># llm_engine.py</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">_build_logits_processors</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">sampling_params</span><span class="p">,</span> <span class="o">...</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">logits_processors</span> <span class="o">=</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">sampling_params</span><span class="o">.</span><span class="n">guided_decoding</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># ...</span>
+</span></span><span class="line"><span class="cl">        <span class="n">guided_decoding</span> <span class="o">=</span> <span class="n">sampling_params</span><span class="o">.</span><span class="n">guided_decoding</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># ...</span>
+</span></span><span class="line"><span class="cl">        <span class="n">processor</span> <span class="o">=</span> <span class="n">get_local_guided_decoding_logits_processor</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">            <span class="n">guided_params</span><span class="o">=</span><span class="n">guided_decoding</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="n">tokenizer</span><span class="o">=</span><span class="n">tokenizer</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="n">model_config</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">model_config</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="n">reasoning_backend</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">decoding_config</span><span class="o">.</span><span class="n">reasoning_backend</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">processor</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">logits_processors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">processor</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1"># ...</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">sampling_params</span><span class="o">.</span><span class="n">logits_processors</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">logits_processors</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">sampling_params</span>
+</span></span></code></pre></div><p><code>GuidedDecodingParams</code> 包含的参数如下：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># sampling_params.py</span>
+</span></span><span class="line"><span class="cl"><span class="nd">@dataclass</span>
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">GuidedDecodingParams</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;One of these fields will be used to build a logit processor.&#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">json</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">dict</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span>
+</span></span><span class="line"><span class="cl">    <span class="n">regex</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+</span></span><span class="line"><span class="cl">    <span class="n">choice</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span>
+</span></span><span class="line"><span class="cl">    <span class="n">grammar</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+</span></span><span class="line"><span class="cl">    <span class="n">json_object</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;These are other options that can be set&#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">backend</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+</span></span><span class="line"><span class="cl">    <span class="n">whitespace_pattern</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+</span></span></code></pre></div><p>其中，前 5 个参数用于指定模型输出需要匹配的模式，剩下 2 个参数为一些可选配置。</p>
+
+
+<h3 class="relative group">4.2 整体推理流程 
+    <div id="42-%E6%95%B4%E4%BD%93%E6%8E%A8%E7%90%86%E6%B5%81%E7%A8%8B" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#42-%E6%95%B4%E4%BD%93%E6%8E%A8%E7%90%86%E6%B5%81%E7%A8%8B" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>当初始化完成后，vLLM 会开启一个循环并不断调用 <code>step()</code> 方法执行推理，每一次调用就是一个迭代。</p>
+<p>部分代码如下：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># llm.py</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">_run_engine</span><span class="p">(</span><span class="o">...</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># ...</span>
+</span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="bp">self</span><span class="o">.</span><span class="n">llm_engine</span><span class="o">.</span><span class="n">has_unfinished_requests</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">        <span class="n">step_outputs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">llm_engine</span><span class="o">.</span><span class="n">step</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># ...</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">outputs</span>
+</span></span></code></pre></div><p>在 <code>step()</code> 方法中，vLLM 的整体调用链路如下：</p>
+<p>
+    <figure>
+      <img class="my-0 rounded-md" loading="lazy" src="./images/process-1.png" alt="" />
+      
+    </figure>
+</p>
+<p>其中，与 Guided Decoding 有关的核心处理逻辑都被封装到了 <code>BaseLogitsProcessor</code> 的 <code>__call__()</code> 方法中，这样就可以直接通过 <code>logits_processor(...)</code> 的方式来进行调用。</p>
+
+
+<h3 class="relative group">4.3 计算 Mask 
+    <div id="43-%E8%AE%A1%E7%AE%97-mask" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#43-%E8%AE%A1%E7%AE%97-mask" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>具体地，<code>BaseLogitsProcessor: __call__()</code> 的部分代码（<code>#...</code> 代表省略）及其说明如下：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">outlines.fsm.guide</span> <span class="kn">import</span> <span class="p">(</span><span class="n">CFGGuide</span><span class="p">,</span> <span class="n">CFGState</span><span class="p">,</span> <span class="n">Generate</span><span class="p">,</span> <span class="n">Guide</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                                <span class="n">RegexGuide</span><span class="p">,</span> <span class="n">Write</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">BaseLogitsProcessor</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">guide</span><span class="p">:</span> <span class="n">Guide</span><span class="p">,</span> <span class="n">reasoner</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Reasoner</span><span class="p">]):</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">_guide</span><span class="p">:</span> <span class="n">Guide</span> <span class="o">=</span> <span class="n">guide</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">_fsm_state</span><span class="p">:</span> <span class="n">DefaultDict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">CFGState</span><span class="p">]]</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># ...</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_ids</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">                 <span class="n">scores</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;&#34;&#34;Use the FSM to bias the logits before sampling the next token.&#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># ...</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">seq_id</span> <span class="o">=</span> <span class="nb">hash</span><span class="p">(</span><span class="nb">tuple</span><span class="p">(</span><span class="n">input_ids</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">input_ids</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">last_token</span> <span class="o">=</span> <span class="n">input_ids</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">            <span class="n">last_seq_id</span> <span class="o">=</span> <span class="nb">hash</span><span class="p">(</span><span class="nb">tuple</span><span class="p">(</span><span class="n">input_ids</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]))</span>
+</span></span><span class="line"><span class="cl">            <span class="c1"># 根据前一个 FSM 状态以及当前输入的 Token，从 Outlines 获取下一个状态</span>
+</span></span><span class="line"><span class="cl">            <span class="c1"># _fsm_state 是一个 Map：序列哈希 &lt;--&gt; FSM 状态</span>
+</span></span><span class="line"><span class="cl">            <span class="bp">self</span><span class="o">.</span><span class="n">_fsm_state</span><span class="p">[</span><span class="n">seq_id</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_guide</span><span class="o">.</span><span class="n">get_next_state</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">                <span class="n">state</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_fsm_state</span><span class="p">[</span><span class="n">last_seq_id</span><span class="p">],</span> <span class="n">token_id</span><span class="o">=</span><span class="n">last_token</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        <span class="c1"># ...</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1"># 从 Outlines 获取当前状态所能接受的 Token 集合</span>
+</span></span><span class="line"><span class="cl">        <span class="n">instruction</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_guide</span><span class="o">.</span><span class="n">get_next_instruction</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">            <span class="n">state</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_fsm_state</span><span class="p">[</span><span class="n">seq_id</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">        <span class="n">allowed_tokens</span> <span class="o">=</span> <span class="n">instruction</span><span class="o">.</span><span class="n">tokens</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1"># 使用 -torch.inf 初始化 Mask</span>
+</span></span><span class="line"><span class="cl">        <span class="n">mask</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">full</span><span class="p">((</span><span class="n">scores</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="p">),</span>
+</span></span><span class="line"><span class="cl">                          <span class="o">-</span><span class="n">torch</span><span class="o">.</span><span class="n">inf</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                          <span class="n">device</span><span class="o">=</span><span class="n">scores</span><span class="o">.</span><span class="n">device</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        <span class="c1"># ...</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1"># 将 Mask 中 allowed_tokens 的位置设为 0，其余为 -torch.inf（即要被过滤的）</span>
+</span></span><span class="line"><span class="cl">        <span class="n">mask</span><span class="o">.</span><span class="n">index_fill_</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">allowed_tokens</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        <span class="c1"># 将 Mask 应用到模型输出上：</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># 1.对于可接受的 Token：原本的概率 + Mask(0)，概率不变</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># 2.对于不接受的 Token：原本的概率 + Mask(负无穷)，概率为 0</span>
+</span></span><span class="line"><span class="cl">        <span class="n">scores</span><span class="o">.</span><span class="n">add_</span><span class="p">(</span><span class="n">mask</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">scores</span>
+</span></span></code></pre></div><p>总结：Guided Decoding 通过一个 Mask 机制实现了筛除模型生成的不满足当前格式限制的 Token 的效果。</p>
+
+
+<h3 class="relative group">4.4 支持 Reasoning 
+    <div id="44-%E6%94%AF%E6%8C%81-reasoning" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#44-%E6%94%AF%E6%8C%81-reasoning" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>目前，vLLM 还支持在 Reasoning 时，仅对最后的结果 <code>content</code> 执行 Guided Decoding 逻辑，而不影响原本推理部分的内容 <code>reasoning_content</code>。</p>
+<p>具体的代码可以参考这个 <a href="https://github.com/vllm-project/vllm/pull/12955" target="_blank"><u>PR</u></a>，由 <a href="https://github.com/gaocegege" target="_blank"><u>Ce Gao</u></a> 实现，感兴趣的读者可以自行了解，这里不再详细展开。</p>
+
+
+<h2 class="relative group">五、SGLang Jump-Forward Decoding 
+    <div id="%E4%BA%94sglang-jump-forward-decoding" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E4%BA%94sglang-jump-forward-decoding" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<p>使用 FSM 实现 Guided Decoding 还有一个缺点——即只能逐个 Token 计算 Mask。然而，在 Guided Decoding 中，有一些特定的 Token 组合是绑定在一起的，对于这些 Token，其实没必要再一个一个地去生成，而是可以一次 Decode 直接生成几个 Token 的组合，从而可以加速 Guided Decoding 的推理过程。</p>
+<p>为了解决上述问题，SGLang 提出了一种基于 <strong>Compressed Finite State Machine</strong> 的 <strong>Jump-Forward Decoding</strong>。即当生成一些特定的 Token（后续模式固定且可预测，如：<code>{</code>）时，该算法可以在一次 Decode 中将连续的几个 Token 直接生成。</p>
+<p>
+    <figure>
+      <img class="my-0 rounded-md" loading="lazy" src="./images/jump-forwad.png" alt="" />
+      
+    </figure>
+</p>
+<p>具体地，Compressed FSM 通过先分析 FSM（根据用户给定的正则表达式生成），识别其中一些没有分支的节点（即只由一条边连接），并将这些路径上的节点合并，从而可以通过一次跳转（Decode），跨越多个状态（Token），直到下一个具有分支的节点，从而极大地提高了 Guided Decoding 的效率。</p>
+<p>更多细节可以参考 SGLang 的<a href="https://arxiv.org/abs/2312.07104" target="_blank"><u>论文</u></a>和<a href="https://github.com/sgl-project/sglang" target="_blank"><u>代码</u></a>。</p>
+
+
+<h2 class="relative group">六、参考资料 
+    <div id="%E5%85%AD%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E5%85%AD%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<ul>
+<li><a href="https://arxiv.org/abs/1807.03100" target="_blank"><u>Robust Text-to-SQL Generation with Execution-Guided Decoding</u></a></li>
+<li><a href="https://arxiv.org/abs/2307.09702" target="_blank"><u>Efficient Guided Generation for Large Language Models</u></a></li>
+<li><a href="https://docs.vllm.ai/en/stable/features/structured_outputs.html#structured-outputs" target="_blank"><u>vLLM Docs | Structured Outputs</u></a></li>
+<li><a href="https://github.com/vllm-project/vllm" target="_blank"><u>vLLM GitHub</u></a></li>
+<li><a href="https://lmsys.org/blog/2024-02-05-compressed-fsm/" target="_blank"><u>Fast JSON Decoding for Local LLMs with Compressed Finite State Machine</u></a></li>
+<li><a href="https://arxiv.org/abs/2312.07104" target="_blank"><u>SGLang: Efficient Execution of Structured Language Model Programs</u></a></li>
+</ul>
+
+          
+          
+          
+        </div>
+        
+        
+
+          
+            
+            
+<div class="flex author">
+  
+    
+    
+      
+    
+    
+      
+        
+      
+      <img class="!mt-0 !mb-0 h-24 w-24 rounded-full ltr:mr-4 rtl:ml-4" width="96" height="96"
+      alt="Shanshan Shen" src="/images/logo_hu9373694138991197219.jpg" />
+    
+  
+  <div class="place-self-center">
+    
+    <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+      Author
+    </div>
+    <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+      Shanshan Shen
+    </div>
+    
+    
+    <div class="text-sm text-neutral-700 dark:text-neutral-400">A programmer ingaging in AI Infra.</div>
+    
+    <div class="text-2xl sm:text-lg">
+  <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500">
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://github.com/shen-shanshan"
+          target="_blank"
+          aria-label="Github"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom">
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+
+  </span>
+
+</span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://gitee.com/shenshanshan0918"
+          target="_blank"
+          aria-label="Gitee"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom">
+
+  <span class="relative block icon">
+    <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M224 96C135.6 96 64 167.6 64 256s71.6 160 160 160c77.4 0 142-55 156.8-128L256 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l144 0c25.8 0 49.6 21.4 47.2 50.6C437.8 389.6 341.4 480 224 480C100.3 480 0 379.7 0 256S100.3 32 224 32c57.4 0 109.7 21.6 149.3 57c13.2 11.8 14.3 32 2.5 45.2s-32 14.3-45.2 2.5C302.3 111.4 265 96 224 96z"/></svg>
+  </span>
+
+</span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://blog.csdn.net/weixin_44162047?type=blog"
+          target="_blank"
+          aria-label="Csdn"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom">
+
+  <span class="relative block icon">
+    <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M329.1 142.9c-62.5-62.5-155.8-62.5-218.3 0s-62.5 163.8 0 226.3s155.8 62.5 218.3 0c12.5-12.5 32.8-12.5 45.3 0s12.5 32.8 0 45.3c-87.5 87.5-221.3 87.5-308.8 0s-87.5-229.3 0-316.8s221.3-87.5 308.8 0c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0z"/></svg>
+  </span>
+
+</span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://www.zhihu.com/people/sss-53-26"
+          target="_blank"
+          aria-label="Zhihu"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom">
+
+  <span class="relative block icon">
+    <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M170.5 148.1v217.5l23.4 0 7.7 26.4 42-26.4h49.5V148.1H170.5zm97.8 193.9h-27.9l-27.9 17.5-5.1-17.5-11.9 0V171.8h72.8v170.3zm-118.5-94.4H97.5c1.7-27.1 2.2-51.6 2.2-73.5h51.2s2-22.6-8.6-22.3h-88.5c3.5-13.1 7.9-26.7 13.1-40.7 0 0-24.1 0-32.3 21.6-3.4 8.9-13.2 43.1-30.7 78.1 5.9-.6 25.4-1.2 36.8-22.2 2.1-5.9 2.5-6.7 5.1-14.5h28.9c0 10.5-1.2 66.9-1.7 73.4H20.8c-11.7 0-15.6 23.6-15.6 23.6h65.6C66.5 321.1 42.8 363.1 0 396.3c20.5 5.9 40.9-.9 51-9.9 0 0 23-20.9 35.6-69.3l54 64.9s7.9-26.9-1.2-40c-7.6-8.9-28.1-33.1-36.8-41.8L87.9 312c4.4-14 7-27.6 7.9-40.7h61.7s-.1-23.6-7.6-23.6v0zm412-1.6c20.8-25.6 45-58.6 45-58.6s-18.7-14.8-27.4-4.1c-6 8.2-36.8 48.2-36.8 48.2l19.2 14.4zm-150.1-59.1c-9-8.3-25.9 2.1-25.9 2.1s39.5 55 41.1 57.5l19.5-13.7s-25.7-37.6-34.7-45.9h0zM640 258.4c-19.8 0-130.9 .9-131.1 .9v-101c4.8 0 12.4-.4 22.9-1.2 40.9-2.4 70.1-4 87.8-4.8 0 0 12.2-27.2-.6-33.4-3.1-1.2-23.2 4.6-23.2 4.6s-165.2 16.5-232.4 18.1c1.6 8.8 7.6 17.1 15.8 19.6 13.3 3.5 22.7 1.7 49.2 .9 24.8-1.6 43.7-2.4 56.5-2.4v99.8H351.4s2.8 22.3 25.5 22.9h107.9v70.9c0 14-11.2 22-24.5 21.1-14.1 .1-26.1-1.2-41.7-1.8 2 4 6.3 14.4 19.3 21.8 9.9 4.8 16.2 6.6 26 6.6 29.6 0 45.7-17.3 44.9-45.3v-73.3h122.4c9.7 0 8.7-23.8 8.7-23.8l0 0z"/></svg>
+  </span>
+
+</span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://space.bilibili.com/14112152?spm_id_from=333.1007.0.0"
+          target="_blank"
+          aria-label="Bilibili"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom">
+
+  <span class="relative block icon">
+    <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M488.6 104.1C505.3 122.2 513 143.8 511.9 169.8V372.2C511.5 398.6 502.7 420.3 485.4 437.3C468.2 454.3 446.3 463.2 419.9 464H92C65.6 463.2 43.8 454.2 26.7 436.8C9.7 419.4 .8 396.5 0 368.2V169.8C.8 143.8 9.7 122.2 26.7 104.1C43.8 87.8 65.6 78.8 92 78H121.4L96.1 52.2C90.3 46.5 87.4 39.2 87.4 30.4C87.4 21.6 90.3 14.3 96.1 8.6C101.8 2.9 109.1 0 117.9 0C126.7 0 134 2.9 139.8 8.6L213.1 78H301.1L375.6 8.6C381.7 2.9 389.2 0 398 0C406.8 0 414.1 2.9 419.9 8.6C425.6 14.3 428.5 21.6 428.5 30.4C428.5 39.2 425.6 46.5 419.9 52.2L394.6 78L423.9 78C450.3 78.8 471.9 87.8 488.6 104.1H488.6zM449.8 173.8C449.4 164.2 446.1 156.4 439.1 150.3C433.9 144.2 425.1 140.9 416.4 140.5H96.1C86.5 140.9 78.6 144.2 72.5 150.3C66.3 156.4 63.1 164.2 62.7 173.8V368.2C62.7 377.4 66 385.2 72.5 391.7C79 398.2 86.9 401.5 96.1 401.5H416.4C425.6 401.5 433.4 398.2 439.7 391.7C446 385.2 449.4 377.4 449.8 368.2L449.8 173.8zM185.5 216.5C191.8 222.8 195.2 230.6 195.6 239.7V273C195.2 282.2 191.9 289.9 185.8 296.2C179.6 302.5 171.8 305.7 162.2 305.7C152.6 305.7 144.7 302.5 138.6 296.2C132.5 289.9 129.2 282.2 128.8 273V239.7C129.2 230.6 132.6 222.8 138.9 216.5C145.2 210.2 152.1 206.9 162.2 206.5C171.4 206.9 179.2 210.2 185.5 216.5H185.5zM377 216.5C383.3 222.8 386.7 230.6 387.1 239.7V273C386.7 282.2 383.4 289.9 377.3 296.2C371.2 302.5 363.3 305.7 353.7 305.7C344.1 305.7 336.3 302.5 330.1 296.2C323.1 289.9 320.7 282.2 320.4 273V239.7C320.7 230.6 324.1 222.8 330.4 216.5C336.7 210.2 344.5 206.9 353.7 206.5C362.9 206.9 370.7 210.2 377 216.5H377z"/></svg>
+  </span>
+
+</span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://music.163.com/#/artist?id=62054947"
+          target="_blank"
+          aria-label="Music"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom">
+
+  <span class="relative block icon">
+    <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M499.1 6.3c8.1 6 12.9 15.6 12.9 25.7l0 72 0 264c0 44.2-43 80-96 80s-96-35.8-96-80s43-80 96-80c11.2 0 22 1.6 32 4.6L448 147 192 223.8 192 432c0 44.2-43 80-96 80s-96-35.8-96-80s43-80 96-80c11.2 0 22 1.6 32 4.6L128 200l0-72c0-14.1 9.3-26.6 22.8-30.7l320-96c9.7-2.9 20.2-1.1 28.3 5z"/></svg>
+  </span>
+
+</span></a
+        >
+      
+    
+  </div>
+
+</div>
+  </div>
+</div>
+
+          
+
+          
+
+          
+          <div class="mb-10"></div>
+          
+
+        
+
+        
+        
+
+        
+
+
+<h2 class="mt-8 text-2xl font-extrabold mb-10">Related</h2>
+<section class="w-full grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+  
+  
+
+  <a href="/articles/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%BE%AE%E8%B0%83%E7%9F%A5%E8%AF%86%E5%85%A8%E6%99%AF/" class="min-w-full">
+    
+    <div class="min-h-full border border-neutral-200 dark:border-neutral-700 border-2 rounded overflow-hidden shadow-2xl relative">
+        
+        <div class="w-full thumbnail_card_related nozoom" style="background-image:url(/articles/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%BE%AE%E8%B0%83%E7%9F%A5%E8%AF%86%E5%85%A8%E6%99%AF/featured_hu5669775764973143139.jpg);"></div>
+        
+      
+
+      <div class="px-6 py-4">
+
+        
+        <div class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
+          href="/articles/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%BE%AE%E8%B0%83%E7%9F%A5%E8%AF%86%E5%85%A8%E6%99%AF/">大模型微调知识全景</div>
+        
+
+        <div class="text-sm text-neutral-500 dark:text-neutral-400">
+          
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  <time datetime="2024-12-05T10:00:40&#43;08:00">2024-12-05</time>
+  
+
+  
+  
+</div>
+
+
+
+
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  
+  
+  
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/&#34;,'_self');">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    计算机
+  </span>
+</span>
+  </span>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/ai/&#34;,'_self');">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    AI
+  </span>
+</span>
+  </span>
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/llm/&#34;,'_self');">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    LLM
+  </span>
+</span>
+  </span>
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/%E6%A8%A1%E5%9E%8B%E5%BE%AE%E8%B0%83/&#34;,'_self');">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    模型微调
+  </span>
+</span>
+  </span>
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/%E8%AE%BA%E6%96%87%E7%B2%BE%E8%AF%BB/&#34;,'_self');">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    论文精读
+  </span>
+</span>
+  </span>
+  
+  
+  
+  
+</div>
+
+
+
+
+        </div>
+
+        
+        <div class="py-1 prose dark:prose-invert">
+          
+        </div>
+        
+      </div>
+      <div class="px-6 pt-4 pb-2">
+
+      </div>
+    </div>
+  </a>
+
+  
+  
+
+  <a href="/articles/%E5%A4%A7%E6%A8%A1%E5%9E%8B-lora-%E5%BE%AE%E8%B0%83%E7%9A%84%E6%95%B0%E5%AD%A6%E5%8E%9F%E7%90%86/" class="min-w-full">
+    
+    <div class="min-h-full border border-neutral-200 dark:border-neutral-700 border-2 rounded overflow-hidden shadow-2xl relative">
+        
+        <div class="w-full thumbnail_card_related nozoom" style="background-image:url(/articles/%E5%A4%A7%E6%A8%A1%E5%9E%8B-lora-%E5%BE%AE%E8%B0%83%E7%9A%84%E6%95%B0%E5%AD%A6%E5%8E%9F%E7%90%86/featured_hu5669775764973143139.jpg);"></div>
+        
+      
+
+      <div class="px-6 py-4">
+
+        
+        <div class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
+          href="/articles/%E5%A4%A7%E6%A8%A1%E5%9E%8B-lora-%E5%BE%AE%E8%B0%83%E7%9A%84%E6%95%B0%E5%AD%A6%E5%8E%9F%E7%90%86/">大模型 LoRA 微调的数学原理</div>
+        
+
+        <div class="text-sm text-neutral-500 dark:text-neutral-400">
+          
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  <time datetime="2024-11-13T17:05:40&#43;00:00">2024-11-13</time>
+  
+
+  
+  
+</div>
+
+
+
+
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  
+  
+  
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/&#34;,'_self');">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    计算机
+  </span>
+</span>
+  </span>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/ai/&#34;,'_self');">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    AI
+  </span>
+</span>
+  </span>
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/llm/&#34;,'_self');">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    LLM
+  </span>
+</span>
+  </span>
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/%E6%A8%A1%E5%9E%8B%E5%BE%AE%E8%B0%83/&#34;,'_self');">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    模型微调
+  </span>
+</span>
+  </span>
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/%E8%AE%BA%E6%96%87%E7%B2%BE%E8%AF%BB/&#34;,'_self');">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    论文精读
+  </span>
+</span>
+  </span>
+  
+  
+  
+  
+</div>
+
+
+
+
+        </div>
+
+        
+        <div class="py-1 prose dark:prose-invert">
+          
+        </div>
+        
+      </div>
+      <div class="px-6 pt-4 pb-2">
+
+      </div>
+    </div>
+  </a>
+
+  
+  
+
+  <a href="/articles/%E6%B7%B1%E5%85%A5%E8%A7%A3%E6%9E%90-python-%E5%8C%85%E8%B0%83%E7%94%A8%E5%8E%9F%E7%90%86%E4%B8%8E%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/" class="min-w-full">
+    
+    <div class="min-h-full border border-neutral-200 dark:border-neutral-700 border-2 rounded overflow-hidden shadow-2xl relative">
+        
+        <div class="w-full thumbnail_card_related nozoom" style="background-image:url(/articles/%E6%B7%B1%E5%85%A5%E8%A7%A3%E6%9E%90-python-%E5%8C%85%E8%B0%83%E7%94%A8%E5%8E%9F%E7%90%86%E4%B8%8E%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/featured_hu17493459015759175972.jpg);"></div>
+        
+      
+
+      <div class="px-6 py-4">
+
+        
+        <div class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
+          href="/articles/%E6%B7%B1%E5%85%A5%E8%A7%A3%E6%9E%90-python-%E5%8C%85%E8%B0%83%E7%94%A8%E5%8E%9F%E7%90%86%E4%B8%8E%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/">深入解析 Python 包调用原理与最佳实践</div>
+        
+
+        <div class="text-sm text-neutral-500 dark:text-neutral-400">
+          
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  <time datetime="2025-01-15T15:02:45&#43;08:00">2025-01-15</time>
+  
+
+  
+  
+</div>
+
+
+
+
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  
+  
+  
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/&#34;,'_self');">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    计算机
+  </span>
+</span>
+  </span>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/python/&#34;,'_self');">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Python
+  </span>
+</span>
+  </span>
+  
+  
+  
+  
+</div>
+
+
+
+
+        </div>
+
+        
+        <div class="py-1 prose dark:prose-invert">
+          
+        </div>
+        
+      </div>
+      <div class="px-6 pt-4 pb-2">
+
+      </div>
+    </div>
+  </a>
+
+  
+</section>
+
+  
+      </div>
+     
+      
+      
+        
+        
+          
+          
+        
+      <script>
+        var oid = "views_posts\/【计算机】vLLM学习笔记——Guided-Decoding\/index.md"
+        var oid_likes = "likes_posts\/【计算机】vLLM学习笔记——Guided-Decoding\/index.md"
+      </script>
+      
+      
+      <script type="text/javascript" src="/js/page.min.0860cf4e04fa2d72cc33ddba263083464d48f67de06114529043cb4623319efed4f484fd7f1730df5abea0e2da6f3538855634081d02f2d6e920b956f063e823.js" integrity="sha512-CGDPTgT6LXLMM926JjCDRk1I9n3gYRRSkEPLRiMxnv7U9IT9fxcw31q&#43;oOLabzU4hVY0CB0C8tbpILlW8GPoIw=="></script>
+      
+  
+    </section>
+  <footer class="pt-8 max-w-prose print:hidden">
+
+    
+
+    
+  </footer>
+</article>
+
+      <div id="top-scroller" class="pointer-events-none absolute top-[110vh] bottom-0 w-12 ltr:right-0 rtl:left-0">
+  <a href="#the-top"
+    class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 mb-16 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="Scroll to top" title="Scroll to top">
+    &uarr;
+  </a>
+</div>
+    </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+  
+  <div class="flex items-center justify-between">
+
+    
+    
+    <p class="text-sm text-neutral-500 dark:text-neutral-400">
+      &copy;
+      2025
+      Shanshan Shen
+    </p>
+    
+
+    
+    
+    <p class="text-xs text-neutral-500 dark:text-neutral-400">
+      
+      
+      Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+        href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+        href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a>
+    </p>
+    
+
+  </div>
+  <script>
+    
+    mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+      margin: 24,
+      background: 'rgba(0,0,0,0.5)',
+      scrollOffset: 0,
+    })
+    
+  </script>
+  
+  
+  <script type="text/javascript" src="/js/process.min.ee03488f19c93c2efb199e2e3014ea5f3cb2ce7d45154adb3399a158cac27ca52831db249ede5bb602700ef87eb02434139de0858af1818ab0fb4182472204a4.js" integrity="sha512-7gNIjxnJPC77GZ4uMBTqXzyyzn1FFUrbM5mhWMrCfKUoMdsknt5btgJwDvh&#43;sCQ0E53ghYrxgYqw&#43;0GCRyIEpA=="></script>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh]"
+  data-url="http://localhost:1313/"
+  style="z-index:500"
+>
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800"
+  >
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          
+
+  <span class="relative block icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+
+  </span>
+
+
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0"
+        />
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)"
+      >
+        
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+
+  </span>
+
+
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+  </div>
+</body>
+
+</html>
