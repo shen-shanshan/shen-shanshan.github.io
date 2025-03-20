@@ -2,7 +2,7 @@
 title: '《长安的荔枝》读书笔记｜披着历史外衣的职场生存指南'
 date: '2025-02-02T21:07:55+08:00'
 categories: "阅读"
-tags: ["文学", "小说", "职场"]
+tags: ["读书笔记", "文学", "小说", "职场"]
 # summary: "xxx"
 draft: false
 ---
@@ -11,7 +11,7 @@ draft: false
 
 {{< timeline >}}
 
-{{< timelineItem icon="tag" header="《长安的荔枝》" badge="历史文学" subheader="作者：马伯庸" >}}
+{{< timelineItem icon="tag" header="《长安的荔枝》" badge="文学" subheader="作者：马伯庸" >}}
 简介：本书以“一骑红尘妃子笑，无人知是荔枝来”作为背景，以一个小人物的视角，描绘了唐代官场里的明争暗斗，也展现了主角李善德从一开始刚接到任务时的绝望到后来的勇敢和冷静，再到最后的心灰意冷的心境变化，是一本扣人心弦的历史小说。
 <img src="./cover.jpg" width="120" alt="book cover">
 {{< /timelineItem >}}
