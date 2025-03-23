@@ -25,6 +25,10 @@ showRelatedContent: false
 
 ## 文学
 
+{{< article link="/articles/%E8%A7%A3%E5%BF%A7%E6%9D%82%E8%B4%A7%E5%BA%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%E9%83%BD%E5%B8%82%E6%B8%A9%E6%83%85%E5%B0%8F%E6%95%85%E4%BA%8B/" >}}
+
+<br>
+
 {{< article link="/articles/%E9%95%BF%E5%AE%89%E7%9A%84%E8%8D%94%E6%9E%9D%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%E6%8A%AB%E7%9D%80%E5%8E%86%E5%8F%B2%E5%A4%96%E8%A1%A3%E7%9A%84%E8%81%8C%E5%9C%BA%E7%94%9F%E5%AD%98%E6%8C%87%E5%8D%97/" >}}
 
 ## 个人成长
