@@ -87,7 +87,7 @@ Studying at School of Electronic and Information Engineering, majoring in commun
 
 ## Open Source Contribution
 
-I am a contributor to many open source projects on GitHub, which are shown below. You can find the PRs I have contributed [<u>here</u>](https://github.com/pulls?q=is%3Apr+author%3Ashen-shanshan+is%3Amerged+is%3Apublic).
+I am a contributor to many open source projects on GitHub, which are shown below. You can find the PRs I have contributed [here](https://github.com/pulls?q=is%3Apr+author%3Ashen-shanshan+is%3Amerged+is%3Apublic).
 
 {{< github repo="vllm-project/vllm-ascend" >}}
 

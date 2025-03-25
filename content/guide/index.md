@@ -48,11 +48,3 @@ There are some other kinds of articles such as some reflections in my life, you 
 **_Coming soon._**
 
 ---
-
-## Roadmap
-
-You can read the page shown below to get more information about the roadmap of this site.
-
-{{< article link="/roadmap/" >}}
-
----
