@@ -2,7 +2,7 @@
 title: '《解忧杂货店》读书笔记｜都市温情小故事'
 date: '2025-03-20T23:23:55+08:00'
 categories: "阅读"
-tags: ["读书笔记", "文学", "小说"]
+tags: ["读书笔记", "文学"]
 # summary: "xxx"
 draft: false
 ---
