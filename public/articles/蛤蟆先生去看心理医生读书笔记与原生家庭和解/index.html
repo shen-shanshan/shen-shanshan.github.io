@@ -8,14 +8,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   
-  <title>大模型 LoRA 微调的数学原理 &middot; Home</title>
-  <meta name="title" content="大模型 LoRA 微调的数学原理 &middot; Home" />
+  <title>《蛤蟆先生去看心理医生》读书笔记｜与原生家庭和解 &middot; Home</title>
+  <meta name="title" content="《蛤蟆先生去看心理医生》读书笔记｜与原生家庭和解 &middot; Home" />
   
   
-  <meta name="keywords" content="AI, LLM, 模型微调, 论文精读, " />
+  <meta name="keywords" content="读书笔记, 心理学, 个人成长, 人际交往, " />
   
   
-  <link rel="canonical" href="http://localhost:1313/articles/%E5%A4%A7%E6%A8%A1%E5%9E%8B-lora-%E5%BE%AE%E8%B0%83%E7%9A%84%E6%95%B0%E5%AD%A6%E5%8E%9F%E7%90%86/" />
+  <link rel="canonical" href="http://localhost:1313/articles/%E8%9B%A4%E8%9F%86%E5%85%88%E7%94%9F%E5%8E%BB%E7%9C%8B%E5%BF%83%E7%90%86%E5%8C%BB%E7%94%9F%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%E4%B8%8E%E5%8E%9F%E7%94%9F%E5%AE%B6%E5%BA%AD%E5%92%8C%E8%A7%A3/" />
   
   
   
@@ -69,24 +69,24 @@
   
   
   
-  <meta property="og:url" content="http://localhost:1313/articles/%E5%A4%A7%E6%A8%A1%E5%9E%8B-lora-%E5%BE%AE%E8%B0%83%E7%9A%84%E6%95%B0%E5%AD%A6%E5%8E%9F%E7%90%86/">
+  <meta property="og:url" content="http://localhost:1313/articles/%E8%9B%A4%E8%9F%86%E5%85%88%E7%94%9F%E5%8E%BB%E7%9C%8B%E5%BF%83%E7%90%86%E5%8C%BB%E7%94%9F%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%E4%B8%8E%E5%8E%9F%E7%94%9F%E5%AE%B6%E5%BA%AD%E5%92%8C%E8%A7%A3/">
   <meta property="og:site_name" content="Home">
-  <meta property="og:title" content="大模型 LoRA 微调的数学原理">
+  <meta property="og:title" content="《蛤蟆先生去看心理医生》读书笔记｜与原生家庭和解">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2024-11-13T17:05:40+00:00">
-    <meta property="article:modified_time" content="2024-11-13T17:05:40+00:00">
-    <meta property="article:tag" content="AI">
-    <meta property="article:tag" content="LLM">
-    <meta property="article:tag" content="模型微调">
-    <meta property="article:tag" content="论文精读">
-    <meta property="og:image" content="http://localhost:1313/articles/%E5%A4%A7%E6%A8%A1%E5%9E%8B-lora-%E5%BE%AE%E8%B0%83%E7%9A%84%E6%95%B0%E5%AD%A6%E5%8E%9F%E7%90%86/featured.jpg">
+    <meta property="article:published_time" content="2025-03-23T21:24:07+08:00">
+    <meta property="article:modified_time" content="2025-03-23T21:24:07+08:00">
+    <meta property="article:tag" content="读书笔记">
+    <meta property="article:tag" content="心理学">
+    <meta property="article:tag" content="个人成长">
+    <meta property="article:tag" content="人际交往">
+    <meta property="og:image" content="http://localhost:1313/articles/%E8%9B%A4%E8%9F%86%E5%85%88%E7%94%9F%E5%8E%BB%E7%9C%8B%E5%BF%83%E7%90%86%E5%8C%BB%E7%94%9F%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%E4%B8%8E%E5%8E%9F%E7%94%9F%E5%AE%B6%E5%BA%AD%E5%92%8C%E8%A7%A3/featured.jpg">
 
   
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="http://localhost:1313/articles/%E5%A4%A7%E6%A8%A1%E5%9E%8B-lora-%E5%BE%AE%E8%B0%83%E7%9A%84%E6%95%B0%E5%AD%A6%E5%8E%9F%E7%90%86/featured.jpg">
-  <meta name="twitter:title" content="大模型 LoRA 微调的数学原理">
+  <meta name="twitter:image" content="http://localhost:1313/articles/%E8%9B%A4%E8%9F%86%E5%85%88%E7%94%9F%E5%8E%BB%E7%9C%8B%E5%BF%83%E7%90%86%E5%8C%BB%E7%94%9F%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%E4%B8%8E%E5%8E%9F%E7%94%9F%E5%AE%B6%E5%BA%AD%E5%92%8C%E8%A7%A3/featured.jpg">
+  <meta name="twitter:title" content="《蛤蟆先生去看心理医生》读书笔记｜与原生家庭和解">
 
   
   <script type="application/ld+json">
@@ -94,26 +94,26 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "Articles",
-    "name": "大模型 LoRA 微调的数学原理",
-    "headline": "大模型 LoRA 微调的数学原理",
+    "name": "《蛤蟆先生去看心理医生》读书笔记｜与原生家庭和解",
+    "headline": "《蛤蟆先生去看心理医生》读书笔记｜与原生家庭和解",
     
     
     "inLanguage": "en",
-    "url" : "http:\/\/localhost:1313\/articles\/%E5%A4%A7%E6%A8%A1%E5%9E%8B-lora-%E5%BE%AE%E8%B0%83%E7%9A%84%E6%95%B0%E5%AD%A6%E5%8E%9F%E7%90%86\/",
+    "url" : "http:\/\/localhost:1313\/articles\/%E8%9B%A4%E8%9F%86%E5%85%88%E7%94%9F%E5%8E%BB%E7%9C%8B%E5%BF%83%E7%90%86%E5%8C%BB%E7%94%9F%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%E4%B8%8E%E5%8E%9F%E7%94%9F%E5%AE%B6%E5%BA%AD%E5%92%8C%E8%A7%A3\/",
     "author" : {
       "@type": "Person",
       "name": "Shanshan Shen"
     },
-    "copyrightYear": "2024",
-    "dateCreated": "2024-11-13T17:05:40\u002b00:00",
-    "datePublished": "2024-11-13T17:05:40\u002b00:00",
+    "copyrightYear": "2025",
+    "dateCreated": "2025-03-23T21:24:07\u002b08:00",
+    "datePublished": "2025-03-23T21:24:07\u002b08:00",
     
-    "dateModified": "2024-11-13T17:05:40\u002b00:00",
+    "dateModified": "2025-03-23T21:24:07\u002b08:00",
     
-    "keywords": ["AI","LLM","模型微调","论文精读"],
+    "keywords": ["读书笔记","心理学","个人成长","人际交往"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "529"
+    "wordCount": "65"
   }]
   </script>
 
@@ -157,145 +157,15 @@
 
 
 
-<link type="text/css" rel="stylesheet" href="/lib/katex/katex.min.68e17230ccd917b97b7a2def38a8108918599d8aa4f580bfb8cce5e13d23e4de43dcaba5f9000553cb2c10d0d1300aabfe5c433a3305ebd752609f0762a63e59.css" integrity="sha512-aOFyMMzZF7l7ei3vOKgQiRhZnYqk9YC/uMzl4T0j5N5D3Kul&#43;QAFU8ssENDRMAqr/lxDOjMF69dSYJ8HYqY&#43;WQ==" />
 
 
-<script defer src="/lib/katex/katex.min.50f14e69d6a8da7128ae3b63974c544ed377c36d096b5e3750f114e84c89d668b9301d9b0ed3248969aa183aa2e3bc4d2c1e73d5dcb7d462890c45a18d424589.js" integrity="sha512-UPFOadao2nEorjtjl0xUTtN3w20Ja143UPEU6EyJ1mi5MB2bDtMkiWmqGDqi47xNLB5z1dy31GKJDEWhjUJFiQ=="></script>
 
 
-<script defer src="/lib/katex/auto-render.min.6095714e3aadb63b14ddc4af69346ab12974c1b460654345f8d1860a0b68fcc51b22f68b757433193090bb80afc8965b65cb607e5541d0f5f0f4b2e64d69b9ff.js" integrity="sha512-YJVxTjqttjsU3cSvaTRqsSl0wbRgZUNF&#43;NGGCgto/MUbIvaLdXQzGTCQu4CvyJZbZctgflVB0PXw9LLmTWm5/w=="
-  onload="renderMathInElement(document.body);"></script>
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<script defer src="/lib/tw-elements/index.min.js" integrity=""></script>
 
 
 
@@ -655,7 +525,7 @@
 
     
     <div class="fixed inset-x-0 top-0 h-[800px] single_hero_background nozoom"
-    style="background-image:url(/articles/%E5%A4%A7%E6%A8%A1%E5%9E%8B-lora-%E5%BE%AE%E8%B0%83%E7%9A%84%E6%95%B0%E5%AD%A6%E5%8E%9F%E7%90%86/featured_hu9027764350102079116.jpg);">
+    style="background-image:url(/articles/%E8%9B%A4%E8%9F%86%E5%85%88%E7%94%9F%E5%8E%BB%E7%9C%8B%E5%BF%83%E7%90%86%E5%8C%BB%E7%94%9F%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%E4%B8%8E%E5%8E%9F%E7%94%9F%E5%AE%B6%E5%BA%AD%E5%92%8C%E8%A7%A3/featured_hu15474829444708496596.jpg);">
     
 
 
@@ -681,7 +551,7 @@
   <header id="single_header" class="mt-5 max-w-prose">
     
     <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-      大模型 LoRA 微调的数学原理
+      《蛤蟆先生去看心理医生》读书笔记｜与原生家庭和解
     </h1>
     <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
       
@@ -724,7 +594,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2024-11-13T17:05:40&#43;00:00">2024-11-13</time><span class="px-2 text-primary-500">&middot;</span>
+  <time datetime="2025-03-23T21:24:07&#43;08:00">2025-03-23</time><span class="px-2 text-primary-500">&middot;</span>
 
 
 <script type="text/javascript" src="/js/zen-mode.min.63c8a202661f4a2063fdc2706685d668e8ea3da613da2224e9da527e5876e4f53dcac39ab60732626fb4151feae5d430d0cf44731e5d3c726522fcc1519c1547.js" integrity="sha512-Y8iiAmYfSiBj/cJwZoXWaOjqPaYT2iIk6dpSflh25PU9ysOatgcyYm&#43;0FR/q5dQw0M9Ecx5dPHJlIvzBUZwVRw=="></script>
@@ -763,10 +633,10 @@
   
   
   
-  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/&#34;,'_self');">
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/categories/%E9%98%85%E8%AF%BB/&#34;,'_self');">
     <span class="flex" style="cursor: pointer;">
   <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    计算机
+    阅读
   </span>
 </span>
   </span>
@@ -779,34 +649,34 @@
   
   
   
-  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/ai/&#34;,'_self');">
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/&#34;,'_self');">
     <span class="flex" style="cursor: pointer;">
   <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    AI
+    读书笔记
   </span>
 </span>
   </span>
   
-  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/llm/&#34;,'_self');">
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/%E5%BF%83%E7%90%86%E5%AD%A6/&#34;,'_self');">
     <span class="flex" style="cursor: pointer;">
   <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    LLM
+    心理学
   </span>
 </span>
   </span>
   
-  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/%E6%A8%A1%E5%9E%8B%E5%BE%AE%E8%B0%83/&#34;,'_self');">
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/%E4%B8%AA%E4%BA%BA%E6%88%90%E9%95%BF/&#34;,'_self');">
     <span class="flex" style="cursor: pointer;">
   <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    模型微调
+    个人成长
   </span>
 </span>
   </span>
   
-  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/%E8%AE%BA%E6%96%87%E7%B2%BE%E8%AF%BB/&#34;,'_self');">
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/%E4%BA%BA%E9%99%85%E4%BA%A4%E5%BE%80/&#34;,'_self');">
     <span class="flex" style="cursor: pointer;">
   <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    论文精读
+    人际交往
   </span>
 </span>
   </span>
@@ -849,34 +719,15 @@
     class="min-w-[220px] py-2 border-dotted ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#一概述">一、概述</a></li>
-    <li><a href="#二背景介绍">二、背景介绍</a>
+    <li><a href="#一关于本书">一、关于本书</a></li>
+    <li><a href="#二内容分享">二、内容分享</a>
       <ul>
-        <li><a href="#21-基本概念">2.1 基本概念</a></li>
-        <li><a href="#22-研究现状">2.2 研究现状</a></li>
+        <li><a href="#21-我抑郁了">2.1 “我抑郁了”</a></li>
+        <li><a href="#22-自我状态的三位一体">2.2 “自我状态”的三位一体</a></li>
+        <li><a href="#23-什么是真正的情商">2.3 什么是真正的“情商”</a></li>
       </ul>
     </li>
-    <li><a href="#三lora-基本原理">三、LoRA 基本原理</a>
-      <ul>
-        <li><a href="#31-lora-模型结构">3.1 LoRA 模型结构</a></li>
-        <li><a href="#32-lora-的优点">3.2 LoRA 的优点</a></li>
-      </ul>
-    </li>
-    <li><a href="#四lora-的数学原理与论文实验分析">四、LoRA 的数学原理与论文实验分析</a>
-      <ul>
-        <li><a href="#41-svd-定理">4.1 SVD 定理</a></li>
-        <li><a href="#42-论文实验分析">4.2 论文实验分析</a>
-          <ul>
-            <li><a href="#421-实验一不同微调方法的效果对比">4.2.1 实验一：不同微调方法的效果对比</a></li>
-            <li><a href="#422-实验二不同-r-对微调效果的影响">4.2.2 实验二：不同 \(r\) 对微调效果的影响</a></li>
-            <li><a href="#423-实验三mathbfdelta-w-的左奇异矩阵-mathbfu-不同子空间的相似度对比">4.2.3 实验三：\(\mathbf{\Delta W}\) 的左奇异矩阵 \(\mathbf{U}\) 不同子空间的相似度对比</a></li>
-            <li><a href="#424-实验四mathbfdelta-w-与-mathbfw-不同子空间的相似度对比">4.2.4 实验四：\(\mathbf{\Delta W}\) 与 \(\mathbf{W}\) 不同子空间的相似度对比</a></li>
-          </ul>
-        </li>
-        <li><a href="#43-缩放因子-alpha">4.3 缩放因子 \(\alpha\)</a></li>
-      </ul>
-    </li>
-    <li><a href="#五参考资料">五、参考资料</a></li>
+    <li><a href="#三心得体会">三、心得体会</a></li>
   </ul>
 </nav>
   </div>
@@ -890,34 +741,15 @@
     class="py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#一概述">一、概述</a></li>
-    <li><a href="#二背景介绍">二、背景介绍</a>
+    <li><a href="#一关于本书">一、关于本书</a></li>
+    <li><a href="#二内容分享">二、内容分享</a>
       <ul>
-        <li><a href="#21-基本概念">2.1 基本概念</a></li>
-        <li><a href="#22-研究现状">2.2 研究现状</a></li>
+        <li><a href="#21-我抑郁了">2.1 “我抑郁了”</a></li>
+        <li><a href="#22-自我状态的三位一体">2.2 “自我状态”的三位一体</a></li>
+        <li><a href="#23-什么是真正的情商">2.3 什么是真正的“情商”</a></li>
       </ul>
     </li>
-    <li><a href="#三lora-基本原理">三、LoRA 基本原理</a>
-      <ul>
-        <li><a href="#31-lora-模型结构">3.1 LoRA 模型结构</a></li>
-        <li><a href="#32-lora-的优点">3.2 LoRA 的优点</a></li>
-      </ul>
-    </li>
-    <li><a href="#四lora-的数学原理与论文实验分析">四、LoRA 的数学原理与论文实验分析</a>
-      <ul>
-        <li><a href="#41-svd-定理">4.1 SVD 定理</a></li>
-        <li><a href="#42-论文实验分析">4.2 论文实验分析</a>
-          <ul>
-            <li><a href="#421-实验一不同微调方法的效果对比">4.2.1 实验一：不同微调方法的效果对比</a></li>
-            <li><a href="#422-实验二不同-r-对微调效果的影响">4.2.2 实验二：不同 \(r\) 对微调效果的影响</a></li>
-            <li><a href="#423-实验三mathbfdelta-w-的左奇异矩阵-mathbfu-不同子空间的相似度对比">4.2.3 实验三：\(\mathbf{\Delta W}\) 的左奇异矩阵 \(\mathbf{U}\) 不同子空间的相似度对比</a></li>
-            <li><a href="#424-实验四mathbfdelta-w-与-mathbfw-不同子空间的相似度对比">4.2.4 实验四：\(\mathbf{\Delta W}\) 与 \(\mathbf{W}\) 不同子空间的相似度对比</a></li>
-          </ul>
-        </li>
-        <li><a href="#43-缩放因子-alpha">4.3 缩放因子 \(\alpha\)</a></li>
-      </ul>
-    </li>
-    <li><a href="#五参考资料">五、参考资料</a></li>
+    <li><a href="#三心得体会">三、心得体会</a></li>
   </ul>
 </nav>
   </div>
@@ -1001,344 +833,191 @@
         <div class="article-content max-w-prose mb-20">
           
 
-
-
-<h2 class="relative group">一、概述 
-    <div id="%E4%B8%80%E6%A6%82%E8%BF%B0" class="anchor"></div>
+<h2 class="relative group">一、关于本书 
+    <div id="%E4%B8%80%E5%85%B3%E4%BA%8E%E6%9C%AC%E4%B9%A6" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%E4%B8%80%E6%A6%82%E8%BF%B0" aria-label="Anchor">#</a>
+            style="text-decoration-line: none !important;" href="#%E4%B8%80%E5%85%B3%E4%BA%8E%E6%9C%AC%E4%B9%A6" aria-label="Anchor">#</a>
     </span>        
     
 </h2>
-<p><strong>LoRA</strong>（Low-Rank Adaptation，低秩适配器）是目前非常热门的大模型微调技术之一，网上已经有许多关于其原理的分析和讲解，本文将着重从 LoRA 背后的数学原理进行解读。</p>
+<ol class="border-l-2 border-primary-500 dark:border-primary-300 list-none">
+  
 
 
-<h2 class="relative group">二、背景介绍 
-    <div id="%E4%BA%8C%E8%83%8C%E6%99%AF%E4%BB%8B%E7%BB%8D" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%E4%BA%8C%E8%83%8C%E6%99%AF%E4%BB%8B%E7%BB%8D" aria-label="Anchor">#</a>
-    </span>        
-    
-</h2>
 
 
-<h3 class="relative group">2.1 基本概念 
-    <div id="21-%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#21-%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5" aria-label="Anchor">#</a>
-    </span>        
-    
-</h3>
-<p><strong>大模型微调（Fine-tuning）</strong>：基于已经训练好的预训练模型，针对特定的下游任务，在特定领域的数据集上进行二次训练，以提升模型在特定任务上的表现。</p>
-<ul>
-<li><strong>全量微调</strong>：在下游任务的训练中，对预训练模型的每一个参数都做更新（训练代价昂贵）；</li>
-<li><strong>局部微调</strong>：冻结（不更新）预训练模型的权重，只对部分增量权重进行训练，从而有效降低训练的代价（实用性更高）。</li>
-</ul>
-
-
-<h3 class="relative group">2.2 研究现状 
-    <div id="22-%E7%A0%94%E7%A9%B6%E7%8E%B0%E7%8A%B6" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#22-%E7%A0%94%E7%A9%B6%E7%8E%B0%E7%8A%B6" aria-label="Anchor">#</a>
-    </span>        
-    
-</h3>
-<p>在 LoRA 微调技术出现之前，现有的大模型微调技术存在以下缺点：</p>
-<ul>
-<li><strong>Adapter Tuning</strong>：在模型中添加额外的 Adapter 层，并只针对这些 Adapter 的权重进行训练。这将导致模型整体的层数变深，从而使模型的训练/推理耗时增加（因为新增的 Adapter 层与模型中的其它层是串行的，无法充分利用硬件能力进行并行计算）；</li>
-<li><strong>Prefix Tuning</strong>：对输入数据增加前缀（prefix），并只针对这些 prefix token 进行训练（prefix 的作用是引导模型提取输入中的特定信息，进而更好地生成结果）。这将导致输入数据中有效信息的减少，因为一般输入数据的长度是固定的，而增加的 prefix 将会占用原本输入数据的空间，从而使输入文字表达力下降。</li>
-</ul>
-
-
-<h2 class="relative group">三、LoRA 基本原理 
-    <div id="%E4%B8%89lora-%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%E4%B8%89lora-%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86" aria-label="Anchor">#</a>
-    </span>        
-    
-</h2>
-
-
-<h3 class="relative group">3.1 LoRA 模型结构 
-    <div id="31-lora-%E6%A8%A1%E5%9E%8B%E7%BB%93%E6%9E%84" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#31-lora-%E6%A8%A1%E5%9E%8B%E7%BB%93%E6%9E%84" aria-label="Anchor">#</a>
-    </span>        
-    
-</h3>
-<p>LoRA 使用 \(\mathbf{A}\) 和 \(\mathbf{B}\) 两个与原模型并行的低秩矩阵来代替原本的增量权重矩阵 \(\mathbf{\Delta W}\)，从而可以在保证模型性能的同时，有效降低需要训练的参数量。</p>
-<p>
-    <figure>
-      <img class="my-0 rounded-md" loading="lazy" src="./images/LoRA.png" alt="LoRA基本原理" />
+<li>
+  <div class="flex flex-start">
+    <div class="bg-primary-500 dark:bg-primary-300 text-neutral-50 dark:text-neutral-700 min-w-[30px] h-8 text-2xl flex items-center justify-center rounded-full -ml-12 mt-5">
       
-    </figure>
-</p>
-<p>对于输入 \(\mathbf{x}\)，模型的输出 \(\mathbf{h}\) 为：</p>
-<p>$$
-\mathbf{h} = \mathbf{W}\mathbf{x} + \mathbf{\Delta W}\mathbf{x} \approx \mathbf{W}\mathbf{x} + \mathbf{B}\mathbf{A}\mathbf{x}
-$$</p>
-<p>其中 \(\mathbf{W}、\mathbf{\Delta W} \in \mathbb{R}^{d \times d}\)，\(\mathbf{A} \in \mathbb{R}^{r \times d}\)（初始化为正态分布），\(\mathbf{B} \in \mathbb{R}^{d \times r}\)（初始化为零），\(r\) 为矩阵 \(\mathbf{\Delta W}\) 的秩。</p>
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M48 32H197.5C214.5 32 230.7 38.74 242.7 50.75L418.7 226.7C443.7 251.7 443.7 292.3 418.7 317.3L285.3 450.7C260.3 475.7 219.7 475.7 194.7 450.7L18.75 274.7C6.743 262.7 0 246.5 0 229.5V80C0 53.49 21.49 32 48 32L48 32zM112 176C129.7 176 144 161.7 144 144C144 126.3 129.7 112 112 112C94.33 112 80 126.3 80 144C80 161.7 94.33 176 112 176z"/></svg>
+
+  </span>
 
 
-<h3 class="relative group">3.2 LoRA 的优点 
-    <div id="32-lora-%E7%9A%84%E4%BC%98%E7%82%B9" class="anchor"></div>
+    </div>
+    <div class="block p-6 rounded-lg shadow-2xl min-w-full ml-6 mb-10 break-words">
+      <div class="flex justify-between">
+        
+        <h2 class="mt-0">
+          《蛤蟆先生去看心理医生》 
+        </h2>
+        
+        
+        <h3 class="">
+          <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    心理学
+  </span>
+</span>
+        </h3>
+        
+      </div>
+      
+      <h4 class="mt-0">
+        作者：罗伯特·戴博德
+      </h4>
+      
+      <div class="mb-6">
+  简介：本书以经典名著《柳林风声》作为故事的背景，讲述了主人公蛤蟆先生在历经生活的波折之后陷入了抑郁，并在朋友们的建议下去做心理咨询的故事。书中提出了三种“自我状态”，能够帮助我们更好地理解自己的行为和情绪，进而让我们可以用理性而不是情绪化的方式来行事。
+  <img src="./cover.jpg" width="120" alt="book cover">
+  </div>
+    </div>
+  </div>
+</li>
+
+</ol>
+
+
+<h2 class="relative group">二、内容分享 
+    <div id="%E4%BA%8C%E5%86%85%E5%AE%B9%E5%88%86%E4%BA%AB" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#32-lora-%E7%9A%84%E4%BC%98%E7%82%B9" aria-label="Anchor">#</a>
-    </span>        
-    
-</h3>
-<ul>
-<li><strong>节约内存</strong>：在训练时，需要更新的权重数量从 \(d \times d\) 下降到了 \(2 \times d \times r\)，显著降低了模型微调对硬件性能的要求；</li>
-<li><strong>保证性能</strong>：在推理时，可以将 LoRA 的权重直接合并到预训练权重中，从而可以保证推理的速度不受影响；</li>
-<li><strong>灵活易用</strong>：针对不同的下游任务，用户可以训练不同的 LoRA，并且在微调完成后，只需要保存新增的这一部分权重（不同任务间共享预训练模型的权重），相比于存储整个模型的权重，只需要极少的内存。</li>
-</ul>
-
-
-<h2 class="relative group">四、LoRA 的数学原理与论文实验分析 
-    <div id="%E5%9B%9Blora-%E7%9A%84%E6%95%B0%E5%AD%A6%E5%8E%9F%E7%90%86%E4%B8%8E%E8%AE%BA%E6%96%87%E5%AE%9E%E9%AA%8C%E5%88%86%E6%9E%90" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%E5%9B%9Blora-%E7%9A%84%E6%95%B0%E5%AD%A6%E5%8E%9F%E7%90%86%E4%B8%8E%E8%AE%BA%E6%96%87%E5%AE%9E%E9%AA%8C%E5%88%86%E6%9E%90" aria-label="Anchor">#</a>
+            style="text-decoration-line: none !important;" href="#%E4%BA%8C%E5%86%85%E5%AE%B9%E5%88%86%E4%BA%AB" aria-label="Anchor">#</a>
     </span>        
     
 </h2>
-<p>简单介绍完了 LoRA 的基本原理，下面将针对以下几个问题进行分析和说明，这些问题也是我在刚开始学习 LoRA 时产生的疑惑。</p>
-<ul>
-<li>为什么可以将 \(\mathbf{\Delta W}\) 拆分为 \(\mathbf{A}\) 和 \(\mathbf{B}\)？这样做为什么是有效的？</li>
-<li>\(r\) 作为一个超参数，它的取值是如何影响 LoRA 的表现的？</li>
-<li>\(\mathbf{A}\) 和 \(\mathbf{B}\) 为什么要这样初始化？</li>
-</ul>
 
 
-<h3 class="relative group">4.1 SVD 定理 
-    <div id="41-svd-%E5%AE%9A%E7%90%86" class="anchor"></div>
+<h3 class="relative group">2.1 “我抑郁了” 
+    <div id="21-%E6%88%91%E6%8A%91%E9%83%81%E4%BA%86" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#41-svd-%E5%AE%9A%E7%90%86" aria-label="Anchor">#</a>
+            style="text-decoration-line: none !important;" href="#21-%E6%88%91%E6%8A%91%E9%83%81%E4%BA%86" aria-label="Anchor">#</a>
     </span>        
     
 </h3>
-<p><strong>为什么可以将 \(\mathbf{\Delta W}\) 拆分为 \(\mathbf{A}\) 和 \(\mathbf{B}\)？这样做为什么是有效的？</strong></p>
-<p>在回答这个问题之前，我们需要先了解一个基本概念——<strong>SVD（Singular Value Decomposition，奇异值分解）</strong>。</p>
-<p>对于一个非零的 \(m \times n\) 实矩阵 \(\mathbf{M} \in \mathbb{R}^{m \times n}\)，我们可以将其表示为以下三个实矩阵乘积形式的运算：</p>
-<p>$$
-\mathbf{M} = \mathbf{U}\mathbf{Σ}\mathbf{V}^{T}
-$$</p>
-<p>其中 \(\mathbf{U}\) 是 \(m\) 阶正交矩阵，\(\mathbf{V}\) 是 \(n\) 阶正交矩阵，\(\mathbf{Σ}\) 是由降序排列的对角线元素组成的 \(m \times n\) 矩形对角矩阵。</p>
-<p>$$
-\mathbf{Σ} = diag(\sigma_{1}, \sigma_{2}, &hellip;, \sigma_{p}) \\
-\sigma_{1} \geq \sigma_{2} \geq &hellip; \geq \sigma_{p} \geq 0
-$$</p>
-<p>\(\mathbf{U}\mathbf{Σ}\mathbf{V}^{T}\) 称为矩阵 \(\mathbf{M}\) 的奇异值分解，\(\sigma_{i}\) 称为矩阵 \(\mathbf{M}\) 的奇异值，\(\mathbf{U}\) 的列向量称为左奇异向量，\(\mathbf{V}\) 的列向量称为右奇异向量。</p>
+<p>本书以经典名著《柳林风声》作为故事的背景，讲述了主人公蛤蟆先生在历经生活的波折之后陷入了抑郁，并在朋友们的建议下去做心理咨询的故事。就像獾的评价一样，在此之前蛤蟆一直是一个“软弱”、“不安分”以及“愚蠢”的人，而他也终于因为自己的疯狂行径付出了代价，生活变得一团乱麻，自己也陷入虚无的内耗之中。</p>
 <blockquote>
-<p>“正交矩阵”：</p>
-<ul>
-<li>每两行/列之间互相正交（线性无关），且都是单位向量；</li>
-<li>是方阵；</li>
-<li>元素都是实数；</li>
-<li>其转置矩阵同时也是其逆矩阵。</li>
-</ul>
+<p>“时间在他面前蔓延，如同没有路标也没有尽头的沙漠，每天的生活只剩空虚，人生的意义无处可寻。”</p>
 </blockquote>
-<p>矩阵 \(\mathbf{M}\) 的奇异值分解一定存在，但不一定唯一。</p>
-<p>上面的矩阵分解方式又叫做<strong>完全奇异值分解</strong>，而实际中更加常用的则是其紧凑形式和截断形式。</p>
-<p><strong>紧奇异值分解：</strong></p>
-<p>设有 \(m \times n\) 实矩阵 \(\mathbf{M}\)，其秩为 \(r\)，则有紧奇异值分解为：</p>
-<p>$$
-\mathbf{M} = \mathbf{U}_{r}\mathbf{Σ}_{r}\mathbf{V}^{T}_{r}
-$$</p>
-<p>其中 \(\mathbf{U}_{r}\) 是 \(m \times r\) 矩阵，\(\mathbf{V}_{r}\) 是 \(n \times r\) 矩阵，\(\mathbf{Σ}_{r}\) 是 \(r\) 阶对角矩阵。矩阵 \(\mathbf{U}_{r}\) 由完全奇异值分解中 \(\mathbf{U}\) 的前 \(r\) 列构成，矩阵 \(\mathbf{V}_{r}\) 由完全奇异值分解中 \(\mathbf{V}\) 的前 \(r\) 列构成，矩阵 \(\mathbf{Σ}_{r}\) 由完全奇异值分解中 \(\mathbf{Σ}\) 的前 \(r\) 个对角线元素构成。</p>
-<p><strong>截断奇异值分解：</strong></p>
-<p>与“紧奇异值分解”类似，只不过这里只保留最大的 \(k\) 个奇异值（\(k &lt; r\)）及其对应的奇异向量，有：</p>
-<p>$$
-\mathbf{M} \approx \mathbf{U}_{k}\mathbf{Σ}_{k}\mathbf{V}^{T}_{k}
-$$</p>
-<p>在实际应用中，常常需要对矩阵的数据进行压缩，将其近似表示，奇异值分解提供了一种方法。<strong>奇异值分解是在平方损失（弗罗贝尼乌斯范数）意义下对矩阵的最优近似</strong>。紧奇异值分解对应着无损压缩，截断奇异值分解对应着有损压缩。</p>
-<p>因此，SVD 的原理告诉我们，<strong>可以用低秩矩阵来近似地表达原矩阵</strong>。</p>
+<p>后来，当蛤蟆第一次进行心理咨询并被心理咨询师“苍鹭”问及当下的感受时，他发现自己好像从未正视过自己的情绪和行为，一直以来，他都只是任由潜意识驱使着自己去做出一系列反应。</p>
 <blockquote>
-<p>“弗罗贝尼乌斯范数”：
-$$
-\lVert A \rVert_{F} = \bigg( \sum_{i = 1}^{m}\sum_{j = 1}^{n} (a_{ij})^{2} \bigg)^{\frac{1}{2}}, \mathbf{A} \in \mathbb{R}^{m \times n}
-$$
-“奇异值分解在统计中的主要应用为主成分分析（PCA）。数据集的特征值（在 SVD 中用奇异值表征）按照重要性排列，降维的过程就是舍弃不重要的特征向量的过程，而剩下的特征向量张成空间为降维后的空间。”</p>
+<p>“蛤蟆并非故意表现得那么愚钝。和许多人一样，他从未有意识地用这样的方式来看待过自己的情绪，所以很难用语言来形容，更别提对别人说了。实际上，他已经下意识地运用了很多行为上的策略，成功地逃避了对自我的认识。他从没有对自我分析感兴趣过，所以还真不知道该怎样描述内心的状态。”</p>
 </blockquote>
-<p>具体地，在 LoRA 中，将矩阵 \(\mathbf{U}\) 和 \(\mathbf{Σ}\) 合并为了一个矩阵 \(\mathbf{B} \in \mathbb{R}^{m \times k}\)，将矩阵 \(\mathbf{V}^{T}\) 表示为了矩阵 \(\mathbf{A} \in \mathbb{R}^{k \times n}\)，从而可以用更少的数据量来表示矩阵 \(\mathbf{\Delta W}\)。</p>
-<p>在实际微调中，由于事先并不知道矩阵 \(\mathbf{\Delta W}\) 中具体的值（除非我们先全参微调一遍，但是这样的话就没必要用 LoRA 了），我们无法直接计算出 \(\mathbf{\Delta W}\) 的 SVD 分解结果，因此论文作者将秩 \(r\) 作为一个超参数，并让模型在训练中自己去学习矩阵 \(\mathbf{A}\) 和 \(\mathbf{B}\) 的值。</p>
+<p>在现实生活中，我也时常听到周围的人以或开玩笑或认真的语气对我说：“我抑郁了”，就好像“抑郁”已经成为了当代年轻人在高压环境下共有的心理问题。如何与自己的负面情绪共处、如何理解并控制自己的行为模式，是当下大多数人所欠缺的课题。下面分享的内容，或许能给我们带来一些启发。</p>
 
 
-<h3 class="relative group">4.2 论文实验分析 
-    <div id="42-%E8%AE%BA%E6%96%87%E5%AE%9E%E9%AA%8C%E5%88%86%E6%9E%90" class="anchor"></div>
+<h3 class="relative group">2.2 “自我状态”的三位一体 
+    <div id="22-%E8%87%AA%E6%88%91%E7%8A%B6%E6%80%81%E7%9A%84%E4%B8%89%E4%BD%8D%E4%B8%80%E4%BD%93" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#42-%E8%AE%BA%E6%96%87%E5%AE%9E%E9%AA%8C%E5%88%86%E6%9E%90" aria-label="Anchor">#</a>
+            style="text-decoration-line: none !important;" href="#22-%E8%87%AA%E6%88%91%E7%8A%B6%E6%80%81%E7%9A%84%E4%B8%89%E4%BD%8D%E4%B8%80%E4%BD%93" aria-label="Anchor">#</a>
     </span>        
     
 </h3>
-
-
-<h4 class="relative group">4.2.1 实验一：不同微调方法的效果对比 
-    <div id="421-%E5%AE%9E%E9%AA%8C%E4%B8%80%E4%B8%8D%E5%90%8C%E5%BE%AE%E8%B0%83%E6%96%B9%E6%B3%95%E7%9A%84%E6%95%88%E6%9E%9C%E5%AF%B9%E6%AF%94" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#421-%E5%AE%9E%E9%AA%8C%E4%B8%80%E4%B8%8D%E5%90%8C%E5%BE%AE%E8%B0%83%E6%96%B9%E6%B3%95%E7%9A%84%E6%95%88%E6%9E%9C%E5%AF%B9%E6%AF%94" aria-label="Anchor">#</a>
-    </span>        
-    
-</h4>
-<p>在论文中，作者将 LoRA 与其它微调方法在多种场景下的表现进行了对比，如下图所示：</p>
-<p>
-    <figure>
-      <img class="my-0 rounded-md" loading="lazy" src="./images/experiment-1.png" alt="experiment-1" />
-      
-    </figure>
-</p>
-<p><strong>实验结论：LoRA 在显著降低了微调参数量的同时，还能在大部分场景下保证最优的性能。</strong></p>
-
-
-<h4 class="relative group">4.2.2 实验二：不同 \(r\) 对微调效果的影响 
-    <div id="422-%E5%AE%9E%E9%AA%8C%E4%BA%8C%E4%B8%8D%E5%90%8C-r-%E5%AF%B9%E5%BE%AE%E8%B0%83%E6%95%88%E6%9E%9C%E7%9A%84%E5%BD%B1%E5%93%8D" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#422-%E5%AE%9E%E9%AA%8C%E4%BA%8C%E4%B8%8D%E5%90%8C-r-%E5%AF%B9%E5%BE%AE%E8%B0%83%E6%95%88%E6%9E%9C%E7%9A%84%E5%BD%B1%E5%93%8D" aria-label="Anchor">#</a>
-    </span>        
-    
-</h4>
-<p><strong>\(r\) 作为一个超参数，它的取值是如何影响 LoRA 的表现的？</strong></p>
-<p>作者对比了当 \(r\) 取不同值时，对模型不同的层应用 LoRA 的效果，如下图所示：</p>
-<p>
-    <figure>
-      <img class="my-0 rounded-md" loading="lazy" src="./images/experiment-2.png" alt="experiment-2" />
-      
-    </figure>
-</p>
-<p>可以看出：</p>
+<p>在蛤蟆进行心理咨询的过程中，心理咨询师苍鹭提出了三种“自我状态”，从而可以更好地帮助蛤蟆找到抑郁的原因。</p>
 <ul>
-<li>当我们同时对 \(\mathbf{W}_{q}\) 和 \(\mathbf{W}_{v}\) 应用 LoRA 时，哪怕取了一个很小的 \(r=1\)，其效果也超过了单独对 \(\mathbf{W}_{q}\) 应用 LoRA 且 \(r=64\) 时的表现；</li>
-<li>在同一行（同样的 Weight Type）内，取 \(r=1\) 与 \(r=64\) 的结果差异不大。</li>
+<li>“儿童自我状态”</li>
+<li>“父母自我状态”</li>
+<li>“成人自我状态”</li>
 </ul>
-<p><strong>实验结论：增量权重矩阵 \(\mathbf{\Delta W}\) 的秩可能很小，因此我们能够用秩很小的两个矩阵来近似表达该矩阵。</strong></p>
-<p>到此为止还没完，作者还做了更进一步的实验，来证明 LoRA 这种分解方式的有效性。 <strong>(´･_･`)</strong></p>
-
-
-<h4 class="relative group">4.2.3 实验三：\(\mathbf{\Delta W}\) 的左奇异矩阵 \(\mathbf{U}\) 不同子空间的相似度对比 
-    <div id="423-%E5%AE%9E%E9%AA%8C%E4%B8%89mathbfdelta-w-%E7%9A%84%E5%B7%A6%E5%A5%87%E5%BC%82%E7%9F%A9%E9%98%B5-mathbfu-%E4%B8%8D%E5%90%8C%E5%AD%90%E7%A9%BA%E9%97%B4%E7%9A%84%E7%9B%B8%E4%BC%BC%E5%BA%A6%E5%AF%B9%E6%AF%94" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#423-%E5%AE%9E%E9%AA%8C%E4%B8%89mathbfdelta-w-%E7%9A%84%E5%B7%A6%E5%A5%87%E5%BC%82%E7%9F%A9%E9%98%B5-mathbfu-%E4%B8%8D%E5%90%8C%E5%AD%90%E7%A9%BA%E9%97%B4%E7%9A%84%E7%9B%B8%E4%BC%BC%E5%BA%A6%E5%AF%B9%E6%AF%94" aria-label="Anchor">#</a>
-    </span>        
-    
-</h4>
-<p>作者对比了 \(\mathbf{U}_{A_{r=8}}\) 和 \(\mathbf{U}_{A_{r=64}}\) 不同维度子空间的相似度，其中 \(\mathbf{U}_{A_{r=8}}\) 为 \(r=8\) 时矩阵 \(\mathbf{A}\) 的左奇异矩阵，\(\mathbf{U}_{A_{r=64}}\) 同理。</p>
-<p>子空间相似度的计算方式：</p>
-<p>
-    <figure>
-      <img class="my-0 rounded-md" loading="lazy" src="./images/experiment-3.png" alt="experiment-3" />
-      
-    </figure>
-</p>
+<p><strong>什么是“儿童自我状态”？</strong></p>
 <blockquote>
-<p>这里的 \(\lVert &hellip; \rVert_{F}\) 为上面提到的“弗罗贝尼乌斯范数”。</p>
+<p>“‘儿童自我状态’是指一个人的行为和感受都像一个孩子，这不同于‘幼稚’，而是‘像孩子一样’。‘儿童自我状态’是由我们童年残留的遗迹搭建而成的，包含我们小时候体验过的所有情感。你一定知道在刚出生时，我们只具备几种最基本的情感（快乐、悲伤、恐惧等）。幼年时，这些基本情感逐渐发展演变成更微妙、更复杂的行为模式，这些行为模式成为自我的核心，融为我们自身的一部分，定义了我们一生的行为。正因为这样，某些特定的情形和场景会激发我们的基本行为模式，让我们自动做出反应，所以我们会和小时候一样去行动和感受。具体的情形和场景因人而异。”</p>
 </blockquote>
-<p>实验结果如下图所示（图 3 和图 4 分别为图 1 和图 2 的左下角部分）：</p>
-<p>
-    <figure>
-      <img class="my-0 rounded-md" loading="lazy" src="./images/experiment-4.png" alt="experiment-4" />
-      
-    </figure>
-</p>
-<p>这个图可能比较难理解，下面举例进行说明：</p>
-<p>当 \(i=1\) 时，\(j\) 从 \(1\) 取到 \(64\)，发现颜色都比较浅（相似度高），说明当 \(r=8\) 时，\(\mathbf{\Delta W}\) 分解出的矩阵 \(\mathbf{A}_{r=8}\) 的左奇异矩阵 \(\mathbf{U}_{A_{r=8}}\) 的第一个左奇异向量表示的特征（或者说信息）与 \(\mathbf{A}_{r=64}\) 的前 64 个左奇异向量组成的子空间表示的特征重合度很高，即<strong>高秩矩阵（\(r=64\)）的大部分信息都已经包含在了低秩矩阵（\(r=8\)）的前几维子空间中</strong>。</p>
-<p><strong>实验结论：越靠前的奇异向量（奇异值按降序排序）包含的信息越多（或者说越重要），不管 \(r\) 取多大，前几维（如 \(r&lt;8\)）子空间表示的信息都是差不多的，越后面（如 \(8&lt;r&lt;64\)）的子空间包含的有效信息越少，噪声越多，再次证明了用低秩矩阵近似表达高秩矩阵的有效性</strong>。</p>
-
-
-<h4 class="relative group">4.2.4 实验四：\(\mathbf{\Delta W}\) 与 \(\mathbf{W}\) 不同子空间的相似度对比 
-    <div id="424-%E5%AE%9E%E9%AA%8C%E5%9B%9Bmathbfdelta-w-%E4%B8%8E-mathbfw-%E4%B8%8D%E5%90%8C%E5%AD%90%E7%A9%BA%E9%97%B4%E7%9A%84%E7%9B%B8%E4%BC%BC%E5%BA%A6%E5%AF%B9%E6%AF%94" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#424-%E5%AE%9E%E9%AA%8C%E5%9B%9Bmathbfdelta-w-%E4%B8%8E-mathbfw-%E4%B8%8D%E5%90%8C%E5%AD%90%E7%A9%BA%E9%97%B4%E7%9A%84%E7%9B%B8%E4%BC%BC%E5%BA%A6%E5%AF%B9%E6%AF%94" aria-label="Anchor">#</a>
-    </span>        
-    
-</h4>
-<p>与实验三类似，作者还比较了 \(\mathbf{\Delta W}\) 与 \(\mathbf{W}\) 不同维度子空间的相似度，如下图所示：
-
-    <figure>
-      <img class="my-0 rounded-md" loading="lazy" src="./images/experiment-5.png" alt="experiment-5" />
-      
-    </figure>
-</p>
-<p>其中，\(i\) 表示使用预训练权重矩阵 \(\mathbf{W}\) 的前 \(i\) 个左奇异向量组成的子空间，\(j\) 表示使用 \(\mathbf{\Delta W}\) 的前 \(j\) 个左奇异向量组成的子空间（\(j \leq r\)）。</p>
-<p>可以看出，\(\mathbf{W}\) 中靠前（靠上）的奇异向量组成的子空间与 \(\mathbf{\Delta W}\) 的子空间相似度并不高，反而是 \(\mathbf{W}\) 中最后的一些奇异向量与 \(\mathbf{\Delta W}\) 中的奇异向量有较高的相似度。</p>
-<p><strong>实验结论：\(\mathbf{\Delta W}\) 中学习到的特征都是原来预训练权重矩阵中没有被强调的部分，说明 \(\mathbf{\Delta W}\) 能够有效学习到针对特定下游任务、区别于原特征的新特征，证明了 LoRA 在微调方面的有效性。</strong></p>
+<p>“原生家庭”是现在网络上特别火的一个词，人们常用“原生家庭”带来的影响作为当下一些行为的解释，大家之所以会这样正是因为“父母”的行为是决定我们“儿童自我状态”最重要的影响因素。</p>
 <blockquote>
-<p>说明：这里只挑了论文中我比较感兴趣的几个实验来进行分析，对于论文中的其它实验，感兴趣的读者可以自行阅读论文进行了解。</p>
+<p>“大多数的父母会尽最大的努力来养育孩子，很少有父母要故意伤害自己的孩子。可是，父母也是人，会不可避免地把他们的观念和行为传递给后代，正如他们一定会把自己的基因传给下一代一样。所以孩子们要学会的是，如何应对和防御因此而产生的后果。”</p>
+<p>“当然，人生后面阶段的许多其他事件也会对我们造成影响，但这些最早期的经历塑造了人格的雏形，所以我们无法否认也无法忘记它们。”</p>
 </blockquote>
+<p>那么，我们应该如何与自己的过去和解，并在当下活出独立的自我呢？首先，我们要理解自己的行为和情绪——<strong>“理解你的童年就是理解你自己的关键线索。”</strong></p>
+<blockquote>
+<p>“我们成年后的许多行为，都是从童年学来的。童年体验到的最强烈的情绪，不可避免地变成我们成年后经常有的感受。”</p>
+<p>“如果你要更好地理解自己，就需要跟自己的情绪做联结，并理解这些情绪。如果你否认它们，无论是用无视还是压抑的方式，结果都像是做了截肢，就如自己身体的重要部位被切掉了一样，你在某种程度上成了一个残缺的人。”</p>
+<p>“就像所有好问题一样，答案会让你产生痛苦的自我觉察。越是能帮助你深入自我的概念，也越容易引发激烈的阻抗。因为这些概念最容易打破我们的心理平衡，它们最有可能带你走向深层的蜕变，而这个过程往往是痛苦的。”</p>
+</blockquote>
+<p>以书中的蛤蟆先生为例，在童年时，他总是受到严厉的父母的打压，这也造成了在他长大之后，总是喜欢去炫耀以博得更多的关注，并且习惯于去讨好别人。</p>
+<blockquote>
+<p>“他总是为这为那训斥我。他会用非常不满的眼神看着我并叫我的大名说：‘要我跟你说多少遍？不准这么做！’他总是在批评我、责备我，慢慢地我也会认为，他永远都是对的，而我永远是错的。也许是我太渴望得到他的爱了，就会犯傻，做一些傻里傻气的举动。”</p>
+<p>“父母若是严厉挑剔，这个孩子就必须学习如何应对他们，他会将自然行为调整为最能适应现状的行为。”</p>
+</blockquote>
+<p>因此，蛤蟆从他的童年学会了“顺从”和“取悦”这两种行为模式。</p>
+<blockquote>
+<p>顺从：“如果你被迫顺从某个人，就意味着你不与他争辩。你照他说的去做，而且同意他的想法。” -&gt; 成年后的行为：忍气吞声。——“他总觉得如果别人知道他生气了，他就会受到惩罚。结果就是他吞下了怒火，却化成了内疚。”</p>
+<p>取悦：“他们对我的所作所为从没有满意过或被打动过，所以我就放任自己用浮夸和愚蠢的行为来博得他们的关注。” -&gt; 成年后的行为：爱炫耀。</p>
+</blockquote>
+<p>在深刻地理解了造成自己这些行为模式背后的原因之后，我们要做的就是打破思维惯性，以“不断发展和变化”的态度看待自己，而不是一味地埋怨“原生家庭”对自己的影响。当再次触发类似的行为模式时，我们要学会用更加理性的头脑来控制自己的行为，这便是成长。</p>
+<blockquote>
+<p>“成长的本质就是要减少并最终打破这样的依赖关系，这样才能成为一个独立自主的人。顺从行为可能导致有些人学会了把依赖当成生活方式。换句话说，这些人永远都没有真正长大成人。”</p>
+</blockquote>
+<p><strong>什么是“父母自我状态”？</strong></p>
+<p>“儿童自我状态”是指我们成年后的行为模式表现得像小时候的自己，而“父母自我状态”则是指我们表现得像自己的父母。</p>
+<blockquote>
+<p>“处于‘父母自我状态’时，我们表现得正如自己的父母。记住，他们是我们最早接触的人，因此对我们的影响是不可估量的。‘父母自我状态’包含了自出生起，我们从父母那里学到的所有价值观和道德观，还包含了对生活的评判标准，让我们借此判断是非对错。这些价值观来自父母，所以父母是最能左右我们行为的人。他们的言行塑造了我们童年的生活，也不可避免地对我们之后的人生产生影响。“</p>
+</blockquote>
+<p>以我自己为例，小时候的我总以为自己能活成和父母不一样的样子，可随着年龄不断增大，却越来越发现自己的一些行为习惯和思维模式之中原来早已深深地烙印上了父母的影子。我的父亲的优点是自律、开明、爱学习，缺点是浮夸、自大、爱吹嘘；我的母亲的优点是温柔、细心、勤劳，缺点是爱计较、爱嚼舌根。而反观现在的我，性格越来越像是父母的结合版，既继承了双方的优点，也保留了对应的缺点。当然，我也有一些独属于我的特质，因为我们并不完全是父母的复制品。</p>
+<blockquote>
+<p>“我们绝不是父母的翻版。虽然父母对我们的影响极大，但每个人自身的独特性确保了我们不是父亲或母亲的复制品，而是独立的个体。”</p>
+</blockquote>
+<p><strong>什么是“成人自我状态”？</strong></p>
+<blockquote>
+<p>“‘成人自我状态’是指我们用理性而不是情绪化的方式来行事。它让我们能应对此时此地正在发生的现实状况。处于这个状态时，我们所有的知识和技能都能为自己所用，而不再被脑子里父母过去的声音所驱使，也不会被童年的情绪所困扰。相反，我们能思考当下的状况，基于事实来决定要怎么做。”</p>
+</blockquote>
+<p>“成人自我状态”是作为成年人的我们应当尽力去追求的状态，当然，在成功的人生里，这三种状态都是必需的。</p>
 
 
-<h3 class="relative group">4.3 缩放因子 \(\alpha\) 
-    <div id="43-%E7%BC%A9%E6%94%BE%E5%9B%A0%E5%AD%90-alpha" class="anchor"></div>
+<h3 class="relative group">2.3 什么是真正的“情商” 
+    <div id="23-%E4%BB%80%E4%B9%88%E6%98%AF%E7%9C%9F%E6%AD%A3%E7%9A%84%E6%83%85%E5%95%86" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#43-%E7%BC%A9%E6%94%BE%E5%9B%A0%E5%AD%90-alpha" aria-label="Anchor">#</a>
+            style="text-decoration-line: none !important;" href="#23-%E4%BB%80%E4%B9%88%E6%98%AF%E7%9C%9F%E6%AD%A3%E7%9A%84%E6%83%85%E5%95%86" aria-label="Anchor">#</a>
     </span>        
     
 </h3>
-<p>LoRA 引入了一个超参数 \(\alpha\)，可以看作是学习率，同时也代表了 LoRA 对从特定下游任务学习而来的特征的放大程度，有：</p>
-<p>$$
-\mathbf{h} = \mathbf{W}\mathbf{x} + \mathbf{\Delta W}\mathbf{x} \approx \mathbf{W}\mathbf{x} + \frac{\alpha}{r}\mathbf{B}\mathbf{A}\mathbf{x}
-$$</p>
-<p>在实际微调中，一般先随机设置一个 \(r\)，并让 \(\alpha = r\)，然后保持 \(\alpha\) 不变，通过不断调整 \(r\) 的值来调整微调的效果。</p>
+<p>最后，本书给出了一种关于“情商”的解释，与我们常见的理解不太一样，书中的说法包含了更多的层次，我觉得很有意思：</p>
+<blockquote>
+<p>“情商的意思是理解你内心的情感世界，并且还能掌控它。你也能看出来，这和智商完全不是一回事。”</p>
+<p>“高情商的人是怎么样的？概括而言，他们都有强大的自我意识，了解自己的情感。他们能管理情绪，能从悲伤和不幸中重新振作。但也许最重要的是，他们能控制冲动，也懂得延迟满足，从而避免轻率的决定和不妥的行为。”</p>
+<p>“另外，情商和理解别人有关，一个高情商的人能辨识他人的感受，这种技能称为‘共情’。但也许情感智力中最大的技能是通过理解和回应对方的情感，与他人建立良好的关系。情感智力能让你在自我成长和完善的路上走得更远，因为它将带你从独立的个体走向共生的关系。独立性隐含了做自己的自豪感，还包括独特的才能、与众不同的部分。独立的人时刻守护新发现的自主权，如同一个曾被殖民的国家重获自由一样。这当然没错，但共生性则体现出成熟和自我接纳，还包括求同存异地接纳他人。共生性可以让你在社交和工作上与别人有效联结，协同合作。”</p>
+</blockquote>
+<p>我一直以来都是一个情商比较低的人，包括但不限于喜欢独来独往、以自我为中心、说话没分寸等等，为此也吃了不少的苦头。而关于如何提高情商的方法，目前还在探索中，希望在未来能够找到一套成熟的解决方案……</p>
 
 
-<h2 class="relative group">五、参考资料 
-    <div id="%E4%BA%94%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99" class="anchor"></div>
+<h2 class="relative group">三、心得体会 
+    <div id="%E4%B8%89%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%E4%BA%94%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99" aria-label="Anchor">#</a>
+            style="text-decoration-line: none !important;" href="#%E4%B8%89%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A" aria-label="Anchor">#</a>
     </span>        
     
 </h2>
-<ul>
-<li><a href="https://arxiv.org/abs/2106.09685" target="_blank"><u>LoRA: Low-Rank Adaptation of Large Language Models</u></a></li>
-<li><a href="https://book.douban.com/subject/33437381/" target="_blank"><u>《统计学习方法》</u></a></li>
-<li><a href="https://zhuanlan.zhihu.com/p/646831196" target="_blank"><u>图解大模型微调系列之：大模型低秩适配器 LoRA（原理篇）</u></a></li>
-</ul>
+<p>本书提出了很多心理学的理论来帮助我们更好地理解自己，但就像书中所说的：“这些理念不是用来给人贴标签，攻击羞辱别人的。它们只是用来理解行为的方法，尤其是理解我们自己的行为”。在今天，大家似乎都非常热衷于给自己和别人贴标签，只不过以前是流行看星座，现在变成了看 MBTI 而已，然后我们就会在潜意识里刻意按照自己幻想的人格去行动，就像是给自己套上了一层思想枷锁。我们学习心理学理论，不是为了限制自己的可能性，而是应该利用它们来帮助自己察觉不好的行为并做出改善，否则就是缘木求鱼了。</p>
 
           
           
@@ -1509,11 +1188,11 @@ $$</p>
   
   
 
-  <a href="/articles/git-%E5%AE%9E%E8%B7%B5%E6%A1%88%E4%BE%8B%E5%90%88%E5%B9%B6%E5%A4%9A%E4%B8%AA%E5%88%86%E6%95%A3%E7%9A%84-commit-%E8%8A%82%E7%82%B9/" class="min-w-full">
+  <a href="/articles/%E8%A2%AB%E8%AE%A8%E5%8E%8C%E7%9A%84%E5%8B%87%E6%B0%94%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%E6%8E%A5%E7%BA%B3%E8%87%AA%E6%88%91%E5%8B%87%E6%95%A2%E5%9C%B0%E6%84%9F%E5%8F%97%E7%94%9F%E6%B4%BB/" class="min-w-full">
     
     <div class="min-h-full border border-neutral-200 dark:border-neutral-700 border-2 rounded overflow-hidden shadow-2xl relative">
         
-        <div class="w-full thumbnail_card_related nozoom" style="background-image:url(/articles/git-%E5%AE%9E%E8%B7%B5%E6%A1%88%E4%BE%8B%E5%90%88%E5%B9%B6%E5%A4%9A%E4%B8%AA%E5%88%86%E6%95%A3%E7%9A%84-commit-%E8%8A%82%E7%82%B9/featured_hu4844137032686845614.jpg);"></div>
+        <div class="w-full thumbnail_card_related nozoom" style="background-image:url(/articles/%E8%A2%AB%E8%AE%A8%E5%8E%8C%E7%9A%84%E5%8B%87%E6%B0%94%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%E6%8E%A5%E7%BA%B3%E8%87%AA%E6%88%91%E5%8B%87%E6%95%A2%E5%9C%B0%E6%84%9F%E5%8F%97%E7%94%9F%E6%B4%BB/featured_hu11962077528168138223.jpg);"></div>
         
       
 
@@ -1521,7 +1200,7 @@ $$</p>
 
         
         <div class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
-          href="/articles/git-%E5%AE%9E%E8%B7%B5%E6%A1%88%E4%BE%8B%E5%90%88%E5%B9%B6%E5%A4%9A%E4%B8%AA%E5%88%86%E6%95%A3%E7%9A%84-commit-%E8%8A%82%E7%82%B9/">Git 实践案例｜合并多个分散的 commit 节点</div>
+          href="/articles/%E8%A2%AB%E8%AE%A8%E5%8E%8C%E7%9A%84%E5%8B%87%E6%B0%94%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%E6%8E%A5%E7%BA%B3%E8%87%AA%E6%88%91%E5%8B%87%E6%95%A2%E5%9C%B0%E6%84%9F%E5%8F%97%E7%94%9F%E6%B4%BB/">《被讨厌的勇气》读书笔记｜接纳自我，勇敢地感受生活</div>
         
 
         <div class="text-sm text-neutral-500 dark:text-neutral-400">
@@ -1560,7 +1239,7 @@ $$</p>
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2024-10-18T15:49:42&#43;00:00">2024-10-18</time>
+  <time datetime="2024-12-07T11:34:17&#43;08:00">2024-12-07</time>
   
 
   
@@ -1578,10 +1257,10 @@ $$</p>
   
   
   
-  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/&#34;,'_self');">
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/categories/%E9%98%85%E8%AF%BB/&#34;,'_self');">
     <span class="flex" style="cursor: pointer;">
   <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    计算机
+    阅读
   </span>
 </span>
   </span>
@@ -1594,10 +1273,34 @@ $$</p>
   
   
   
-  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/git/&#34;,'_self');">
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/&#34;,'_self');">
     <span class="flex" style="cursor: pointer;">
   <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    Git
+    读书笔记
+  </span>
+</span>
+  </span>
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/%E5%BF%83%E7%90%86%E5%AD%A6/&#34;,'_self');">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    心理学
+  </span>
+</span>
+  </span>
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/%E4%B8%AA%E4%BA%BA%E6%88%90%E9%95%BF/&#34;,'_self');">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    个人成长
+  </span>
+</span>
+  </span>
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/%E4%BA%BA%E9%99%85%E4%BA%A4%E5%BE%80/&#34;,'_self');">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    人际交往
   </span>
 </span>
   </span>
@@ -1627,11 +1330,11 @@ $$</p>
   
   
 
-  <a href="/articles/ascend-aclnn-%E7%AE%97%E5%AD%90%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/" class="min-w-full">
+  <a href="/articles/%E6%88%91%E6%9C%89%E8%87%AA%E5%B7%B1%E7%9A%84%E5%AE%87%E5%AE%99%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%E5%B9%B4%E8%BD%BB%E4%BA%BA%E7%9A%84%E8%81%8C%E5%9C%BA%E7%94%9F%E5%AD%98%E4%B9%8B%E9%81%93/" class="min-w-full">
     
     <div class="min-h-full border border-neutral-200 dark:border-neutral-700 border-2 rounded overflow-hidden shadow-2xl relative">
         
-        <div class="w-full thumbnail_card_related nozoom" style="background-image:url(/articles/ascend-aclnn-%E7%AE%97%E5%AD%90%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/featured_hu9253359173625983682.jpg);"></div>
+        <div class="w-full thumbnail_card_related nozoom" style="background-image:url(/articles/%E6%88%91%E6%9C%89%E8%87%AA%E5%B7%B1%E7%9A%84%E5%AE%87%E5%AE%99%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%E5%B9%B4%E8%BD%BB%E4%BA%BA%E7%9A%84%E8%81%8C%E5%9C%BA%E7%94%9F%E5%AD%98%E4%B9%8B%E9%81%93/featured_hu11962077528168138223.jpg);"></div>
         
       
 
@@ -1639,7 +1342,7 @@ $$</p>
 
         
         <div class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
-          href="/articles/ascend-aclnn-%E7%AE%97%E5%AD%90%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/">Ascend aclnn 算子开发入门</div>
+          href="/articles/%E6%88%91%E6%9C%89%E8%87%AA%E5%B7%B1%E7%9A%84%E5%AE%87%E5%AE%99%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%E5%B9%B4%E8%BD%BB%E4%BA%BA%E7%9A%84%E8%81%8C%E5%9C%BA%E7%94%9F%E5%AD%98%E4%B9%8B%E9%81%93/">《我有自己的宇宙》读书笔记｜年轻人的职场生存之道</div>
         
 
         <div class="text-sm text-neutral-500 dark:text-neutral-400">
@@ -1678,7 +1381,7 @@ $$</p>
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2024-10-23T15:52:36&#43;00:00">2024-10-23</time>
+  <time datetime="2024-08-10T10:28:06&#43;00:00">2024-08-10</time>
   
 
   
@@ -1696,10 +1399,10 @@ $$</p>
   
   
   
-  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/&#34;,'_self');">
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/categories/%E9%98%85%E8%AF%BB/&#34;,'_self');">
     <span class="flex" style="cursor: pointer;">
   <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    计算机
+    阅读
   </span>
 </span>
   </span>
@@ -1712,42 +1415,34 @@ $$</p>
   
   
   
-  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/ai-infra/&#34;,'_self');">
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/&#34;,'_self');">
     <span class="flex" style="cursor: pointer;">
   <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    AI Infra
+    读书笔记
   </span>
 </span>
   </span>
   
-  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/%E7%AE%97%E5%AD%90%E5%BC%80%E5%8F%91/&#34;,'_self');">
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/%E5%BF%83%E7%90%86%E5%AD%A6/&#34;,'_self');">
     <span class="flex" style="cursor: pointer;">
   <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    算子开发
+    心理学
   </span>
 </span>
   </span>
   
-  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/ascend/&#34;,'_self');">
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/%E4%B8%AA%E4%BA%BA%E6%88%90%E9%95%BF/&#34;,'_self');">
     <span class="flex" style="cursor: pointer;">
   <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    Ascend
+    个人成长
   </span>
 </span>
   </span>
   
-  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/npu/&#34;,'_self');">
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/%E8%81%8C%E5%9C%BA/&#34;,'_self');">
     <span class="flex" style="cursor: pointer;">
   <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    NPU
-  </span>
-</span>
-  </span>
-  
-  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/cann/&#34;,'_self');">
-    <span class="flex" style="cursor: pointer;">
-  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    CANN
+    职场
   </span>
 </span>
   </span>
@@ -1777,11 +1472,11 @@ $$</p>
   
   
 
-  <a href="/articles/ascend-npu-%E7%A1%AC%E4%BB%B6%E6%9E%B6%E6%9E%84%E5%85%A5%E9%97%A8/" class="min-w-full">
+  <a href="/articles/%E6%97%A9%E8%B5%B7%E7%9A%84%E5%A5%87%E8%BF%B9%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%E5%88%B6%E5%AE%9A%E4%BD%A0%E7%9A%84%E6%97%A9%E8%B5%B7%E8%AE%A1%E5%88%92/" class="min-w-full">
     
     <div class="min-h-full border border-neutral-200 dark:border-neutral-700 border-2 rounded overflow-hidden shadow-2xl relative">
         
-        <div class="w-full thumbnail_card_related nozoom" style="background-image:url(/articles/ascend-npu-%E7%A1%AC%E4%BB%B6%E6%9E%B6%E6%9E%84%E5%85%A5%E9%97%A8/featured_hu9253359173625983682.jpg);"></div>
+        <div class="w-full thumbnail_card_related nozoom" style="background-image:url(/articles/%E6%97%A9%E8%B5%B7%E7%9A%84%E5%A5%87%E8%BF%B9%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%E5%88%B6%E5%AE%9A%E4%BD%A0%E7%9A%84%E6%97%A9%E8%B5%B7%E8%AE%A1%E5%88%92/featured_hu11962077528168138223.jpg);"></div>
         
       
 
@@ -1789,7 +1484,7 @@ $$</p>
 
         
         <div class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
-          href="/articles/ascend-npu-%E7%A1%AC%E4%BB%B6%E6%9E%B6%E6%9E%84%E5%85%A5%E9%97%A8/">Ascend NPU 硬件架构入门</div>
+          href="/articles/%E6%97%A9%E8%B5%B7%E7%9A%84%E5%A5%87%E8%BF%B9%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%E5%88%B6%E5%AE%9A%E4%BD%A0%E7%9A%84%E6%97%A9%E8%B5%B7%E8%AE%A1%E5%88%92/">《早起的奇迹》读书笔记｜制定你的早起计划</div>
         
 
         <div class="text-sm text-neutral-500 dark:text-neutral-400">
@@ -1828,7 +1523,7 @@ $$</p>
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2024-08-31T15:35:00&#43;00:00">2024-08-31</time>
+  <time datetime="2024-07-09T10:03:51&#43;00:00">2024-07-09</time>
   
 
   
@@ -1846,10 +1541,10 @@ $$</p>
   
   
   
-  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/&#34;,'_self');">
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/categories/%E9%98%85%E8%AF%BB/&#34;,'_self');">
     <span class="flex" style="cursor: pointer;">
   <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    计算机
+    阅读
   </span>
 </span>
   </span>
@@ -1862,34 +1557,26 @@ $$</p>
   
   
   
-  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/ai-infra/&#34;,'_self');">
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/&#34;,'_self');">
     <span class="flex" style="cursor: pointer;">
   <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    AI Infra
+    读书笔记
   </span>
 </span>
   </span>
   
-  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/ascend/&#34;,'_self');">
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/%E4%B8%AA%E4%BA%BA%E6%88%90%E9%95%BF/&#34;,'_self');">
     <span class="flex" style="cursor: pointer;">
   <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    Ascend
+    个人成长
   </span>
 </span>
   </span>
   
-  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/npu/&#34;,'_self');">
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/%E4%B8%AA%E4%BA%BA%E5%81%A5%E5%BA%B7/&#34;,'_self');">
     <span class="flex" style="cursor: pointer;">
   <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    NPU
-  </span>
-</span>
-  </span>
-  
-  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/cann/&#34;,'_self');">
-    <span class="flex" style="cursor: pointer;">
-  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    CANN
+    个人健康
   </span>
 </span>
   </span>
@@ -1930,8 +1617,8 @@ $$</p>
           
         
       <script>
-        var oid = "views_posts\/【计算机】大模型LoRA微调的数学原理\/index.md"
-        var oid_likes = "likes_posts\/【计算机】大模型LoRA微调的数学原理\/index.md"
+        var oid = "views_posts\/【阅读】《蛤蟆先生去看心理医生》读书笔记\/index.md"
+        var oid_likes = "likes_posts\/【阅读】《蛤蟆先生去看心理医生》读书笔记\/index.md"
       </script>
       
       
