@@ -17,7 +17,7 @@ showRelatedContent: false
 
 <br>
 
-{{< article link="/articles/%E5%A4%A7%E6%A8%A1%E5%9E%8B-lora-%E5%BE%AE%E8%B0%83%E7%9A%84%E6%95%B0%E5%AD%A6%E5%8E%9F%E7%90%86/" >}}
+{{< article link="/articles/%E5%A4%A7%E6%A8%A1%E5%9E%8B-lora-%E5%BE%AE%E8%B0%83%E5%8E%9F%E7%90%86%E8%AF%A6%E8%A7%A3/" >}}
 
 ## 算子开发
 
