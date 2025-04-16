@@ -55,7 +55,7 @@ tags: ["AI", "LLM", "模型推理", "源码分析"]
 
 `run_busy_loop()` 主要分为两步：
 
-1. `_process_input_queue()`：处理来自 `EngineCoreClient` 的请求。当有新的请求到来时，调用 `add_request()` 方法：（1）将 `EngineCoreRequest` 转换为 `Request`；（2）异步编译 Structured Output Grammar；（3）将请求添加到 `Scheduler` 中。
+1. `_process_input_queue()`：处理来自 `EngineCoreClient` 的请求。当有新的请求到来时，调用 `add_request()` 方法：（1）将 `EngineCoreRequest` 转换为 `Request`；（2）异步编译 Structured Output Grammar；（3）将请求添加到 `Scheduler` 中；
 2. `_process_engine_step()`：执行调度和推理。
 
 ![](./images/2.3.png)
@@ -178,7 +178,7 @@ class XgrammarBackend(StructuredOutputBackend):
 1. `Scheduler` 调用 `schedule()` 方法对请求进行调度。其中，会调用 `StructuredOutputManager` 的 `grammar_bitmask()` 方法：
    1. 调用 XGrammar 后端的 `allocate_token_bitmask()` 方法，为当前 batch 中的所有请求准备下一个 token 的 bitmask（bitmask 的具体作用在上一篇文章中有做解释）；
    2. 针对每一个设置了 Structured Output 的请求，调用 `GrammarMatcher` 中的 `fill_next_token_bitmask()` 方法为它们填充 bitmask。
-2. `Scheduler` 调度完成后生成调度结果 `SchedulerOutput`，并调用 `ModelExecutor` 开始执行推理（调用链路：`ModelExecutor` -> `Worker` -> `ModelRunner`）。其中，`ModelRunner` 会调用 `apply_grammar_bitmask()` 方法将 bitmask 应用到模型输出的 logits 上，从而起到 Guided Decoding 的效果。该方法底层调用的是 XGrammar 后端中的 `apply_token_bitmask_inplace()` 方法。
+2. `Scheduler` 调度完成后生成调度结果 `SchedulerOutput`，并调用 `ModelExecutor` 开始执行推理（调用链路：`ModelExecutor` -> `Worker` -> `ModelRunner`）。其中，`ModelRunner` 会调用 `apply_grammar_bitmask()` 方法将 bitmask 应用到模型输出的 logits 上，从而起到 Guided Decoding 的效果。该方法底层调用的是 XGrammar 后端中的 `apply_token_bitmask_inplace()` 方法；
 3. 最后，`Scheduler` 根据之前生成的调度结果 `SchedulerOutput` 以及模型推理输出的结果 `ModelRunnerOutput` 更新状态并生成 `EngineCoreOutputs` 结果，返回给 `EngineCoreClient`。其中，每一个 `use_structured_output = True` 的请求都会调用自己的 `XgrammarGrammar` 对象，调用 `GrammarMatcher` 中的 `accept_token()` 方法，使对应的 FSM 接受新生成的 token 并向前跳转到下一个状态。
 
 上述流程中涉及的部分 XGrammar API 的说明如下：
