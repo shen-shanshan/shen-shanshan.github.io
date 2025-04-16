@@ -9,7 +9,17 @@
     <managingEditor>youremail@example.com (Shanshan Shen)</managingEditor>
     <webMaster>youremail@example.com (Shanshan Shen)</webMaster>
     <copyright>© 2025 Shanshan Shen</copyright>
-    <lastBuildDate>Thu, 20 Mar 2025 11:44:20 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/%E6%A8%A1%E5%9E%8B%E6%8E%A8%E7%90%86/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 16 Apr 2025 15:03:13 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/%E6%A8%A1%E5%9E%8B%E6%8E%A8%E7%90%86/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>vLLM 学习笔记｜Guided Decoding (V1)</title>
+      <link>http://localhost:1313/articles/vllm-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0guided-decoding-v1/</link>
+      <pubDate>Wed, 16 Apr 2025 15:03:13 +0800</pubDate>
+      <author>youremail@example.com (Shanshan Shen)</author>
+      <guid>http://localhost:1313/articles/vllm-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0guided-decoding-v1/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/articles/vllm-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0guided-decoding-v1/featured.png" />
+    </item>
+    
     <item>
       <title>vLLM 学习笔记｜Guided Decoding</title>
       <link>http://localhost:1313/articles/vllm-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0guided-decoding/</link>

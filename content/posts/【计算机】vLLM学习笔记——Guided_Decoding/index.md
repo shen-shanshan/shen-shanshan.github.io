@@ -2,7 +2,7 @@
 title: 'vLLM 学习笔记｜Guided Decoding'
 date: '2025-03-20T11:44:20+08:00'
 categories: "计算机"
-tags: ["AI", "LLM", "模型推理", "论文精读", "源码分析"]
+tags: ["AI", "LLM", "模型推理", "源码分析"]
 # summary: "xxx"
 # draft: false
 ---

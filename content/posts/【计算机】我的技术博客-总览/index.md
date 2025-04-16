@@ -11,6 +11,10 @@ showRelatedContent: false
 
 {{< article link="/articles/vllm-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0guided-decoding/" >}}
 
+<br>
+
+{{< article link="/articles/vllm-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0guided-decoding-v1/" >}}
+
 ## 大模型微调
 
 {{< article link="/articles/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%BE%AE%E8%B0%83%E7%9F%A5%E8%AF%86%E5%85%A8%E6%99%AF/" >}}

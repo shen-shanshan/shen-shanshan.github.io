@@ -8,14 +8,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   
-  <title>vLLM 学习笔记｜Guided Decoding &middot; Home</title>
-  <meta name="title" content="vLLM 学习笔记｜Guided Decoding &middot; Home" />
+  <title>vLLM 学习笔记｜Guided Decoding (V1) &middot; Home</title>
+  <meta name="title" content="vLLM 学习笔记｜Guided Decoding (V1) &middot; Home" />
   
   
   <meta name="keywords" content="AI, LLM, 模型推理, 源码分析, " />
   
   
-  <link rel="canonical" href="http://localhost:1313/articles/vllm-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0guided-decoding/" />
+  <link rel="canonical" href="http://localhost:1313/articles/vllm-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0guided-decoding-v1/" />
   
   
   
@@ -69,24 +69,24 @@
   
   
   
-  <meta property="og:url" content="http://localhost:1313/articles/vllm-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0guided-decoding/">
+  <meta property="og:url" content="http://localhost:1313/articles/vllm-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0guided-decoding-v1/">
   <meta property="og:site_name" content="Home">
-  <meta property="og:title" content="vLLM 学习笔记｜Guided Decoding">
+  <meta property="og:title" content="vLLM 学习笔记｜Guided Decoding (V1)">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2025-03-20T11:44:20+08:00">
-    <meta property="article:modified_time" content="2025-03-20T11:44:20+08:00">
+    <meta property="article:published_time" content="2025-04-16T15:03:13+08:00">
+    <meta property="article:modified_time" content="2025-04-16T15:03:13+08:00">
     <meta property="article:tag" content="AI">
     <meta property="article:tag" content="LLM">
     <meta property="article:tag" content="模型推理">
     <meta property="article:tag" content="源码分析">
-    <meta property="og:image" content="http://localhost:1313/articles/vllm-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0guided-decoding/featured.png">
+    <meta property="og:image" content="http://localhost:1313/articles/vllm-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0guided-decoding-v1/featured.png">
 
   
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="http://localhost:1313/articles/vllm-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0guided-decoding/featured.png">
-  <meta name="twitter:title" content="vLLM 学习笔记｜Guided Decoding">
+  <meta name="twitter:image" content="http://localhost:1313/articles/vllm-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0guided-decoding-v1/featured.png">
+  <meta name="twitter:title" content="vLLM 学习笔记｜Guided Decoding (V1)">
 
   
   <script type="application/ld+json">
@@ -94,26 +94,26 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "Articles",
-    "name": "vLLM 学习笔记｜Guided Decoding",
-    "headline": "vLLM 学习笔记｜Guided Decoding",
+    "name": "vLLM 学习笔记｜Guided Decoding (V1)",
+    "headline": "vLLM 学习笔记｜Guided Decoding (V1)",
     
     
     "inLanguage": "en",
-    "url" : "http:\/\/localhost:1313\/articles\/vllm-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0guided-decoding\/",
+    "url" : "http:\/\/localhost:1313\/articles\/vllm-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0guided-decoding-v1\/",
     "author" : {
       "@type": "Person",
       "name": "Shanshan Shen"
     },
     "copyrightYear": "2025",
-    "dateCreated": "2025-03-20T11:44:20\u002b08:00",
-    "datePublished": "2025-03-20T11:44:20\u002b08:00",
+    "dateCreated": "2025-04-16T15:03:13\u002b08:00",
+    "datePublished": "2025-04-16T15:03:13\u002b08:00",
     
-    "dateModified": "2025-03-20T11:44:20\u002b08:00",
+    "dateModified": "2025-04-16T15:03:13\u002b08:00",
     
     "keywords": ["AI","LLM","模型推理","源码分析"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "1015"
+    "wordCount": "822"
   }]
   </script>
 
@@ -522,7 +522,7 @@
 
     
     <div class="fixed inset-x-0 top-0 h-[800px] single_hero_background nozoom"
-    style="background-image:url(/articles/vllm-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0guided-decoding/featured_hu3941036965393894561.png);">
+    style="background-image:url(/articles/vllm-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0guided-decoding-v1/featured_hu3941036965393894561.png);">
     
 
 
@@ -548,7 +548,7 @@
   <header id="single_header" class="mt-5 max-w-prose">
     
     <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-      vLLM 学习笔记｜Guided Decoding
+      vLLM 学习笔记｜Guided Decoding (V1)
     </h1>
     <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
       
@@ -591,7 +591,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2025-03-20T11:44:20&#43;08:00">2025-03-20</time><span class="px-2 text-primary-500">&middot;</span>
+  <time datetime="2025-04-16T15:03:13&#43;08:00">2025-04-16</time><span class="px-2 text-primary-500">&middot;</span>
 
 
 <script type="text/javascript" src="/js/zen-mode.min.63c8a202661f4a2063fdc2706685d668e8ea3da613da2224e9da527e5876e4f53dcac39ab60732626fb4151feae5d430d0cf44731e5d3c726522fcc1519c1547.js" integrity="sha512-Y8iiAmYfSiBj/cJwZoXWaOjqPaYT2iIk6dpSflh25PU9ysOatgcyYm&#43;0FR/q5dQw0M9Ecx5dPHJlIvzBUZwVRw=="></script>
@@ -717,23 +717,21 @@
     <nav id="TableOfContents">
   <ul>
     <li><a href="#一引言">一、引言</a></li>
-    <li><a href="#二什么是-guided-decoding">二、什么是 Guided Decoding？</a></li>
-    <li><a href="#三outlines-原理详解">三、Outlines 原理详解</a>
+    <li><a href="#二v1-engine-整体架构">二、V1 Engine 整体架构</a></li>
+    <li><a href="#三v1-engine-整体流程">三、V1 Engine 整体流程</a>
       <ul>
-        <li><a href="#31-fsm-的工作原理">3.1 FSM 的工作原理</a></li>
-        <li><a href="#32-fsm-的构建过程">3.2 FSM 的构建过程</a></li>
-        <li><a href="#33-总结">3.3 总结</a></li>
+        <li><a href="#31-llmengine-整体流程">3.1 LLMEngine 整体流程</a></li>
+        <li><a href="#32-enginecore-整体流程">3.2 EngineCore 整体流程</a></li>
       </ul>
     </li>
-    <li><a href="#四vllm-guided-decoding-源码解读">四、vLLM Guided Decoding 源码解读</a>
+    <li><a href="#四structured-output-代码实现">四、Structured Output 代码实现</a>
       <ul>
-        <li><a href="#41-加载-logitsprocessor">4.1 加载 LogitsProcessor</a></li>
-        <li><a href="#42-整体推理流程">4.2 整体推理流程</a></li>
-        <li><a href="#43-计算-mask">4.3 计算 Mask</a></li>
-        <li><a href="#44-支持-reasoning">4.4 支持 Reasoning</a></li>
+        <li><a href="#41-请求预处理">4.1 请求预处理</a></li>
+        <li><a href="#42-异步编译-grammar">4.2 异步编译 Grammar</a></li>
+        <li><a href="#43-分配-bitmask-并更新-fsm-状态">4.3 分配 bitmask 并更新 FSM 状态</a></li>
       </ul>
     </li>
-    <li><a href="#五sglang-jump-forward-decoding">五、SGLang Jump-Forward Decoding</a></li>
+    <li><a href="#五总结">五、总结</a></li>
     <li><a href="#六参考资料">六、参考资料</a></li>
   </ul>
 </nav>
@@ -749,23 +747,21 @@
     <nav id="TableOfContents">
   <ul>
     <li><a href="#一引言">一、引言</a></li>
-    <li><a href="#二什么是-guided-decoding">二、什么是 Guided Decoding？</a></li>
-    <li><a href="#三outlines-原理详解">三、Outlines 原理详解</a>
+    <li><a href="#二v1-engine-整体架构">二、V1 Engine 整体架构</a></li>
+    <li><a href="#三v1-engine-整体流程">三、V1 Engine 整体流程</a>
       <ul>
-        <li><a href="#31-fsm-的工作原理">3.1 FSM 的工作原理</a></li>
-        <li><a href="#32-fsm-的构建过程">3.2 FSM 的构建过程</a></li>
-        <li><a href="#33-总结">3.3 总结</a></li>
+        <li><a href="#31-llmengine-整体流程">3.1 LLMEngine 整体流程</a></li>
+        <li><a href="#32-enginecore-整体流程">3.2 EngineCore 整体流程</a></li>
       </ul>
     </li>
-    <li><a href="#四vllm-guided-decoding-源码解读">四、vLLM Guided Decoding 源码解读</a>
+    <li><a href="#四structured-output-代码实现">四、Structured Output 代码实现</a>
       <ul>
-        <li><a href="#41-加载-logitsprocessor">4.1 加载 LogitsProcessor</a></li>
-        <li><a href="#42-整体推理流程">4.2 整体推理流程</a></li>
-        <li><a href="#43-计算-mask">4.3 计算 Mask</a></li>
-        <li><a href="#44-支持-reasoning">4.4 支持 Reasoning</a></li>
+        <li><a href="#41-请求预处理">4.1 请求预处理</a></li>
+        <li><a href="#42-异步编译-grammar">4.2 异步编译 Grammar</a></li>
+        <li><a href="#43-分配-bitmask-并更新-fsm-状态">4.3 分配 bitmask 并更新 FSM 状态</a></li>
       </ul>
     </li>
-    <li><a href="#五sglang-jump-forward-decoding">五、SGLang Jump-Forward Decoding</a></li>
+    <li><a href="#五总结">五、总结</a></li>
     <li><a href="#六参考资料">六、参考资料</a></li>
   </ul>
 </nav>
@@ -860,271 +856,322 @@
     </span>        
     
 </h2>
-<p>目前，在大模型推理领域中，Guided Decoding 技术广泛用于生成一些特定格式的输出，如：SQL、JSON 等。本文将基于 vLLM 以及 Outlines 后端，深入解析 Guided Decoding 背后的技术原理。</p>
+<p><strong>Guided Decoding</strong>，又叫 <strong>Structured Output</strong>，是大模型推理领域中非常重要的一个特性，主要用于引导大模型输出符合某种特定格式（如：SQL、Json）的结果，以便更好地将大模型落地到具体的应用场景中。</p>
+<p>在我的上一篇文章中，简要地介绍了 Guided Decoding 的原理，并详细分析了 vLLM 中相关代码的实现（V0），文章链接如下：</p>
+
+<section class="space-y-10 w-full">
+    
+    
+        
+            
 
 
-<h2 class="relative group">二、什么是 Guided Decoding？ 
-    <div id="%E4%BA%8C%E4%BB%80%E4%B9%88%E6%98%AF-guided-decoding" class="anchor"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a class="flex flex-wrap article border border-neutral-200 dark:border-neutral-700 border-2 rounded-md overflow-hidden" href="/articles/vllm-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0guided-decoding/">
+    
+        
+        <div class="w-full md:w-auto h-full thumbnail nozoom " style="background-image:url(/articles/vllm-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0guided-decoding/featured_hu515409118694051596.png);"></div>
+        
+      <div class=" p-4">
+      <div class="items-center text-left text-xl font-semibold">
+        
+        <div class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
+          href="/articles/vllm-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0guided-decoding/">vLLM 学习笔记｜Guided Decoding</div>
+        
+        
+        
+      </div>
+      <div class="text-sm text-neutral-500 dark:text-neutral-400">
+        
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  <time datetime="2025-03-20T11:44:20&#43;08:00">2025-03-20</time>
+  
+
+  
+  
+</div>
+
+
+
+
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  
+  
+  
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/&#34;,'_self');">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    计算机
+  </span>
+</span>
+  </span>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/ai/&#34;,'_self');">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    AI
+  </span>
+</span>
+  </span>
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/llm/&#34;,'_self');">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    LLM
+  </span>
+</span>
+  </span>
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/%E6%A8%A1%E5%9E%8B%E6%8E%A8%E7%90%86/&#34;,'_self');">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    模型推理
+  </span>
+</span>
+  </span>
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/&#34;,'_self');">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    源码分析
+  </span>
+</span>
+  </span>
+  
+  
+  
+  
+</div>
+
+
+
+
+      </div>
+      
+      <div class="py-1 max-w-fit prose dark:prose-invert">
+        
+      </div>
+      
+    </div>
+  </a>
+
+        
+    
+</section>
+<p>自从 vLLM <strong>v0.8.x</strong> 之后，<strong>V1 Engine</strong> 将作为 vLLM 启动时的默认选项。关于 V1 Engine 的系统设计以及具体的优化点，我将会在之后逐步梳理并分享出来（<del>如果有空的话</del>）。而在本文中，我将针对 V1 Engine，分享 Structured Output 模块的整体设计与具体实现。</p>
+
+
+<h2 class="relative group">二、V1 Engine 整体架构 
+    <div id="%E4%BA%8Cv1-engine-%E6%95%B4%E4%BD%93%E6%9E%B6%E6%9E%84" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%E4%BA%8C%E4%BB%80%E4%B9%88%E6%98%AF-guided-decoding" aria-label="Anchor">#</a>
+            style="text-decoration-line: none !important;" href="#%E4%BA%8Cv1-engine-%E6%95%B4%E4%BD%93%E6%9E%B6%E6%9E%84" aria-label="Anchor">#</a>
     </span>        
     
 </h2>
-<p>一般来说，LLM 的输出通常是一段符合人类表达习惯的文本序列，这让我们可以利用 LLM 来回答问题或是创作内容。然而，当我们需要 LLM 的输出符合特定的格式（如：JSON、SQL、正则表达式等）时——例如希望 LLM 根据我们的需求生成查询数据库的 SQL 语句，通过微调的方法通常很难达到我们预期的效果。这时，就需要用到 Guided Decoding 技术，它可以通过影响模型输出层的 Logits 分布（施加 Mask 过滤不满足要求的 Token）来达到规范模型输出格式的效果。</p>
-<p><strong>🌰 举个例子：</strong></p>
-<p>我们可以向 LLM 输入一个 Prompt 以及对应的格式数据：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># Guided decoding by JSON using Pydantic schema</span>
-</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">CarType</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">Enum</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="n">sedan</span> <span class="o">=</span> <span class="s2">&#34;sedan&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="n">suv</span> <span class="o">=</span> <span class="s2">&#34;SUV&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="n">truck</span> <span class="o">=</span> <span class="s2">&#34;Truck&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="n">coupe</span> <span class="o">=</span> <span class="s2">&#34;Coupe&#34;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">CarDescription</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="n">brand</span><span class="p">:</span> <span class="nb">str</span>
-</span></span><span class="line"><span class="cl">    <span class="n">model</span><span class="p">:</span> <span class="nb">str</span>
-</span></span><span class="line"><span class="cl">    <span class="n">car_type</span><span class="p">:</span> <span class="n">CarType</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">json_schema</span> <span class="o">=</span> <span class="n">CarDescription</span><span class="o">.</span><span class="n">model_json_schema</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">prompt</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&#34;Generate a JSON with the brand, model and car_type of&#34;</span>
-</span></span><span class="line"><span class="cl">          <span class="s2">&#34;the most iconic car from the 90&#39;s, think in 100 tokens&#34;</span><span class="p">)</span>
-</span></span></code></pre></div><p>此时，LLM 就会根据我们的要求生成一个 JSON 格式的输出：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="err">content:</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="nt">&#34;brand&#34;</span><span class="p">:</span> <span class="s2">&#34;Levels&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="nt">&#34;model&#34;</span><span class="p">:</span> <span class="s2">&#34;racing equation&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="nt">&#34;car_type&#34;</span><span class="p">:</span> <span class="s2">&#34;sedan&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div>
-
-<h2 class="relative group">三、Outlines 原理详解 
-    <div id="%E4%B8%89outlines-%E5%8E%9F%E7%90%86%E8%AF%A6%E8%A7%A3" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%E4%B8%89outlines-%E5%8E%9F%E7%90%86%E8%AF%A6%E8%A7%A3" aria-label="Anchor">#</a>
-    </span>        
-    
-</h2>
-<p>目前，实现了 Guided Decoding 支持的后端有 <code>outlines</code>、<code>xgrammar</code> 以及 <code>lm-format-enforcer</code> 等，下面将以 Outlines 为例，深入介绍 Guided Decoding 背后的实现原理。</p>
-<p><strong>Outlines 的核心技术点包括：</strong></p>
-<ul>
-<li><strong>基于 FSM（Finite-State Machine，有限状态机）</strong>，实现了当前输入与对应状态的匹配，并可以根据状态转移函数确定对应的 Mask；</li>
-<li><strong>建立了 FSM 的状态与其可接受 Token 的 Map</strong>，并为这些 Token 建立索引，从而避免了在每次 Decode 中遍历整个 Vocabulary 进行匹配，加快了匹配的速度。</li>
-</ul>
+<p>在介绍 Structured Output 模块的设计之前，让我们先来看下 vLLM V1 Engine 的整体架构。在 V1 中，vLLM 将不同类型的 CPU 密集型操作拆分到了两个相互独立的进程中，以便能够异步执行不同的 CPU 操作，减少了不同步骤之间相互等待的时间，因此能够更好地压榨硬件的计算性能。</p>
 <p>
     <figure>
-      <img class="my-0 rounded-md" loading="lazy" src="./images/fsm.png" alt="" />
+      <img class="my-0 rounded-md" loading="lazy" src="./images/1_v1_arch.png" alt="" />
       
     </figure>
 </p>
-<p>下面，为了让大家更快速、更直观地理解 Outlines 的原理，本文将尽力避免大段公式和算法的罗列，而是尽量使用具体的例子进行讲解。</p>
+<ul>
+<li><code>Process 0</code> 主要负责请求的预处理（如：参数校验）、Tokenization 以及 Detokenization 等操作；</li>
+<li><code>Process 1</code> 主要负责请求的调度和推理执行等操作。</li>
+</ul>
+<p>在优化前（V0），<code>Process 0</code> 和 <code>Process 1</code> 中的操作顺序执行，因此存在许多 CPU 空闲等待的时间，而在 V1 中则是并行执行上面两个进程中的操作，因此极大地提升了整体的推理效率。</p>
 
 
-<h3 class="relative group">3.1 FSM 的工作原理 
-    <div id="31-fsm-%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86" class="anchor"></div>
+<h2 class="relative group">三、V1 Engine 整体流程 
+    <div id="%E4%B8%89v1-engine-%E6%95%B4%E4%BD%93%E6%B5%81%E7%A8%8B" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#31-fsm-%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86" aria-label="Anchor">#</a>
+            style="text-decoration-line: none !important;" href="#%E4%B8%89v1-engine-%E6%95%B4%E4%BD%93%E6%B5%81%E7%A8%8B" aria-label="Anchor">#</a>
     </span>        
     
-</h3>
-<p><strong>🌰 举个例子：</strong></p>
-<p>假设我们需要模型输出一个浮点小数，即输出需要匹配的正则表达式为 <code>([0-9]*)?\.?[0-9]*</code>，并给定一个仅包含 <code>A</code>、<code>.</code>、<code>42</code>、<code>.2</code> 和 <code>1</code> 的 Vocabulary。</p>
+</h2>
+<p>接下来，让我们再看一下 V1 Engine 的整体推理流程：</p>
+<p>
+    <figure>
+      <img class="my-0 rounded-md" loading="lazy" src="./images/2_so_arch.png" alt="" />
+      
+    </figure>
+</p>
 <blockquote>
-<p>“正则表达式”符号说明：</p>
-<ul>
-<li><code>*</code>：匹配前面的子表达式零次或多次；</li>
-<li><code>?</code>：匹配前面的子表达式零次或一次；</li>
-<li><code>.</code>：匹配除换行符 <code>\n</code> 之外的任何单字符；</li>
-<li><code>\.</code>：匹配小数点符号 <code>.</code>（需要使用 <code>\</code> 进行转义）。</li>
-</ul>
+<p>高清图片链接：<a href="https://github.com/shen-shanshan/cs-self-learning/tree/master/Open_Source/Projects/vLLM/Features/Guided_Decoding/posts/vLLM%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94Guided_Decoding_V1/images" target="_blank"><u>link</u></a>，画图不易，走过路过欢迎点一个 Star！</p>
 </blockquote>
-<p>当 LLM 开始 Decode 时，FSM 位于初始状态（<code>0</code>，用整数表示不同的状态），根据状态 <code>0</code> 的转移函数可知，当前状态可以接受的字符模式为 <code>[0-9]</code> 和 <code>[.]</code>，而在我们所给的词表中，只有 <code>A</code> 不符合，此时 FSM 会针对词表 <code>['A', '.', '42', '.2', '1']</code> 生成一个值为 <code>[0, 1, 1, 1, 1]</code> 的 Mask，即模型在本轮迭代进行采样时会排除掉 <code>A</code>（图中用黑色表示），如下图所示。</p>
+<ul>
+<li><code>LLMEngine</code> 属于 <code>Process 0</code>，主要用于与推理引擎外部进行交互（如：接收用户请求、输出推理结果等）。vLLM 的离线推理引擎 <code>LLM</code> 和在线推理引擎 <code>AsyncLLM</code> 都是基于 <code>LLMEngine</code> 的封装；</li>
+<li><code>EngineCore</code> 属于 <code>Process 1</code>，是推理引擎的核心，包含了请求调度、模型前向推理等关键实现。</li>
+</ul>
+
+
+<h3 class="relative group">3.1 LLMEngine 整体流程 
+    <div id="31-llmengine-%E6%95%B4%E4%BD%93%E6%B5%81%E7%A8%8B" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#31-llmengine-%E6%95%B4%E4%BD%93%E6%B5%81%E7%A8%8B" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
 <p>
     <figure>
-      <img class="my-0 rounded-md" loading="lazy" src="./images/outlines-fsm-1.png" alt="" />
+      <img class="my-0 rounded-md" loading="lazy" src="./images/2.1.png" alt="" />
       
     </figure>
 </p>
-<p>接下来，有两种情况：</p>
 <ol>
-<li><strong>模型本轮的采样值为 <code>.2</code>（图中用红色表示）</strong>，此时 <code>.2</code> 同时满足从状态 <code>0</code> 过渡到状态 <code>2</code> 再到状态 <code>3</code> 的条件，因此 FSM 的当前状态会跳转到状态 <code>3</code> 并生成下一次采样的 Mask。由于状态 <code>3</code> 可接受的字符模式仅为 <code>[0-9]</code>，只有 <code>42</code> 和 <code>1</code> 满足，因此此时的 Mask 为 <code>[0, 0, 1, 0, 1]</code>；</li>
-<li><strong>模型本轮的采样值为 <code>1</code>（图中用黄色表示）</strong>，同理，此时 FSM 会跳转到状态 <code>1</code> 并生成对应的 Mask，其值为 <code>[0, 1, 1, 1, 1]</code>。</li>
+<li>当一个新的 prompt 输入到 vLLM 后，<code>LLMEngine</code> 会调用 <code>Processor</code> 的 <code>process_inputs()</code> 方法，对输入数据进行一些校验和预处理。其中，有一个步骤叫做 <code>_validate_structured_output()</code>，会对 Structured Output 后端的设置进行检查（目前 V1 只支持 <strong>engine-level</strong> 的后端，即全局只能使用同一个后端，不允许针对不同的请求使用不动的后端进行处理），并判断输入内容是否能被转换成 Structured Output 后端能够识别的语法；</li>
+<li><code>LLMEngine</code> 调用 <code>step()</code>，并通过 <code>get_output()</code> 方法从 <code>EngineCoreClient</code> 获取推理结果（<code>EngineCoreClient</code> 是 <code>LLMEngine</code> 中专门用于与 <code>EngineCore</code> 进行通信的类）；</li>
+<li><code>LLMEngine</code> 调用 <code>OutputProcessor</code> 中的 <code>process_outputs()</code> 方法，对推理结果进行后处理，比如：Detokenization、准备 <code>RequestOutput</code> 对象以及终止已经生成结束符的请求。</li>
 </ol>
-<p>不断循环此过程，最终就能得到满足该正则表达式的输出。</p>
+
+
+<h3 class="relative group">3.2 EngineCore 整体流程 
+    <div id="32-enginecore-%E6%95%B4%E4%BD%93%E6%B5%81%E7%A8%8B" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#32-enginecore-%E6%95%B4%E4%BD%93%E6%B5%81%E7%A8%8B" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>当 <code>LLMEngine</code> 调用 <code>make_client()</code> 方法创建 <code>EngineCoreClient</code> 时，可以根据配置创建不同的 <code>EngineCoreClient</code>，用户可以选择继续使用 V0-style 的 Engine，也可以采用 V1-style（本文仅讨论 V1）。当使用 V1 Engine 时，会创建一个新的进程，运行 <code>EngineCoreProc</code> 中的 <code>run_engine_core()</code> 方法，并开启一个 busy loop。</p>
+<p>
+    <figure>
+      <img class="my-0 rounded-md" loading="lazy" src="./images/2.2.png" alt="" />
+      
+    </figure>
+</p>
+<p><code>run_busy_loop()</code> 主要分为两步：</p>
+<ol>
+<li><code>_process_input_queue()</code>：处理来自 <code>EngineCoreClient</code> 的请求。当有新的请求到来时，调用 <code>add_request()</code> 方法：（1）将 <code>EngineCoreRequest</code> 转换为 <code>Request</code>；（2）异步编译 Structured Output Grammar；（3）将请求添加到 <code>Scheduler</code> 中。</li>
+<li><code>_process_engine_step()</code>：执行调度和推理。</li>
+</ol>
+<p>
+    <figure>
+      <img class="my-0 rounded-md" loading="lazy" src="./images/2.3.png" alt="" />
+      
+    </figure>
+</p>
 <blockquote>
-<p>补充：在 vLLM 的实现中，其 Mask 使用 <code>0</code> 表示接受的 Token，用 <code>-inf</code>（负无穷）表示要排除的 Token，然后再将输出的 Logits 分布与 Mask 相加，从而达到屏蔽不满足要求的 Token 的效果。</p>
+<p>注意：本文主要聚焦于 Structured Output 特性，前面只是大致介绍下 V1 Engine 的整体情况，更多具体的内容（如：调度流程、解码算法等）后面有空再单独写文章进行分享。</p>
 </blockquote>
 
 
-<h3 class="relative group">3.2 FSM 的构建过程 
-    <div id="32-fsm-%E7%9A%84%E6%9E%84%E5%BB%BA%E8%BF%87%E7%A8%8B" class="anchor"></div>
+<h2 class="relative group">四、Structured Output 代码实现 
+    <div id="%E5%9B%9Bstructured-output-%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#32-fsm-%E7%9A%84%E6%9E%84%E5%BB%BA%E8%BF%87%E7%A8%8B" aria-label="Anchor">#</a>
-    </span>        
-    
-</h3>
-<p>在了解了 Outlines 中 FSM 的基本工作原理之后，接下来我们再看下，针对一个给定的正则表达式与 Vocabulary，Outlines 是如何构建这个 FSM 的。</p>
-<p>FSM 的构建过程主要分为两步：</p>
-<ol>
-<li><strong>收集每个 Token 能够匹配的状态转换路径</strong>：给定一个 Token，遍历所有状态，并从每一个状态开始，看是否存在能够完整接受该 Token 的路径，若存在，则将该路径记录到该 Token 对应的列表中；若不存在这样一条路径，则跳过当前状态，继续收集以下一个状态作为开始状态的可能路径；</li>
-<li><strong>收集每个状态能够接受的所有 Token</strong>：遍历每一个 Token，并针对该 Token 执行步骤一，获取该 Token 能够匹配的状态转换路径，然后遍历每一条路径并取路径中的第一个节点（开始状态），将该状态与该 Token 进行绑定（将该 Token 添加到该状态的集合中）。</li>
-</ol>
-<p><strong>🌰 举个例子：</strong></p>
-<p>这里我们继续使用上面的例子进行说明：</p>
-<p>
-    <figure>
-      <img class="my-0 rounded-md" loading="lazy" src="./images/outlines-fsm-2.png" alt="" />
-      
-    </figure>
-</p>
-<p><strong>对于 Token <code>A</code>，遍历每个状态：</strong></p>
-<ol>
-<li>从状态 <code>0</code> 开始，不满足，pass；</li>
-<li>从状态 <code>1</code> 开始，不满足，pass；</li>
-<li>从状态 <code>2</code> 开始，不满足，pass；</li>
-<li>从状态 <code>3</code> 开始，不满足，pass。</li>
-</ol>
-<p><strong>对于 Token <code>.</code>，遍历每个状态：</strong></p>
-<ol>
-<li>从状态 <code>0</code> 开始，可以转换到状态 <code>2</code>，记录路径 <code>0 -&gt; 2</code>；</li>
-<li>从状态 <code>1</code> 开始，可以转换到状态 <code>2</code>，记录路径 <code>1 -&gt; 2</code>；</li>
-<li>从状态 <code>2</code> 开始，不满足，pass；</li>
-<li>从状态 <code>3</code> 开始，不满足，pass。</li>
-</ol>
-<p>此时，我们可以收集到对于 Token <code>.</code>，其所能匹配到的所有状态转换路径集合：</p>
-<pre tabindex="0"><code>0 -&gt; 2
-1 -&gt; 2
-</code></pre><p>然后，将每条路径的起始状态与该 Token 进行绑定（一个 HashMap）：</p>
-<pre tabindex="0"><code>状态 0 &lt;-&gt; set(&#34;.&#34;)
-状态 1 &lt;-&gt; set(&#34;.&#34;)
-</code></pre><p><strong>对于 Token <code>42</code>，遍历每个状态：</strong></p>
-<ol>
-<li>从状态 <code>0</code> 开始，可以转换到状态 <code>1</code>，记录路径 <code>0 -&gt; 1</code>；</li>
-<li>从状态 <code>1</code> 开始，可以转换到状态 <code>1</code>，记录路径 <code>1</code>；</li>
-<li>从状态 <code>2</code> 开始，可以转换到状态 <code>3</code>，记录路径 <code>2 -&gt; 3</code>；</li>
-<li>从状态 <code>3</code> 开始，可以转换到状态 <code>3</code>，记录路径 <code>3</code>。</li>
-</ol>
-<p>Token <code>42</code> 能匹配到的所有路径集合如下：</p>
-<pre tabindex="0"><code>0 -&gt; 1
-1
-2 -&gt; 3
-3
-</code></pre><p>同理，将所有起始状态与该 Token 进行绑定：</p>
-<pre tabindex="0"><code>状态 0 &lt;-&gt; set(&#34;.&#34;, &#34;42&#34;)
-状态 1 &lt;-&gt; set(&#34;.&#34;, &#34;42&#34;)
-状态 2 &lt;-&gt; set(&#34;42&#34;)
-状态 3 &lt;-&gt; set(&#34;42&#34;)
-</code></pre><p><strong>对于 Token <code>.2</code>，遍历每个状态：</strong></p>
-<ol>
-<li>从状态 <code>0</code> 开始，记录路径 <code>0 -&gt; 2 -&gt; 3</code>；</li>
-<li>从状态 <code>1</code> 开始，记录路径 <code>1 -&gt; 2 -&gt; 3</code>；</li>
-<li>从状态 <code>2</code> 开始，不满足，pass；</li>
-<li>从状态 <code>3</code> 开始，不满足，pass。</li>
-</ol>
-<p>绑定状态与 Token：</p>
-<pre tabindex="0"><code>状态 0 &lt;-&gt; set(&#34;.&#34;, &#34;42&#34;, &#34;.2&#34;)
-状态 1 &lt;-&gt; set(&#34;.&#34;, &#34;42&#34;, &#34;.2&#34;)
-状态 2 &lt;-&gt; set(&#34;42&#34;)
-状态 3 &lt;-&gt; set(&#34;42&#34;)
-</code></pre><p><strong>对于 Token <code>1</code>，遍历每个状态：</strong></p>
-<ol>
-<li>从状态 <code>0</code> 开始，记录路径 <code>0 -&gt; 1</code>；</li>
-<li>从状态 <code>1</code> 开始，记录路径 <code>1</code>；</li>
-<li>从状态 <code>2</code> 开始，记录路径 <code>2 -&gt; 3</code>；</li>
-<li>从状态 <code>3</code> 开始，记录路径 <code>3</code>。</li>
-</ol>
-<p>绑定状态与 Token：</p>
-<pre tabindex="0"><code>状态 0 &lt;-&gt; set(&#34;.&#34;, &#34;42&#34;, &#34;.2&#34;, &#34;1&#34;)
-状态 1 &lt;-&gt; set(&#34;.&#34;, &#34;42&#34;, &#34;.2&#34;, &#34;1&#34;)
-状态 2 &lt;-&gt; set(&#34;42&#34;, &#34;1&#34;)
-状态 3 &lt;-&gt; set(&#34;42&#34;, &#34;1&#34;)
-</code></pre><p>最后，我们就得到了每个 FSM 状态能够匹配的所有 Token 集合。</p>
-<p>在实际过程中，当 LLM 生成的内容进行到某一个状态时（比如：状态 <code>2</code>），Outlines 就能快速通过该 Map 获取到当前状态所能接受生成的 Token 集合（<code>42</code> 和 <code>1</code>），搜索的时间复杂度为 <code>O(1)</code>，并生成下一步 Decode 的 Mask（为 <code>[0, 0, 1, 0, 1]</code>，即过滤掉了其它 3 个 Token）。</p>
-
-
-<h3 class="relative group">3.3 总结 
-    <div id="33-%E6%80%BB%E7%BB%93" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#33-%E6%80%BB%E7%BB%93" aria-label="Anchor">#</a>
-    </span>        
-    
-</h3>
-<p><strong>Outlines 的优缺点：</strong></p>
-<ul>
-<li><strong>优点：不会引入额外的推理延迟</strong>。FSM Map 的构建过程会在真正进行 Decode 之前就完成，因此并不会给实际运行时的推理过程引入太多额外的延迟（引入的额外计算仅包括生成 Mask 等，几乎可以忽略）；</li>
-<li><strong>缺点：会引入额外的内存占用</strong>。保存并加载这个 Map 会带来额外的内存占用，因此在实际应用中，我们需要对推理速度和内存占用这两方面做一个权衡。</li>
-</ul>
-<p>另外，Outlines 不仅可以支持使用正则表达式来限定模型的输出，还支持 <strong>CFGs（Context-Free Grammars，上下文无关文法）</strong>，比如：JSON、SQL 以及 Python 等语言。关于 CFGs 生成的原理，这里不再详细展开，感兴趣的读者可以自行阅读 Outlines 的<a href="https://arxiv.org/abs/2307.09702" target="_blank"><u>论文</u></a>与<a href="https://github.com/dottxt-ai/outlines" target="_blank"><u>源码</u></a>。</p>
-
-
-<h2 class="relative group">四、vLLM Guided Decoding 源码解读 
-    <div id="%E5%9B%9Bvllm-guided-decoding-%E6%BA%90%E7%A0%81%E8%A7%A3%E8%AF%BB" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%E5%9B%9Bvllm-guided-decoding-%E6%BA%90%E7%A0%81%E8%A7%A3%E8%AF%BB" aria-label="Anchor">#</a>
+            style="text-decoration-line: none !important;" href="#%E5%9B%9Bstructured-output-%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0" aria-label="Anchor">#</a>
     </span>        
     
 </h2>
-<p>目前，vLLM 的 Guided Decoding 功能支持 <code>outlines</code>、<code>xgrammar</code> 以及 <code>lm-format-enforcer</code> 这三种后端。下面，我们将使用 <code>Qwen2.5-7B-Instruct</code> 模型，并基于 <code>outlines</code> 后端，详细讲解 Guided Decoding 的整体流程及其代码实现。</p>
+<p>了解了 V1 Engine 的整体架构和推理流程之后，下面我们将以 <strong>XGrammar</strong> 后端为例，梳理 Structured Output 具体的代码实现。</p>
+<p>
+    <figure>
+      <img class="my-0 rounded-md" loading="lazy" src="./images/3_so_xgrammar_code.png" alt="" />
+      
+    </figure>
+</p>
+<blockquote>
+<p>高清图片链接：<a href="https://github.com/shen-shanshan/cs-self-learning/tree/master/Open_Source/Projects/vLLM/Features/Guided_Decoding/posts/vLLM%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94Guided_Decoding_V1/images" target="_blank"><u>link</u></a>，画图不易，走过路过欢迎点一个 Star！</p>
+</blockquote>
 
 
-<h3 class="relative group">4.1 加载 LogitsProcessor 
-    <div id="41-%E5%8A%A0%E8%BD%BD-logitsprocessor" class="anchor"></div>
+<h3 class="relative group">4.1 请求预处理 
+    <div id="41-%E8%AF%B7%E6%B1%82%E9%A2%84%E5%A4%84%E7%90%86" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#41-%E5%8A%A0%E8%BD%BD-logitsprocessor" aria-label="Anchor">#</a>
+            style="text-decoration-line: none !important;" href="#41-%E8%AF%B7%E6%B1%82%E9%A2%84%E5%A4%84%E7%90%86" aria-label="Anchor">#</a>
     </span>        
     
 </h3>
-<p>当 <code>LLMEngine</code> 初始化时，会在 <code>_build_logits_processors()</code> 方法中调用 <code>get_local_guided_decoding_logits_processor()</code> 方法获取当前可用后端对应的 <code>LogitsProcessor</code>（位于 <code>vllm/model_executor/guided_decoding</code> 目录下）。</p>
-<p>此时，需要传入 Guided Decoding 相关的参数 <code>GuidedDecodingParams</code>，这些参数位于 <code>SamplingParams</code> 中，可以在启动 vLLM 时进行指定。最后，所有被成功加载的各种 <code>LogitsProcessor</code> 都会被存放到 <code>SamplingParams</code> 中。</p>
-<p>部分代码如下：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># llm_engine.py</span>
-</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">_build_logits_processors</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">sampling_params</span><span class="p">,</span> <span class="o">...</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="n">logits_processors</span> <span class="o">=</span> <span class="p">[]</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">sampling_params</span><span class="o">.</span><span class="n">guided_decoding</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="c1"># ...</span>
-</span></span><span class="line"><span class="cl">        <span class="n">guided_decoding</span> <span class="o">=</span> <span class="n">sampling_params</span><span class="o">.</span><span class="n">guided_decoding</span>
-</span></span><span class="line"><span class="cl">        <span class="c1"># ...</span>
-</span></span><span class="line"><span class="cl">        <span class="n">processor</span> <span class="o">=</span> <span class="n">get_local_guided_decoding_logits_processor</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">            <span class="n">guided_params</span><span class="o">=</span><span class="n">guided_decoding</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">            <span class="n">tokenizer</span><span class="o">=</span><span class="n">tokenizer</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">            <span class="n">model_config</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">model_config</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">            <span class="n">reasoning_backend</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">decoding_config</span><span class="o">.</span><span class="n">reasoning_backend</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">processor</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">            <span class="n">logits_processors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">processor</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    
-</span></span><span class="line"><span class="cl">    <span class="c1"># ...</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="n">sampling_params</span><span class="o">.</span><span class="n">logits_processors</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">logits_processors</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">sampling_params</span>
-</span></span></code></pre></div><p><code>GuidedDecodingParams</code> 包含的参数如下：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># sampling_params.py</span>
-</span></span><span class="line"><span class="cl"><span class="nd">@dataclass</span>
+<p>当一个新的请求从 <code>EngineCoreClient</code> 发送到 <code>EngineCore</code> 时，是以 <code>EngineCoreRequest</code> 的形式。<code>EngineCore</code> 会先通过 <code>Request.from_engine_core_request()</code> 方法将其转换为 <code>Request</code> 形式，在这一步中，会创建 <code>StructuredOutputRequest</code> 对象并将 <code>SamplingParams</code> 传递给它。而在 <code>SamplingParams</code> 中就包含了用户设置的 <code>GuidedDecodingParams</code>。</p>
+<p>
+    <figure>
+      <img class="my-0 rounded-md" loading="lazy" src="./images/3.1.png" alt="" />
+      
+    </figure>
+</p>
+<p>若 <code>GuidedDecodingParams</code> 为空，则代表不使用 Structured Output，因此会将 <code>use_structured_output</code> 设置为 <code>False</code>，反之则为 <code>True</code>。<code>GuidedDecodingParams</code> 的部分内容如下：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nd">@dataclass</span>
 </span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">GuidedDecodingParams</span><span class="p">:</span>
 </span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;One of these fields will be used to build a logit processor.&#34;&#34;&#34;</span>
 </span></span><span class="line"><span class="cl">    <span class="n">json</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">dict</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span>
@@ -1135,136 +1182,175 @@
 </span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;These are other options that can be set&#34;&#34;&#34;</span>
 </span></span><span class="line"><span class="cl">    <span class="n">backend</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
 </span></span><span class="line"><span class="cl">    <span class="n">whitespace_pattern</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
-</span></span></code></pre></div><p>其中，前 5 个参数用于指定模型输出需要匹配的模式，剩下 2 个参数为一些可选配置。</p>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nd">@property</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">backend_name</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">        Return the backend name without any options.
+</span></span></span><span class="line"><span class="cl"><span class="s2">        For example if the backend is &#34;xgrammar:no-fallback&#34;, returns &#34;xgrammar&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">        &#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">backend</span> <span class="ow">or</span> <span class="s2">&#34;&#34;</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&#34;:&#34;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+</span></span></code></pre></div><p>一个简单的使用示例（根据文字判断感情，并输出对应的选项）如下：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># Guided decoding by Choice (list of possible options)</span>
+</span></span><span class="line"><span class="cl"><span class="n">guided_decoding_params_choice</span> <span class="o">=</span> <span class="n">GuidedDecodingParams</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">choice</span><span class="o">=</span><span class="p">[</span><span class="s2">&#34;Positive&#34;</span><span class="p">,</span> <span class="s2">&#34;Negative&#34;</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl"><span class="n">sampling_params_choice</span> <span class="o">=</span> <span class="n">SamplingParams</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">guided_decoding</span><span class="o">=</span><span class="n">guided_decoding_params_choice</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">prompt_choice</span> <span class="o">=</span> <span class="s2">&#34;Classify this sentiment: vLLM is wonderful!&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">llm</span> <span class="o">=</span> <span class="n">LLM</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="s2">&#34;Qwen/Qwen2.5-3B-Instruct&#34;</span><span class="p">,</span> <span class="n">max_model_len</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">choice_output</span> <span class="o">=</span> <span class="n">generate_output</span><span class="p">(</span><span class="n">prompt_choice</span><span class="p">,</span> <span class="n">sampling_params_choice</span><span class="p">,</span> <span class="n">llm</span><span class="p">)</span>
+</span></span></code></pre></div>
 
-
-<h3 class="relative group">4.2 整体推理流程 
-    <div id="42-%E6%95%B4%E4%BD%93%E6%8E%A8%E7%90%86%E6%B5%81%E7%A8%8B" class="anchor"></div>
+<h3 class="relative group">4.2 异步编译 Grammar 
+    <div id="42-%E5%BC%82%E6%AD%A5%E7%BC%96%E8%AF%91-grammar" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#42-%E6%95%B4%E4%BD%93%E6%8E%A8%E7%90%86%E6%B5%81%E7%A8%8B" aria-label="Anchor">#</a>
+            style="text-decoration-line: none !important;" href="#42-%E5%BC%82%E6%AD%A5%E7%BC%96%E8%AF%91-grammar" aria-label="Anchor">#</a>
     </span>        
     
 </h3>
-<p>当初始化完成后，vLLM 会开启一个循环并不断调用 <code>step()</code> 方法执行推理，每一次调用就是一个迭代。</p>
-<p>部分代码如下：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># llm.py</span>
-</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">_run_engine</span><span class="p">(</span><span class="o">...</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="c1"># ...</span>
-</span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="bp">self</span><span class="o">.</span><span class="n">llm_engine</span><span class="o">.</span><span class="n">has_unfinished_requests</span><span class="p">():</span>
-</span></span><span class="line"><span class="cl">        <span class="n">step_outputs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">llm_engine</span><span class="o">.</span><span class="n">step</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">        <span class="c1"># ...</span>
-</span></span><span class="line"><span class="cl">    
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">outputs</span>
-</span></span></code></pre></div><p>在 <code>step()</code> 方法中，vLLM 的整体调用链路如下：</p>
+<p><code>StructuredOutputManager</code> 是 <code>EngineCore</code> 中的一个组件，当 <code>Request</code> 转换完成后，会调用 <code>StructuredOutputManager</code> 中的 <code>grammar_init()</code> 方法。</p>
 <p>
     <figure>
-      <img class="my-0 rounded-md" loading="lazy" src="./images/process-1.png" alt="" />
+      <img class="my-0 rounded-md" loading="lazy" src="./images/3.2.png" alt="" />
       
     </figure>
 </p>
-<p>其中，与 Guided Decoding 有关的核心处理逻辑都被封装到了 <code>BaseLogitsProcessor</code> 的 <code>__call__()</code> 方法中，这样就可以直接通过 <code>logits_processor(...)</code> 的方式来进行调用。</p>
+<p><code>grammar_init()</code> 的主要步骤如下：</p>
+<ol>
+<li>将 engine-level backend 设置到 <code>StructuredOutputManager</code> 中；</li>
+<li>通过 backend 调用 <code>compile_grammar()</code> 方法，并开始异步编译语法。编译完成后，会生成一个 <code>CompiledGrammar</code> 对象，然后利用该对象创建 <code>GrammarMatcher</code> 对象，最后将这些内容打包为一个 <code>XgrammarGrammar</code> 对象放到 <code>Request</code> 的 <code>StructuredOutputRequest</code> 属性中。</li>
+</ol>
+<p>
+    <figure>
+      <img class="my-0 rounded-md" loading="lazy" src="./images/3.3.png" alt="" />
+      
+    </figure>
+</p>
+<p>上述流程的部分代码如下：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">StructuredOutputManager</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;Engine-level manager for structured output requests.&#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">grammar_init</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">:</span> <span class="n">Request</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">structured_output_request</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1"># 根据 sampling_params 设置对应的 backend</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">backend</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">backend_name</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">sampling_params</span><span class="o">.</span><span class="n">guided_decoding</span><span class="o">.</span><span class="n">backend_name</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">backend_name</span> <span class="o">==</span> <span class="s2">&#34;xgrammar&#34;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="bp">self</span><span class="o">.</span><span class="n">backend</span> <span class="o">=</span> <span class="n">XgrammarBackend</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">vllm_config</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">grammar</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">executor</span><span class="o">.</span><span class="n">submit</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_async_create_grammar</span><span class="p">,</span> <span class="n">request</span><span class="p">)</span>  
+</span></span><span class="line"><span class="cl">        <span class="c1"># 异步调用：self.backend.compile_grammar(...)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">request</span><span class="o">.</span><span class="n">structured_output_request</span><span class="o">.</span><span class="n">grammar</span> <span class="o">=</span> <span class="n">grammar</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">XgrammarBackend</span><span class="p">(</span><span class="n">StructuredOutputBackend</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">compile_grammar</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request_type</span><span class="p">:</span> <span class="n">StructuredOutputOptions</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                        <span class="n">grammar_spec</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">StructuredOutputGrammar</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># 根据不同的 request_type 调用对应的 compile_xxx()</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">request_type</span> <span class="o">==</span> <span class="n">xxx</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">ctx</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">compiler</span><span class="o">.</span><span class="n">compile_xxx</span><span class="p">(</span><span class="n">grammar_spec</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">XgrammarGrammar</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">            <span class="n">matcher</span><span class="o">=</span><span class="n">xgr</span><span class="o">.</span><span class="n">GrammarMatcher</span><span class="p">(</span><span class="n">ctx</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">            <span class="n">vocab_size</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">vocab_size</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="n">ctx</span><span class="o">=</span><span class="n">ctx</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="p">)</span>
+</span></span></code></pre></div><blockquote>
+<p>注意：在 V1 Engine 中，每一个 Structured Output 后端都需要实现两个类——<code>StructuredOutputBackend</code> 和 <code>StructuredOutputGrammar</code>，在这两个抽象类中定义了每个后端应该实现的接口。其中，<code>StructuredOutputBackend</code> 是 <strong>engine-level</strong> 的 backend，而 <code>StructuredOutputGrammar</code> 是 <strong>request-level</strong> 的 backend，即前者是整个推理引擎共用的后端，而后者存在于 <code>Request</code> 对象中，只负责对自己所属的请求进行处理。</p>
+</blockquote>
 
 
-<h3 class="relative group">4.3 计算 Mask 
-    <div id="43-%E8%AE%A1%E7%AE%97-mask" class="anchor"></div>
+<h3 class="relative group">4.3 分配 bitmask 并更新 FSM 状态 
+    <div id="43-%E5%88%86%E9%85%8D-bitmask-%E5%B9%B6%E6%9B%B4%E6%96%B0-fsm-%E7%8A%B6%E6%80%81" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#43-%E8%AE%A1%E7%AE%97-mask" aria-label="Anchor">#</a>
+            style="text-decoration-line: none !important;" href="#43-%E5%88%86%E9%85%8D-bitmask-%E5%B9%B6%E6%9B%B4%E6%96%B0-fsm-%E7%8A%B6%E6%80%81" aria-label="Anchor">#</a>
     </span>        
     
 </h3>
-<p>具体地，<code>BaseLogitsProcessor: __call__()</code> 的部分代码（<code>#...</code> 代表省略）及其说明如下：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">outlines.fsm.guide</span> <span class="kn">import</span> <span class="p">(</span><span class="n">CFGGuide</span><span class="p">,</span> <span class="n">CFGState</span><span class="p">,</span> <span class="n">Generate</span><span class="p">,</span> <span class="n">Guide</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">                                <span class="n">RegexGuide</span><span class="p">,</span> <span class="n">Write</span><span class="p">)</span>
+<p>当前置准备完成后，<code>EngineCore</code> 就会调用 <code>step()</code> 方法进行请求调度和模型推理。</p>
+<p>
+    <figure>
+      <img class="my-0 rounded-md" loading="lazy" src="./images/3.2.png" alt="" />
+      
+    </figure>
+</p>
+<p><code>step()</code> 的主要步骤如下：</p>
+<ol>
+<li><code>Scheduler</code> 调用 <code>schedule()</code> 方法对请求进行调度。其中，会调用 <code>StructuredOutputManager</code> 的 <code>grammar_bitmask()</code> 方法：
+<ol>
+<li>调用 XGrammar 后端的 <code>allocate_token_bitmask()</code> 方法，为当前 batch 中的所有请求准备下一个 token 的 bitmask（bitmask 的具体作用在上一篇文章中有做解释）；</li>
+<li>针对每一个设置了 Structured Output 的请求，调用 <code>GrammarMatcher</code> 中的 <code>fill_next_token_bitmask()</code> 方法为它们填充 bitmask。</li>
+</ol>
+</li>
+<li><code>Scheduler</code> 调度完成后生成调度结果 <code>SchedulerOutput</code>，并调用 <code>ModelExecutor</code> 开始执行推理（调用链路：<code>ModelExecutor</code> -&gt; <code>Worker</code> -&gt; <code>ModelRunner</code>）。其中，<code>ModelRunner</code> 会调用 <code>apply_grammar_bitmask()</code> 方法将 bitmask 应用到模型输出的 logits 上，从而起到 Guided Decoding 的效果。该方法底层调用的是 XGrammar 后端中的 <code>apply_token_bitmask_inplace()</code> 方法。</li>
+<li>最后，<code>Scheduler</code> 根据之前生成的调度结果 <code>SchedulerOutput</code> 以及模型推理输出的结果 <code>ModelRunnerOutput</code> 更新状态并生成 <code>EngineCoreOutputs</code> 结果，返回给 <code>EngineCoreClient</code>。其中，每一个 <code>use_structured_output = True</code> 的请求都会调用自己的 <code>XgrammarGrammar</code> 对象，调用 <code>GrammarMatcher</code> 中的 <code>accept_token()</code> 方法，使对应的 FSM 接受新生成的 token 并向前跳转到下一个状态。</li>
+</ol>
+<p>上述流程中涉及的部分 XGrammar API 的说明如下：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">allocate_token_bitmask</span><span class="p">(</span><span class="n">batch_size</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                           <span class="n">vocab_size</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tensor</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;&#39;&#39;
+</span></span></span><span class="line"><span class="cl"><span class="s1">    Allocate the bitmask for the next token prediction. The bitmask is an int32
+</span></span></span><span class="line"><span class="cl"><span class="s1">    tensor on CPU with shape (batch_size, ceil(vocab_size / 32)).
+</span></span></span><span class="line"><span class="cl"><span class="s1">    Users who have their own needs to manage CUDA memory can construct the tensor
+</span></span></span><span class="line"><span class="cl"><span class="s1">    with get_bitmask_shape and bitmask_dtype themselves.
+</span></span></span><span class="line"><span class="cl"><span class="s1">    &#39;&#39;&#39;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">BaseLogitsProcessor</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">fill_next_token_bitmask</span><span class="p">(</span><span class="n">bitmask</span><span class="p">:</span> <span class="n">Tensor</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                            <span class="n">index</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                            <span class="n">debug_print</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;&#39;&#39;
+</span></span></span><span class="line"><span class="cl"><span class="s1">    Fill the bitmask for the next token prediction. The input bitmask can be
+</span></span></span><span class="line"><span class="cl"><span class="s1">    generated by allocate_token_bitmask, and must be on CPU. bitmask[index] will
+</span></span></span><span class="line"><span class="cl"><span class="s1">    be filled with the next token bitmask.
+</span></span></span><span class="line"><span class="cl"><span class="s1">    This method does not change the matcher state.
+</span></span></span><span class="line"><span class="cl"><span class="s1">    &#39;&#39;&#39;</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">guide</span><span class="p">:</span> <span class="n">Guide</span><span class="p">,</span> <span class="n">reasoner</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Reasoner</span><span class="p">]):</span>
-</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">_guide</span><span class="p">:</span> <span class="n">Guide</span> <span class="o">=</span> <span class="n">guide</span>
-</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">_fsm_state</span><span class="p">:</span> <span class="n">DefaultDict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">CFGState</span><span class="p">]]</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="c1"># ...</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_ids</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span>
-</span></span><span class="line"><span class="cl">                 <span class="n">scores</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;&#34;&#34;Use the FSM to bias the logits before sampling the next token.&#34;&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">        <span class="c1"># ...</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">apply_token_bitmask_inplace</span><span class="p">(</span><span class="n">logits</span><span class="p">:</span> <span class="n">Tensor</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                                <span class="n">bitmask</span><span class="p">:</span> <span class="n">Tensor</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                                <span class="n">vocab_size</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                                <span class="n">indices</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;&#39;&#39;
+</span></span></span><span class="line"><span class="cl"><span class="s1">    Apply the bitmask to the logits in-place. The bitmask is a 01 bitwise compressed
+</span></span></span><span class="line"><span class="cl"><span class="s1">    tensor, where 0 means the token is masked and 1 means the token is not masked.
+</span></span></span><span class="line"><span class="cl"><span class="s1">    It can be generated by allocate_token_bitmask and filled by fill_next_token_bitmask.
+</span></span></span><span class="line"><span class="cl"><span class="s1">    After applying the bitmask, the masked logits will be set to -inf.
+</span></span></span><span class="line"><span class="cl"><span class="s1">    &#39;&#39;&#39;</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">        <span class="n">seq_id</span> <span class="o">=</span> <span class="nb">hash</span><span class="p">(</span><span class="nb">tuple</span><span class="p">(</span><span class="n">input_ids</span><span class="p">))</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">input_ids</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">            <span class="n">last_token</span> <span class="o">=</span> <span class="n">input_ids</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">            <span class="n">last_seq_id</span> <span class="o">=</span> <span class="nb">hash</span><span class="p">(</span><span class="nb">tuple</span><span class="p">(</span><span class="n">input_ids</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]))</span>
-</span></span><span class="line"><span class="cl">            <span class="c1"># 根据前一个 FSM 状态以及当前输入的 Token，从 Outlines 获取下一个状态</span>
-</span></span><span class="line"><span class="cl">            <span class="c1"># _fsm_state 是一个 Map：序列哈希 &lt;--&gt; FSM 状态</span>
-</span></span><span class="line"><span class="cl">            <span class="bp">self</span><span class="o">.</span><span class="n">_fsm_state</span><span class="p">[</span><span class="n">seq_id</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_guide</span><span class="o">.</span><span class="n">get_next_state</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">                <span class="n">state</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_fsm_state</span><span class="p">[</span><span class="n">last_seq_id</span><span class="p">],</span> <span class="n">token_id</span><span class="o">=</span><span class="n">last_token</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        
-</span></span><span class="line"><span class="cl">        <span class="c1"># ...</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">        <span class="c1"># 从 Outlines 获取当前状态所能接受的 Token 集合</span>
-</span></span><span class="line"><span class="cl">        <span class="n">instruction</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_guide</span><span class="o">.</span><span class="n">get_next_instruction</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">            <span class="n">state</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_fsm_state</span><span class="p">[</span><span class="n">seq_id</span><span class="p">])</span>
-</span></span><span class="line"><span class="cl">        <span class="n">allowed_tokens</span> <span class="o">=</span> <span class="n">instruction</span><span class="o">.</span><span class="n">tokens</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">        <span class="c1"># 使用 -torch.inf 初始化 Mask</span>
-</span></span><span class="line"><span class="cl">        <span class="n">mask</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">full</span><span class="p">((</span><span class="n">scores</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="p">),</span>
-</span></span><span class="line"><span class="cl">                          <span class="o">-</span><span class="n">torch</span><span class="o">.</span><span class="n">inf</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">                          <span class="n">device</span><span class="o">=</span><span class="n">scores</span><span class="o">.</span><span class="n">device</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        
-</span></span><span class="line"><span class="cl">        <span class="c1"># ...</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">        <span class="c1"># 将 Mask 中 allowed_tokens 的位置设为 0，其余为 -torch.inf（即要被过滤的）</span>
-</span></span><span class="line"><span class="cl">        <span class="n">mask</span><span class="o">.</span><span class="n">index_fill_</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">allowed_tokens</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        
-</span></span><span class="line"><span class="cl">        <span class="c1"># 将 Mask 应用到模型输出上：</span>
-</span></span><span class="line"><span class="cl">        <span class="c1"># 1.对于可接受的 Token：原本的概率 + Mask(0)，概率不变</span>
-</span></span><span class="line"><span class="cl">        <span class="c1"># 2.对于不接受的 Token：原本的概率 + Mask(负无穷)，概率为 0</span>
-</span></span><span class="line"><span class="cl">        <span class="n">scores</span><span class="o">.</span><span class="n">add_</span><span class="p">(</span><span class="n">mask</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">scores</span>
-</span></span></code></pre></div><p>总结：Guided Decoding 通过一个 Mask 机制实现了筛除模型生成的不满足当前格式限制的 Token 的效果。</p>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">accept_token</span><span class="p">(</span><span class="n">token_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                 <span class="n">debug_print</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;&#39;&#39;
+</span></span></span><span class="line"><span class="cl"><span class="s1">    Accept one token and update the state of the matcher.
+</span></span></span><span class="line"><span class="cl"><span class="s1">    &#39;&#39;&#39;</span>
+</span></span></code></pre></div><p>到此为止，我们就介绍完了 vLLM 是怎么将一个 Structured Output 的请求转换为对应格式的输出的。</p>
 
 
-<h3 class="relative group">4.4 支持 Reasoning 
-    <div id="44-%E6%94%AF%E6%8C%81-reasoning" class="anchor"></div>
+<h2 class="relative group">五、总结 
+    <div id="%E4%BA%94%E6%80%BB%E7%BB%93" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#44-%E6%94%AF%E6%8C%81-reasoning" aria-label="Anchor">#</a>
-    </span>        
-    
-</h3>
-<p>目前，vLLM 还支持在 Reasoning 时，仅对最后的结果 <code>content</code> 执行 Guided Decoding 逻辑，而不影响原本推理部分的内容 <code>reasoning_content</code>。</p>
-<p>具体的代码可以参考这个 <a href="https://github.com/vllm-project/vllm/pull/12955" target="_blank"><u>PR</u></a>，由 <a href="https://github.com/gaocegege" target="_blank"><u>Ce Gao</u></a> 实现，感兴趣的读者可以自行了解，这里不再详细展开。</p>
-
-
-<h2 class="relative group">五、SGLang Jump-Forward Decoding 
-    <div id="%E4%BA%94sglang-jump-forward-decoding" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%E4%BA%94sglang-jump-forward-decoding" aria-label="Anchor">#</a>
+            style="text-decoration-line: none !important;" href="#%E4%BA%94%E6%80%BB%E7%BB%93" aria-label="Anchor">#</a>
     </span>        
     
 </h2>
-<p>使用 FSM 实现 Guided Decoding 还有一个缺点——即只能逐个 Token 计算 Mask。然而，在 Guided Decoding 中，有一些特定的 Token 组合是绑定在一起的，对于这些 Token，其实没必要再一个一个地去生成，而是可以一次 Decode 直接生成几个 Token 的组合，从而可以加速 Guided Decoding 的推理过程。</p>
-<p>为了解决上述问题，SGLang 提出了一种基于 <strong>Compressed Finite State Machine</strong> 的 <strong>Jump-Forward Decoding</strong>。即当生成一些特定的 Token（后续模式固定且可预测，如：<code>{</code>）时，该算法可以在一次 Decode 中将连续的几个 Token 直接生成。</p>
-<p>
-    <figure>
-      <img class="my-0 rounded-md" loading="lazy" src="./images/jump-forwad.png" alt="" />
-      
-    </figure>
-</p>
-<p>具体地，Compressed FSM 通过先分析 FSM（根据用户给定的正则表达式生成），识别其中一些没有分支的节点（即只由一条边连接），并将这些路径上的节点合并，从而可以通过一次跳转（Decode），跨越多个状态（Token），直到下一个具有分支的节点，从而极大地提高了 Guided Decoding 的效率。</p>
-<p>更多细节可以参考 SGLang 的<a href="https://arxiv.org/abs/2312.07104" target="_blank"><u>论文</u></a>和<a href="https://github.com/sgl-project/sglang" target="_blank"><u>代码</u></a>。</p>
+<p>目前，vLLM 的 V1 Engine 还在积极开发中（变动频繁），其 Structured Output 特性也还只支持 <code>xgrammar</code> 和 <code>guidance</code> 后端。本文中介绍的内容，仅代表写下这篇文章时代码的状态（<code>v0.8.4</code>），后续 Structured Output 模块如果还有比较大的调整，再考虑另写文章进行分享。</p>
+<p>另外，目前我的工作就是全职参与 vLLM 社区的开发和维护，后续我还会持续分享更多关于 vLLM 最新进展的学习笔记，欢迎大家持续关注～</p>
 
 
 <h2 class="relative group">六、参考资料 
@@ -1278,12 +1364,10 @@
     
 </h2>
 <ul>
-<li><a href="https://arxiv.org/abs/1807.03100" target="_blank"><u>Robust Text-to-SQL Generation with Execution-Guided Decoding</u></a></li>
-<li><a href="https://arxiv.org/abs/2307.09702" target="_blank"><u>Efficient Guided Generation for Large Language Models</u></a></li>
+<li><a href="https://blog.vllm.ai/2025/01/27/v1-alpha-release.html" target="_blank"><u>vLLM V1: A Major Upgrade to vLLM&rsquo;s Core Architecture</u></a></li>
 <li><a href="https://docs.vllm.ai/en/stable/features/structured_outputs.html#structured-outputs" target="_blank"><u>vLLM Docs | Structured Outputs</u></a></li>
 <li><a href="https://github.com/vllm-project/vllm" target="_blank"><u>vLLM GitHub</u></a></li>
-<li><a href="https://lmsys.org/blog/2024-02-05-compressed-fsm/" target="_blank"><u>Fast JSON Decoding for Local LLMs with Compressed Finite State Machine</u></a></li>
-<li><a href="https://arxiv.org/abs/2312.07104" target="_blank"><u>SGLang: Efficient Execution of Structured Language Model Programs</u></a></li>
+<li><a href="https://xgrammar.mlc.ai/docs/api/python/index.html" target="_blank"><u>XGrammar API Reference</u></a></li>
 </ul>
 
           
@@ -1452,6 +1536,148 @@
 
 <h2 class="mt-8 text-2xl font-extrabold mb-10">Related</h2>
 <section class="w-full grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+  
+  
+
+  <a href="/articles/vllm-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0guided-decoding/" class="min-w-full">
+    
+    <div class="min-h-full border border-neutral-200 dark:border-neutral-700 border-2 rounded overflow-hidden shadow-2xl relative">
+        
+        <div class="w-full thumbnail_card_related nozoom" style="background-image:url(/articles/vllm-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0guided-decoding/featured_hu515409118694051596.png);"></div>
+        
+      
+
+      <div class="px-6 py-4">
+
+        
+        <div class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
+          href="/articles/vllm-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0guided-decoding/">vLLM 学习笔记｜Guided Decoding</div>
+        
+
+        <div class="text-sm text-neutral-500 dark:text-neutral-400">
+          
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  <time datetime="2025-03-20T11:44:20&#43;08:00">2025-03-20</time>
+  
+
+  
+  
+</div>
+
+
+
+
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  
+  
+  
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/&#34;,'_self');">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    计算机
+  </span>
+</span>
+  </span>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/ai/&#34;,'_self');">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    AI
+  </span>
+</span>
+  </span>
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/llm/&#34;,'_self');">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    LLM
+  </span>
+</span>
+  </span>
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/%E6%A8%A1%E5%9E%8B%E6%8E%A8%E7%90%86/&#34;,'_self');">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    模型推理
+  </span>
+</span>
+  </span>
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/&#34;,'_self');">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    源码分析
+  </span>
+</span>
+  </span>
+  
+  
+  
+  
+</div>
+
+
+
+
+        </div>
+
+        
+        <div class="py-1 prose dark:prose-invert">
+          
+        </div>
+        
+      </div>
+      <div class="px-6 pt-4 pb-2">
+
+      </div>
+    </div>
+  </a>
+
   
   
 
@@ -1737,124 +1963,6 @@
   </a>
 
   
-  
-
-  <a href="/articles/%E6%B7%B1%E5%85%A5%E8%A7%A3%E6%9E%90-python-%E5%8C%85%E8%B0%83%E7%94%A8%E5%8E%9F%E7%90%86%E4%B8%8E%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/" class="min-w-full">
-    
-    <div class="min-h-full border border-neutral-200 dark:border-neutral-700 border-2 rounded overflow-hidden shadow-2xl relative">
-        
-        <div class="w-full thumbnail_card_related nozoom" style="background-image:url(/articles/%E6%B7%B1%E5%85%A5%E8%A7%A3%E6%9E%90-python-%E5%8C%85%E8%B0%83%E7%94%A8%E5%8E%9F%E7%90%86%E4%B8%8E%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/featured_hu17493459015759175972.jpg);"></div>
-        
-      
-
-      <div class="px-6 py-4">
-
-        
-        <div class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
-          href="/articles/%E6%B7%B1%E5%85%A5%E8%A7%A3%E6%9E%90-python-%E5%8C%85%E8%B0%83%E7%94%A8%E5%8E%9F%E7%90%86%E4%B8%8E%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/">深入解析 Python 包调用原理与最佳实践</div>
-        
-
-        <div class="text-sm text-neutral-500 dark:text-neutral-400">
-          
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="flex flex-row flex-wrap items-center">
-  
-  
-  <time datetime="2025-01-15T15:02:45&#43;08:00">2025-01-15</time>
-  
-
-  
-  
-</div>
-
-
-
-
-
-<div class="flex flex-row flex-wrap items-center">
-  
-  
-  
-  
-  
-  
-  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/&#34;,'_self');">
-    <span class="flex" style="cursor: pointer;">
-  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    计算机
-  </span>
-</span>
-  </span>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/python/&#34;,'_self');">
-    <span class="flex" style="cursor: pointer;">
-  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    Python
-  </span>
-</span>
-  </span>
-  
-  
-  
-  
-</div>
-
-
-
-
-        </div>
-
-        
-        <div class="py-1 prose dark:prose-invert">
-          
-        </div>
-        
-      </div>
-      <div class="px-6 pt-4 pb-2">
-
-      </div>
-    </div>
-  </a>
-
-  
 </section>
 
   
@@ -1868,8 +1976,8 @@
           
         
       <script>
-        var oid = "views_posts\/【计算机】vLLM学习笔记——Guided_Decoding\/index.md"
-        var oid_likes = "likes_posts\/【计算机】vLLM学习笔记——Guided_Decoding\/index.md"
+        var oid = "views_posts\/【计算机】vLLM学习笔记——Guided_Decoding_V1\/index.md"
+        var oid_likes = "likes_posts\/【计算机】vLLM学习笔记——Guided_Decoding_V1\/index.md"
       </script>
       
       
