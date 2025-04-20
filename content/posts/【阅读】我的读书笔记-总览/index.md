@@ -49,4 +49,8 @@ showRelatedContent: false
 
 ## 年度书单
 
+{{< article link="/articles/%E6%88%91%E7%9A%84-2025-%E5%B9%B4%E5%BA%A6%E4%B9%A6%E5%8D%95/" >}}
+
+<br>
+
 {{< article link="/articles/%E6%88%91%E7%9A%84-2024-%E5%B9%B4%E5%BA%A6%E4%B9%A6%E5%8D%95/" >}}

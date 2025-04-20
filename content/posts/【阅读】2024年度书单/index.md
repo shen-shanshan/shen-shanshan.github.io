@@ -85,11 +85,3 @@ tags: ["书单"]
 ## 三、总结与展望
 
 2024 是充实而又忙碌的一年，希望在 2025 年里，自己能少玩点手机，在工作之余能抽出更多的时间去阅读，去读更多类型的书，在此立下 flag。
-
-**相关链接：**
-
-- 我的读书笔记都会更新到我的[<u>个人博客</u>][1]中，欢迎阅读和分享；
-- 我每年的书单和读书笔记同时也会放到我的 [<u>GitHub</u>][2] 仓库中，欢迎 star & fork。
-
-[1]: https://shen-shanshan.github.io/categories/%E9%98%85%E8%AF%BB/
-[2]: https://github.com/shen-shanshan/reading-makes-life-better?tab=readme-ov-file
