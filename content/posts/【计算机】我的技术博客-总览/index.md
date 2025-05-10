@@ -9,6 +9,10 @@ showRelatedContent: false
 
 ## 大模型推理
 
+{{< article link="/articles/vllm-v1-%E6%95%B4%E4%BD%93%E6%B5%81%E7%A8%8B%E4%BB%8E%E8%AF%B7%E6%B1%82%E5%88%B0%E7%AE%97%E5%AD%90%E6%89%A7%E8%A1%8C/" >}}
+
+<br>
+
 {{< article link="/articles/vllm-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0guided-decoding/" >}}
 
 <br>
