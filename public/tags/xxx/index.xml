@@ -8,14 +8,14 @@
     <language>en</language>
     <managingEditor>youremail@example.com (Shanshan Shen)</managingEditor>
     <webMaster>youremail@example.com (Shanshan Shen)</webMaster>
-    <copyright>© 2024 Shanshan Shen</copyright>
-    <lastBuildDate>Sun, 15 Dec 2024 11:19:30 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/xxx/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>© 2025 Shanshan Shen</copyright>
+    <lastBuildDate>Sat, 17 May 2025 16:25:35 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/xxx/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>333</title>
-      <link>http://localhost:1313/articles/333/</link>
-      <pubDate>Sun, 15 Dec 2024 11:19:30 +0800</pubDate>
+      <title>Title</title>
+      <link>http://localhost:1313/articles/title/</link>
+      <pubDate>Sat, 17 May 2025 16:25:35 +0800</pubDate>
       <author>youremail@example.com (Shanshan Shen)</author>
-      <guid>http://localhost:1313/articles/333/</guid>
+      <guid>http://localhost:1313/articles/title/</guid>
       <description></description>
       
     </item>
