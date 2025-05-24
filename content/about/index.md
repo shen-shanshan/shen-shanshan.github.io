@@ -89,6 +89,15 @@ Studying at School of Electronic and Information Engineering, majoring in commun
 
 I am a contributor to many open source projects on GitHub, which are shown below. You can find the PRs I have contributed [here](https://github.com/pulls?q=is%3Apr+author%3Ashen-shanshan+is%3Amerged+is%3Apublic).
 
+| No. |           Repo           | Stars |  First PR  |  Last PR   | PR Count |
+| --- | ------------------------ | ----- | ---------- | ---------- | -------- |
+| 1   | vllm-project/vllm-ascend | 672   | 2025-02-06 | 2025-05-23 | 34       |
+| 2   | vllm-project/vllm        | 47.9k | 2025-01-13 | 2025-05-23 | 12       |
+| 3   | 2noise/ChatTTS           | 36.3k | 2024-10-10 | 2024-10-21 | 2        |
+| 4   | ggml-org/llama.cpp       | 80.8k | 2024-11-26 | 2024-11-26 | 1        |
+
+Find more details about these projects in the following links:
+
 {{< github repo="vllm-project/vllm-ascend" >}}
 
 <br>
