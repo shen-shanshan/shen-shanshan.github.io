@@ -29,6 +29,10 @@ showRelatedContent: false
 
 ## 文学
 
+{{< article link="/articles/%E6%82%89%E8%BE%BE%E5%A4%9A%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%E6%89%BE%E5%AF%BB%E8%87%AA%E6%88%91%E4%B9%8B%E8%B7%AF/" >}}
+
+<br>
+
 {{< article link="/articles/%E8%A7%A3%E5%BF%A7%E6%9D%82%E8%B4%A7%E5%BA%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%E9%83%BD%E5%B8%82%E6%B8%A9%E6%83%85%E5%B0%8F%E6%95%85%E4%BA%8B/" >}}
 
 <br>
