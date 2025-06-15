@@ -91,7 +91,7 @@ I am a contributor to many open source projects on GitHub, which are shown below
 
 | No. |           Repo           | Stars |  First PR  |  Last PR   | PR Count |
 | --- | ------------------------ | ----- | ---------- | ---------- | -------- |
-| 1   | vllm-project/vllm-ascend | 672   | 2025-02-06 | 2025-05-23 | 34       |
+| 1   | vllm-project/vllm-ascend | 672   | 2025-02-06 | 2025-06-09 | 41       |
 | 2   | vllm-project/vllm        | 47.9k | 2025-01-13 | 2025-05-23 | 12       |
 | 3   | 2noise/ChatTTS           | 36.3k | 2024-10-10 | 2024-10-21 | 2        |
 | 4   | ggml-org/llama.cpp       | 80.8k | 2024-11-26 | 2024-11-26 | 1        |
@@ -190,6 +190,7 @@ This album is a collection of fingerstyle guitar and ukulele cover which contain
 
 I love playing badminton and will participate in this activity 1~4 times a week. Awards I have received are shown below. Welcome to battle with me!
 
+- <b><font color="#ff0000">First place</font></b> in the Computing Product Line Team Competition of Xian Huawei at 2025
 - <b><font color="#ff0000">Fourth place</font></b> in the Inter-Department Team Competition of Xian Huawei at 2024
 - <b><font color="#ff0000">Second place</font></b> in the Quality and Process IT Department Team Competition of Xian Huawei at 2024
 - <b><font color="#ff0000">Third place</font></b> in the Inter-School Cup of Beijing Jiao Tong University at 2023
