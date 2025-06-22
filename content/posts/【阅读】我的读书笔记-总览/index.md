@@ -49,6 +49,10 @@ showRelatedContent: false
 
 ## 个人健康
 
+{{< article link="/articles/%E6%8A%97%E8%80%81%E7%94%9F%E6%B4%BB%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%E6%B0%B8%E8%91%86%E9%9D%92%E6%98%A5%E7%9A%84%E7%A7%98%E8%AF%80/" >}}
+
+<br>
+
 {{< article link="/articles/%E7%9D%A1%E7%9C%A0%E9%9D%A9%E5%91%BD%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%E4%BA%86%E8%A7%A3%E4%BD%A0%E7%9A%84%E6%98%BC%E5%A4%9C%E8%8A%82%E5%BE%8B/" >}}
 
 ## 年度书单
