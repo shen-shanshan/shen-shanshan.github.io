@@ -61,13 +61,13 @@
     </item>
     
     <item>
-      <title>我的技术博客｜总览</title>
-      <link>http://localhost:1313/articles/%E6%88%91%E7%9A%84%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2%E6%80%BB%E8%A7%88/</link>
+      <title>我的技术博客｜合集</title>
+      <link>http://localhost:1313/articles/%E6%88%91%E7%9A%84%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2%E5%90%88%E9%9B%86/</link>
       <pubDate>Sat, 23 Nov 2024 18:59:01 +0800</pubDate>
       <author>youremail@example.com (Shanshan Shen)</author>
-      <guid>http://localhost:1313/articles/%E6%88%91%E7%9A%84%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2%E6%80%BB%E8%A7%88/</guid>
+      <guid>http://localhost:1313/articles/%E6%88%91%E7%9A%84%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2%E5%90%88%E9%9B%86/</guid>
       <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/articles/%E6%88%91%E7%9A%84%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2%E6%80%BB%E8%A7%88/featured.jpg" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/articles/%E6%88%91%E7%9A%84%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2%E5%90%88%E9%9B%86/featured.jpg" />
     </item>
     
     <item>

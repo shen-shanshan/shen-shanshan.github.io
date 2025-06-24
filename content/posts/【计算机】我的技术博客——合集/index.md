@@ -1,10 +1,11 @@
 ---
-title: '我的技术博客｜总览'
+title: '我的技术博客｜合集'
 date: '2024-11-23T18:59:01+08:00'
 categories: "计算机"
 tags: []
 showAuthor: false
 showRelatedContent: false
+showDate: false
 ---
 
 ## 大模型推理
