@@ -20,9 +20,11 @@ You can read the pages shown below to get more information about me.
 
 {{< article link="/about/" >}}
 
+<!--
 <br>
 
 {{< article link="/articles/about-mehobbies/" >}}
+-->
 
 ---
 

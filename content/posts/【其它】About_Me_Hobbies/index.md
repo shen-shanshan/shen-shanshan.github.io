@@ -7,7 +7,7 @@ showAuthor: false
 showRelatedContent: false
 showDate: false
 # summary: "xxx"
-# draft: false
+draft: true
 ---
 
 ---
