@@ -19,13 +19,14 @@ title = "Home"
   email = "youremail@example.com"
   image = "images/logo.jpg"
   imageQuality = 96
-  headline = "Salvation lies within." # Salvation lies within.
-  bio = "A software engineer focusing on LLM / VLM inference and reasoning."
+  headline = "Salvation lies within."
+  bio = "A software engineer focusing on LLM/VLM inference engine and GPU/NPU computing."
   links = [
       { github = "https://github.com/shen-shanshan" },
       { zhihu = "https://www.zhihu.com/people/sss-53-26" },
   ]
 
+# Salvation lies within.
 # { gitee = "https://gitee.com/shenshanshan0918" },
 # { csdn = "https://blog.csdn.net/weixin_44162047?type=blog" },
 # { bilibili = "https://space.bilibili.com/14112152?spm_id_from=333.1007.0.0" },

@@ -16,6 +16,11 @@
   weight = 1
 
 [[main]]
+  name = "About"
+  pageRef = "about"
+  weight = 2
+
+[[main]]
   name = "Articles"
   pageRef = "posts"
   weight = 10
@@ -29,16 +34,6 @@
   name = "Tags"
   pageRef = "tags"
   weight = 30
-
-[[main]]
-  name = "About"
-  pageRef = "about"
-  weight = 40
-
-#[[main]]
-#  name = "Roadmap"
-#  pageRef = "roadmap"
-#  weight = 50
 
 #[[main]]
 #  name = "Parent"
