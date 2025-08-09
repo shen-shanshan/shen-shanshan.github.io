@@ -50,7 +50,7 @@ showDate: false
 
 ## 个人健康
 
-{{< article link="/articles/%E6%8A%97%E8%80%81%E7%94%9F%E6%B4%BB%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%E6%B0%B8%E8%91%86%E9%9D%92%E6%98%A5%E7%9A%84%E7%A7%98%E8%AF%80/" >}}
+{{< article link="/articles/%E6%8A%97%E8%80%81%E7%94%9F%E6%B4%BB%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%E9%87%8D%E8%A7%86%E5%81%A5%E5%BA%B7%E6%98%AF%E5%AF%B9%E8%87%AA%E5%B7%B1%E7%9A%84%E4%BA%BA%E7%94%9F%E8%B4%9F%E8%B4%A3/" >}}
 
 <br>
 
