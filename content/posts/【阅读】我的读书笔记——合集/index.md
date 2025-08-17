@@ -22,6 +22,10 @@ showDate: false
 
 ## 心理学
 
+{{< article link="/articles/%E5%86%85%E5%90%91%E8%80%85%E4%BC%98%E5%8A%BF%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%E9%A1%BA%E5%BA%94%E5%A4%A9%E6%80%A7%E5%96%84%E7%94%A8%E5%A4%A9%E8%B5%8B/" >}}
+
+<br>
+
 {{< article link="/articles/%E8%9B%A4%E8%9F%86%E5%85%88%E7%94%9F%E5%8E%BB%E7%9C%8B%E5%BF%83%E7%90%86%E5%8C%BB%E7%94%9F%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%E7%90%86%E8%A7%A3%E6%83%85%E7%BB%AA%E6%8E%8C%E6%8E%A7%E8%A1%8C%E4%B8%BA/" >}}
 
 <br>
@@ -50,7 +54,7 @@ showDate: false
 
 ## 个人健康
 
-{{< article link="/articles/%E6%8A%97%E8%80%81%E7%94%9F%E6%B4%BB%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%E9%87%8D%E8%A7%86%E5%81%A5%E5%BA%B7%E6%98%AF%E5%AF%B9%E8%87%AA%E5%B7%B1%E7%9A%84%E4%BA%BA%E7%94%9F%E8%B4%9F%E8%B4%A3/" >}}
+{{< article link="/articles/%E6%8A%97%E8%80%81%E7%94%9F%E6%B4%BB%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%E7%A0%81%E5%86%9C%E7%9A%84%E5%85%BB%E7%94%9F%E4%B9%8B%E9%81%93/" >}}
 
 <br>
 

@@ -19,18 +19,14 @@ draft: true
 
 ## Contents
 
+- [ ] 东莞印象（西安搬迁经历）
 - [ ] 写 vLLM 学习笔记之 Speculative Decoding
-- [ ] 写 vLLM 学习笔记之 Chunked Prefill
-- [ ] 写 vLLM 学习笔记之 Prefix Caching
-- [ ] 写 vLLM 学习笔记之 Guided Decoding (V1)
-- [ ] 写 vLLM 学习笔记之 V1 Engine 推理流程
-- [ ] 写 vLLM 学习笔记之 V1 Engine 整体架构
 - [ ] 写 CUDA 编程入门教程
-- [ ] 写大模型推理知识全景
-- [ ] 写《晚熟的人》读书笔记
 - [ ] 写《非暴力沟通》读书笔记
 - [ ] 写《娱乐至死》读书笔记
-- [ ] 2025-04-04: 写《蛤蟆先生去看心理医生》读书笔记
+- [x] 写 vLLM 学习笔记之 V1 Engine 整体流程
+- [x] 写 vLLM 学习笔记之 Guided Decoding (V1)
+- [x] 2025-04-04: 写《蛤蟆先生去看心理医生》读书笔记
 - [x] 2025-03-22: 写《解忧杂货店》读书笔记
 - [x] 2025-03-20: 写 vLLM 学习笔记之 Guided Decoding
 - [x] 2025-02-18: 写《长安的荔枝》读书笔记

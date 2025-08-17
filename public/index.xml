@@ -9,15 +9,25 @@
     <managingEditor>youremail@example.com (Shanshan Shen)</managingEditor>
     <webMaster>youremail@example.com (Shanshan Shen)</webMaster>
     <copyright>© 2025 Shanshan Shen</copyright>
-    <lastBuildDate>Sun, 15 Jun 2025 20:53:10 +0800</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 17 Aug 2025 10:30:42 +0800</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>《抗老生活》读书笔记｜重视健康是对自己的人生负责</title>
-      <link>http://localhost:1313/articles/%E6%8A%97%E8%80%81%E7%94%9F%E6%B4%BB%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%E9%87%8D%E8%A7%86%E5%81%A5%E5%BA%B7%E6%98%AF%E5%AF%B9%E8%87%AA%E5%B7%B1%E7%9A%84%E4%BA%BA%E7%94%9F%E8%B4%9F%E8%B4%A3/</link>
+      <title>《内向者优势》读书笔记｜顺应天性，善用天赋</title>
+      <link>http://localhost:1313/articles/%E5%86%85%E5%90%91%E8%80%85%E4%BC%98%E5%8A%BF%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%E9%A1%BA%E5%BA%94%E5%A4%A9%E6%80%A7%E5%96%84%E7%94%A8%E5%A4%A9%E8%B5%8B/</link>
+      <pubDate>Sun, 17 Aug 2025 10:30:42 +0800</pubDate>
+      <author>youremail@example.com (Shanshan Shen)</author>
+      <guid>http://localhost:1313/articles/%E5%86%85%E5%90%91%E8%80%85%E4%BC%98%E5%8A%BF%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%E9%A1%BA%E5%BA%94%E5%A4%A9%E6%80%A7%E5%96%84%E7%94%A8%E5%A4%A9%E8%B5%8B/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/articles/%E5%86%85%E5%90%91%E8%80%85%E4%BC%98%E5%8A%BF%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%E9%A1%BA%E5%BA%94%E5%A4%A9%E6%80%A7%E5%96%84%E7%94%A8%E5%A4%A9%E8%B5%8B/featured.jpg" />
+    </item>
+    
+    <item>
+      <title>《抗老生活》读书笔记｜码农的养生之道</title>
+      <link>http://localhost:1313/articles/%E6%8A%97%E8%80%81%E7%94%9F%E6%B4%BB%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%E7%A0%81%E5%86%9C%E7%9A%84%E5%85%BB%E7%94%9F%E4%B9%8B%E9%81%93/</link>
       <pubDate>Sun, 15 Jun 2025 20:53:10 +0800</pubDate>
       <author>youremail@example.com (Shanshan Shen)</author>
-      <guid>http://localhost:1313/articles/%E6%8A%97%E8%80%81%E7%94%9F%E6%B4%BB%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%E9%87%8D%E8%A7%86%E5%81%A5%E5%BA%B7%E6%98%AF%E5%AF%B9%E8%87%AA%E5%B7%B1%E7%9A%84%E4%BA%BA%E7%94%9F%E8%B4%9F%E8%B4%A3/</guid>
+      <guid>http://localhost:1313/articles/%E6%8A%97%E8%80%81%E7%94%9F%E6%B4%BB%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%E7%A0%81%E5%86%9C%E7%9A%84%E5%85%BB%E7%94%9F%E4%B9%8B%E9%81%93/</guid>
       <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/articles/%E6%8A%97%E8%80%81%E7%94%9F%E6%B4%BB%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%E9%87%8D%E8%A7%86%E5%81%A5%E5%BA%B7%E6%98%AF%E5%AF%B9%E8%87%AA%E5%B7%B1%E7%9A%84%E4%BA%BA%E7%94%9F%E8%B4%9F%E8%B4%A3/featured.jpg" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/articles/%E6%8A%97%E8%80%81%E7%94%9F%E6%B4%BB%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%E7%A0%81%E5%86%9C%E7%9A%84%E5%85%BB%E7%94%9F%E4%B9%8B%E9%81%93/featured.jpg" />
     </item>
     
     <item>
