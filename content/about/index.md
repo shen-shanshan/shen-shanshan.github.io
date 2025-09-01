@@ -42,23 +42,20 @@ Studying at School of Electronic and Information Engineering, majoring in commun
 
 ## Open Source Contribution
 
-I am a core contributor to [vllm-ascend](https://github.com/vllm-project/vllm-ascend) and an enthusiastic contributor to [vllm](https://github.com/vllm-project/vllm). Find more details about these projects in the following links.
+I am a core collaborator of [vllm-ascend](https://github.com/vllm-project/vllm-ascend) and an enthusiastic contributor to [vllm](https://github.com/vllm-project/vllm). Find more details about all PRs I have contributed [here](https://github.com/pulls?q=is%3Apr+author%3Ashen-shanshan+is%3Amerged+is%3Apublic).
 
-{{< github repo="vllm-project/vllm" >}}
-
-<br>
+<!-------------------------- last updated: 2025/09/01 ------------------------->
+- I have contributed [78 PRs](https://github.com/vllm-project/vllm-ascend/pulls?q=is%3Apr+is%3Amerged+author%3Ashen-shanshan) to:
 
 {{< github repo="vllm-project/vllm-ascend" >}}
 
-Plus, I am a contributor to many open source projects on GitHub, which are shown below. You can find the PRs I have contributed [here](https://github.com/pulls?q=is%3Apr+author%3Ashen-shanshan+is%3Amerged+is%3Apublic).
+- I have contributed [13 PRs](https://github.com/vllm-project/vllm/pulls?q=is%3Apr+is%3Amerged+author%3Ashen-shanshan) to:
 
-<!--------------------- last updated: 2025/09/01 --------------------->
-| No. |           Repo           | PR Count |  First PR  |  Last PR   |
-| :-: | :----------------------: | :------: | :--------: | :--------: |
-| 1   | vllm-project/vllm-ascend | 77       | 2025-02-06 | 2025-08-25 |
-| 2   | vllm-project/vllm        | 13       | 2025-01-13 | 2025-08-14 |
-| 3   | 2noise/ChatTTS           | 2        | 2024-10-10 | 2024-10-21 |
-| 4   | ggml-org/llama.cpp       | 1        | 2024-11-26 | 2024-11-26 |
+{{< github repo="vllm-project/vllm" >}}
+
+Plus, there are some my own projects on GitHub, which are shown below.
+
+{{< github repo="shen-shanshan/cs-self-learning" >}}
 
 ---
 
