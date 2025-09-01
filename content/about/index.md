@@ -52,10 +52,11 @@ I am a core contributor to [vllm-ascend](https://github.com/vllm-project/vllm-as
 
 Plus, I am a contributor to many open source projects on GitHub, which are shown below. You can find the PRs I have contributed [here](https://github.com/pulls?q=is%3Apr+author%3Ashen-shanshan+is%3Amerged+is%3Apublic).
 
+<!--------------------- last updated: 2025/09/01 --------------------->
 | No. |           Repo           | PR Count |  First PR  |  Last PR   |
 | :-: | :----------------------: | :------: | :--------: | :--------: |
-| 1   | vllm-project/vllm-ascend | 66       | 2025-02-06 | 2025-07-24 |
-| 2   | vllm-project/vllm        | 12       | 2025-01-13 | 2025-05-23 |
+| 1   | vllm-project/vllm-ascend | 77       | 2025-02-06 | 2025-08-25 |
+| 2   | vllm-project/vllm        | 13       | 2025-01-13 | 2025-08-14 |
 | 3   | 2noise/ChatTTS           | 2        | 2024-10-10 | 2024-10-21 |
 | 4   | ggml-org/llama.cpp       | 1        | 2024-11-26 | 2024-11-26 |
 
@@ -85,10 +86,6 @@ Plus, I am a contributor to many open source projects on GitHub, which are shown
   <img src="https://img.shields.io/badge/-IDEA-3f3f46?style=flat&logo=intellijidea&logoColor=000000" class="grid-w20" />
   <img src="https://img.shields.io/badge/-PyCharm-3f3f46?style=flat&logo=pycharm&logoColor=000000" class="grid-w20" />
   <img src="https://img.shields.io/badge/-LeetCode-3f3f46?style=flat&logo=leetcode&logoColor=FFA116" class="grid-w20" />
-  <!-- <img src="https://img.shields.io/badge/-Wireshark-3f3f46?style=flat&logo=wireshark&logoColor=1679A7" class="grid-w20" /> -->
-  <!-- <img src="https://img.shields.io/badge/-CSDN-3f3f46?style=flat&logo=csdn&logoColor=FC5531" class="grid-w20" /> -->
-  <!-- <img src="https://img.shields.io/badge/-Huawei-3f3f46?style=flat&logo=huawei&logoColor=FF0000" class="grid-w20" /> -->
-  <!-- <img src="https://img.shields.io/badge/-IEEE-3f3f46?style=flat&logo=ieee&logoColor=00629B" class="grid-w20" /> -->
 {{< /gallery >}}
 
 ---

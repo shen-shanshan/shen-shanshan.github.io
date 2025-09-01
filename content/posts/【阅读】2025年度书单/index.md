@@ -55,6 +55,11 @@ draft: true
 <img src="./images/内向者优势.jpg" width="120" alt="book cover">
 {{< /timelineItem >}}
 
+{{< timelineItem icon="tag" header="《学术“咸鱼”自救指南》" badge="2024年08月" subheader="作者：钱婧" >}}
+简介：
+<!-- <img src="./images/" width="120" alt="book cover"> -->
+{{< /timelineItem >}}
+
 {{< /timeline >}}
 
 ## 三、总结与展望
