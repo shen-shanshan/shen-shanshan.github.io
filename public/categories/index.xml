@@ -9,7 +9,17 @@
     <managingEditor>youremail@example.com (Shanshan Shen)</managingEditor>
     <webMaster>youremail@example.com (Shanshan Shen)</webMaster>
     <copyright>© 2025 Shanshan Shen</copyright>
-    <lastBuildDate>Sun, 17 Aug 2025 10:30:42 +0800</lastBuildDate><atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 06 Sep 2025 23:59:51 +0800</lastBuildDate><atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>随笔</title>
+      <link>http://localhost:1313/categories/%E9%9A%8F%E7%AC%94/</link>
+      <pubDate>Sat, 06 Sep 2025 23:59:51 +0800</pubDate>
+      <author>youremail@example.com (Shanshan Shen)</author>
+      <guid>http://localhost:1313/categories/%E9%9A%8F%E7%AC%94/</guid>
+      <description></description>
+      
+    </item>
+    
     <item>
       <title>阅读</title>
       <link>http://localhost:1313/categories/%E9%98%85%E8%AF%BB/</link>

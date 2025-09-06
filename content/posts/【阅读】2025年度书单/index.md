@@ -36,7 +36,7 @@ draft: true
 {{< /timelineItem >}}
 
 {{< timelineItem icon="tag" header="《晚熟的人》" badge="2024年04月" subheader="作者：莫言" >}}
-简介：可能是因为自己与作者在年龄上确实有代沟，实在是看不懂、欣赏不了……
+简介：……，可能是因为自己与作者在年龄上确实有代沟，实在是看不懂、欣赏不了……
 <img src="./images/晚熟的人.jpg" width="120" alt="book cover">
 {{< /timelineItem >}}
 
@@ -56,8 +56,8 @@ draft: true
 {{< /timelineItem >}}
 
 {{< timelineItem icon="tag" header="《学术“咸鱼”自救指南》" badge="2024年08月" subheader="作者：钱婧" >}}
-简介：
-<!-- <img src="./images/" width="120" alt="book cover"> -->
+简介：……
+<img src="./images/学术咸鱼自救指南.jpg" width="120" alt="book cover">
 {{< /timelineItem >}}
 
 {{< /timeline >}}
