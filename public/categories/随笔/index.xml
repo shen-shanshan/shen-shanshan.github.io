@@ -11,13 +11,13 @@
     <copyright>© 2025 Shanshan Shen</copyright>
     <lastBuildDate>Sat, 06 Sep 2025 23:59:51 +0800</lastBuildDate><atom:link href="http://localhost:1313/categories/%E9%9A%8F%E7%AC%94/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>｜</title>
-      <link>http://localhost:1313/articles/</link>
+      <title>工作两周年小结｜关于职场的一点思考</title>
+      <link>http://localhost:1313/articles/%E5%B7%A5%E4%BD%9C%E4%B8%A4%E5%91%A8%E5%B9%B4%E5%B0%8F%E7%BB%93%E5%85%B3%E4%BA%8E%E8%81%8C%E5%9C%BA%E7%9A%84%E4%B8%80%E7%82%B9%E6%80%9D%E8%80%83/</link>
       <pubDate>Sat, 06 Sep 2025 23:59:51 +0800</pubDate>
       <author>youremail@example.com (Shanshan Shen)</author>
-      <guid>http://localhost:1313/articles/</guid>
+      <guid>http://localhost:1313/articles/%E5%B7%A5%E4%BD%9C%E4%B8%A4%E5%91%A8%E5%B9%B4%E5%B0%8F%E7%BB%93%E5%85%B3%E4%BA%8E%E8%81%8C%E5%9C%BA%E7%9A%84%E4%B8%80%E7%82%B9%E6%80%9D%E8%80%83/</guid>
       <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/articles/featured.jpg" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/articles/%E5%B7%A5%E4%BD%9C%E4%B8%A4%E5%91%A8%E5%B9%B4%E5%B0%8F%E7%BB%93%E5%85%B3%E4%BA%8E%E8%81%8C%E5%9C%BA%E7%9A%84%E4%B8%80%E7%82%B9%E6%80%9D%E8%80%83/featured.jpg" />
     </item>
     
   </channel>
