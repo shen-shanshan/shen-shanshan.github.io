@@ -14,11 +14,11 @@ showDate: false
 
 <br>
 
-{{< article link="/articles/vllm-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0guided-decoding/" >}}
+{{< article link="/articles/vllm-%E7%BB%93%E6%9E%84%E5%8C%96%E8%BE%93%E5%87%BAguided-decoding/" >}}
 
 <br>
 
-{{< article link="/articles/vllm-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0guided-decoding-v1/" >}}
+{{< article link="/articles/vllm-%E7%BB%93%E6%9E%84%E5%8C%96%E8%BE%93%E5%87%BAguided-decoding-v1/" >}}
 
 ## 大模型微调
 

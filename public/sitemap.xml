@@ -45,7 +45,7 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/articles/vllm-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0guided-decoding-v1/</loc>
+    <loc>http://localhost:1313/articles/vllm-%E7%BB%93%E6%9E%84%E5%8C%96%E8%BE%93%E5%87%BAguided-decoding-v1/</loc>
     <lastmod>2025-04-16T15:03:13+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
@@ -63,7 +63,7 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/articles/vllm-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0guided-decoding/</loc>
+    <loc>http://localhost:1313/articles/vllm-%E7%BB%93%E6%9E%84%E5%8C%96%E8%BE%93%E5%87%BAguided-decoding/</loc>
     <lastmod>2025-03-20T11:44:20+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>

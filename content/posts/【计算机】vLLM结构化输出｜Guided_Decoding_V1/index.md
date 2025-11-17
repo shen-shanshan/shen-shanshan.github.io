@@ -1,5 +1,5 @@
 ---
-title: 'vLLM 学习笔记｜Guided Decoding (V1)'
+title: 'vLLM 结构化输出｜Guided Decoding (V1)'
 date: '2025-04-16T15:03:13+08:00'
 categories: "计算机"
 tags: ["AI", "LLM", "模型推理", "vLLM", "源码分析"]
