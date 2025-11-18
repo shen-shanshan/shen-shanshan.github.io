@@ -4,13 +4,19 @@
 
   <url>
     <loc>http://localhost:1313/articles/</loc>
-    <lastmod>2025-10-05T23:33:23+08:00</lastmod>
+    <lastmod>2025-11-17T10:46:15+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2025-10-05T23:33:23+08:00</lastmod>
+    <lastmod>2025-11-17T10:46:15+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/articles/vllm-%E5%8D%B7%E7%A7%AF%E7%AE%97%E5%AD%90%E5%8A%A0%E9%80%9Fimg2col-%E5%8E%9F%E7%90%86%E8%AF%A6%E8%A7%A3/</loc>
+    <lastmod>2025-11-17T10:46:15+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
