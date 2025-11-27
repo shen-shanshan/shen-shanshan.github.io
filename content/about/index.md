@@ -45,11 +45,11 @@ Studying at School of Electronic and Information Engineering, majoring in commun
 I am a core collaborator of [vllm-ascend](https://github.com/vllm-project/vllm-ascend) and an enthusiastic contributor to [vllm](https://github.com/vllm-project/vllm). Find more details about all PRs I have contributed [here](https://github.com/pulls?q=is%3Apr+author%3Ashen-shanshan+is%3Amerged+is%3Apublic).
 
 <!-------------------------- last updated: 2025/09/01 ------------------------->
-- I have contributed [78 PRs](https://github.com/vllm-project/vllm-ascend/pulls?q=is%3Apr+is%3Amerged+author%3Ashen-shanshan) to:
+- I have contributed [89 PRs](https://github.com/vllm-project/vllm-ascend/pulls?q=is%3Apr+is%3Amerged+author%3Ashen-shanshan) to:
 
 {{< github repo="vllm-project/vllm-ascend" >}}
 
-- I have contributed [13 PRs](https://github.com/vllm-project/vllm/pulls?q=is%3Apr+is%3Amerged+author%3Ashen-shanshan) to:
+- I have contributed [17 PRs](https://github.com/vllm-project/vllm/pulls?q=is%3Apr+is%3Amerged+author%3Ashen-shanshan) to:
 
 {{< github repo="vllm-project/vllm" >}}
 
