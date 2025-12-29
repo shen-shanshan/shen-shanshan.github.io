@@ -121,16 +121,6 @@
     </item>
     
     <item>
-      <title>照金滑雪一日游｜耳边呼啸而过的风是我逝去的自由</title>
-      <link>http://localhost:1313/articles/%E7%85%A7%E9%87%91%E6%BB%91%E9%9B%AA%E4%B8%80%E6%97%A5%E6%B8%B8%E8%80%B3%E8%BE%B9%E5%91%BC%E5%95%B8%E8%80%8C%E8%BF%87%E7%9A%84%E9%A3%8E%E6%98%AF%E6%88%91%E9%80%9D%E5%8E%BB%E7%9A%84%E8%87%AA%E7%94%B1/</link>
-      <pubDate>Tue, 21 Jan 2025 15:22:33 +0800</pubDate>
-      <author>youremail@example.com (Shanshan Shen)</author>
-      <guid>http://localhost:1313/articles/%E7%85%A7%E9%87%91%E6%BB%91%E9%9B%AA%E4%B8%80%E6%97%A5%E6%B8%B8%E8%80%B3%E8%BE%B9%E5%91%BC%E5%95%B8%E8%80%8C%E8%BF%87%E7%9A%84%E9%A3%8E%E6%98%AF%E6%88%91%E9%80%9D%E5%8E%BB%E7%9A%84%E8%87%AA%E7%94%B1/</guid>
-      <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/articles/%E7%85%A7%E9%87%91%E6%BB%91%E9%9B%AA%E4%B8%80%E6%97%A5%E6%B8%B8%E8%80%B3%E8%BE%B9%E5%91%BC%E5%95%B8%E8%80%8C%E8%BF%87%E7%9A%84%E9%A3%8E%E6%98%AF%E6%88%91%E9%80%9D%E5%8E%BB%E7%9A%84%E8%87%AA%E7%94%B1/featured.jpg" />
-    </item>
-    
-    <item>
       <title>深入解析 Python 包调用原理与最佳实践</title>
       <link>http://localhost:1313/articles/%E6%B7%B1%E5%85%A5%E8%A7%A3%E6%9E%90-python-%E5%8C%85%E8%B0%83%E7%94%A8%E5%8E%9F%E7%90%86%E4%B8%8E%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/</link>
       <pubDate>Wed, 15 Jan 2025 15:02:45 +0800</pubDate>
@@ -138,16 +128,6 @@
       <guid>http://localhost:1313/articles/%E6%B7%B1%E5%85%A5%E8%A7%A3%E6%9E%90-python-%E5%8C%85%E8%B0%83%E7%94%A8%E5%8E%9F%E7%90%86%E4%B8%8E%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/</guid>
       <description></description>
       <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/articles/%E6%B7%B1%E5%85%A5%E8%A7%A3%E6%9E%90-python-%E5%8C%85%E8%B0%83%E7%94%A8%E5%8E%9F%E7%90%86%E4%B8%8E%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/featured.jpg" />
-    </item>
-    
-    <item>
-      <title>我的 2024 年度书单</title>
-      <link>http://localhost:1313/articles/%E6%88%91%E7%9A%84-2024-%E5%B9%B4%E5%BA%A6%E4%B9%A6%E5%8D%95/</link>
-      <pubDate>Fri, 03 Jan 2025 23:40:02 +0800</pubDate>
-      <author>youremail@example.com (Shanshan Shen)</author>
-      <guid>http://localhost:1313/articles/%E6%88%91%E7%9A%84-2024-%E5%B9%B4%E5%BA%A6%E4%B9%A6%E5%8D%95/</guid>
-      <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/articles/%E6%88%91%E7%9A%84-2024-%E5%B9%B4%E5%BA%A6%E4%B9%A6%E5%8D%95/featured.jpg" />
     </item>
     
     <item>

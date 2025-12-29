@@ -14,11 +14,11 @@ showDate: false
 
 September 18th, 1998
 
-Hello, I am currently a software engineer working at [Huawei Ascend](https://www.hiascend.com/), focusing on LLM / VLM inference and reasoning. I have contributed to some popular open source projects such as [vLLM](https://github.com/vllm-project/vllm), to build a easy-to-use software ecosystem for Ascend. Before this, I was a student at [Beijing Jiao Tong University](https://www.bjtu.edu.cn/) (BSc/MSc), majoring in communication engineering. You can see my projects at [Github](https://github.com/shen-shanshan), or see my posts at [Zhihu](https://www.zhihu.com/people/sss-53-26).
+I am currently a software engineer working at [Huawei Ascend](https://www.hiascend.com/), focusing on LLM/VLM inference and GPU/NPU computing. I have contributed to some popular open source projects such as [vLLM](https://github.com/vllm-project/vllm), to build a easy-to-use software ecosystem for Ascend. Before this, I was a student at [Beijing Jiao Tong University](https://www.bjtu.edu.cn/) (BSc/MSc), majoring in communication engineering. You can see my projects at [Github](https://github.com/shen-shanshan), or see my posts at [Zhihu](https://www.zhihu.com/people/sss-53-26).
 
 ---
 
-## Experience
+## Experiences
 
 {{< timeline >}}
 
@@ -38,22 +38,47 @@ Studying at School of Electronic and Information Engineering, majoring in commun
 
 ---
 
-<!-- ## Selected Publication -->
+<!-- ## Publications -->
 
-## Open Source Contribution
+## Open Source Contributions
 
-I am a core collaborator of [vllm-ascend](https://github.com/vllm-project/vllm-ascend) and an enthusiastic contributor to [vllm](https://github.com/vllm-project/vllm). Find more details about all PRs I have contributed [here](https://github.com/pulls?q=is%3Apr+author%3Ashen-shanshan+is%3Amerged+is%3Apublic).
+During my open source experience, I have become a:
 
-<!-------------------------- last updated: 2025/09/01 ------------------------->
-- I have contributed [89 PRs](https://github.com/vllm-project/vllm-ascend/pulls?q=is%3Apr+is%3Amerged+author%3Ashen-shanshan) to:
+- Outside collaborator of [vllm](https://github.com/vllm-project/vllm).
+- Core contributor to [vllm-ascend](https://github.com/vllm-project/vllm-ascend).
 
-{{< github repo="vllm-project/vllm-ascend" >}}
-
-- I have contributed [17 PRs](https://github.com/vllm-project/vllm/pulls?q=is%3Apr+is%3Amerged+author%3Ashen-shanshan) to:
+<!-------------------------- last updated: 2025/12/29 ------------------------->
+In addition, I have contributed [119 PRs](https://github.com/pulls?q=is%3Apr+author%3Ashen-shanshan+is%3Amerged+is%3Apublic+org%3Avllm-project) to the vLLM ecosystem, focusing on structured output, multi-modal inference and elastic scaling.
 
 {{< github repo="vllm-project/vllm" >}}
 
-Plus, there are some my own projects on GitHub, which are shown below.
+<br>
+
+{{< github repo="vllm-project/vllm-ascend" >}}
+
+Find more details about all PRs I have contributed [here](https://github.com/pulls?q=is%3Apr+author%3Ashen-shanshan+is%3Amerged+is%3Apublic).
+
+<!--
+I am a core contributor to [vllm-ascend](https://github.com/vllm-project/vllm-ascend) and an outside collaborator of [vllm](https://github.com/vllm-project/vllm).
+
+{{< gallery >}}
+  <img src="./images/vllm.png" class="grid-w50" />
+  <img src="./images/vllm-ascend.png" class="grid-w50" />
+  <img src="./images/vllm-omni.png" class="grid-w40" />
+{{< /gallery >}}
+
+- I have contributed [98 PRs](https://github.com/vllm-project/vllm-ascend/pulls?q=is%3Apr+is%3Amerged+author%3Ashen-shanshan) to:
+{{< github repo="vllm-project/vllm-ascend" >}}
+- I have contributed [21 PRs](https://github.com/vllm-project/vllm/pulls?q=is%3Apr+is%3Amerged+author%3Ashen-shanshan) to:
+{{< github repo="vllm-project/vllm" >}}
+{{< github repo="vllm-project/vllm-omni" >}}
+-->
+
+---
+
+## Projects
+
+[cs-self-learning](https://github.com/shen-shanshan/cs-self-learning) is one of my projects used for archiving my notes, codes and materials of CS (Computer Science) learning.
 
 {{< github repo="shen-shanshan/cs-self-learning" >}}
 
@@ -89,7 +114,7 @@ Plus, there are some my own projects on GitHub, which are shown below.
 
 ## Contact me
 
-<p>Feel free to drop me an email, <b><a href="shanshanshen333@gmail.com">gmail</a></b> and <b><a href="467638484@qq.com">qq-mail</a></b> are both available.</p>
+<p>Feel free to drop me an email, <b><a href="shanshanshen333@gmail.com">gmail</a></b> or <b><a href="467638484@qq.com">qq-mail</a></b> are both available.</p>
 
 You can also have my WeChat through the picture shown below:
 
@@ -97,6 +122,6 @@ You can also have my WeChat through the picture shown below:
     <img src="./images/WeChat.png" width="200" alt="WeChat">
 </center>
 
-> NOTE: Remember to add a description before sending a request.
+> NOTE: Remember to add a description about your intentions before sending a request.
 
 ---

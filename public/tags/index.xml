@@ -151,31 +151,11 @@
     </item>
     
     <item>
-      <title>滑雪</title>
-      <link>http://localhost:1313/tags/%E6%BB%91%E9%9B%AA/</link>
-      <pubDate>Tue, 21 Jan 2025 15:22:33 +0800</pubDate>
-      <author>youremail@example.com (Shanshan Shen)</author>
-      <guid>http://localhost:1313/tags/%E6%BB%91%E9%9B%AA/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
       <title>Python</title>
       <link>http://localhost:1313/tags/python/</link>
       <pubDate>Wed, 15 Jan 2025 15:02:45 +0800</pubDate>
       <author>youremail@example.com (Shanshan Shen)</author>
       <guid>http://localhost:1313/tags/python/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>书单</title>
-      <link>http://localhost:1313/tags/%E4%B9%A6%E5%8D%95/</link>
-      <pubDate>Fri, 03 Jan 2025 23:40:02 +0800</pubDate>
-      <author>youremail@example.com (Shanshan Shen)</author>
-      <guid>http://localhost:1313/tags/%E4%B9%A6%E5%8D%95/</guid>
       <description></description>
       
     </item>

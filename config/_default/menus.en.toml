@@ -11,17 +11,17 @@
 # ordered by weight from lowest to highest.
 
 [[main]]
-  name = "Guide"
-  pageRef = "guide"
+  name = "About Me"
+  pageRef = "about"
   weight = 1
 
 [[main]]
-  name = "About"
-  pageRef = "about"
+  name = "Guide"
+  pageRef = "guide"
   weight = 2
 
 [[main]]
-  name = "Articles"
+  name = "Blogs"
   pageRef = "posts"
   weight = 10
 

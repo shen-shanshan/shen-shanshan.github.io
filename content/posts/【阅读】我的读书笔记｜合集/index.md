@@ -2,7 +2,7 @@
 title: '我的读书笔记｜合集'
 date: '2024-11-23T10:13:27+08:00'
 categories: "阅读"
-tags: ["读书笔记", "书单"]
+tags: ["读书笔记"]
 showAuthor: false
 showRelatedContent: false
 showDate: false
