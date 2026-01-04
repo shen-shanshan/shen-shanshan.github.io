@@ -112,6 +112,12 @@ I am a core contributor to [vllm-ascend](https://github.com/vllm-project/vllm-as
 
 ---
 
+## Multi-lingual Skills
+
+- English: IELTS overall band score of **6.5**.
+
+---
+
 ## Contact me
 
 <p>Feel free to drop me an email, <b><a href="shanshanshen333@gmail.com">gmail</a></b> or <b><a href="467638484@qq.com">qq-mail</a></b> are both available.</p>
