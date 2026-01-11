@@ -12,7 +12,7 @@
   <meta name="title" content="vLLM 卷积计算加速｜img2col 原理详解 &middot; Home" />
   
   
-  <meta name="keywords" content="AI, LLM, 模型推理, vLLM, 源码分析, " />
+  <meta name="keywords" content="AI, LLM, 大模型推理, 多模态, vLLM, 源码分析, " />
   
   
   <link rel="canonical" href="http://localhost:1313/articles/vllm-%E5%8D%B7%E7%A7%AF%E8%AE%A1%E7%AE%97%E5%8A%A0%E9%80%9Fimg2col-%E5%8E%9F%E7%90%86%E8%AF%A6%E8%A7%A3/" />
@@ -79,7 +79,8 @@
     <meta property="article:modified_time" content="2025-11-17T10:46:15+08:00">
     <meta property="article:tag" content="AI">
     <meta property="article:tag" content="LLM">
-    <meta property="article:tag" content="模型推理">
+    <meta property="article:tag" content="大模型推理">
+    <meta property="article:tag" content="多模态">
     <meta property="article:tag" content="VLLM">
     <meta property="article:tag" content="源码分析">
     <meta property="og:image" content="http://localhost:1313/articles/vllm-%E5%8D%B7%E7%A7%AF%E8%AE%A1%E7%AE%97%E5%8A%A0%E9%80%9Fimg2col-%E5%8E%9F%E7%90%86%E8%AF%A6%E8%A7%A3/featured.png">
@@ -111,7 +112,7 @@
     
     "dateModified": "2025-11-17T10:46:15\u002b08:00",
     
-    "keywords": ["AI","LLM","模型推理","vLLM","源码分析"],
+    "keywords": ["AI","LLM","大模型推理","多模态","vLLM","源码分析"],
     
     "mainEntityOfPage": "true",
     "wordCount": "212"
@@ -651,10 +652,18 @@
 </span>
   </span>
   
-  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/%E6%A8%A1%E5%9E%8B%E6%8E%A8%E7%90%86/&#34;,'_self');">
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%8E%A8%E7%90%86/&#34;,'_self');">
     <span class="flex" style="cursor: pointer;">
   <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    模型推理
+    大模型推理
+  </span>
+</span>
+  </span>
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/%E5%A4%9A%E6%A8%A1%E6%80%81/&#34;,'_self');">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    多模态
   </span>
 </span>
   </span>
@@ -716,7 +725,7 @@
     <li><a href="#一引言">一、引言</a></li>
     <li><a href="#二卷积的基本原理">二、卷积的基本原理</a></li>
     <li><a href="#三img2col-原理详解">三、img2col 原理详解</a></li>
-    <li><a href="#四benchmark">四、Benchmark</a></li>
+    <li><a href="#四性能测试">四、性能测试</a></li>
     <li><a href="#五总结">五、总结</a></li>
     <li><a href="#六参考资料">六、参考资料</a></li>
   </ul>
@@ -735,7 +744,7 @@
     <li><a href="#一引言">一、引言</a></li>
     <li><a href="#二卷积的基本原理">二、卷积的基本原理</a></li>
     <li><a href="#三img2col-原理详解">三、img2col 原理详解</a></li>
-    <li><a href="#四benchmark">四、Benchmark</a></li>
+    <li><a href="#四性能测试">四、性能测试</a></li>
     <li><a href="#五总结">五、总结</a></li>
     <li><a href="#六参考资料">六、参考资料</a></li>
   </ul>
@@ -887,6 +896,9 @@
       
     </figure>
 </p>
+<blockquote>
+<p>高清图片链接：<a href="https://github.com/shen-shanshan/cs-self-learning/tree/master/Open_Source/Projects/vLLM/Multi-Modal/Posts/Conv%E4%BC%98%E5%8C%96/images" target="_blank"><u>link</u></a>，画图不易，走过路过欢迎点一个 Star！</p>
+</blockquote>
 <p><strong>img2col 的计算过程：</strong></p>
 <ol>
 <li>将输入的图像数据展平，并按 <code>kernel_size</code> 进行分块（这里展示的是 <code>kernel_size</code> = <code>stride</code> 步长的特殊情况）；</li>
@@ -896,9 +908,6 @@
 <li>两个大矩阵直接做一把 matmul（可以用到高度优化的 GEMM 库，计算效率高）；</li>
 <li>将矩阵运算的结果 reshape 为标准卷积的输出形式。</li>
 </ol>
-<blockquote>
-<p>高清图片链接：<a href="https://github.com/shen-shanshan/cs-self-learning/tree/master/Open_Source/Projects/vLLM/Multi-Modal/Posts/Conv%E4%BC%98%E5%8C%96/images" target="_blank"><u>link</u></a>，画图不易，走过路过欢迎点一个 Star！</p>
-</blockquote>
 <p><strong>PyTorch 代码实现：</strong></p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">_forward_mulmat</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">:</span>
 </span></span><span class="line"><span class="cl">    <span class="k">assert</span> <span class="n">x</span><span class="o">.</span><span class="n">dim</span><span class="p">()</span> <span class="o">==</span> <span class="mi">4</span>
@@ -917,13 +926,13 @@
 </span></span></code></pre></div><p><strong>需要特别注意的是：只有当 <code>kernel_size</code> = <code>stride</code> 时才适合使用上述优化，因为此时卷积核在每次移动之后，处理的数据互相不重叠，能够完美地展开为一个大的矩阵。当不满足上述条件时，重叠的窗口会导致重排矩阵中存在大量的数据冗余，从而带来更大的内存占用。特别是对于大尺寸的输入、大卷积核或小步长，这个重排矩阵会非常庞大，可能成为内存的瓶颈。</strong></p>
 
 
-<h2 class="relative group">四、Benchmark 
-    <div id="%E5%9B%9Bbenchmark" class="anchor"></div>
+<h2 class="relative group">四、性能测试 
+    <div id="%E5%9B%9B%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%E5%9B%9Bbenchmark" aria-label="Anchor">#</a>
+            style="text-decoration-line: none !important;" href="#%E5%9B%9B%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95" aria-label="Anchor">#</a>
     </span>        
     
 </h2>
@@ -1163,10 +1172,10 @@
 </span>
   </span>
   
-  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/%E6%A8%A1%E5%9E%8B%E6%8E%A8%E7%90%86/&#34;,'_self');">
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%8E%A8%E7%90%86/&#34;,'_self');">
     <span class="flex" style="cursor: pointer;">
   <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    模型推理
+    大模型推理
   </span>
 </span>
   </span>
@@ -1313,10 +1322,10 @@
 </span>
   </span>
   
-  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/%E6%A8%A1%E5%9E%8B%E6%8E%A8%E7%90%86/&#34;,'_self');">
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%8E%A8%E7%90%86/&#34;,'_self');">
     <span class="flex" style="cursor: pointer;">
   <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    模型推理
+    大模型推理
   </span>
 </span>
   </span>
@@ -1463,10 +1472,10 @@
 </span>
   </span>
   
-  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/%E6%A8%A1%E5%9E%8B%E6%8E%A8%E7%90%86/&#34;,'_self');">
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%8E%A8%E7%90%86/&#34;,'_self');">
     <span class="flex" style="cursor: pointer;">
   <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    模型推理
+    大模型推理
   </span>
 </span>
   </span>

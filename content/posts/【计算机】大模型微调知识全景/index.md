@@ -2,7 +2,7 @@
 title: '大模型微调知识全景'
 date: '2024-12-05T10:00:40+08:00'
 categories: "计算机"
-tags: ["AI", "LLM", "模型微调", "论文精读"]
+tags: ["AI", "LLM", "大模型微调", "论文精读"]
 # summary: "xxx"
 # draft: false
 ---

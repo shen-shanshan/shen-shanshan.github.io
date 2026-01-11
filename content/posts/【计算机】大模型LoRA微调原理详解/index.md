@@ -2,7 +2,7 @@
 title: 大模型 LoRA 微调原理详解
 date: 2024-11-13 17:05:40
 categories: "计算机"
-tags: ["AI", "LLM", "模型微调", "论文精读"]
+tags: ["AI", "LLM", "大模型微调", "论文精读"]
 ---
 
 {{< katex >}}

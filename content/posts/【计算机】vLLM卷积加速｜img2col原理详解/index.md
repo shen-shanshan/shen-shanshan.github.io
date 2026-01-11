@@ -2,7 +2,7 @@
 title: 'vLLM 卷积计算加速｜img2col 原理详解'
 date: '2025-11-17T10:46:15+08:00'
 categories: "计算机"
-tags: ["AI", "LLM", "模型推理", "vLLM", "源码分析"]
+tags: ["AI", "LLM", "大模型推理", "多模态", "vLLM", "源码分析"]
 # summary: "xxx"
 draft: false
 ---
@@ -37,6 +37,8 @@ draft: false
 
 ![](./images/img2col.drawio.svg)
 
+> 高清图片链接：[<u>link</u>](https://github.com/shen-shanshan/cs-self-learning/tree/master/Open_Source/Projects/vLLM/Multi-Modal/Posts/Conv%E4%BC%98%E5%8C%96/images)，画图不易，走过路过欢迎点一个 Star！
+
 **img2col 的计算过程：**
 
 1. 将输入的图像数据展平，并按 `kernel_size` 进行分块（这里展示的是 `kernel_size` = `stride` 步长的特殊情况）；
@@ -45,8 +47,6 @@ draft: false
 4. 将每一个卷积核展开为一列（27 行），共 2 列（两个卷积核，`out_channels` = 2）；
 5. 两个大矩阵直接做一把 matmul（可以用到高度优化的 GEMM 库，计算效率高）；
 6. 将矩阵运算的结果 reshape 为标准卷积的输出形式。
-
-> 高清图片链接：[<u>link</u>](https://github.com/shen-shanshan/cs-self-learning/tree/master/Open_Source/Projects/vLLM/Multi-Modal/Posts/Conv%E4%BC%98%E5%8C%96/images)，画图不易，走过路过欢迎点一个 Star！
 
 **PyTorch 代码实现：**
 
@@ -69,7 +69,7 @@ def _forward_mulmat(self, x: torch.Tensor) -> torch.Tensor:
 
 **需要特别注意的是：只有当 `kernel_size` = `stride` 时才适合使用上述优化，因为此时卷积核在每次移动之后，处理的数据互相不重叠，能够完美地展开为一个大的矩阵。当不满足上述条件时，重叠的窗口会导致重排矩阵中存在大量的数据冗余，从而带来更大的内存占用。特别是对于大尺寸的输入、大卷积核或小步长，这个重排矩阵会非常庞大，可能成为内存的瓶颈。**
 
-## 四、Benchmark
+## 四、性能测试
 
 以 `Qwen2.5-VL-7B` 为例，我在 Ascend A2 硬件上进行了一个简单的 benchmark，对比了在 `qps=16` 时，直接进行卷积以及使用矩阵乘进行优化后的性能数据。
 
