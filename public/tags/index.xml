@@ -61,6 +61,16 @@
     </item>
     
     <item>
+      <title>摄影</title>
+      <link>http://localhost:1313/tags/%E6%91%84%E5%BD%B1/</link>
+      <pubDate>Sun, 04 Jan 2026 23:42:46 +0800</pubDate>
+      <author>youremail@example.com (Shanshan Shen)</author>
+      <guid>http://localhost:1313/tags/%E6%91%84%E5%BD%B1/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
       <title>多模态</title>
       <link>http://localhost:1313/tags/%E5%A4%9A%E6%A8%A1%E6%80%81/</link>
       <pubDate>Mon, 17 Nov 2025 10:46:15 +0800</pubDate>
@@ -76,16 +86,6 @@
       <pubDate>Sun, 05 Oct 2025 23:33:23 +0800</pubDate>
       <author>youremail@example.com (Shanshan Shen)</author>
       <guid>http://localhost:1313/tags/city-walk/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>摄影</title>
-      <link>http://localhost:1313/tags/%E6%91%84%E5%BD%B1/</link>
-      <pubDate>Sun, 05 Oct 2025 23:33:23 +0800</pubDate>
-      <author>youremail@example.com (Shanshan Shen)</author>
-      <guid>http://localhost:1313/tags/%E6%91%84%E5%BD%B1/</guid>
       <description></description>
       
     </item>
