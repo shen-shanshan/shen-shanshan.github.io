@@ -46,6 +46,10 @@ showDate: false
 
 ## 个人成长
 
+{{< article link="/articles/%E6%96%B0%E6%94%B6%E5%85%A5%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%E6%89%93%E9%80%A0%E4%BD%A0%E7%9A%84%E4%B8%AA%E4%BA%BA-ip/" >}}
+
+<br>
+
 {{< article link="/articles/%E6%97%A9%E8%B5%B7%E7%9A%84%E5%A5%87%E8%BF%B9%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%E5%88%B6%E5%AE%9A%E4%BD%A0%E7%9A%84%E6%97%A9%E8%B5%B7%E8%AE%A1%E5%88%92/" >}}
 
 <br>
@@ -59,13 +63,3 @@ showDate: false
 <br>
 
 {{< article link="/articles/%E7%9D%A1%E7%9C%A0%E9%9D%A9%E5%91%BD%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%E4%BA%86%E8%A7%A3%E4%BD%A0%E7%9A%84%E6%98%BC%E5%A4%9C%E8%8A%82%E5%BE%8B/" >}}
-
-<!--
-## 年度书单
-
-{{< article link="/articles/%E6%88%91%E7%9A%84-2025-%E5%B9%B4%E5%BA%A6%E4%B9%A6%E5%8D%95/" >}}
-
-<br>
-
-{{< article link="/articles/%E6%88%91%E7%9A%84-2024-%E5%B9%B4%E5%BA%A6%E4%B9%A6%E5%8D%95/" >}}
--->

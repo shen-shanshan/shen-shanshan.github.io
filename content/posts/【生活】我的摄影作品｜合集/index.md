@@ -12,7 +12,7 @@ draft: true
 
 ## 广东
 
-{{< article link="/articles/%E5%8D%8E%E4%B8%BA%E6%BA%AA%E6%9D%91%E6%91%84%E5%BD%B1%E9%9B%86%E7%89%9B%E9%A9%AC%E7%9A%84%E4%B8%96%E5%A4%96%E6%A1%83%E6%BA%90/" >}}
+{{< article link="/articles/%E5%8D%8E%E4%B8%BA%E4%B8%9C%E8%8E%9E%E6%BA%AA%E6%9D%91%E6%91%84%E5%BD%B1%E9%9B%86/" >}}
 
 <br>
 
