@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
-    <loc>http://localhost:1313/articles/%E6%96%B0%E6%94%B6%E5%85%A5%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</loc>
+    <loc>http://localhost:1313/articles/%E6%96%B0%E6%94%B6%E5%85%A5%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%E6%89%93%E9%80%A0%E4%BD%A0%E7%9A%84%E4%B8%AA%E4%BA%BA-ip/</loc>
     <lastmod>2026-02-14T12:18:17+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
@@ -27,13 +27,13 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/articles/%E5%8D%8E%E4%B8%BA%E6%BA%AA%E6%9D%91%E6%91%84%E5%BD%B1%E9%9B%86/</loc>
+    <loc>http://localhost:1313/articles/%E5%8D%8E%E4%B8%BA%E4%B8%9C%E8%8E%9E%E6%BA%AA%E6%9D%91%E6%91%84%E5%BD%B1%E9%9B%86/</loc>
     <lastmod>2026-01-04T23:42:46+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/articles/vllm-%E5%8D%B7%E7%A7%AF%E8%AE%A1%E7%AE%97%E5%8A%A0%E9%80%9Fimg2col-%E5%8E%9F%E7%90%86%E8%AF%A6%E8%A7%A3/</loc>
+    <loc>http://localhost:1313/articles/vllm-%E5%A4%9A%E6%A8%A1%E6%80%81%E6%8E%A8%E7%90%86%E5%8D%B7%E7%A7%AF%E8%AE%A1%E7%AE%97%E5%8A%A0%E9%80%9F/</loc>
     <lastmod>2025-11-17T10:46:15+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
