@@ -46,9 +46,9 @@ During my open source experience, I have become:
 
 - Outside collaborator of [vllm](https://github.com/vllm-project/vllm).
 - Core contributor to [vllm-ascend](https://github.com/vllm-project/vllm-ascend).
+- Contributor to [vllm-omni](https://github.com/vllm-project/vllm-omni).
 
-<!-------------------------- last updated: 2025/12/29 ------------------------->
-In addition, I have contributed [125 PRs](https://github.com/pulls?q=is%3Apr+author%3Ashen-shanshan+is%3Amerged+is%3Apublic+org%3Avllm-project) to the vLLM ecosystem, focusing on structured output, multi-modal inference and elastic scaling.
+
 
 {{< github repo="vllm-project/vllm" >}}
 
@@ -56,23 +56,12 @@ In addition, I have contributed [125 PRs](https://github.com/pulls?q=is%3Apr+aut
 
 {{< github repo="vllm-project/vllm-ascend" >}}
 
-Find more details about all PRs I have contributed [here](https://github.com/pulls?q=is%3Apr+author%3Ashen-shanshan+is%3Amerged+is%3Apublic).
+<br>
 
-<!--
-I am a core contributor to [vllm-ascend](https://github.com/vllm-project/vllm-ascend) and an outside collaborator of [vllm](https://github.com/vllm-project/vllm).
-
-{{< gallery >}}
-  <img src="./images/vllm.png" class="grid-w50" />
-  <img src="./images/vllm-ascend.png" class="grid-w50" />
-  <img src="./images/vllm-omni.png" class="grid-w40" />
-{{< /gallery >}}
-
-- I have contributed [98 PRs](https://github.com/vllm-project/vllm-ascend/pulls?q=is%3Apr+is%3Amerged+author%3Ashen-shanshan) to:
-{{< github repo="vllm-project/vllm-ascend" >}}
-- I have contributed [21 PRs](https://github.com/vllm-project/vllm/pulls?q=is%3Apr+is%3Amerged+author%3Ashen-shanshan) to:
-{{< github repo="vllm-project/vllm" >}}
 {{< github repo="vllm-project/vllm-omni" >}}
--->
+
+<!-------------------------- last updated: 2026/02/26 ------------------------->
+In addition, I have contributed [131 PRs](https://github.com/pulls?q=is%3Apr+author%3Ashen-shanshan+is%3Amerged+is%3Apublic+org%3Avllm-project) to the vLLM ecosystem, focusing on multi-modal inference, structured output and elastic scaling. Find more details about all PRs I have contributed [here](https://github.com/pulls?q=is%3Apr+author%3Ashen-shanshan+is%3Amerged+is%3Apublic).
 
 ---
 
