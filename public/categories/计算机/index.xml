@@ -9,7 +9,17 @@
     <managingEditor>youremail@example.com (Shanshan Shen)</managingEditor>
     <webMaster>youremail@example.com (Shanshan Shen)</webMaster>
     <copyright>© 2026 Shanshan Shen</copyright>
-    <lastBuildDate>Sat, 10 Jan 2026 10:08:27 +0800</lastBuildDate><atom:link href="http://localhost:1313/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 10 Mar 2026 23:55:19 +0800</lastBuildDate><atom:link href="http://localhost:1313/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>vLLM 多模态推理｜ViT 性能优化</title>
+      <link>http://localhost:1313/articles/vllm-%E5%A4%9A%E6%A8%A1%E6%80%81%E6%8E%A8%E7%90%86vit-%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/</link>
+      <pubDate>Tue, 10 Mar 2026 23:55:19 +0800</pubDate>
+      <author>youremail@example.com (Shanshan Shen)</author>
+      <guid>http://localhost:1313/articles/vllm-%E5%A4%9A%E6%A8%A1%E6%80%81%E6%8E%A8%E7%90%86vit-%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/</guid>
+      <description></description>
+      
+    </item>
+    
     <item>
       <title>vLLM 算力多样性｜Platform 插件与 CustomOp</title>
       <link>http://localhost:1313/articles/vllm-%E7%AE%97%E5%8A%9B%E5%A4%9A%E6%A0%B7%E6%80%A7platform-%E6%8F%92%E4%BB%B6%E4%B8%8E-customop/</link>

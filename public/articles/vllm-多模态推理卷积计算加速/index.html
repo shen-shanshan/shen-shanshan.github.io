@@ -12,7 +12,7 @@
   <meta name="title" content="vLLM 多模态推理｜卷积计算加速 &middot; Home" />
   
   
-  <meta name="keywords" content="AI, LLM, 大模型推理, 多模态, vLLM, 源码分析, " />
+  <meta name="keywords" content="AI, LLM, 大模型推理, 多模态, vLLM, " />
   
   
   <link rel="canonical" href="http://localhost:1313/articles/vllm-%E5%A4%9A%E6%A8%A1%E6%80%81%E6%8E%A8%E7%90%86%E5%8D%B7%E7%A7%AF%E8%AE%A1%E7%AE%97%E5%8A%A0%E9%80%9F/" />
@@ -82,7 +82,6 @@
     <meta property="article:tag" content="大模型推理">
     <meta property="article:tag" content="多模态">
     <meta property="article:tag" content="VLLM">
-    <meta property="article:tag" content="源码分析">
     <meta property="og:image" content="http://localhost:1313/articles/vllm-%E5%A4%9A%E6%A8%A1%E6%80%81%E6%8E%A8%E7%90%86%E5%8D%B7%E7%A7%AF%E8%AE%A1%E7%AE%97%E5%8A%A0%E9%80%9F/featured.png">
 
   
@@ -112,10 +111,10 @@
     
     "dateModified": "2025-11-17T10:46:15\u002b08:00",
     
-    "keywords": ["AI","LLM","大模型推理","多模态","vLLM","源码分析"],
+    "keywords": ["AI","LLM","大模型推理","多模态","vLLM"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "208"
+    "wordCount": "192"
   }]
   </script>
 
@@ -676,14 +675,6 @@
 </span>
   </span>
   
-  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/&#34;,'_self');">
-    <span class="flex" style="cursor: pointer;">
-  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    源码分析
-  </span>
-</span>
-  </span>
-  
   
   
   
@@ -725,9 +716,8 @@
     <li><a href="#一引言">一、引言</a></li>
     <li><a href="#二卷积的基本原理">二、卷积的基本原理</a></li>
     <li><a href="#三img2col-原理详解">三、img2col 原理详解</a></li>
-    <li><a href="#四性能测试">四、性能测试</a></li>
-    <li><a href="#五总结">五、总结</a></li>
-    <li><a href="#六参考资料">六、参考资料</a></li>
+    <li><a href="#四总结">四、总结</a></li>
+    <li><a href="#五参考资料">五、参考资料</a></li>
   </ul>
 </nav>
   </div>
@@ -744,9 +734,8 @@
     <li><a href="#一引言">一、引言</a></li>
     <li><a href="#二卷积的基本原理">二、卷积的基本原理</a></li>
     <li><a href="#三img2col-原理详解">三、img2col 原理详解</a></li>
-    <li><a href="#四性能测试">四、性能测试</a></li>
-    <li><a href="#五总结">五、总结</a></li>
-    <li><a href="#六参考资料">六、参考资料</a></li>
+    <li><a href="#四总结">四、总结</a></li>
+    <li><a href="#五参考资料">五、参考资料</a></li>
   </ul>
 </nav>
   </div>
@@ -926,27 +915,13 @@
 </span></span></code></pre></div><p><strong>需要特别注意的是：只有当 <code>kernel_size</code> = <code>stride</code> 时才适合使用上述优化，因为此时卷积核在每次移动之后，处理的数据互相不重叠，能够完美地展开为一个大的矩阵。当不满足上述条件时，重叠的窗口会导致重排矩阵中存在大量的数据冗余，从而带来更大的内存占用。特别是对于大尺寸的输入、大卷积核或小步长，这个重排矩阵会非常庞大，可能成为内存的瓶颈。</strong></p>
 
 
-<h2 class="relative group">四、性能测试 
-    <div id="%E5%9B%9B%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95" class="anchor"></div>
+<h2 class="relative group">四、总结 
+    <div id="%E5%9B%9B%E6%80%BB%E7%BB%93" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%E5%9B%9B%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95" aria-label="Anchor">#</a>
-    </span>        
-    
-</h2>
-<p>以 <code>Qwen2.5-VL-7B</code> 为例，我在 Ascend A2 硬件上进行了一个简单的 benchmark，对比了在 <code>qps=16</code> 时，直接进行卷积以及使用矩阵乘进行优化后的性能数据。</p>
-<p>实验结果表明，使用矩阵乘进行优化后，TTFT（Time to First Token）得到了一定程度（10% 左右）的改善。</p>
-
-
-<h2 class="relative group">五、总结 
-    <div id="%E4%BA%94%E6%80%BB%E7%BB%93" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%E4%BA%94%E6%80%BB%E7%BB%93" aria-label="Anchor">#</a>
+            style="text-decoration-line: none !important;" href="#%E5%9B%9B%E6%80%BB%E7%BB%93" aria-label="Anchor">#</a>
     </span>        
     
 </h2>
@@ -954,13 +929,13 @@
 <p>该工作由我和梓峰（Isotr0py）共同完成，感兴趣的朋友可以自行阅读 vLLM 最新的源码（<code>vllm/model_executor/layers/conv.py</code>）进行了解。</p>
 
 
-<h2 class="relative group">六、参考资料 
-    <div id="%E5%85%AD%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99" class="anchor"></div>
+<h2 class="relative group">五、参考资料 
+    <div id="%E4%BA%94%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%E5%85%AD%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99" aria-label="Anchor">#</a>
+            style="text-decoration-line: none !important;" href="#%E4%BA%94%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99" aria-label="Anchor">#</a>
     </span>        
     
 </h2>
@@ -1068,6 +1043,148 @@
 
 <h2 class="mt-8 text-2xl font-extrabold mb-10">Related</h2>
 <section class="w-full grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+  
+  
+
+  <a href="/articles/vllm-v1-%E6%95%B4%E4%BD%93%E6%B5%81%E7%A8%8B%E4%BB%8E%E8%AF%B7%E6%B1%82%E5%88%B0%E7%AE%97%E5%AD%90%E6%89%A7%E8%A1%8C/" class="min-w-full">
+    
+    <div class="min-h-full border border-neutral-200 dark:border-neutral-700 border-2 rounded overflow-hidden shadow-2xl relative">
+        
+        <div class="w-full thumbnail_card_related nozoom" style="background-image:url(/articles/vllm-v1-%E6%95%B4%E4%BD%93%E6%B5%81%E7%A8%8B%E4%BB%8E%E8%AF%B7%E6%B1%82%E5%88%B0%E7%AE%97%E5%AD%90%E6%89%A7%E8%A1%8C/featured_hu515409118694051596.png);"></div>
+        
+      
+
+      <div class="px-6 py-4">
+
+        
+        <div class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
+          href="/articles/vllm-v1-%E6%95%B4%E4%BD%93%E6%B5%81%E7%A8%8B%E4%BB%8E%E8%AF%B7%E6%B1%82%E5%88%B0%E7%AE%97%E5%AD%90%E6%89%A7%E8%A1%8C/">vLLM V1 整体流程｜从请求到算子执行</div>
+        
+
+        <div class="text-sm text-neutral-500 dark:text-neutral-400">
+          
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  <time datetime="2025-05-10T16:43:15&#43;08:00">2025-05-10</time>
+  
+
+  
+  
+</div>
+
+
+
+
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  
+  
+  
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/&#34;,'_self');">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    计算机
+  </span>
+</span>
+  </span>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/ai/&#34;,'_self');">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    AI
+  </span>
+</span>
+  </span>
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/llm/&#34;,'_self');">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    LLM
+  </span>
+</span>
+  </span>
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%8E%A8%E7%90%86/&#34;,'_self');">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    大模型推理
+  </span>
+</span>
+  </span>
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/vllm/&#34;,'_self');">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    VLLM
+  </span>
+</span>
+  </span>
+  
+  
+  
+  
+</div>
+
+
+
+
+        </div>
+
+        
+        <div class="py-1 prose dark:prose-invert">
+          
+        </div>
+        
+      </div>
+      <div class="px-6 pt-4 pb-2">
+
+      </div>
+    </div>
+  </a>
+
   
   
 
@@ -1184,14 +1301,6 @@
     <span class="flex" style="cursor: pointer;">
   <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
     VLLM
-  </span>
-</span>
-  </span>
-  
-  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/&#34;,'_self');">
-    <span class="flex" style="cursor: pointer;">
-  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    源码分析
   </span>
 </span>
   </span>
@@ -1334,164 +1443,6 @@
     <span class="flex" style="cursor: pointer;">
   <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
     VLLM
-  </span>
-</span>
-  </span>
-  
-  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/&#34;,'_self');">
-    <span class="flex" style="cursor: pointer;">
-  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    源码分析
-  </span>
-</span>
-  </span>
-  
-  
-  
-  
-</div>
-
-
-
-
-        </div>
-
-        
-        <div class="py-1 prose dark:prose-invert">
-          
-        </div>
-        
-      </div>
-      <div class="px-6 pt-4 pb-2">
-
-      </div>
-    </div>
-  </a>
-
-  
-  
-
-  <a href="/articles/vllm-v1-%E6%95%B4%E4%BD%93%E6%B5%81%E7%A8%8B%E4%BB%8E%E8%AF%B7%E6%B1%82%E5%88%B0%E7%AE%97%E5%AD%90%E6%89%A7%E8%A1%8C/" class="min-w-full">
-    
-    <div class="min-h-full border border-neutral-200 dark:border-neutral-700 border-2 rounded overflow-hidden shadow-2xl relative">
-        
-        <div class="w-full thumbnail_card_related nozoom" style="background-image:url(/articles/vllm-v1-%E6%95%B4%E4%BD%93%E6%B5%81%E7%A8%8B%E4%BB%8E%E8%AF%B7%E6%B1%82%E5%88%B0%E7%AE%97%E5%AD%90%E6%89%A7%E8%A1%8C/featured_hu515409118694051596.png);"></div>
-        
-      
-
-      <div class="px-6 py-4">
-
-        
-        <div class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
-          href="/articles/vllm-v1-%E6%95%B4%E4%BD%93%E6%B5%81%E7%A8%8B%E4%BB%8E%E8%AF%B7%E6%B1%82%E5%88%B0%E7%AE%97%E5%AD%90%E6%89%A7%E8%A1%8C/">vLLM V1 整体流程｜从请求到算子执行</div>
-        
-
-        <div class="text-sm text-neutral-500 dark:text-neutral-400">
-          
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="flex flex-row flex-wrap items-center">
-  
-  
-  <time datetime="2025-05-10T16:43:15&#43;08:00">2025-05-10</time>
-  
-
-  
-  
-</div>
-
-
-
-
-
-<div class="flex flex-row flex-wrap items-center">
-  
-  
-  
-  
-  
-  
-  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/&#34;,'_self');">
-    <span class="flex" style="cursor: pointer;">
-  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    计算机
-  </span>
-</span>
-  </span>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/ai/&#34;,'_self');">
-    <span class="flex" style="cursor: pointer;">
-  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    AI
-  </span>
-</span>
-  </span>
-  
-  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/llm/&#34;,'_self');">
-    <span class="flex" style="cursor: pointer;">
-  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    LLM
-  </span>
-</span>
-  </span>
-  
-  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%8E%A8%E7%90%86/&#34;,'_self');">
-    <span class="flex" style="cursor: pointer;">
-  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    大模型推理
-  </span>
-</span>
-  </span>
-  
-  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/vllm/&#34;,'_self');">
-    <span class="flex" style="cursor: pointer;">
-  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    VLLM
-  </span>
-</span>
-  </span>
-  
-  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/&#34;,'_self');">
-    <span class="flex" style="cursor: pointer;">
-  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    源码分析
   </span>
 </span>
   </span>

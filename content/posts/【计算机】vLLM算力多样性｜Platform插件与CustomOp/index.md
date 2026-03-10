@@ -2,7 +2,7 @@
 title: 'vLLM 算力多样性｜Platform 插件与 CustomOp'
 date: '2026-01-10T10:08:27+08:00'
 categories: "计算机"
-tags: ["AI", "LLM", "大模型推理", "vLLM", "源码分析"]
+tags: ["AI", "LLM", "大模型推理", "vLLM", "Ascend", "NPU"]
 # summary: "xxx"
 # draft: false
 ---

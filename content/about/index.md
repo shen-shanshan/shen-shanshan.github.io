@@ -42,26 +42,19 @@ Studying at School of Electronic and Information Engineering, majoring in commun
 
 ## Open Source Contributions
 
-During my open source experience, I have become:
-
-- Outside collaborator of [vllm](https://github.com/vllm-project/vllm).
-- Core contributor to [vllm-ascend](https://github.com/vllm-project/vllm-ascend).
-- Contributor to [vllm-omni](https://github.com/vllm-project/vllm-omni).
-
-
+- Outside collaborator of [vllm](https://github.com/vllm-project/vllm):
 
 {{< github repo="vllm-project/vllm" >}}
 
-<br>
+- Core contributor to [vllm-ascend](https://github.com/vllm-project/vllm-ascend):
 
 {{< github repo="vllm-project/vllm-ascend" >}}
 
-<br>
+- Contributor to [vllm-omni](https://github.com/vllm-project/vllm-omni):
 
 {{< github repo="vllm-project/vllm-omni" >}}
 
-<!-------------------------- last updated: 2026/02/26 ------------------------->
-In addition, I have contributed [131 PRs](https://github.com/pulls?q=is%3Apr+author%3Ashen-shanshan+is%3Amerged+is%3Apublic+org%3Avllm-project) to the vLLM ecosystem, focusing on multi-modal inference, structured output and elastic scaling. Find more details about all PRs I have contributed [here](https://github.com/pulls?q=is%3Apr+author%3Ashen-shanshan+is%3Amerged+is%3Apublic).
+Overall, I have contributed [134 PRs](https://github.com/pulls?q=is%3Apr+author%3Ashen-shanshan+is%3Amerged+is%3Apublic+org%3Avllm-project) to the vLLM ecosystem, focusing on multi-modal inference, structured output and elastic scaling. Find more details about all PRs I have contributed [here](https://github.com/pulls?q=is%3Apr+author%3Ashen-shanshan+is%3Amerged+is%3Apublic).
 
 ---
 
@@ -103,7 +96,7 @@ In addition, I have contributed [131 PRs](https://github.com/pulls?q=is%3Apr+aut
 
 ## Multilingual Skills
 
-- English: IELTS overall band score of **6.5**.
+- English: IELTS overall band score of **6.5**
 
 ---
 

@@ -2,7 +2,7 @@
 title: 'vLLM 多模态推理｜卷积计算加速'
 date: '2025-11-17T10:46:15+08:00'
 categories: "计算机"
-tags: ["AI", "LLM", "大模型推理", "多模态", "vLLM", "源码分析"]
+tags: ["AI", "LLM", "大模型推理", "多模态", "vLLM"]
 # summary: "xxx"
 draft: false
 ---
