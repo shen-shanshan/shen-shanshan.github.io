@@ -46,6 +46,10 @@ showDate: false
 
 ## 个人成长
 
+{{< article link="/articles/%E7%BA%B3%E7%93%A6%E5%B0%94%E5%AE%9D%E5%85%B8%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%E8%B4%A2%E5%AF%8C%E4%B8%8E%E5%B9%B8%E7%A6%8F%E6%8C%87%E5%8D%97/" >}}
+
+<br>
+
 {{< article link="/articles/%E6%96%B0%E6%94%B6%E5%85%A5%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%E6%89%93%E9%80%A0%E4%BD%A0%E7%9A%84%E4%B8%AA%E4%BA%BA-ip/" >}}
 
 <br>

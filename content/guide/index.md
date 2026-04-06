@@ -14,11 +14,11 @@ showDate: false
 
 {{< article link="/articles/%E6%88%91%E7%9A%84%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%E5%90%88%E9%9B%86/" >}}
 
+<!--
 ## Photo Albums
 
 **_Coming soon ..._**
 
-<!--
 TODO:
 Publications
 Albums
