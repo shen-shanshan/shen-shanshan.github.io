@@ -32,6 +32,10 @@ showDate: false
 
 {{< article link="/articles/vllm-%E7%AE%97%E5%8A%9B%E5%A4%9A%E6%A0%B7%E6%80%A7platform-%E6%8F%92%E4%BB%B6%E4%B8%8E-customop/" >}}
 
+<br>
+
+{{< article link="/articles/vllm-dev-skills%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6%E5%BC%80%E5%8F%91%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/" >}}
+
 ## 大模型微调
 
 {{< article link="/articles/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%BE%AE%E8%B0%83%E7%9F%A5%E8%AF%86%E5%85%A8%E6%99%AF/" >}}

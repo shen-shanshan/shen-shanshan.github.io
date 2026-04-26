@@ -42,6 +42,8 @@ Studying at School of Electronic and Information Engineering, majoring in commun
 
 ## Open Source Contributions
 
+Overall, I have contributed [144 PRs](https://github.com/pulls?q=is%3Apr+author%3Ashen-shanshan+is%3Amerged+is%3Apublic+org%3Avllm-project) to the vLLM ecosystem, focusing on multi-modal inference, structured output and elastic scaling. Find more details about all PRs I have contributed [here](https://github.com/pulls?q=is%3Apr+author%3Ashen-shanshan+is%3Amerged+is%3Apublic).
+
 - Outside collaborator of [vllm](https://github.com/vllm-project/vllm):
 
 {{< github repo="vllm-project/vllm" >}}
@@ -54,15 +56,19 @@ Studying at School of Electronic and Information Engineering, majoring in commun
 
 {{< github repo="vllm-project/vllm-omni" >}}
 
-Overall, I have contributed [137 PRs](https://github.com/pulls?q=is%3Apr+author%3Ashen-shanshan+is%3Amerged+is%3Apublic+org%3Avllm-project) to the vLLM ecosystem, focusing on multi-modal inference, structured output and elastic scaling. Find more details about all PRs I have contributed [here](https://github.com/pulls?q=is%3Apr+author%3Ashen-shanshan+is%3Amerged+is%3Apublic).
-
 ---
 
 ## Projects
 
+<!--
 [cs-self-learning](https://github.com/shen-shanshan/cs-self-learning) is one of my projects used for archiving my notes, codes and materials of CS (Computer Science) learning.
+-->
 
 {{< github repo="shen-shanshan/cs-self-learning" >}}
+
+<br>
+
+{{< github repo="shen-shanshan/vllm-dev-skills" >}}
 
 ---
 
