@@ -10,10 +10,6 @@ showDate: false
 
 ## Overview
 
-**Shanshan Shen | 申杉杉**
-
-September 18th, 1998
-
 I am currently a software engineer working at [Huawei Ascend](https://www.hiascend.com/), focusing on LLM/VLM inference and GPU/NPU computing. I have contributed to some popular open source projects such as [vLLM](https://github.com/vllm-project/vllm), to build a easy-to-use software ecosystem for Ascend. Before this, I was a student at [Beijing Jiao Tong University](https://www.bjtu.edu.cn/) (BSc/MSc), majoring in communication engineering. You can see my projects at [Github](https://github.com/shen-shanshan), or see my posts at [Zhihu](https://www.zhihu.com/people/sss-53-26).
 
 ---
@@ -22,15 +18,23 @@ I am currently a software engineer working at [Huawei Ascend](https://www.hiasce
 
 {{< timeline >}}
 
-{{< timelineItem icon="code" header="Huawei" badge="Software Engineer" subheader="July '23 - Present" >}}
-Working at Huawei Ascend, building vLLM inference engine, previously at Quality and Process IT Department.
+{{< timelineItem icon="code" header="AMD" badge="Senior SDE" subheader="June '26 - Present" >}}
+Working at AMD ROCm, building vLLM inference engine for AMD GPU software ecosystem.
 {{< /timelineItem >}}
 
-{{< timelineItem icon="graduation-cap" header="Beijing Jiao Tong University" badge="Postgraduate Student" subheader="September '21 - June '23" >}}
-Studying at School of Electronic and Information Engineering, focusing on wireless communication NAS layer security.
+{{< timelineItem icon="code" header="Huawei" badge="Software Engineer" subheader="August '24 - June '26" >}}
+Working at Huawei Ascend, building vLLM inference engine for Ascend NPU software ecosystem.
 {{< /timelineItem >}}
 
-{{< timelineItem icon="graduation-cap" header="Beijing Jiao Tong University" badge="Undergraduate Student" subheader="September '16 - June '20" >}}
+{{< timelineItem icon="code" header="Huawei" badge="Software Engineer" subheader="July '23 - August '24" >}}
+Working at Huawei Quality and Process IT Department, building MetaERP BI (Business Intelligence) for PSI (purchase-sale-inventory) IT system.
+{{< /timelineItem >}}
+
+{{< timelineItem icon="graduation-cap" header="Beijing Jiao Tong University" badge="Master" subheader="September '21 - June '23" >}}
+Studying at School of Electronic and Information Engineering, focusing on NAS layer security of wireless communication.
+{{< /timelineItem >}}
+
+{{< timelineItem icon="graduation-cap" header="Beijing Jiao Tong University" badge="Bachelor" subheader="September '16 - June '20" >}}
 Studying at School of Electronic and Information Engineering, majoring in communication engineering.
 {{< /timelineItem >}}
 
@@ -42,7 +46,7 @@ Studying at School of Electronic and Information Engineering, majoring in commun
 
 ## Open Source Contributions
 
-Overall, I have contributed [147 PRs](https://github.com/pulls?q=is%3Apr+author%3Ashen-shanshan+is%3Amerged+is%3Apublic+org%3Avllm-project) to the vLLM ecosystem, focusing on multi-modal inference, structured output and elastic scaling. Find more details about all PRs I have contributed [here](https://github.com/pulls?q=is%3Apr+author%3Ashen-shanshan+is%3Amerged+is%3Apublic).
+Overall, I have contributed [149 PRs](https://github.com/pulls?q=is%3Apr+author%3Ashen-shanshan+is%3Amerged+is%3Apublic+org%3Avllm-project) to the vLLM ecosystem, focusing on multi-modal inference, structured output and elastic scaling. Find more details about all PRs I have contributed [here](https://github.com/pulls?q=is%3Apr+author%3Ashen-shanshan+is%3Amerged+is%3Apublic).
 
 - Outside collaborator of [vllm](https://github.com/vllm-project/vllm):
 
@@ -59,10 +63,6 @@ Overall, I have contributed [147 PRs](https://github.com/pulls?q=is%3Apr+author%
 ---
 
 ## Projects
-
-<!--
-[cs-self-learning](https://github.com/shen-shanshan/cs-self-learning) is one of my projects used for archiving my notes, codes and materials of CS (Computer Science) learning.
--->
 
 {{< github repo="shen-shanshan/cs-self-learning" >}}
 

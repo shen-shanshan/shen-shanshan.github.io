@@ -9,126 +9,109 @@ tags: ["AI", "Agent", "大模型推理", "vLLM"]
 
 ## 一、引言
 
-[vLLM](https://github.com/vllm-project/vllm) 是目前最流行的大模型推理框架之一，凭借着 PagedAttention 等核心技术在工业界广泛落地。然而，作为一个高速迭代的大型开源项目，vLLM 的代码库庞大、模块繁多，对新贡献者来说上手成本极高——光是读懂一个 Feature 的实现路径，往往就需要数天时间。
+[vLLM](https://github.com/vllm-project/vllm) 是目前最主流的大模型推理框架之一，但作为社区贡献者，上手成本实在不低——代码库庞大、模块耦合深、迭代速度又快，光搞清楚一个 Feature 的实现路径就得花不少时间。
 
-随着 Coding Agent 越来越普及，在参与 vLLM 社区开发的过程中，我开始尝试使用 Claude Code 来辅助日常工作：读代码、写测试、做 Code Review、分析 Issue 等，发现效果还不错。相比于纯“古法编程”，我的工作效率确实提升了不少。
+去年开始我尝试把 Claude Code 接入到自己的 vLLM 开发流程里，用了一段时间发现确实能省不少力气。我把常用的工作流封装成了一个个 Skill，放在 [vllm-dev-skills](https://github.com/shen-shanshan/vllm-dev-skills) 这个仓库里。这篇文章聊聊这些 Skill 具体做什么、我实际怎么用，以及踩过的一些坑。
 
-因此，我整理了自己平时在 vLLM 社区工作的 Workflow 以及一些常用的 Skill，放到了 [vllm-dev-skills](https://github.com/shen-shanshan/vllm-dev-skills) 这个仓库中，分享给同样想做 or 正在做 vLLM 社区贡献的朋友。
+> NOTE：本文跟随项目演进持续更新中（last update：2026/06/12）。
 
 ## 二、项目介绍
 
-这个仓库按开发流程将 Skill 分为三大类：
+该仓库中目前一共有 10 个 Skill，按我日常的开发流程分成 6 类：
 
-![](./images/1.1.png)
+![](./images/ai-summary-20260611.png)
 
-### 2.1 代码学习类
+### 2.1 需求发现：找活干
 
-**`vllm-feature-tutorial`：读懂一个 vLLM 模块，只需一条指令。**
+**`vllm-dev-task-discovery`**：
 
-**痛点**：vLLM 的模块设计复杂，看一段代码往往要在十几个文件之间跳来跳去，还要同时理解 CUDA Kernel、Python 接口、调度逻辑多个层次。
+这是个我最近才加的新 Skill。输入一个模块或方向（比如"多模态"、"V1 Engine"），它会从 vLLM 的 Open Issues、近期合并的 PR、Discussions、代码里的 TODO/FIXME、Roadmap 标签等多个渠道搜集信息，整理出一份"当前有哪些事可以干"的报告，每个 task 标注了难度、前置知识、相关 maintainer、紧急程度等信息。
 
-**Skill 效果**：输入一个 Feature 名称（如 `Chunked Prefill`、`Prefix Caching`），该 Skill 会生成一篇包含以下内容的中文深度解析文档：
+### 2.2 代码学习：读代码和看模型
 
-- **背景与动机**：为什么要有这个功能？解决了什么问题？
-- **核心数据结构与类**：附带 Mermaid 类图；
-- **执行流程**：从 API 调用到底层实现的完整调用链，附带 Mermaid 流程图；
-- **关键代码走读**：逐段解释核心实现逻辑；
-- **与其他模块的交互关系**：依赖了哪些组件，被哪些模块调用。
+**`vllm-feature-tutorial`**：
 
-这个 Skill 目前是我使用频率最高的一个，尤其在接手一个不熟悉的 Feature 时，能节省大量阅读时间。
+这是我用得最多的一个。输入一个 Feature 名（比如 EPD、Chunked Prefill、Prefix Caching），它会自动去翻 vLLM 的源码和文档，生成一篇中文技术文档，包含架构图（Mermaid）、核心类的继承关系、完整调用链、关键代码走读等内容。
 
-### 2.2 特性开发类
+实际用下来最爽的场景是接手一个完全陌生的模块。比如有次需要了解 EPD disaggregation 的 encoder cache 传输机制，20 分钟读完文档基本就有概念了，换以前纯手工翻代码至少半天起步。当然它也不是万能的，偶尔会漏掉一些冷门分支逻辑，或者 Mermaid 图里的类名跟实际代码对不上，但作为零基础入门的跳板，效率提升还是很明显的。
 
-**`vllm-feature-design`：从需求到实现的全流程辅助。**
+**`vllm-model-tutorial`**：
 
-**适用场景**：你有一个新 Feature 的想法（或被分配了一个任务），但还没有清晰的实现路径。
+和上面的 Feature 教程类似，但专注在模型层面。比如你想了解 DeepSeek-OCR 在 vLLM 里是怎么接进去的、ViT 的图像预处理流程是怎样的，它会把模型架构、vLLM 里的注册和推理流程、多模态输入的处理 pipeline 都梳理出来。
 
-**Skill 输入**：Feature 描述 + 相关 PR/Issue 链接 + 参考资料。
+这个 Skill 特别适合需要快速理解某个模型在 vLLM 里实现细节的场景——比如你要给某个 VLM 加新功能，得先搞清楚它的 multimodal processor 是怎么写的。
 
-**Skill 输出**：
+### 2.3 需求设计：做 POC、提 RFC
 
-1. **核心代码实现**（不含测试）——包括新增文件、修改点、关键函数实现；
-2. **Markdown 设计文档**——包含架构图、数据流、模块改动说明、权衡分析。
+**`vllm-feature-design`**：
 
-> 注意：这个 Skill 的定位是"辅助设计"而非"完全自动化"，实际 PR 还需要开发者仔细 Review 并调整。
+输入需求描述、相关 PR/Issue 链接、参考资料，输出核心代码实现和一份设计文档。
 
-**`vllm-rfc-generator`：生成规范的 RFC 提案。**
+这个 Skill 的定位不是"自动写 PR"，而是"帮你快速出一个能跑的设计草稿"，实测准确度大概六到七成。架构图和接口定义那部分基本可以直接用，但具体实现细节还是得自己改。一个比较好用的姿势是：先让它生成初版，然后在这个基础上迭代调整，比自己从空白文件开始效率高不少。
 
-vLLM 社区对大型架构变更要求提交 RFC 文档。这个 Skill 能根据你的想法生成符合社区规范的 RFC 草稿，但由于 RFC 内容高度依赖深度领域知识，目前评分较低，更多作为起草辅助工具使用。
+之前用它设计了一个支持 Mooncake 的 ECConnector（给 EPD 场景传 encoder cache），生成的代码框架和设计文档后来直接发到了 vLLM 社区当 RFC 讨论：[Issue #39766](https://github.com/vllm-project/vllm/issues/39766)。
 
-**`vllm-pr-desc-generator`：告别手写 PR 描述。**
+**`vllm-rfc-generator`**：
 
-输入一个 PR 的代码变更，自动生成符合 vLLM PR 模板（Purpose / Test Plan / Test Result）的规范描述。对于修改量大、涉及多个文件的 PR 尤其实用。
+vLLM 社区对大的架构改动要求先提 RFC。这个 Skill 根据你的想法生成符合社区规范的 RFC 草稿。说实话这个 Skill 的实用性一般（我自己评分最低），因为 RFC 写得好不好太依赖对社区设计偏好的理解了，AI 目前还不太能把握这种 nuance。更多是当个模板生成器用，省去打框架的时间。
 
-### 2.3 测试与维护类
+### 2.4 代码贡献：提 PR、补测试
 
-**`vllm-test-generator`：自动生成测试用例。**
+**`vllm-pr-desc-generator`**：
 
-给定一个函数、类或场景描述，生成对应的：
+输入一个 PR 链接，自动按 vLLM 的 PR 模板（Purpose / Test Plan / Test Result）生成描述。这个算是 ROI 最高的 Skill 之一，改了很多文件的 PR 用它能省不少写文档的时间，生成的描述稍微改改就能用。
 
-- **单元测试**：覆盖正常路径、边界条件、异常路径；
-- **端到端测试**：模拟真实推理请求，验证系统行为。
+**`vllm-test-generator`**：
 
-`vllm-ascend-test-generator`：是专门为华为昇腾适配版本（vllm-ascend）定制的变体，了解昇腾硬件特性和该项目的测试规范。
+给定函数、类或 PR 的代码变更，生成单元测试或端到端测试。之前给 ViT Full CUDA Graph 的 PR 写测试时用了一次，生成的结构基本合理。
 
-**`vllm-benchmark-result-summary`：快速对比性能数据。**
+### 2.5 性能优化：Benchmark 分析
 
-将两份 vLLM Serving Benchmark 的输出文本（修改前/后）粘贴给 Skill，它会自动：
+**`vllm-benchmark-result-analysis`**：
 
-- 解析各项指标（吞吐量、P50/P99 延迟、TTFT 等）；
-- 计算百分比变化，标注改善/退步；
-- 给出简短的性能变化摘要。
+把改代码前后的 benchmark 输出贴进去，自动算各项指标的百分比变化，标出改善/退步。之前提了个 vllm-ascend 的 PR 时用它对比过性能数据，比自己手动按计算器快多了。
 
-**`vllm-pr-summary`：PR Review 提效工具。**
+### 2.6 项目维护：Review 和分析
 
-输入一个 vLLM PR 的编号或链接，生成包含以下内容的分析报告：
+**`vllm-pr-summary`**：
 
-- PR 目的与背景；
-- 代码变更分析（含架构/流程 Mermaid 图）；
-- 潜在风险点与 Review 建议；
-- 测试覆盖评估。
+输入一个 PR 编号，生成分析报告：PR 目的、代码变更分析（带架构/流程图）、潜在风险点。我主要用它快速浏览社区 PR，尤其是那种改动很大但跟自己的活没直接关系、只想了解个大概的。Review 自己负责的 PR 时还是得老老实实读代码，这个只当辅助参考。
 
-适合快速了解一个 PR 做了什么，或者在 Review 时作为辅助参考。
+**`vllm-multimodal-open-issue-analyzer`**：
 
-**`vllm-multimodal-open-issue-analyzer`：多模态相关待处理 issue 搜集与整理。**
+自动拉 vLLM 仓库里跟多模态相关的 Open Issue，按 Bug / Feature Request / 性能等分类整理。适合定期跑一下了解社区动向，但输出比较长，建议配合搜索用。
 
-自动拉取并分类整理 vLLM 仓库中与多模态相关的 Open Issue，按问题类型（Bug、Feature Request、性能等）分组，便于快速了解社区当前的痛点和待解决问题。
+## 三、使用经验
 
-## 三、使用体验
+这些 Skill 的安装很简单：把仓库里的 `skills/` 目录拷到 Claude Code 的 skills 路径下（`~/.claude/skills/`），然后在 Claude Code 里用 `/skill-name` 调用就行。
 
-以下是一些我在实际开发中的使用体验：
+具体每个 Skill 的 prompt 示例和输出样例在仓库 [README](https://github.com/shen-shanshan/vllm-dev-skills) 里都有，这里不展开。
 
-- **读代码阶段**：接到一个 EPD 相关的任务，用 `vllm-feature-tutorial` 生成文档后，20 分钟内完成了对整个模块的基本认知，而之前纯手动阅读需要至少半天；
-- **开发阶段**：用 `vllm-feature-design` 辅助设计实现方案，生成的代码框架准确度约 60-70%，还需要手动调整细节，但起点比从零开始高很多；
-- **提 PR 阶段**：`vllm-pr-desc-generator` 生成的 PR 描述基本不需要大改，节省了不少写文档的时间；
-- **Review 阶段**：`vllm-pr-summary` 在快速浏览社区 PR 时很有用，特别是需要了解某个 PR 背景但不想仔细读代码的场景。
+![](./images/vllm-dev-skills.png)
 
-## 四、快速开始
+下面分享几个我在不同开发阶段的使用经验：
 
-1. 安装 Claude Code CLI（参考 [官方文档](https://docs.anthropic.com/en/docs/claude-code)）；
-2. Clone 本仓库，将 `skills/` 目录中的 Skill 文件放置到 Claude Code 的 Skill 目录（`~/.claude/skills/`）；
-3. 在 Claude Code 中使用 `/Skill名称` 调用对应 Skill。
+1. **找活干**：定期跑 `vllm-dev-task-discovery` 看某个方向有没有适合自己水平的 task，锁定目标后再去对应 Issue 里深入了解；
+2. **接手新任务**：先跑 `vllm-feature-tutorial` 或 `vllm-model-tutorial` 建立全局认知，再翻代码补细节。比直接硬读效率高不少；
+3. **做设计**：用 `vllm-feature-design` 出初版 → 手动调整细节 → 把设计文档扔到社区讨论（需要 RFC 的话用 `vllm-rfc-generator` 起个框架）；
+4. **提交 PR**：`vllm-pr-desc-generator` 生成描述草稿，`vllm-benchmark-result-analysis` 对比性能（如果有 benchmark 数据的话）；
+5. **Code Review**：自己负责 Review 的 PR 老实读代码，但用 `vllm-pr-summary` 快速了解背景和改动范围。
 
-```bash
-# 示例：生成 Chunked Prefill 的技术解析文档
-/vllm-feature-tutorial
+## 四、使用感受
 
-# 示例：分析 vLLM 某个 PR
-/vllm-pr-summary
-```
+- **Skill 在"格式化输出"的任务上最稳定**：像 PR 描述、benchmark 对比报告、RFC 模板这类有明确格式要求的，AI 输出质量很高，基本不用大改。但越需要"理解社区偏好"或"做设计权衡"的任务（比如 RFC 的实际内容、Feature Design 的细节实现），AI 的表现就越依赖你的 prompt 质量和后续的人工调整；
+- **好的 Skill 帮的是"冷启动"，不是"全自动"**：我从不指望任何一个 Skill 直接出最终结果。它们最大的价值是把你从零拉到 60-70%，剩下的 30-40% 还是得靠自己对代码和领域的理解。但这个 60-70% 已经很值了——它把你的精力从"搞清楚怎么回事"转移到"想清楚怎么做更好"；
+- **文档生成类的 Skill 要注意过时问题**：vLLM 代码迭代太快，生成的教程可能过几周就有部分过时。我现在养成了个习惯：用 `vllm-feature-tutorial` 生成的文档只当一次性速读材料，重要的理解还是回归到读源码；
+- **不是 Skill 越多越好**：10 个 Skill 里我真正高频用的就 4-5 个（feature-tutorial、model-tutorial、pr-desc-generator、pr-summary、feature-design），其他的按需使用。与其堆数量，不如把常用的那几个 prompt 持续打磨。
 
-## 五、一些思考
+## 五、未来计划
 
-在使用这些 Skill 的过程中，我有几点感受：
+- 增加 `vllm-pr-review` Skill，参考阿里巴巴的 [open-code-review](https://github.com/alibaba/open-code-review) 思路，在 PR Review 阶段做更结构化的检查；
+- 给 [README](https://github.com/shen-shanshan/vllm-dev-skills) 增加一个 Tricks 章节，记录一些实际使用中的小技巧；
+- 探索用 GitHub Pages 做个更易读的 Web 网站。
 
-1. **AI 辅助开发的价值在于降低认知负担，而不是替代思考**。Skill 生成的内容是起点，不是终点，开发者的判断和领域知识依然不可替代；
-2. **标准化的工作流越清晰，AI 发挥越稳定**。像 PR 描述、RFC 模板这类有固定格式的任务，AI 效果最好；越开放、越需要创造性判断的任务，效果越依赖提示词质量；
-3. **Skill 的复用价值随使用次数递增**。单次节省的时间可能不多，但在高频重复的开发流程中，积累效益相当可观。
+## 六、总结
 
-## 六、后续计划
+如果你也准备/正在做 vLLM 社区贡献，或者有自己好用的 Skill 想分享，欢迎来仓库提 Issue/PR，或者直接 Star/Fork 拿去用。
 
-- 持续补充新 Skill，覆盖更多开发场景；
-- 优化现有 Skill 的提示词，提高输出质量和稳定性；
-- 探索 Multi-Agent 协作模式，例如让多个 Skill 联动完成端到端的 Feature 开发流程。
-
-欢迎感兴趣的朋友 Star、Fork，也欢迎提 Issue 或 PR 贡献新的 Skill！
+![](./images/stars.png)
