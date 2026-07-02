@@ -27,7 +27,7 @@
       <author>youremail@example.com (Shanshan Shen)</author>
       <guid>http://localhost:1313/articles/%E6%88%91%E7%9A%84%E6%91%84%E5%BD%B1%E4%BD%9C%E5%93%81%E5%90%88%E9%9B%86/</guid>
       <description></description>
-      
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/articles/%E6%88%91%E7%9A%84%E6%91%84%E5%BD%B1%E4%BD%9C%E5%93%81%E5%90%88%E9%9B%86/featured.jpg" />
     </item>
     
     <item>
