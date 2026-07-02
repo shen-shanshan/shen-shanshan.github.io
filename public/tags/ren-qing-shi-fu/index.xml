@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ren Qing Shi Fu on Home</title>
+    <link>http://localhost:1313/tags/ren-qing-shi-fu/</link>
+    <description>Recent content in Ren Qing Shi Fu on Home</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>youremail@example.com (Shanshan Shen)</managingEditor>
+    <webMaster>youremail@example.com (Shanshan Shen)</webMaster>
+    <copyright>© 2026 Shanshan Shen</copyright>
+    <lastBuildDate>Wed, 24 Jun 2026 20:32:24 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/ren-qing-shi-fu/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>我的社会化记录｜合集</title>
+      <link>http://localhost:1313/articles/%E6%88%91%E7%9A%84%E7%A4%BE%E4%BC%9A%E5%8C%96%E8%AE%B0%E5%BD%95%E5%90%88%E9%9B%86/</link>
+      <pubDate>Wed, 24 Jun 2026 20:32:24 +0800</pubDate>
+      <author>youremail@example.com (Shanshan Shen)</author>
+      <guid>http://localhost:1313/articles/%E6%88%91%E7%9A%84%E7%A4%BE%E4%BC%9A%E5%8C%96%E8%AE%B0%E5%BD%95%E5%90%88%E9%9B%86/</guid>
+      <description></description>
+      
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>游记 on Home</title>
+    <link>http://localhost:1313/tags/%E6%B8%B8%E8%AE%B0/</link>
+    <description>Recent content in 游记 on Home</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>youremail@example.com (Shanshan Shen)</managingEditor>
+    <webMaster>youremail@example.com (Shanshan Shen)</webMaster>
+    <copyright>© 2026 Shanshan Shen</copyright>
+    <lastBuildDate>Wed, 24 Jun 2026 20:34:11 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/%E6%B8%B8%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>九寨沟 &amp; 黄龙四日游｜视听之外，即是禅心</title>
+      <link>http://localhost:1313/articles/%E4%B9%9D%E5%AF%A8%E6%B2%9F-%E9%BB%84%E9%BE%99%E5%9B%9B%E6%97%A5%E6%B8%B8%E8%A7%86%E5%90%AC%E4%B9%8B%E5%A4%96%E5%8D%B3%E6%98%AF%E7%A6%85%E5%BF%83/</link>
+      <pubDate>Wed, 24 Jun 2026 20:34:11 +0800</pubDate>
+      <author>youremail@example.com (Shanshan Shen)</author>
+      <guid>http://localhost:1313/articles/%E4%B9%9D%E5%AF%A8%E6%B2%9F-%E9%BB%84%E9%BE%99%E5%9B%9B%E6%97%A5%E6%B8%B8%E8%A7%86%E5%90%AC%E4%B9%8B%E5%A4%96%E5%8D%B3%E6%98%AF%E7%A6%85%E5%BF%83/</guid>
+      <description></description>
+      
+    </item>
+    
+  </channel>
+</rss>

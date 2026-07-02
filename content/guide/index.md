@@ -14,12 +14,10 @@ showDate: false
 
 {{< article link="/articles/%E6%88%91%E7%9A%84%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%E5%90%88%E9%9B%86/" >}}
 
-<!--
 ## Photo Albums
 
-**_Coming soon ..._**
+{{< article link="/articles/%E6%88%91%E7%9A%84%E6%91%84%E5%BD%B1%E4%BD%9C%E5%93%81%E5%90%88%E9%9B%86/" >}}
 
-TODO:
-Publications
-Albums
--->
+## Socialization Records
+
+{{< article link="/articles/%E6%88%91%E7%9A%84%E7%A4%BE%E4%BC%9A%E5%8C%96%E8%AE%B0%E5%BD%95%E5%90%88%E9%9B%86/" >}}

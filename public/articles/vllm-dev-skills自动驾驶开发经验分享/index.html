@@ -113,7 +113,7 @@
     "keywords": ["AI","Agent","大模型推理","vLLM"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "283"
+    "wordCount": "334"
   }]
   </script>
 
@@ -618,10 +618,10 @@
   
   
   
-  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/&#34;,'_self');">
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/categories/%E6%8A%80%E6%9C%AF/&#34;,'_self');">
     <span class="flex" style="cursor: pointer;">
   <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    计算机
+    技术
   </span>
 </span>
   </span>
@@ -707,15 +707,18 @@
     <li><a href="#一引言">一、引言</a></li>
     <li><a href="#二项目介绍">二、项目介绍</a>
       <ul>
-        <li><a href="#21-代码学习类">2.1 代码学习类</a></li>
-        <li><a href="#22-特性开发类">2.2 特性开发类</a></li>
-        <li><a href="#23-测试与维护类">2.3 测试与维护类</a></li>
+        <li><a href="#21-需求发现找活干">2.1 需求发现：找活干</a></li>
+        <li><a href="#22-代码学习读代码和看模型">2.2 代码学习：读代码和看模型</a></li>
+        <li><a href="#23-需求设计做-poc提-rfc">2.3 需求设计：做 POC、提 RFC</a></li>
+        <li><a href="#24-代码贡献提-pr补测试">2.4 代码贡献：提 PR、补测试</a></li>
+        <li><a href="#25-性能优化benchmark-分析">2.5 性能优化：Benchmark 分析</a></li>
+        <li><a href="#26-项目维护review-和分析">2.6 项目维护：Review 和分析</a></li>
       </ul>
     </li>
-    <li><a href="#三使用体验">三、使用体验</a></li>
-    <li><a href="#四快速开始">四、快速开始</a></li>
-    <li><a href="#五一些思考">五、一些思考</a></li>
-    <li><a href="#六后续计划">六、后续计划</a></li>
+    <li><a href="#三使用经验">三、使用经验</a></li>
+    <li><a href="#四使用感受">四、使用感受</a></li>
+    <li><a href="#五未来计划">五、未来计划</a></li>
+    <li><a href="#六总结">六、总结</a></li>
   </ul>
 </nav>
   </div>
@@ -732,15 +735,18 @@
     <li><a href="#一引言">一、引言</a></li>
     <li><a href="#二项目介绍">二、项目介绍</a>
       <ul>
-        <li><a href="#21-代码学习类">2.1 代码学习类</a></li>
-        <li><a href="#22-特性开发类">2.2 特性开发类</a></li>
-        <li><a href="#23-测试与维护类">2.3 测试与维护类</a></li>
+        <li><a href="#21-需求发现找活干">2.1 需求发现：找活干</a></li>
+        <li><a href="#22-代码学习读代码和看模型">2.2 代码学习：读代码和看模型</a></li>
+        <li><a href="#23-需求设计做-poc提-rfc">2.3 需求设计：做 POC、提 RFC</a></li>
+        <li><a href="#24-代码贡献提-pr补测试">2.4 代码贡献：提 PR、补测试</a></li>
+        <li><a href="#25-性能优化benchmark-分析">2.5 性能优化：Benchmark 分析</a></li>
+        <li><a href="#26-项目维护review-和分析">2.6 项目维护：Review 和分析</a></li>
       </ul>
     </li>
-    <li><a href="#三使用体验">三、使用体验</a></li>
-    <li><a href="#四快速开始">四、快速开始</a></li>
-    <li><a href="#五一些思考">五、一些思考</a></li>
-    <li><a href="#六后续计划">六、后续计划</a></li>
+    <li><a href="#三使用经验">三、使用经验</a></li>
+    <li><a href="#四使用感受">四、使用感受</a></li>
+    <li><a href="#五未来计划">五、未来计划</a></li>
+    <li><a href="#六总结">六、总结</a></li>
   </ul>
 </nav>
   </div>
@@ -834,9 +840,11 @@
     </span>        
     
 </h2>
-<p><a href="https://github.com/vllm-project/vllm" target="_blank">vLLM</a> 是目前最流行的大模型推理框架之一，凭借着 PagedAttention 等核心技术在工业界广泛落地。然而，作为一个高速迭代的大型开源项目，vLLM 的代码库庞大、模块繁多，对新贡献者来说上手成本极高——光是读懂一个 Feature 的实现路径，往往就需要数天时间。</p>
-<p>随着 Coding Agent 越来越普及，在参与 vLLM 社区开发的过程中，我开始尝试使用 Claude Code 来辅助日常工作：读代码、写测试、做 Code Review、分析 Issue 等，发现效果还不错。相比于纯“古法编程”，我的工作效率确实提升了不少。</p>
-<p>因此，我整理了自己平时在 vLLM 社区工作的 Workflow 以及一些常用的 Skill，放到了 <a href="https://github.com/shen-shanshan/vllm-dev-skills" target="_blank">vllm-dev-skills</a> 这个仓库中，分享给同样想做 or 正在做 vLLM 社区贡献的朋友。</p>
+<p><a href="https://github.com/vllm-project/vllm" target="_blank">vLLM</a> 是目前最主流的大模型推理框架之一，但作为社区贡献者，上手成本实在不低——代码库庞大、模块耦合深、迭代速度又快，光搞清楚一个 Feature 的实现路径就得花不少时间。</p>
+<p>去年开始我尝试把 Claude Code 接入到自己的 vLLM 开发流程里，用了一段时间发现确实能省不少力气。我把常用的工作流封装成了一个个 Skill，放在 <a href="https://github.com/shen-shanshan/vllm-dev-skills" target="_blank">vllm-dev-skills</a> 这个仓库里。这篇文章聊聊这些 Skill 具体做什么、我实际怎么用，以及踩过的一些坑。</p>
+<blockquote>
+<p>NOTE：本文跟随项目演进持续更新中（last update：2026/06/12）。</p>
+</blockquote>
 
 
 <h2 class="relative group">二、项目介绍 
@@ -849,177 +857,191 @@
     </span>        
     
 </h2>
-<p>这个仓库按开发流程将 Skill 分为三大类：</p>
+<p>该仓库中目前一共有 10 个 Skill，按我日常的开发流程分成 6 类：</p>
 <p>
     <figure>
-      <img class="my-0 rounded-md" loading="lazy" src="./images/1.1.png" alt="" />
+      <img class="my-0 rounded-md" loading="lazy" src="./images/ai-summary-20260611.png" alt="" />
       
     </figure>
 </p>
 
 
-<h3 class="relative group">2.1 代码学习类 
-    <div id="21-%E4%BB%A3%E7%A0%81%E5%AD%A6%E4%B9%A0%E7%B1%BB" class="anchor"></div>
+<h3 class="relative group">2.1 需求发现：找活干 
+    <div id="21-%E9%9C%80%E6%B1%82%E5%8F%91%E7%8E%B0%E6%89%BE%E6%B4%BB%E5%B9%B2" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#21-%E4%BB%A3%E7%A0%81%E5%AD%A6%E4%B9%A0%E7%B1%BB" aria-label="Anchor">#</a>
+            style="text-decoration-line: none !important;" href="#21-%E9%9C%80%E6%B1%82%E5%8F%91%E7%8E%B0%E6%89%BE%E6%B4%BB%E5%B9%B2" aria-label="Anchor">#</a>
     </span>        
     
 </h3>
-<p><strong><code>vllm-feature-tutorial</code>：读懂一个 vLLM 模块，只需一条指令。</strong></p>
-<p><strong>痛点</strong>：vLLM 的模块设计复杂，看一段代码往往要在十几个文件之间跳来跳去，还要同时理解 CUDA Kernel、Python 接口、调度逻辑多个层次。</p>
-<p><strong>Skill 效果</strong>：输入一个 Feature 名称（如 <code>Chunked Prefill</code>、<code>Prefix Caching</code>），该 Skill 会生成一篇包含以下内容的中文深度解析文档：</p>
-<ul>
-<li><strong>背景与动机</strong>：为什么要有这个功能？解决了什么问题？</li>
-<li><strong>核心数据结构与类</strong>：附带 Mermaid 类图；</li>
-<li><strong>执行流程</strong>：从 API 调用到底层实现的完整调用链，附带 Mermaid 流程图；</li>
-<li><strong>关键代码走读</strong>：逐段解释核心实现逻辑；</li>
-<li><strong>与其他模块的交互关系</strong>：依赖了哪些组件，被哪些模块调用。</li>
-</ul>
-<p>这个 Skill 目前是我使用频率最高的一个，尤其在接手一个不熟悉的 Feature 时，能节省大量阅读时间。</p>
+<p><strong><code>vllm-dev-task-discovery</code></strong>：</p>
+<p>这是个我最近才加的新 Skill。输入一个模块或方向（比如&quot;多模态&quot;、&ldquo;V1 Engine&rdquo;），它会从 vLLM 的 Open Issues、近期合并的 PR、Discussions、代码里的 TODO/FIXME、Roadmap 标签等多个渠道搜集信息，整理出一份&quot;当前有哪些事可以干&quot;的报告，每个 task 标注了难度、前置知识、相关 maintainer、紧急程度等信息。</p>
 
 
-<h3 class="relative group">2.2 特性开发类 
-    <div id="22-%E7%89%B9%E6%80%A7%E5%BC%80%E5%8F%91%E7%B1%BB" class="anchor"></div>
+<h3 class="relative group">2.2 代码学习：读代码和看模型 
+    <div id="22-%E4%BB%A3%E7%A0%81%E5%AD%A6%E4%B9%A0%E8%AF%BB%E4%BB%A3%E7%A0%81%E5%92%8C%E7%9C%8B%E6%A8%A1%E5%9E%8B" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#22-%E7%89%B9%E6%80%A7%E5%BC%80%E5%8F%91%E7%B1%BB" aria-label="Anchor">#</a>
+            style="text-decoration-line: none !important;" href="#22-%E4%BB%A3%E7%A0%81%E5%AD%A6%E4%B9%A0%E8%AF%BB%E4%BB%A3%E7%A0%81%E5%92%8C%E7%9C%8B%E6%A8%A1%E5%9E%8B" aria-label="Anchor">#</a>
     </span>        
     
 </h3>
-<p><strong><code>vllm-feature-design</code>：从需求到实现的全流程辅助。</strong></p>
-<p><strong>适用场景</strong>：你有一个新 Feature 的想法（或被分配了一个任务），但还没有清晰的实现路径。</p>
-<p><strong>Skill 输入</strong>：Feature 描述 + 相关 PR/Issue 链接 + 参考资料。</p>
-<p><strong>Skill 输出</strong>：</p>
-<ol>
-<li><strong>核心代码实现</strong>（不含测试）——包括新增文件、修改点、关键函数实现；</li>
-<li><strong>Markdown 设计文档</strong>——包含架构图、数据流、模块改动说明、权衡分析。</li>
-</ol>
-<blockquote>
-<p>注意：这个 Skill 的定位是&quot;辅助设计&quot;而非&quot;完全自动化&quot;，实际 PR 还需要开发者仔细 Review 并调整。</p>
-</blockquote>
-<p><strong><code>vllm-rfc-generator</code>：生成规范的 RFC 提案。</strong></p>
-<p>vLLM 社区对大型架构变更要求提交 RFC 文档。这个 Skill 能根据你的想法生成符合社区规范的 RFC 草稿，但由于 RFC 内容高度依赖深度领域知识，目前评分较低，更多作为起草辅助工具使用。</p>
-<p><strong><code>vllm-pr-desc-generator</code>：告别手写 PR 描述。</strong></p>
-<p>输入一个 PR 的代码变更，自动生成符合 vLLM PR 模板（Purpose / Test Plan / Test Result）的规范描述。对于修改量大、涉及多个文件的 PR 尤其实用。</p>
+<p><strong><code>vllm-feature-tutorial</code></strong>：</p>
+<p>这是我用得最多的一个。输入一个 Feature 名（比如 EPD、Chunked Prefill、Prefix Caching），它会自动去翻 vLLM 的源码和文档，生成一篇中文技术文档，包含架构图（Mermaid）、核心类的继承关系、完整调用链、关键代码走读等内容。</p>
+<p>实际用下来最爽的场景是接手一个完全陌生的模块。比如有次需要了解 EPD disaggregation 的 encoder cache 传输机制，20 分钟读完文档基本就有概念了，换以前纯手工翻代码至少半天起步。当然它也不是万能的，偶尔会漏掉一些冷门分支逻辑，或者 Mermaid 图里的类名跟实际代码对不上，但作为零基础入门的跳板，效率提升还是很明显的。</p>
+<p><strong><code>vllm-model-tutorial</code></strong>：</p>
+<p>和上面的 Feature 教程类似，但专注在模型层面。比如你想了解 DeepSeek-OCR 在 vLLM 里是怎么接进去的、ViT 的图像预处理流程是怎样的，它会把模型架构、vLLM 里的注册和推理流程、多模态输入的处理 pipeline 都梳理出来。</p>
+<p>这个 Skill 特别适合需要快速理解某个模型在 vLLM 里实现细节的场景——比如你要给某个 VLM 加新功能，得先搞清楚它的 multimodal processor 是怎么写的。</p>
 
 
-<h3 class="relative group">2.3 测试与维护类 
-    <div id="23-%E6%B5%8B%E8%AF%95%E4%B8%8E%E7%BB%B4%E6%8A%A4%E7%B1%BB" class="anchor"></div>
+<h3 class="relative group">2.3 需求设计：做 POC、提 RFC 
+    <div id="23-%E9%9C%80%E6%B1%82%E8%AE%BE%E8%AE%A1%E5%81%9A-poc%E6%8F%90-rfc" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#23-%E6%B5%8B%E8%AF%95%E4%B8%8E%E7%BB%B4%E6%8A%A4%E7%B1%BB" aria-label="Anchor">#</a>
+            style="text-decoration-line: none !important;" href="#23-%E9%9C%80%E6%B1%82%E8%AE%BE%E8%AE%A1%E5%81%9A-poc%E6%8F%90-rfc" aria-label="Anchor">#</a>
     </span>        
     
 </h3>
-<p><strong><code>vllm-test-generator</code>：自动生成测试用例。</strong></p>
-<p>给定一个函数、类或场景描述，生成对应的：</p>
-<ul>
-<li><strong>单元测试</strong>：覆盖正常路径、边界条件、异常路径；</li>
-<li><strong>端到端测试</strong>：模拟真实推理请求，验证系统行为。</li>
-</ul>
-<p><code>vllm-ascend-test-generator</code>：是专门为华为昇腾适配版本（vllm-ascend）定制的变体，了解昇腾硬件特性和该项目的测试规范。</p>
-<p><strong><code>vllm-benchmark-result-summary</code>：快速对比性能数据。</strong></p>
-<p>将两份 vLLM Serving Benchmark 的输出文本（修改前/后）粘贴给 Skill，它会自动：</p>
-<ul>
-<li>解析各项指标（吞吐量、P50/P99 延迟、TTFT 等）；</li>
-<li>计算百分比变化，标注改善/退步；</li>
-<li>给出简短的性能变化摘要。</li>
-</ul>
-<p><strong><code>vllm-pr-summary</code>：PR Review 提效工具。</strong></p>
-<p>输入一个 vLLM PR 的编号或链接，生成包含以下内容的分析报告：</p>
-<ul>
-<li>PR 目的与背景；</li>
-<li>代码变更分析（含架构/流程 Mermaid 图）；</li>
-<li>潜在风险点与 Review 建议；</li>
-<li>测试覆盖评估。</li>
-</ul>
-<p>适合快速了解一个 PR 做了什么，或者在 Review 时作为辅助参考。</p>
-<p><strong><code>vllm-multimodal-open-issue-analyzer</code>：多模态相关待处理 issue 搜集与整理。</strong></p>
-<p>自动拉取并分类整理 vLLM 仓库中与多模态相关的 Open Issue，按问题类型（Bug、Feature Request、性能等）分组，便于快速了解社区当前的痛点和待解决问题。</p>
+<p><strong><code>vllm-feature-design</code></strong>：</p>
+<p>输入需求描述、相关 PR/Issue 链接、参考资料，输出核心代码实现和一份设计文档。</p>
+<p>这个 Skill 的定位不是&quot;自动写 PR&quot;，而是&quot;帮你快速出一个能跑的设计草稿&quot;，实测准确度大概六到七成。架构图和接口定义那部分基本可以直接用，但具体实现细节还是得自己改。一个比较好用的姿势是：先让它生成初版，然后在这个基础上迭代调整，比自己从空白文件开始效率高不少。</p>
+<p>之前用它设计了一个支持 Mooncake 的 ECConnector（给 EPD 场景传 encoder cache），生成的代码框架和设计文档后来直接发到了 vLLM 社区当 RFC 讨论：<a href="https://github.com/vllm-project/vllm/issues/39766" target="_blank">Issue #39766</a>。</p>
+<p><strong><code>vllm-rfc-generator</code></strong>：</p>
+<p>vLLM 社区对大的架构改动要求先提 RFC。这个 Skill 根据你的想法生成符合社区规范的 RFC 草稿。说实话这个 Skill 的实用性一般（我自己评分最低），因为 RFC 写得好不好太依赖对社区设计偏好的理解了，AI 目前还不太能把握这种 nuance。更多是当个模板生成器用，省去打框架的时间。</p>
 
 
-<h2 class="relative group">三、使用体验 
-    <div id="%E4%B8%89%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C" class="anchor"></div>
+<h3 class="relative group">2.4 代码贡献：提 PR、补测试 
+    <div id="24-%E4%BB%A3%E7%A0%81%E8%B4%A1%E7%8C%AE%E6%8F%90-pr%E8%A1%A5%E6%B5%8B%E8%AF%95" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%E4%B8%89%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C" aria-label="Anchor">#</a>
+            style="text-decoration-line: none !important;" href="#24-%E4%BB%A3%E7%A0%81%E8%B4%A1%E7%8C%AE%E6%8F%90-pr%E8%A1%A5%E6%B5%8B%E8%AF%95" aria-label="Anchor">#</a>
     </span>        
     
-</h2>
-<p>以下是一些我在实际开发中的使用体验：</p>
-<ul>
-<li><strong>读代码阶段</strong>：接到一个 EPD 相关的任务，用 <code>vllm-feature-tutorial</code> 生成文档后，20 分钟内完成了对整个模块的基本认知，而之前纯手动阅读需要至少半天；</li>
-<li><strong>开发阶段</strong>：用 <code>vllm-feature-design</code> 辅助设计实现方案，生成的代码框架准确度约 60-70%，还需要手动调整细节，但起点比从零开始高很多；</li>
-<li><strong>提 PR 阶段</strong>：<code>vllm-pr-desc-generator</code> 生成的 PR 描述基本不需要大改，节省了不少写文档的时间；</li>
-<li><strong>Review 阶段</strong>：<code>vllm-pr-summary</code> 在快速浏览社区 PR 时很有用，特别是需要了解某个 PR 背景但不想仔细读代码的场景。</li>
-</ul>
+</h3>
+<p><strong><code>vllm-pr-desc-generator</code></strong>：</p>
+<p>输入一个 PR 链接，自动按 vLLM 的 PR 模板（Purpose / Test Plan / Test Result）生成描述。这个算是 ROI 最高的 Skill 之一，改了很多文件的 PR 用它能省不少写文档的时间，生成的描述稍微改改就能用。</p>
+<p><strong><code>vllm-test-generator</code></strong>：</p>
+<p>给定函数、类或 PR 的代码变更，生成单元测试或端到端测试。之前给 ViT Full CUDA Graph 的 PR 写测试时用了一次，生成的结构基本合理。</p>
 
 
-<h2 class="relative group">四、快速开始 
-    <div id="%E5%9B%9B%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B" class="anchor"></div>
+<h3 class="relative group">2.5 性能优化：Benchmark 分析 
+    <div id="25-%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96benchmark-%E5%88%86%E6%9E%90" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%E5%9B%9B%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B" aria-label="Anchor">#</a>
+            style="text-decoration-line: none !important;" href="#25-%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96benchmark-%E5%88%86%E6%9E%90" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p><strong><code>vllm-benchmark-result-analysis</code></strong>：</p>
+<p>把改代码前后的 benchmark 输出贴进去，自动算各项指标的百分比变化，标出改善/退步。之前提了个 vllm-ascend 的 PR 时用它对比过性能数据，比自己手动按计算器快多了。</p>
+
+
+<h3 class="relative group">2.6 项目维护：Review 和分析 
+    <div id="26-%E9%A1%B9%E7%9B%AE%E7%BB%B4%E6%8A%A4review-%E5%92%8C%E5%88%86%E6%9E%90" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#26-%E9%A1%B9%E7%9B%AE%E7%BB%B4%E6%8A%A4review-%E5%92%8C%E5%88%86%E6%9E%90" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p><strong><code>vllm-pr-summary</code></strong>：</p>
+<p>输入一个 PR 编号，生成分析报告：PR 目的、代码变更分析（带架构/流程图）、潜在风险点。我主要用它快速浏览社区 PR，尤其是那种改动很大但跟自己的活没直接关系、只想了解个大概的。Review 自己负责的 PR 时还是得老老实实读代码，这个只当辅助参考。</p>
+<p><strong><code>vllm-multimodal-open-issue-analyzer</code></strong>：</p>
+<p>自动拉 vLLM 仓库里跟多模态相关的 Open Issue，按 Bug / Feature Request / 性能等分类整理。适合定期跑一下了解社区动向，但输出比较长，建议配合搜索用。</p>
+
+
+<h2 class="relative group">三、使用经验 
+    <div id="%E4%B8%89%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E4%B8%89%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C" aria-label="Anchor">#</a>
     </span>        
     
 </h2>
+<p>这些 Skill 的安装很简单：把仓库里的 <code>skills/</code> 目录拷到 Claude Code 的 skills 路径下（<code>~/.claude/skills/</code>），然后在 Claude Code 里用 <code>/skill-name</code> 调用就行。</p>
+<p>具体每个 Skill 的 prompt 示例和输出样例在仓库 <a href="https://github.com/shen-shanshan/vllm-dev-skills" target="_blank">README</a> 里都有，这里不展开。</p>
+<p>
+    <figure>
+      <img class="my-0 rounded-md" loading="lazy" src="./images/vllm-dev-skills.png" alt="" />
+      
+    </figure>
+</p>
+<p>下面分享几个我在不同开发阶段的使用经验：</p>
 <ol>
-<li>安装 Claude Code CLI（参考 <a href="https://docs.anthropic.com/en/docs/claude-code" target="_blank">官方文档</a>）；</li>
-<li>Clone 本仓库，将 <code>skills/</code> 目录中的 Skill 文件放置到 Claude Code 的 Skill 目录（<code>~/.claude/skills/</code>）；</li>
-<li>在 Claude Code 中使用 <code>/Skill名称</code> 调用对应 Skill。</li>
-</ol>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 示例：生成 Chunked Prefill 的技术解析文档</span>
-</span></span><span class="line"><span class="cl">/vllm-feature-tutorial
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># 示例：分析 vLLM 某个 PR</span>
-</span></span><span class="line"><span class="cl">/vllm-pr-summary
-</span></span></code></pre></div>
-
-<h2 class="relative group">五、一些思考 
-    <div id="%E4%BA%94%E4%B8%80%E4%BA%9B%E6%80%9D%E8%80%83" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%E4%BA%94%E4%B8%80%E4%BA%9B%E6%80%9D%E8%80%83" aria-label="Anchor">#</a>
-    </span>        
-    
-</h2>
-<p>在使用这些 Skill 的过程中，我有几点感受：</p>
-<ol>
-<li><strong>AI 辅助开发的价值在于降低认知负担，而不是替代思考</strong>。Skill 生成的内容是起点，不是终点，开发者的判断和领域知识依然不可替代；</li>
-<li><strong>标准化的工作流越清晰，AI 发挥越稳定</strong>。像 PR 描述、RFC 模板这类有固定格式的任务，AI 效果最好；越开放、越需要创造性判断的任务，效果越依赖提示词质量；</li>
-<li><strong>Skill 的复用价值随使用次数递增</strong>。单次节省的时间可能不多，但在高频重复的开发流程中，积累效益相当可观。</li>
+<li><strong>找活干</strong>：定期跑 <code>vllm-dev-task-discovery</code> 看某个方向有没有适合自己水平的 task，锁定目标后再去对应 Issue 里深入了解；</li>
+<li><strong>接手新任务</strong>：先跑 <code>vllm-feature-tutorial</code> 或 <code>vllm-model-tutorial</code> 建立全局认知，再翻代码补细节。比直接硬读效率高不少；</li>
+<li><strong>做设计</strong>：用 <code>vllm-feature-design</code> 出初版 → 手动调整细节 → 把设计文档扔到社区讨论（需要 RFC 的话用 <code>vllm-rfc-generator</code> 起个框架）；</li>
+<li><strong>提交 PR</strong>：<code>vllm-pr-desc-generator</code> 生成描述草稿，<code>vllm-benchmark-result-analysis</code> 对比性能（如果有 benchmark 数据的话）；</li>
+<li><strong>Code Review</strong>：自己负责 Review 的 PR 老实读代码，但用 <code>vllm-pr-summary</code> 快速了解背景和改动范围。</li>
 </ol>
 
 
-<h2 class="relative group">六、后续计划 
-    <div id="%E5%85%AD%E5%90%8E%E7%BB%AD%E8%AE%A1%E5%88%92" class="anchor"></div>
+<h2 class="relative group">四、使用感受 
+    <div id="%E5%9B%9B%E4%BD%BF%E7%94%A8%E6%84%9F%E5%8F%97" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%E5%85%AD%E5%90%8E%E7%BB%AD%E8%AE%A1%E5%88%92" aria-label="Anchor">#</a>
+            style="text-decoration-line: none !important;" href="#%E5%9B%9B%E4%BD%BF%E7%94%A8%E6%84%9F%E5%8F%97" aria-label="Anchor">#</a>
     </span>        
     
 </h2>
 <ul>
-<li>持续补充新 Skill，覆盖更多开发场景；</li>
-<li>优化现有 Skill 的提示词，提高输出质量和稳定性；</li>
-<li>探索 Multi-Agent 协作模式，例如让多个 Skill 联动完成端到端的 Feature 开发流程。</li>
+<li><strong>Skill 在&quot;格式化输出&quot;的任务上最稳定</strong>：像 PR 描述、benchmark 对比报告、RFC 模板这类有明确格式要求的，AI 输出质量很高，基本不用大改。但越需要&quot;理解社区偏好&quot;或&quot;做设计权衡&quot;的任务（比如 RFC 的实际内容、Feature Design 的细节实现），AI 的表现就越依赖你的 prompt 质量和后续的人工调整；</li>
+<li><strong>好的 Skill 帮的是&quot;冷启动&quot;，不是&quot;全自动&quot;</strong>：我从不指望任何一个 Skill 直接出最终结果。它们最大的价值是把你从零拉到 60-70%，剩下的 30-40% 还是得靠自己对代码和领域的理解。但这个 60-70% 已经很值了——它把你的精力从&quot;搞清楚怎么回事&quot;转移到&quot;想清楚怎么做更好&quot;；</li>
+<li><strong>文档生成类的 Skill 要注意过时问题</strong>：vLLM 代码迭代太快，生成的教程可能过几周就有部分过时。我现在养成了个习惯：用 <code>vllm-feature-tutorial</code> 生成的文档只当一次性速读材料，重要的理解还是回归到读源码；</li>
+<li><strong>不是 Skill 越多越好</strong>：10 个 Skill 里我真正高频用的就 4-5 个（feature-tutorial、model-tutorial、pr-desc-generator、pr-summary、feature-design），其他的按需使用。与其堆数量，不如把常用的那几个 prompt 持续打磨。</li>
 </ul>
-<p>欢迎感兴趣的朋友 Star、Fork，也欢迎提 Issue 或 PR 贡献新的 Skill！</p>
+
+
+<h2 class="relative group">五、未来计划 
+    <div id="%E4%BA%94%E6%9C%AA%E6%9D%A5%E8%AE%A1%E5%88%92" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E4%BA%94%E6%9C%AA%E6%9D%A5%E8%AE%A1%E5%88%92" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<ul>
+<li>增加 <code>vllm-pr-review</code> Skill，参考阿里巴巴的 <a href="https://github.com/alibaba/open-code-review" target="_blank">open-code-review</a> 思路，在 PR Review 阶段做更结构化的检查；</li>
+<li>给 <a href="https://github.com/shen-shanshan/vllm-dev-skills" target="_blank">README</a> 增加一个 Tricks 章节，记录一些实际使用中的小技巧；</li>
+<li>探索用 GitHub Pages 做个更易读的 Web 网站。</li>
+</ul>
+
+
+<h2 class="relative group">六、总结 
+    <div id="%E5%85%AD%E6%80%BB%E7%BB%93" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E5%85%AD%E6%80%BB%E7%BB%93" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<p>如果你也准备/正在做 vLLM 社区贡献，或者有自己好用的 Skill 想分享，欢迎来仓库提 Issue/PR，或者直接 Star/Fork 拿去用。</p>
+<p>
+    <figure>
+      <img class="my-0 rounded-md" loading="lazy" src="./images/stars.png" alt="" />
+      
+    </figure>
+</p>
 
           
           
@@ -1191,10 +1213,10 @@
   
   
   
-  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/&#34;,'_self');">
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/categories/%E6%8A%80%E6%9C%AF/&#34;,'_self');">
     <span class="flex" style="cursor: pointer;">
   <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    计算机
+    技术
   </span>
 </span>
   </span>
@@ -1349,10 +1371,10 @@
   
   
   
-  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/&#34;,'_self');">
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/categories/%E6%8A%80%E6%9C%AF/&#34;,'_self');">
     <span class="flex" style="cursor: pointer;">
   <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    计算机
+    技术
   </span>
 </span>
   </span>
@@ -1507,10 +1529,10 @@
   
   
   
-  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/&#34;,'_self');">
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/categories/%E6%8A%80%E6%9C%AF/&#34;,'_self');">
     <span class="flex" style="cursor: pointer;">
   <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    计算机
+    技术
   </span>
 </span>
   </span>
@@ -1599,8 +1621,8 @@
           
         
       <script>
-        var oid = "views_posts\\【计算机】vLLM_Dev_Skills｜自动驾驶开发经验分享\\index.md"
-        var oid_likes = "likes_posts\\【计算机】vLLM_Dev_Skills｜自动驾驶开发经验分享\\index.md"
+        var oid = "views_posts\/【技术】vLLM_Dev_Skills｜自动驾驶开发经验分享\/index.md"
+        var oid_likes = "likes_posts\/【技术】vLLM_Dev_Skills｜自动驾驶开发经验分享\/index.md"
       </script>
       
       

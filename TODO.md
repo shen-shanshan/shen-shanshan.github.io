@@ -1,4 +1,6 @@
 # TODO
 
-- AMD GPU 硬件架构入门
 - vLLM 多模态推理 ViT CUDA graph
+- 社会化记录：租房
+- 社会化记录：投资理财
+- 社会化记录：厨艺
