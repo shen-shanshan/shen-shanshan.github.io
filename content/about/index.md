@@ -10,7 +10,7 @@ showDate: false
 
 ## Overview
 
-I am currently a software engineer working at [Huawei Ascend](https://www.hiascend.com/), focusing on LLM/VLM inference and GPU/NPU computing. I have contributed to some popular open source projects such as [vLLM](https://github.com/vllm-project/vllm), to build a easy-to-use software ecosystem for Ascend. Before this, I was a student at [Beijing Jiao Tong University](https://www.bjtu.edu.cn/) (BSc/MSc), majoring in communication engineering. You can see my projects at [Github](https://github.com/shen-shanshan), or see my posts at [Zhihu](https://www.zhihu.com/people/sss-53-26).
+I am currently a senior software engineer working at [<u>AMD ROCm</u>](https://www.amd.com/en/products/software/rocm.html) (previously at [<u>Huawei Ascend</u>](https://www.hiascend.com/)), building vLLM inference engine for GPU/NPU software ecosystem (focusing on multi-modality inference, structured output and OOT (Out-Of-Tree) hardware extensibility). Before this, I was a student at [Beijing Jiao Tong University](https://www.bjtu.edu.cn/) (BSc/MSc), majoring in communication engineering. You can see my projects at [Github](https://github.com/shen-shanshan), or see my posts at [Zhihu](https://www.zhihu.com/people/sss-53-26).
 
 ---
 
@@ -46,7 +46,7 @@ Studying at School of Electronic and Information Engineering, majoring in commun
 
 ## Open Source Contributions
 
-Overall, I have contributed [150 PRs](https://github.com/pulls?q=is%3Apr+author%3Ashen-shanshan+is%3Amerged+is%3Apublic+org%3Avllm-project) to the vLLM ecosystem, focusing on multi-modal inference, structured output and OOT hardware extensibility. Find more details about all PRs I have contributed [here](https://github.com/pulls?q=is%3Apr+author%3Ashen-shanshan+is%3Amerged+is%3Apublic).
+Overall, I have contributed [152 PRs](https://github.com/pulls?q=is%3Apr+author%3Ashen-shanshan+is%3Amerged+is%3Apublic+org%3Avllm-project) to the vLLM ecosystem, focusing on multi-modal inference, structured output and OOT hardware extensibility. Find more details about all PRs I have contributed [here](https://github.com/pulls?q=is%3Apr+author%3Ashen-shanshan+is%3Amerged+is%3Apublic).
 
 - Outside collaborator of [vllm](https://github.com/vllm-project/vllm):
 
