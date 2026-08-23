@@ -10,7 +10,15 @@ showDate: false
 
 ## Overview
 
-I am currently a senior software engineer working at [<u>AMD ROCm</u>](https://www.amd.com/en/products/software/rocm.html) (previously at [<u>Huawei Ascend</u>](https://www.hiascend.com/)), building vLLM inference engine for GPU/NPU software ecosystem (focusing on multi-modality inference, structured output and OOT (Out-Of-Tree) hardware extensibility). Before this, I was a student at [Beijing Jiao Tong University](https://www.bjtu.edu.cn/) (BSc/MSc), majoring in communication engineering. You can see my projects at [Github](https://github.com/shen-shanshan), or see my posts at [Zhihu](https://www.zhihu.com/people/sss-53-26).
+I am currently a senior software engineer working at [<u>AMD ROCm</u>](https://www.amd.com/en/products/software/rocm.html) (previously at [<u>Huawei Ascend</u>](https://www.hiascend.com/)), building vLLM inference engine for GPU/NPU software ecosystem.
+
+I am also a maintainer (member) of [vllm-project](https://github.com/vllm-project), mainly focusing on:
+
+- Performance optimization & bugfix for AMD Instinct GPUs.
+- Multi-modality inference (especially ViT execution optimization).
+- Hardware portability (especially OOT device extensibility).
+
+Before this, I was a student at [Beijing Jiao Tong University](https://www.bjtu.edu.cn/) (BSc/MSc), majoring in communication engineering. You can see my projects at my [Github](https://github.com/shen-shanshan) or see my technical blogs at my [Zhihu](https://www.zhihu.com/people/sss-53-26).
 
 ---
 
@@ -18,7 +26,7 @@ I am currently a senior software engineer working at [<u>AMD ROCm</u>](https://w
 
 {{< timeline >}}
 
-{{< timelineItem icon="code" header="AMD" badge="Senior SDE" subheader="June '26 - Present" >}}
+{{< timelineItem icon="code" header="AMD" badge="Senior Software Engineer" subheader="June '26 - Present" >}}
 Working at AMD ROCm, building vLLM inference engine for AMD GPU software ecosystem.
 {{< /timelineItem >}}
 
@@ -30,11 +38,11 @@ Working at Huawei Ascend, building vLLM inference engine for Ascend NPU software
 Working at Huawei Quality and Process IT Department, building MetaERP BI (Business Intelligence) for PSI (purchase-sale-inventory) IT system.
 {{< /timelineItem >}}
 
-{{< timelineItem icon="graduation-cap" header="Beijing Jiao Tong University" badge="Master" subheader="September '21 - June '23" >}}
+{{< timelineItem icon="graduation-cap" header="Beijing Jiao Tong University" badge="Master Student" subheader="September '21 - June '23" >}}
 Studying at School of Electronic and Information Engineering, focusing on NAS layer security of wireless communication.
 {{< /timelineItem >}}
 
-{{< timelineItem icon="graduation-cap" header="Beijing Jiao Tong University" badge="Bachelor" subheader="September '16 - June '20" >}}
+{{< timelineItem icon="graduation-cap" header="Beijing Jiao Tong University" badge="Bachelor Student" subheader="September '16 - June '20" >}}
 Studying at School of Electronic and Information Engineering, majoring in communication engineering.
 {{< /timelineItem >}}
 
@@ -46,9 +54,9 @@ Studying at School of Electronic and Information Engineering, majoring in commun
 
 ## Open Source Contributions
 
-Overall, I have contributed [152 PRs](https://github.com/pulls?q=is%3Apr+author%3Ashen-shanshan+is%3Amerged+is%3Apublic+org%3Avllm-project) to the vLLM ecosystem, focusing on multi-modal inference, structured output and OOT hardware extensibility. Find more details about all PRs I have contributed [here](https://github.com/pulls?q=is%3Apr+author%3Ashen-shanshan+is%3Amerged+is%3Apublic).
+Overall, I have contributed [156 PRs](https://github.com/pulls?q=is%3Apr+author%3Ashen-shanshan+is%3Amerged+is%3Apublic+org%3Avllm-project) to the vLLM ecosystem. Find more details about all PRs I have contributed [here](https://github.com/pulls?q=is%3Apr+author%3Ashen-shanshan+is%3Amerged+is%3Apublic).
 
-- Outside collaborator of [vllm](https://github.com/vllm-project/vllm):
+- Maintainer of [vllm](https://github.com/vllm-project/vllm):
 
 {{< github repo="vllm-project/vllm" >}}
 
