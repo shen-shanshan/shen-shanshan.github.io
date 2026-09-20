@@ -4,19 +4,31 @@
 
   <url>
     <loc>http://localhost:1313/articles/</loc>
-    <lastmod>2026-06-24T20:34:11+08:00</lastmod>
+    <lastmod>2026-09-20T21:59:09+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2026-06-24T20:34:11+08:00</lastmod>
+    <lastmod>2026-09-20T21:59:09+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/articles/title/</loc>
+    <lastmod>2026-09-20T21:59:09+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>http://localhost:1313/articles/%E4%B9%9D%E5%AF%A8%E6%B2%9F-%E9%BB%84%E9%BE%99%E5%9B%9B%E6%97%A5%E6%B8%B8%E8%A7%86%E5%90%AC%E4%B9%8B%E5%A4%96%E5%8D%B3%E6%98%AF%E7%A6%85%E5%BF%83/</loc>
     <lastmod>2026-06-24T20:34:11+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/articles/%E6%88%91%E7%9A%84%E7%A4%BE%E4%BC%9A%E5%8C%96%E8%AE%B0%E5%BD%95%E5%90%88%E9%9B%86/</loc>
+    <lastmod>2026-06-24T20:32:24+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>

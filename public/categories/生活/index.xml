@@ -21,6 +21,16 @@
     </item>
     
     <item>
+      <title>我的社会化记录｜合集</title>
+      <link>http://localhost:1313/articles/%E6%88%91%E7%9A%84%E7%A4%BE%E4%BC%9A%E5%8C%96%E8%AE%B0%E5%BD%95%E5%90%88%E9%9B%86/</link>
+      <pubDate>Wed, 24 Jun 2026 20:32:24 +0800</pubDate>
+      <author>youremail@example.com (Shanshan Shen)</author>
+      <guid>http://localhost:1313/articles/%E6%88%91%E7%9A%84%E7%A4%BE%E4%BC%9A%E5%8C%96%E8%AE%B0%E5%BD%95%E5%90%88%E9%9B%86/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/articles/%E6%88%91%E7%9A%84%E7%A4%BE%E4%BC%9A%E5%8C%96%E8%AE%B0%E5%BD%95%E5%90%88%E9%9B%86/featured.jpg" />
+    </item>
+    
+    <item>
       <title>我的摄影作品｜合集</title>
       <link>http://localhost:1313/articles/%E6%88%91%E7%9A%84%E6%91%84%E5%BD%B1%E4%BD%9C%E5%93%81%E5%90%88%E9%9B%86/</link>
       <pubDate>Mon, 12 Jan 2026 11:16:14 +0800</pubDate>
