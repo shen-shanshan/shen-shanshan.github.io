@@ -9,13 +9,33 @@
     <managingEditor>youremail@example.com (Shanshan Shen)</managingEditor>
     <webMaster>youremail@example.com (Shanshan Shen)</webMaster>
     <copyright>© 2026 Shanshan Shen</copyright>
-    <lastBuildDate>Sun, 20 Sep 2026 21:59:09 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 25 Sep 2026 15:53:16 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Xxx</title>
-      <link>http://localhost:1313/tags/xxx/</link>
+      <title>投资理财</title>
+      <link>http://localhost:1313/tags/%E6%8A%95%E8%B5%84%E7%90%86%E8%B4%A2/</link>
+      <pubDate>Fri, 25 Sep 2026 15:53:16 +0800</pubDate>
+      <author>youremail@example.com (Shanshan Shen)</author>
+      <guid>http://localhost:1313/tags/%E6%8A%95%E8%B5%84%E7%90%86%E8%B4%A2/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>个人成长</title>
+      <link>http://localhost:1313/tags/%E4%B8%AA%E4%BA%BA%E6%88%90%E9%95%BF/</link>
       <pubDate>Sun, 20 Sep 2026 21:59:09 +0800</pubDate>
       <author>youremail@example.com (Shanshan Shen)</author>
-      <guid>http://localhost:1313/tags/xxx/</guid>
+      <guid>http://localhost:1313/tags/%E4%B8%AA%E4%BA%BA%E6%88%90%E9%95%BF/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>职场</title>
+      <link>http://localhost:1313/tags/%E8%81%8C%E5%9C%BA/</link>
+      <pubDate>Sun, 20 Sep 2026 21:59:09 +0800</pubDate>
+      <author>youremail@example.com (Shanshan Shen)</author>
+      <guid>http://localhost:1313/tags/%E8%81%8C%E5%9C%BA/</guid>
       <description></description>
       
     </item>
@@ -41,16 +61,6 @@
     </item>
     
     <item>
-      <title>个人成长</title>
-      <link>http://localhost:1313/tags/%E4%B8%AA%E4%BA%BA%E6%88%90%E9%95%BF/</link>
-      <pubDate>Wed, 24 Jun 2026 20:32:24 +0800</pubDate>
-      <author>youremail@example.com (Shanshan Shen)</author>
-      <guid>http://localhost:1313/tags/%E4%B8%AA%E4%BA%BA%E6%88%90%E9%95%BF/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
       <title>人际交往</title>
       <link>http://localhost:1313/tags/%E4%BA%BA%E9%99%85%E4%BA%A4%E5%BE%80/</link>
       <pubDate>Wed, 24 Jun 2026 20:32:24 +0800</pubDate>
@@ -66,16 +76,6 @@
       <pubDate>Wed, 24 Jun 2026 20:32:24 +0800</pubDate>
       <author>youremail@example.com (Shanshan Shen)</author>
       <guid>http://localhost:1313/tags/%E7%94%9F%E6%B4%BB%E6%8A%80%E8%83%BD/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>职场</title>
-      <link>http://localhost:1313/tags/%E8%81%8C%E5%9C%BA/</link>
-      <pubDate>Wed, 24 Jun 2026 20:32:24 +0800</pubDate>
-      <author>youremail@example.com (Shanshan Shen)</author>
-      <guid>http://localhost:1313/tags/%E8%81%8C%E5%9C%BA/</guid>
       <description></description>
       
     </item>
@@ -126,16 +126,6 @@
       <pubDate>Sat, 04 Apr 2026 10:40:53 +0800</pubDate>
       <author>youremail@example.com (Shanshan Shen)</author>
       <guid>http://localhost:1313/tags/%E5%BF%83%E7%90%86%E5%AD%A6/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>投资理财</title>
-      <link>http://localhost:1313/tags/%E6%8A%95%E8%B5%84%E7%90%86%E8%B4%A2/</link>
-      <pubDate>Sat, 04 Apr 2026 10:40:53 +0800</pubDate>
-      <author>youremail@example.com (Shanshan Shen)</author>
-      <guid>http://localhost:1313/tags/%E6%8A%95%E8%B5%84%E7%90%86%E8%B4%A2/</guid>
       <description></description>
       
     </item>
