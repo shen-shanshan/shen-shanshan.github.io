@@ -4,7 +4,7 @@ date: '2026-06-24T20:32:24+08:00'
 categories: "生活"
 tags: ["生活技能", "职场", "人际交往", "个人成长"]
 # summary: "xxx"
-# draft: true
+draft: true
 ---
 
 ## 社会化第一步｜一个人也能照料好自己的生活
