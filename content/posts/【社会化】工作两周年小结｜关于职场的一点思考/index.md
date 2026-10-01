@@ -1,10 +1,10 @@
 ---
 title: '工作两周年小结｜关于职场的一点思考'
 date: '2025-09-06T23:59:51+08:00'
-categories: "生活"
+categories: "社会化"
 tags: ["职场", "反思", "个人成长"]
 # summary: "xxx"
-draft: false
+# draft: false
 ---
 
 ## 一、引言
