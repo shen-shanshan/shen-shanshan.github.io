@@ -25,6 +25,8 @@ TODO：
 
 ## 广西
 
+{{< article link="/articles/%E5%B9%BF%E8%A5%BF%E6%A1%82%E6%9E%97%E4%B8%80%E6%97%A5%E6%B8%B8%E5%B1%B1%E6%B0%B4%E5%85%A5%E7%94%BB%E7%83%9F%E7%81%AB%E5%85%A5%E5%BF%83/" >}}
+
 ## 四川
 
 {{< article link="/articles/%E4%B9%9D%E5%AF%A8%E6%B2%9F-%E9%BB%84%E9%BE%99%E5%9B%9B%E6%97%A5%E6%B8%B8%E8%A7%86%E5%90%AC%E4%B9%8B%E5%A4%96%E5%8D%B3%E6%98%AF%E7%A6%85%E5%BF%83/" >}}
