@@ -14,7 +14,11 @@ showDate: false
 
 Coming soon.
 
-## 职场生存指南｜学会戒掉“学生思维”
+## 职场生存指南｜完成从学校到职场的认知进化
+
+{{< article link="/articles/%E8%81%8C%E5%9C%BA%E7%94%9F%E5%AD%98%E6%8C%87%E5%8D%97%E4%B8%80%E5%9C%BA%E5%85%B3%E4%BA%8E%E4%BB%B7%E5%80%BC%E9%80%89%E6%8B%A9%E4%B8%8E%E4%BA%BA%E6%80%A7%E7%9A%84%E9%95%BF%E6%9C%9F%E5%8D%9A%E5%BC%88/" >}}
+
+<br>
 
 {{< article link="/articles/%E5%B7%A5%E4%BD%9C%E4%B8%A4%E5%91%A8%E5%B9%B4%E5%B0%8F%E7%BB%93%E5%85%B3%E4%BA%8E%E8%81%8C%E5%9C%BA%E7%9A%84%E4%B8%80%E7%82%B9%E6%80%9D%E8%80%83/" >}}
 
@@ -22,6 +26,6 @@ Coming soon.
 
 Coming soon.
 
-## 找寻自我之路｜在“奥德赛时期”的沉浮中寻求救赎
+## 找寻自我之路｜于“奥德赛时期”的沉浮中觉醒自我
 
 Coming soon.
