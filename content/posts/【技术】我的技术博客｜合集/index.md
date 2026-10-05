@@ -1,6 +1,6 @@
 ---
 title: '我的技术博客｜合集'
-date: '2024-11-23T18:59:01+08:00'
+date: '2023-11-23T18:59:01+08:00'
 categories: "技术"
 tags: ["AI", "LLM", "AI Infra"]
 showAuthor: false
