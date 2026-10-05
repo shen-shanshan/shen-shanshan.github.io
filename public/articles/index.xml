@@ -9,15 +9,25 @@
     <managingEditor>youremail@example.com (Shanshan Shen)</managingEditor>
     <webMaster>youremail@example.com (Shanshan Shen)</webMaster>
     <copyright>© 2026 Shanshan Shen</copyright>
-    <lastBuildDate>Sun, 04 Oct 2026 16:23:07 +0800</lastBuildDate><atom:link href="http://localhost:1313/articles/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 05 Oct 2026 09:21:13 +0800</lastBuildDate><atom:link href="http://localhost:1313/articles/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>广西桂林一日游｜山水入画，烟火入心</title>
-      <link>http://localhost:1313/articles/%E5%B9%BF%E8%A5%BF%E6%A1%82%E6%9E%97%E4%B8%80%E6%97%A5%E6%B8%B8%E5%B1%B1%E6%B0%B4%E5%85%A5%E7%94%BB%E7%83%9F%E7%81%AB%E5%85%A5%E5%BF%83/</link>
+      <title>惠州两日游｜山海拾趣，西湖寻诗</title>
+      <link>http://localhost:1313/articles/%E6%83%A0%E5%B7%9E%E4%B8%A4%E6%97%A5%E6%B8%B8%E5%B1%B1%E6%B5%B7%E6%8B%BE%E8%B6%A3%E8%A5%BF%E6%B9%96%E5%AF%BB%E8%AF%97/</link>
+      <pubDate>Mon, 05 Oct 2026 09:21:13 +0800</pubDate>
+      <author>youremail@example.com (Shanshan Shen)</author>
+      <guid>http://localhost:1313/articles/%E6%83%A0%E5%B7%9E%E4%B8%A4%E6%97%A5%E6%B8%B8%E5%B1%B1%E6%B5%B7%E6%8B%BE%E8%B6%A3%E8%A5%BF%E6%B9%96%E5%AF%BB%E8%AF%97/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/articles/%E6%83%A0%E5%B7%9E%E4%B8%A4%E6%97%A5%E6%B8%B8%E5%B1%B1%E6%B5%B7%E6%8B%BE%E8%B6%A3%E8%A5%BF%E6%B9%96%E5%AF%BB%E8%AF%97/featured.jpg" />
+    </item>
+    
+    <item>
+      <title>桂林一日游｜山水入画，烟火入心</title>
+      <link>http://localhost:1313/articles/%E6%A1%82%E6%9E%97%E4%B8%80%E6%97%A5%E6%B8%B8%E5%B1%B1%E6%B0%B4%E5%85%A5%E7%94%BB%E7%83%9F%E7%81%AB%E5%85%A5%E5%BF%83/</link>
       <pubDate>Sun, 04 Oct 2026 16:23:07 +0800</pubDate>
       <author>youremail@example.com (Shanshan Shen)</author>
-      <guid>http://localhost:1313/articles/%E5%B9%BF%E8%A5%BF%E6%A1%82%E6%9E%97%E4%B8%80%E6%97%A5%E6%B8%B8%E5%B1%B1%E6%B0%B4%E5%85%A5%E7%94%BB%E7%83%9F%E7%81%AB%E5%85%A5%E5%BF%83/</guid>
+      <guid>http://localhost:1313/articles/%E6%A1%82%E6%9E%97%E4%B8%80%E6%97%A5%E6%B8%B8%E5%B1%B1%E6%B0%B4%E5%85%A5%E7%94%BB%E7%83%9F%E7%81%AB%E5%85%A5%E5%BF%83/</guid>
       <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/articles/%E5%B9%BF%E8%A5%BF%E6%A1%82%E6%9E%97%E4%B8%80%E6%97%A5%E6%B8%B8%E5%B1%B1%E6%B0%B4%E5%85%A5%E7%94%BB%E7%83%9F%E7%81%AB%E5%85%A5%E5%BF%83/featured.png" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/articles/%E6%A1%82%E6%9E%97%E4%B8%80%E6%97%A5%E6%B8%B8%E5%B1%B1%E6%B0%B4%E5%85%A5%E7%94%BB%E7%83%9F%E7%81%AB%E5%85%A5%E5%BF%83/featured.png" />
     </item>
     
     <item>
