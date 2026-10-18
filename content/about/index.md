@@ -54,9 +54,9 @@ Studying at School of Electronic and Information Engineering, majoring in commun
 
 ## Open Source Contributions
 
-Overall, I have contributed [162 PRs](https://github.com/pulls?q=is%3Apr+author%3Ashen-shanshan+is%3Amerged+is%3Apublic+org%3Avllm-project) to the vLLM ecosystem. Find more details about all PRs I have contributed [here](https://github.com/pulls?q=is%3Apr+author%3Ashen-shanshan+is%3Amerged+is%3Apublic).
+Overall, I have contributed [168 PRs](https://github.com/pulls?q=is%3Apr+author%3Ashen-shanshan+is%3Amerged+is%3Apublic+org%3Avllm-project) to the vLLM ecosystem. Find more details about all PRs I have contributed [here](https://github.com/pulls?q=is%3Apr+author%3Ashen-shanshan+is%3Amerged+is%3Apublic).
 
-- Maintainer of [vllm](https://github.com/vllm-project/vllm):
+- Maintainer (member) of [vllm](https://github.com/vllm-project/vllm):
 
 {{< github repo="vllm-project/vllm" >}}
 
