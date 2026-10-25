@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="440" viewBox="0 0 1240 440">
+<rect width="1240" height="440" rx="12" fill="#f3f6fb"/>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8z" fill="#64748b"/></marker><marker id="arrowAccent" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8z" fill="#2563eb"/></marker></defs>
+<style>text{font-family:"Comic Sans MS","Comic Sans","Microsoft YaHei","PingFang SC","Noto Sans CJK SC",cursive;fill:#1f2937;font-size:15px}.title{font-size:21px;font-weight:600}.node{fill:#eff6ff;stroke:#2563eb;stroke-width:1.5}.neutral{fill:#ffffff;stroke:#64748b;stroke-width:1.5}.warn{fill:#fffbeb;stroke:#b45309;stroke-width:1.5}.edge{stroke:#64748b;stroke-width:1.5;fill:none;marker-end:url(#arrow)}.edgeA{stroke:#2563eb;stroke-width:1.5;fill:none;marker-end:url(#arrowAccent)}.note{font-size:13px;fill:#475569}.num{font-size:12px;fill:#ffffff;font-weight:600}</style>
+<text x="40" y="40" class="title">Pingboard 如何读取并展示 AI Review 报告</text>
+<rect x="40" y="165" width="180" height="62" rx="8" class="neutral"/>
+<text x="130.0" y="192.0" text-anchor="middle"><tspan x="130.0" dy="0">列出报告目录</tspan><tspan x="130.0" dy="18">每 10 分钟一次</tspan></text>
+<rect x="260" y="165" width="180" height="62" rx="8" class="neutral"/>
+<text x="350.0" y="192.0" text-anchor="middle"><tspan x="350.0" dy="0">按文件名模板</tspan><tspan x="350.0" dy="18">匹配 PR 号</tspan></text>
+<rect x="480" y="165" width="180" height="62" rx="8" class="node"/>
+<text x="570.0" y="192.0" text-anchor="middle"><tspan x="570.0" dy="0">读取 Markdown 原文</tspan><tspan x="570.0" dy="18">（打开详情时）</tspan></text>
+<rect x="700" y="165" width="180" height="62" rx="8" class="node"/>
+<text x="790.0" y="192.0" text-anchor="middle"><tspan x="790.0" dy="0">解析 front matter</tspan><tspan x="790.0" dy="18">结论 / head_sha</tspan></text>
+<line x1="220" y1="196.0" x2="256" y2="196.0" class="edge"/>
+<line x1="440" y1="196.0" x2="476" y2="196.0" class="edge"/>
+<line x1="660" y1="196.0" x2="696" y2="196.0" class="edge"/>
+<polygon points="1010,148.0 1125,196.0 1010,244.0 895,196.0" class="warn"/>
+<text x="1010" y="192.0" text-anchor="middle"><tspan x="1010" dy="0">head_sha 等于</tspan><tspan x="1010" dy="18">PR 当前 head？</tspan></text>
+<line x1="880" y1="196.0" x2="891" y2="196.0" class="edge"/>
+<rect x="1040" y="78" width="180" height="46" rx="8" class="neutral"/>
+<text x="1130.0" y="106.0" text-anchor="middle"><tspan x="1130.0" dy="0">面板：覆盖最新 commit</tspan></text>
+<rect x="1040" y="276" width="180" height="46" rx="8" class="warn"/>
+<text x="1130.0" y="304.0" text-anchor="middle"><tspan x="1130.0" dy="0">面板：PR 有新提交</tspan></text>
+<path d="M1010,148.0 L1010,101 L1036,101" class="edge"/><text x="1002" y="122" text-anchor="end" class="note">是</text>
+<path d="M1010,244.0 L1010,299 L1036,299" class="edge"/><text x="1002" y="292" text-anchor="end" class="note">否</text>
+<rect x="480" y="345" width="180" height="62" rx="8" class="node"/>
+<text x="570.0" y="372.0" text-anchor="middle"><tspan x="570.0" dy="0">GitHub /markdown</tspan><tspan x="570.0" dy="18">渲染为 HTML</tspan></text>
+<rect x="700" y="345" width="180" height="62" rx="8" class="neutral"/>
+<text x="790.0" y="372.0" text-anchor="middle"><tspan x="790.0" dy="0">DOMParser 二次过滤</tspan><tspan x="790.0" dy="18">去掉脚本和危险链接</tspan></text>
+<line x1="570.0" y1="227" x2="570.0" y2="341" class="edge"/>
+<text x="578.0" y="290.0" class="note">点 View full report</text>
+<line x1="660" y1="376.0" x2="696" y2="376.0" class="edge"/>
+<line x1="880" y1="376.0" x2="916" y2="376.0" class="edge"/>
+<rect x="920" y="345" width="300" height="62" rx="8" class="neutral"/>
+<text x="1070.0" y="372.0" text-anchor="middle"><tspan x="1070.0" dy="0">弹窗：完整报告</tspan><tspan x="1070.0" dy="18">按需从 CDN 加载 mermaid 画图</tspan></text>
+<text x="40" y="143" class="note">所有请求都用用户自己的 Token 从浏览器直接发往 api.github.com，只占用 REST 配额</text>
+</svg>

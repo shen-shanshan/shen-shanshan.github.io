@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="640" viewBox="0 0 1240 640">
+<rect width="1240" height="640" rx="12" fill="#f3f6fb"/>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8z" fill="#64748b"/></marker><marker id="arrowAccent" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8z" fill="#2563eb"/></marker></defs>
+<style>text{font-family:"Comic Sans MS","Comic Sans","Microsoft YaHei","PingFang SC","Noto Sans CJK SC",cursive;fill:#1f2937;font-size:15px}.title{font-size:21px;font-weight:600}.node{fill:#eff6ff;stroke:#2563eb;stroke-width:1.5}.neutral{fill:#ffffff;stroke:#64748b;stroke-width:1.5}.warn{fill:#fffbeb;stroke:#b45309;stroke-width:1.5}.edge{stroke:#64748b;stroke-width:1.5;fill:none;marker-end:url(#arrow)}.edgeA{stroke:#2563eb;stroke-width:1.5;fill:none;marker-end:url(#arrowAccent)}.note{font-size:13px;fill:#475569}.num{font-size:12px;fill:#ffffff;font-weight:600}</style>
+<text x="40" y="40" class="title">AI-Native PR 工作流：一个 PR 从收到到合入</text>
+<rect x="15.0" y="70" width="230" height="58" rx="8" class="neutral"/>
+<text x="130.0" y="104.0" text-anchor="middle"><tspan x="130.0" dy="0">我</tspan></text>
+<line x1="130" y1="128" x2="130" y2="610" stroke="#cbd5e1" stroke-dasharray="4 4"/>
+<rect x="305.0" y="70" width="230" height="58" rx="8" class="node"/>
+<text x="420.0" y="95.0" text-anchor="middle"><tspan x="420.0" dy="0">Pingboard</tspan><tspan x="420.0" dy="18">（浏览器里的看板）</tspan></text>
+<line x1="420" y1="128" x2="420" y2="610" stroke="#cbd5e1" stroke-dasharray="4 4"/>
+<rect x="615.0" y="70" width="230" height="58" rx="8" class="node"/>
+<text x="730.0" y="95.0" text-anchor="middle"><tspan x="730.0" dy="0">Claude Code</tspan><tspan x="730.0" dy="18">+ vllm-rocm-pr-review</tspan></text>
+<line x1="730" y1="128" x2="730" y2="610" stroke="#cbd5e1" stroke-dasharray="4 4"/>
+<rect x="925.0" y="70" width="230" height="58" rx="8" class="neutral"/>
+<text x="1040.0" y="95.0" text-anchor="middle"><tspan x="1040.0" dy="0">GitHub</tspan><tspan x="1040.0" dy="18">vllm / vllm-dev-skills</tspan></text>
+<line x1="1040" y1="128" x2="1040" y2="610" stroke="#cbd5e1" stroke-dasharray="4 4"/>
+<line x1="136" y1="180" x2="412" y2="180" class="edge"/>
+<circle cx="150" cy="165" r="9" fill="#64748b"/><text x="150" y="169" text-anchor="middle" class="num">1</text>
+<text x="166" y="170">钉住 PR，按优先级分组</text>
+<line x1="136" y1="242" x2="722" y2="242" class="edgeA"/>
+<circle cx="150" cy="227" r="9" fill="#2563eb"/><text x="150" y="231" text-anchor="middle" class="num">2</text>
+<text x="166" y="232">review vllm PR #N</text>
+<line x1="736" y1="304" x2="1032" y2="304" class="edgeA"/>
+<circle cx="750" cy="289" r="9" fill="#2563eb"/><text x="750" y="293" text-anchor="middle" class="num">3</text>
+<text x="766" y="294">拉取 PR 数据（fetch_pr_data.py）</text>
+<line x1="736" y1="366" x2="1032" y2="366" class="edgeA"/>
+<circle cx="750" cy="351" r="9" fill="#2563eb"/><text x="750" y="355" text-anchor="middle" class="num">4</text>
+<text x="766" y="356">推送报告到 vllm-dev-skills</text>
+<line x1="426" y1="428" x2="1032" y2="428" class="edgeA"/>
+<circle cx="440" cy="413" r="9" fill="#2563eb"/><text x="440" y="417" text-anchor="middle" class="num">5</text>
+<text x="456" y="418">列出报告目录、读取报告（每 10 分钟）</text>
+<line x1="136" y1="490" x2="412" y2="490" class="edge"/>
+<circle cx="150" cy="475" r="9" fill="#64748b"/><text x="150" y="479" text-anchor="middle" class="num">6</text>
+<text x="166" y="480">阅读 AI 报告，结合经验写 review 意见</text>
+<line x1="426" y1="552" x2="1032" y2="552" class="edge"/>
+<circle cx="440" cy="537" r="9" fill="#64748b"/><text x="440" y="541" text-anchor="middle" class="num">7</text>
+<text x="456" y="542">Update branch / Approve / /ci run / Merge</text>
+<text x="40" y="632" class="note">蓝色箭头：AI Review 相关步骤（Agent 生成报告、看板读取报告）；灰色箭头：我在看板上完成的人工操作。</text>
+</svg>

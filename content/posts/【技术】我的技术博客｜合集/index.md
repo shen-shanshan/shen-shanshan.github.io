@@ -36,6 +36,10 @@ showDate: false
 
 {{< article link="/articles/vllm-dev-skills%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6%E5%BC%80%E5%8F%91%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/" >}}
 
+<br>
+
+{{< article link="/articles/vllm-%E7%A4%BE%E5%8C%BA%E7%BB%B4%E6%8A%A4ai-native-pr-review-%E5%B7%A5%E4%BD%9C%E6%B5%81/" >}}
+
 ## 大模型微调
 
 {{< article link="/articles/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%BE%AE%E8%B0%83%E7%9F%A5%E8%AF%86%E5%85%A8%E6%99%AF/" >}}

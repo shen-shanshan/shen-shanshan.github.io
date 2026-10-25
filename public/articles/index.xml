@@ -9,7 +9,17 @@
     <managingEditor>youremail@example.com (Shanshan Shen)</managingEditor>
     <webMaster>youremail@example.com (Shanshan Shen)</webMaster>
     <copyright>© 2026 Shanshan Shen</copyright>
-    <lastBuildDate>Mon, 05 Oct 2026 15:53:16 +0800</lastBuildDate><atom:link href="http://localhost:1313/articles/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 25 Oct 2026 23:56:22 +0800</lastBuildDate><atom:link href="http://localhost:1313/articles/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>vLLM 社区维护｜AI-Native PR Review 工作流</title>
+      <link>http://localhost:1313/articles/vllm-%E7%A4%BE%E5%8C%BA%E7%BB%B4%E6%8A%A4ai-native-pr-review-%E5%B7%A5%E4%BD%9C%E6%B5%81/</link>
+      <pubDate>Sun, 25 Oct 2026 23:56:22 +0800</pubDate>
+      <author>youremail@example.com (Shanshan Shen)</author>
+      <guid>http://localhost:1313/articles/vllm-%E7%A4%BE%E5%8C%BA%E7%BB%B4%E6%8A%A4ai-native-pr-review-%E5%B7%A5%E4%BD%9C%E6%B5%81/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/articles/vllm-%E7%A4%BE%E5%8C%BA%E7%BB%B4%E6%8A%A4ai-native-pr-review-%E5%B7%A5%E4%BD%9C%E6%B5%81/featured.png" />
+    </item>
+    
     <item>
       <title>投资理财心得｜一场关于风险、认知与耐心的长期修行</title>
       <link>http://localhost:1313/articles/%E6%8A%95%E8%B5%84%E7%90%86%E8%B4%A2%E5%BF%83%E5%BE%97%E4%B8%80%E5%9C%BA%E5%85%B3%E4%BA%8E%E9%A3%8E%E9%99%A9%E8%AE%A4%E7%9F%A5%E4%B8%8E%E8%80%90%E5%BF%83%E7%9A%84%E9%95%BF%E6%9C%9F%E4%BF%AE%E8%A1%8C/</link>
