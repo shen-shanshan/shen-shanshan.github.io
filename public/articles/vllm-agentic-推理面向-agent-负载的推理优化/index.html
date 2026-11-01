@@ -1,0 +1,2251 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth" data-default-appearance="dark"
+  data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  
+  <meta http-equiv="content-language" content="en" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  
+  <title>vLLM Agentic 推理｜面向 Agent 负载的推理优化 &middot; Home</title>
+  <meta name="title" content="vLLM Agentic 推理｜面向 Agent 负载的推理优化 &middot; Home" />
+  
+  
+  <meta name="keywords" content="AI, Agent, 大模型推理, vLLM, " />
+  
+  
+  <link rel="canonical" href="http://localhost:1313/articles/vllm-agentic-%E6%8E%A8%E7%90%86%E9%9D%A2%E5%90%91-agent-%E8%B4%9F%E8%BD%BD%E7%9A%84%E6%8E%A8%E7%90%86%E4%BC%98%E5%8C%96/" />
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <link type="text/css" rel="stylesheet" href="/css/main.bundle.min.c7683369d42ab0fa43c2faab379ff224b7030c0e984512cb4535d4888fb382e395322f3ef135ac80c0de62846aad770528c8a3cc249062ca58b1fb90c095bbcd.css"
+    integrity="sha512-x2gzadQqsPpDwvqrN5/yJLcDDA6YRRLLRTXUiI&#43;zguOVMi8&#43;8TWsgMDeYoRqrXcFKMijzCSQYspYsfuQwJW7zQ==" />
+  
+  
+  <script type="text/javascript" src="/js/appearance.min.516a16745bea5a9bd011138d254cc0fd3973cd55ce6e15f3dec763e7c7c2c7448f8fe7b54cca811cb821b0c7e12cd161caace1dd794ac3d34d40937cbcc9ee12.js"
+    integrity="sha512-UWoWdFvqWpvQERONJUzA/TlzzVXObhXz3sdj58fCx0SPj&#43;e1TMqBHLghsMfhLNFhyqzh3XlKw9NNQJN8vMnuEg=="></script>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script defer type="text/javascript" id="script-bundle" src="/js/main.bundle.min.a2d78d78672e549fbfc972ece871725b5478ba0b65708dda20cb97ab80a865eae6d247e1b05a4aec6ebbf78647ec3233bad8b2609ed98eee53cd58aa17128bc7.js"
+    integrity="sha512-oteNeGcuVJ&#43;/yXLs6HFyW1R4ugtlcI3aIMuXq4CoZerm0kfhsFpK7G6794ZH7DIzutiyYJ7Zju5TzViqFxKLxw==" data-copy="" data-copied=""></script>
+  
+  
+  
+  <script src="/lib/zoom/zoom.min.37d2094687372da3f7343a221a470f6b8806f7891aa46a5a03966af7f0ebd38b9fe536cb154e6ad28f006d184b294525a7c4054b6bbb4be62d8b453b42db99bd.js" integrity="sha512-N9IJRoc3LaP3NDoiGkcPa4gG94kapGpaA5Zq9/Dr04uf5TbLFU5q0o8AbRhLKUUlp8QFS2u7S&#43;Yti0U7QtuZvQ=="></script>
+  
+  
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:url" content="http://localhost:1313/articles/vllm-agentic-%E6%8E%A8%E7%90%86%E9%9D%A2%E5%90%91-agent-%E8%B4%9F%E8%BD%BD%E7%9A%84%E6%8E%A8%E7%90%86%E4%BC%98%E5%8C%96/">
+  <meta property="og:site_name" content="Home">
+  <meta property="og:title" content="vLLM Agentic 推理｜面向 Agent 负载的推理优化">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-11-01T16:23:01+08:00">
+    <meta property="article:modified_time" content="2026-11-01T16:23:01+08:00">
+    <meta property="article:tag" content="AI">
+    <meta property="article:tag" content="Agent">
+    <meta property="article:tag" content="大模型推理">
+    <meta property="article:tag" content="VLLM">
+    <meta property="og:image" content="http://localhost:1313/articles/vllm-agentic-%E6%8E%A8%E7%90%86%E9%9D%A2%E5%90%91-agent-%E8%B4%9F%E8%BD%BD%E7%9A%84%E6%8E%A8%E7%90%86%E4%BC%98%E5%8C%96/featured.png">
+
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://localhost:1313/articles/vllm-agentic-%E6%8E%A8%E7%90%86%E9%9D%A2%E5%90%91-agent-%E8%B4%9F%E8%BD%BD%E7%9A%84%E6%8E%A8%E7%90%86%E4%BC%98%E5%8C%96/featured.png">
+  <meta name="twitter:title" content="vLLM Agentic 推理｜面向 Agent 负载的推理优化">
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Blogs",
+    "name": "vLLM Agentic 推理｜面向 Agent 负载的推理优化",
+    "headline": "vLLM Agentic 推理｜面向 Agent 负载的推理优化",
+    
+    
+    "inLanguage": "en",
+    "url" : "http:\/\/localhost:1313\/articles\/vllm-agentic-%E6%8E%A8%E7%90%86%E9%9D%A2%E5%90%91-agent-%E8%B4%9F%E8%BD%BD%E7%9A%84%E6%8E%A8%E7%90%86%E4%BC%98%E5%8C%96\/",
+    "author" : {
+      "@type": "Person",
+      "name": "Shanshan Shen"
+    },
+    "copyrightYear": "2026",
+    "dateCreated": "2026-11-01T16:23:01\u002b08:00",
+    "datePublished": "2026-11-01T16:23:01\u002b08:00",
+    
+    "dateModified": "2026-11-01T16:23:01\u002b08:00",
+    
+    "keywords": ["AI","Agent","大模型推理","vLLM"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "1999"
+  }]
+  </script>
+
+
+  
+  
+  <meta name="author" content="Shanshan Shen" />
+  
+  
+  
+  <link href="https://github.com/shen-shanshan" rel="me" />
+  
+  
+  <link href="https://www.zhihu.com/people/sss-53-26" rel="me" />
+  
+  
+  
+  
+
+<script src="/lib/jquery/jquery.slim.min.b0dca576e87d7eaa5850ae4e61759c065786cdb6489d68fcc82240539eebd5da522bdb4fda085ffd245808c8fe2acb2516408eb774ef26b5f6015fc6737c0ea8.js" integrity="sha512-sNylduh9fqpYUK5OYXWcBleGzbZInWj8yCJAU57r1dpSK9tP2ghf/SRYCMj&#43;KsslFkCOt3TvJrX2AV/Gc3wOqA=="></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  <meta name="theme-color"/>
+  
+  
+</head>
+<body
+  class="flex flex-col h-screen px-6 m-auto text-lg leading-7 max-w-7xl bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32 scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600">
+  <div id="the-top" class="absolute flex self-center">
+    <a class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+      href="#main-content"><span
+        class="font-bold text-primary-600 ltr:pr-2 rtl:pl-2 dark:text-primary-400">&darr;</span>Skip to main content</a>
+  </div>
+  
+  
+  <div class="min-h-[148px]"></div>
+<div class="fixed inset-x-0 min-h-[130px] opacity-65 pl-[24px] pr-[24px] bg-gradient-to-b from-neutral from-60% dark:from-neutral-800 to-transparent mix-blend-normal" style="z-index:80"></div>
+<div class="fixed inset-x-0 pl-[24px] pr-[24px]" style="z-index:100">
+  <div id="menu-blur" class="absolute opacity-0 inset-x-0 top-0 h-full single_hero_background nozoom backdrop-blur-2xl shadow-2xl"></div>
+  <div class="relative max-w-[64rem] ml-auto mr-auto">
+    <div style="padding-left:0;padding-right:0;padding-top:2px;padding-bottom:3px"
+    class="main-menu flex items-center justify-between px-4 py-6 sm:px-6 md:justify-start space-x-3">
+    
+    <div class="flex flex-1 items-center justify-between">
+        <nav class="flex space-x-3">
+
+            
+            <a href="/" class="text-base font-medium text-gray-500 hover:text-gray-900">Home</a>
+            
+
+        </nav>
+        <nav class="hidden md:flex items-center space-x-5 md:ml-12 h-12">
+
+            
+            
+            
+  <a href="/about/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-base font-medium" title="">
+        About Me
+    </p>
+</a>
+
+
+
+            
+            
+  <a href="/guide/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-base font-medium" title="">
+        Guide
+    </p>
+</a>
+
+
+
+            
+            
+  <a href="/articles/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-base font-medium" title="">
+        Blogs
+    </p>
+</a>
+
+
+
+            
+            
+  <a href="/categories/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-base font-medium" title="">
+        Categories
+    </p>
+</a>
+
+
+
+            
+            
+  <a href="/tags/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-base font-medium" title="">
+        Tags
+    </p>
+</a>
+
+
+
+            
+            
+
+            
+
+
+            
+            <button id="search-button" aria-label="Search" class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+                title="">
+                
+
+  <span class="relative block icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+
+  </span>
+
+
+            </button>
+            
+
+
+            
+            
+            <div
+                class="ltr:mr-14 rtl:ml-14 flex items-center">
+                <button id="appearance-switcher" aria-label="Dark mode switcher" type="button" class="text-base hover:text-primary-600 dark:hover:text-primary-400">
+                    <div class="flex items-center justify-center dark:hidden">
+                        
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+
+  </span>
+
+
+                    </div>
+                    <div class="items-center justify-center hidden dark:flex">
+                        
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+
+  </span>
+
+
+                    </div>
+                </button>
+            </div>
+            
+
+        </nav>
+        <div class="flex md:hidden items-center space-x-5 md:ml-12 h-12">
+
+            <span></span>
+
+            
+
+
+            
+            <button id="search-button-mobile" aria-label="Search" class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+                title="">
+                
+
+  <span class="relative block icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+
+  </span>
+
+
+            </button>
+            
+
+            
+            
+            <button id="appearance-switcher-mobile" aria-label="Dark mode switcher" type="button" class="text-base hover:text-primary-600 dark:hover:text-primary-400" style="margin-right:5px">
+                <div class="flex items-center justify-center dark:hidden">
+                    
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+
+  </span>
+
+
+                </div>
+                <div class="items-center justify-center hidden dark:flex">
+                    
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+
+  </span>
+
+
+                </div>
+            </button>
+            
+
+        </div>
+    </div>
+    <div class="-my-2 -mr-2 md:hidden">
+
+        <label id="menu-button" class="block">
+            
+            <div class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400">
+                
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+
+  </span>
+
+
+            </div>
+            <div id="menu-wrapper" style="padding-top:5px;"
+                class="fixed inset-0 z-30 invisible w-screen h-screen m-0 overflow-auto transition-opacity opacity-0 cursor-default bg-neutral-100/50 backdrop-blur-sm dark:bg-neutral-900/50">
+                <ul
+                    class="flex space-y-2 mt-3 flex-col items-end w-full px-6 py-6 mx-auto overflow-visible list-none ltr:text-right rtl:text-left max-w-7xl">
+
+                    <li id="menu-close-button">
+                        <span
+                            class="cursor-pointer inline-block align-text-bottom hover:text-primary-600 dark:hover:text-primary-400">
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+
+  </span>
+
+</span>
+                    </li>
+
+                    
+
+                    
+  <li class="mt-1">
+    <a href="/about/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <p class="text-bg font-bg" title="">
+            About Me
+        </p>
+    </a>
+</li>
+
+
+
+
+                    
+
+                    
+  <li class="mt-1">
+    <a href="/guide/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <p class="text-bg font-bg" title="">
+            Guide
+        </p>
+    </a>
+</li>
+
+
+
+
+                    
+
+                    
+  <li class="mt-1">
+    <a href="/articles/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <p class="text-bg font-bg" title="">
+            Blogs
+        </p>
+    </a>
+</li>
+
+
+
+
+                    
+
+                    
+  <li class="mt-1">
+    <a href="/categories/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <p class="text-bg font-bg" title="">
+            Categories
+        </p>
+    </a>
+</li>
+
+
+
+
+                    
+
+                    
+  <li class="mt-1">
+    <a href="/tags/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <p class="text-bg font-bg" title="">
+            Tags
+        </p>
+    </a>
+</li>
+
+
+
+
+                    
+
+                </ul>
+                
+                
+
+            </div>
+        </label>
+    </div>
+</div>
+
+
+
+
+<script>
+    (function () {
+        var $mainmenu = $('.main-menu');
+        var path = window.location.pathname;
+        $mainmenu.find('a[href="' + path + '"]').each(function (i, e) {
+            $(e).children('p').addClass('active');
+        });
+    })();
+</script>
+
+
+  </div>
+</div>
+<script>
+  window.addEventListener('scroll', function (e) {
+    var scroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    var background_blur = document.getElementById('menu-blur');
+    background_blur.style.opacity = (scroll / 300);
+  });
+</script>
+
+  
+  <div class="relative flex flex-col grow">
+    <main id="main-content" class="grow">
+      
+
+
+<article>
+  
+  
+  
+  
+  
+  
+
+
+
+
+    
+    <div class="fixed inset-x-0 top-0 h-[800px] single_hero_background nozoom"
+    style="background-image:url(/articles/vllm-agentic-%E6%8E%A8%E7%90%86%E9%9D%A2%E5%90%91-agent-%E8%B4%9F%E8%BD%BD%E7%9A%84%E6%8E%A8%E7%90%86%E4%BC%98%E5%8C%96/featured_hu3941036965393894561.png);">
+    
+
+
+    <div class="absolute inset-0 bg-gradient-to-t from-neutral dark:from-neutral-800 to-transparent mix-blend-normal">
+    </div>
+    <div
+        class="absolute inset-0 opacity-60 bg-gradient-to-t from-neutral dark:from-neutral-800 to-neutral-100 dark:to-neutral-800 mix-blend-normal">
+    </div>
+</div>
+
+<div id="background-blur" class="fixed opacity-0 inset-x-0 top-0 h-full single_hero_background nozoom backdrop-blur-2xl"></div>
+<script>
+    window.addEventListener('scroll', function (e) {
+        var scroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+        var background_blur = document.getElementById('background-blur');
+        background_blur.style.opacity = (scroll / 300)
+    });
+</script>
+
+  
+  
+
+  <header id="single_header" class="mt-5 max-w-prose">
+    
+    <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+      vLLM Agentic 推理｜面向 Agent 负载的推理优化
+    </h1>
+    <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+      
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  <time datetime="2026-11-01T16:23:01&#43;08:00">2026-11-01</time><span class="px-2 text-primary-500">&middot;</span>
+
+
+<script type="text/javascript" src="/js/zen-mode.min.63c8a202661f4a2063fdc2706685d668e8ea3da613da2224e9da527e5876e4f53dcac39ab60732626fb4151feae5d430d0cf44731e5d3c726522fcc1519c1547.js" integrity="sha512-Y8iiAmYfSiBj/cJwZoXWaOjqPaYT2iIk6dpSflh25PU9ysOatgcyYm&#43;0FR/q5dQw0M9Ecx5dPHJlIvzBUZwVRw=="></script>
+
+<span class="mb-[2px]">
+    <span id="zen-mode-button"
+          class="text-lg hover:text-primary-500"
+          title="Enable zen mode"
+          data-title-i18n-disable="Enable zen mode"
+          data-title-i18n-enable="Disable zen mode">
+        <span class="inline-block align-text-bottom">
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50px" height="50px">
+    <path fill="currentColor" d="M 12.980469 4 C 9.1204688 4 5.9804688 7.14 5.9804688 11 L 6 26 L 9.9804688 26 L 9.9804688 11 C 9.9804688 9.35 11.320469 8 12.980469 8 L 40.019531 8 C 41.679531 8 43.019531 9.35 43.019531 11 L 43.019531 39 C 43.019531 40.65 41.679531 42 40.019531 42 L 29 42 C 29 43.54 28.420938 44.94 27.460938 46 L 40.019531 46 C 43.879531 46 47.019531 42.86 47.019531 39 L 47.019531 11 C 47.019531 7.14 43.879531 4 40.019531 4 L 12.980469 4 z M 7 28 C 4.794 28 3 29.794 3 32 L 3 42 C 3 44.206 4.794 46 7 46 L 23 46 C 25.206 46 27 44.206 27 42 L 27 32 C 27 29.794 25.206 28 23 28 L 7 28 z M 7 32 L 23 32 L 23.001953 42 L 7 42 L 7 32 z"/>
+</svg>
+  </span>
+
+</span>
+    </span>
+</span>
+  
+
+  
+  
+</div>
+
+
+
+
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  
+  
+  
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/categories/%E6%8A%80%E6%9C%AF/&#34;,'_self');">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    技术
+  </span>
+</span>
+  </span>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/ai/&#34;,'_self');">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    AI
+  </span>
+</span>
+  </span>
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/agent/&#34;,'_self');">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Agent
+  </span>
+</span>
+  </span>
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%8E%A8%E7%90%86/&#34;,'_self');">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    大模型推理
+  </span>
+</span>
+  </span>
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/vllm/&#34;,'_self');">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    VLLM
+  </span>
+</span>
+  </span>
+  
+  
+  
+  
+</div>
+
+
+
+
+    </div>
+
+    
+    
+    
+    
+    
+
+    
+
+    
+
+  </header>
+  
+  <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+    
+     <div
+      class="order-first lg:ml-auto px-0 lg:order-last ltr:lg:pl-8 rtl:lg:pr-8">
+      <div class="toc ltr:pl-5 rtl:pr-5 print:hidden lg:sticky lg:top-[140px]">
+
+         <details open id="TOCView"
+  class="toc-right mt-0 overflow-y-scroll overscroll-contain scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600 rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 hidden lg:block">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="min-w-[220px] py-2 border-dotted ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#一引言">一、引言</a></li>
+    <li><a href="#二什么是-agentic-workload">二、什么是 Agentic Workload？</a>
+      <ul>
+        <li><a href="#21-一个-agent-任务是怎么执行的">2.1 一个 Agent 任务是怎么执行的？</a></li>
+        <li><a href="#22-agentic-workload-的特点">2.2 Agentic Workload 的特点</a></li>
+        <li><a href="#23-agentic-推理面临的挑战">2.3 Agentic 推理面临的挑战</a></li>
+      </ul>
+    </li>
+    <li><a href="#三怎么评估-agentic-推理的性能">三、怎么评估 Agentic 推理的性能？</a>
+      <ul>
+        <li><a href="#31-agentx-的数据集">3.1 AgentX 的数据集</a></li>
+        <li><a href="#32-怎么看-agentx-榜单">3.2 怎么看 AgentX 榜单？</a></li>
+        <li><a href="#33-核心指标">3.3 核心指标</a></li>
+      </ul>
+    </li>
+    <li><a href="#四显存优化存下并复用更多的-kv">四、显存优化：存下并复用更多的 KV</a>
+      <ul>
+        <li><a href="#41-prefix-复用与-kv-cache-offloading">4.1 Prefix 复用与 KV Cache Offloading</a></li>
+        <li><a href="#42-umbp调度器感知的多级-kv-缓存">4.2 UMBP：调度器感知的多级 KV 缓存</a></li>
+        <li><a href="#43-dcp用通信换显存">4.3 DCP：用通信换显存</a>
+          <ul>
+            <li><a href="#431-为什么纯-tp-下-mla-会复制-kv">4.3.1 为什么纯 TP 下 MLA 会复制 KV？</a></li>
+            <li><a href="#432-tp-与-dcp-的对比">4.3.2 TP 与 DCP 的对比</a></li>
+            <li><a href="#433-tp8--dcp8-下的通信流程">4.3.3 TP8 + DCP8 下的通信流程</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#五计算优化mono-decode-kernel">五、计算优化：Mono Decode Kernel</a>
+      <ul>
+        <li><a href="#51-为什么需要-mono-kernel">5.1 为什么需要 Mono Kernel？</a></li>
+        <li><a href="#52-每层两个-kernel">5.2 每层两个 Kernel</a></li>
+        <li><a href="#53-为什么主要用于小并发">5.3 为什么主要用于小并发？</a></li>
+      </ul>
+    </li>
+    <li><a href="#六调度优化--prefill-schedule-interval">六、调度优化：<code>--prefill-schedule-interval</code></a>
+      <ul>
+        <li><a href="#61-agentic-流量在调度上的问题">6.1 Agentic 流量在调度上的问题</a></li>
+        <li><a href="#62-为什么要延迟-prefill">6.2 为什么要延迟 Prefill？</a></li>
+        <li><a href="#63-实现细节">6.3 实现细节</a></li>
+        <li><a href="#64-适用场景与代价">6.4 适用场景与代价</a></li>
+      </ul>
+    </li>
+    <li><a href="#七总结">七、总结</a></li>
+    <li><a href="#八参考资料">八、参考资料</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+<details class="toc-inside mt-0 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 lg:hidden">
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#一引言">一、引言</a></li>
+    <li><a href="#二什么是-agentic-workload">二、什么是 Agentic Workload？</a>
+      <ul>
+        <li><a href="#21-一个-agent-任务是怎么执行的">2.1 一个 Agent 任务是怎么执行的？</a></li>
+        <li><a href="#22-agentic-workload-的特点">2.2 Agentic Workload 的特点</a></li>
+        <li><a href="#23-agentic-推理面临的挑战">2.3 Agentic 推理面临的挑战</a></li>
+      </ul>
+    </li>
+    <li><a href="#三怎么评估-agentic-推理的性能">三、怎么评估 Agentic 推理的性能？</a>
+      <ul>
+        <li><a href="#31-agentx-的数据集">3.1 AgentX 的数据集</a></li>
+        <li><a href="#32-怎么看-agentx-榜单">3.2 怎么看 AgentX 榜单？</a></li>
+        <li><a href="#33-核心指标">3.3 核心指标</a></li>
+      </ul>
+    </li>
+    <li><a href="#四显存优化存下并复用更多的-kv">四、显存优化：存下并复用更多的 KV</a>
+      <ul>
+        <li><a href="#41-prefix-复用与-kv-cache-offloading">4.1 Prefix 复用与 KV Cache Offloading</a></li>
+        <li><a href="#42-umbp调度器感知的多级-kv-缓存">4.2 UMBP：调度器感知的多级 KV 缓存</a></li>
+        <li><a href="#43-dcp用通信换显存">4.3 DCP：用通信换显存</a>
+          <ul>
+            <li><a href="#431-为什么纯-tp-下-mla-会复制-kv">4.3.1 为什么纯 TP 下 MLA 会复制 KV？</a></li>
+            <li><a href="#432-tp-与-dcp-的对比">4.3.2 TP 与 DCP 的对比</a></li>
+            <li><a href="#433-tp8--dcp8-下的通信流程">4.3.3 TP8 + DCP8 下的通信流程</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#五计算优化mono-decode-kernel">五、计算优化：Mono Decode Kernel</a>
+      <ul>
+        <li><a href="#51-为什么需要-mono-kernel">5.1 为什么需要 Mono Kernel？</a></li>
+        <li><a href="#52-每层两个-kernel">5.2 每层两个 Kernel</a></li>
+        <li><a href="#53-为什么主要用于小并发">5.3 为什么主要用于小并发？</a></li>
+      </ul>
+    </li>
+    <li><a href="#六调度优化--prefill-schedule-interval">六、调度优化：<code>--prefill-schedule-interval</code></a>
+      <ul>
+        <li><a href="#61-agentic-流量在调度上的问题">6.1 Agentic 流量在调度上的问题</a></li>
+        <li><a href="#62-为什么要延迟-prefill">6.2 为什么要延迟 Prefill？</a></li>
+        <li><a href="#63-实现细节">6.3 实现细节</a></li>
+        <li><a href="#64-适用场景与代价">6.4 适用场景与代价</a></li>
+      </ul>
+    </li>
+    <li><a href="#七总结">七、总结</a></li>
+    <li><a href="#八参考资料">八、参考资料</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+<script>
+
+  var margin = 200;
+  var marginError = 50;
+
+  (function () {
+    var $window = $(window);
+    var $toc = $('#TOCView');
+    var tocHeight = $toc.height();
+
+    function onResize() {
+      var windowAndMarginHeight = $window.height() - margin;
+      if(tocHeight >= windowAndMarginHeight) {
+        $toc.css("overflow-y", "scroll")
+        $toc.css("max-height", (windowAndMarginHeight + marginError) + "px")
+      } else {
+        $toc.css("overflow-y", "hidden")
+        $toc.css("max-height", "9999999px")
+      }
+    }
+
+    $window.on('resize', onResize);
+    $(document).ready(onResize);
+  })();
+
+
+
+  (function () {
+    var $toc = $('#TableOfContents');
+    if ($toc.length > 0) {
+      var $window = $(window);
+
+      function onScroll() {
+        var currentScroll = $window.scrollTop();
+        var h = $('.anchor');
+        var id = "";
+        h.each(function (i, e) {
+          e = $(e);
+          if (e.offset().top - $(window).height()/3 <= currentScroll) {
+            id = decodeURIComponent(e.attr('id'));
+          }
+        });
+        var active = $toc.find('a.active');      
+        if (active.length == 1 && active.eq(0).attr('href') == '#' + id) return true;
+
+        active.each(function (i, e) {
+          
+            $(e).removeClass('active');
+          
+        });
+        $toc.find('a[href="#' + id + '"]').addClass('active')
+        $toc.find('a[href="#' + id + '"]').parentsUntil('#TableOfContents').each(function (i, e) {
+          $(e).children('a').parents('ul').show();          
+        });
+      }
+
+      $window.on('scroll', onScroll);
+      $(document).ready(function () {
+        
+        onScroll();
+      });
+    }
+  })();
+
+
+</script>
+   </div>
+      </div>
+      
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+        
+
+
+        <div class="article-content max-w-prose mb-20">
+          
+
+<h2 class="relative group">一、引言 
+    <div id="%E4%B8%80%E5%BC%95%E8%A8%80" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E4%B8%80%E5%BC%95%E8%A8%80" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<p>以 Claude Code、Codex 为代表的 Coding Agent 正在成为大模型推理最主要的流量来源之一。和传统的 Chat 不同，一个 Agent 任务往往要经过几十轮“模型推理 → 工具调用 → 再推理”的循环，上下文随轮数不断累积，中途还会派生出多个 Sub-agent 并行干活。这种负载（下文统称 Agentic Workload）把推理引擎的瓶颈从“算得快不快”推向了“KV Cache 存不存得下、复用得了多少”，以及“忽高忽低的流量下调度稳不稳”。</p>
+<p>今年 vLLM 社区围绕 Agentic Workload 做了大量工作，并在 SemiAnalysis 的 InferenceX AgentX 榜单上做了系统性的验证。本文将先拆解一个 Agent 任务的执行过程，总结这类负载的特点和挑战；然后介绍如何用 AgentX 评估推理引擎在 Agentic 场景下的表现；最后从显存、计算和调度三个方面，介绍 vLLM 中几项有代表性的优化：KV Offloading（以 AMD 的 UMBP 为例）、DCP（Decode Context Parallelism）、Mono Decode Kernel 和 <code>--prefill-schedule-interval</code>。</p>
+<blockquote>
+<p>Note：本文涉及的 vLLM 实现基于 <code>main</code> 分支 Commit <code>5cae6fd0c9</code>（2026/10/30）。这些特性大多仍在快速演进，具体参数和行为请以最新代码为准。</p>
+</blockquote>
+
+
+<h2 class="relative group">二、什么是 Agentic Workload？ 
+    <div id="%E4%BA%8C%E4%BB%80%E4%B9%88%E6%98%AF-agentic-workload" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E4%BA%8C%E4%BB%80%E4%B9%88%E6%98%AF-agentic-workload" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+
+
+<h3 class="relative group">2.1 一个 Agent 任务是怎么执行的？ 
+    <div id="21-%E4%B8%80%E4%B8%AA-agent-%E4%BB%BB%E5%8A%A1%E6%98%AF%E6%80%8E%E4%B9%88%E6%89%A7%E8%A1%8C%E7%9A%84" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#21-%E4%B8%80%E4%B8%AA-agent-%E4%BB%BB%E5%8A%A1%E6%98%AF%E6%80%8E%E4%B9%88%E6%89%A7%E8%A1%8C%E7%9A%84" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p><strong>🌰 举个例子：</strong></p>
+<p>用户在 Coding Agent 中输入“帮我实现 XXX 功能”，接下来会发生这些事情：</p>
+<ol>
+<li>用户输入一个 Prompt；</li>
+<li>Model Call：LLM 执行推理，此时上下文约 45.7k Tokens（System Prompt、工具定义、用户输入等）；</li>
+<li>Tool Call：Agent 读取代码、理解当前项目；</li>
+<li>Model Call：LLM 再次推理，上下文约 48.4k Tokens，即上一轮的全部历史加上少量新 Token（工具返回结果）；</li>
+<li>Tool Call：Agent 开始写代码；</li>
+<li>……（中间省略 N 轮）；</li>
+<li>Model Call：上下文已经增长到约 108.5k Tokens；</li>
+<li>主 Agent 分裂（Fan Out）出多个 Sub-agent，自己进入等待状态，如：Sub-agent 1 以主 Agent 提供的约 10k Tokens 信息为起点推理，再调用工具查阅技术文档（上下文涨到约 29.4k）；Sub-agent 2 同样从约 10k Tokens 开始，调用工具执行测试（上下文涨到约 59.3k），二者完成后各自返回结果；</li>
+<li>主 Agent 收到所有 Sub-agent 的返回结果；</li>
+<li>Model Call：主 Agent 继续推理，上下文约 141.5k Tokens，即之前的 108.5k 加上 Sub-agent 返回的新内容；</li>
+<li>Agent 总结当前进展并通知用户；</li>
+<li>用户根据结果输入下一步指令，进入新一轮循环。</li>
+</ol>
+<p>把这个过程画出来，就是下图：</p>
+<p>
+    <figure>
+      <img class="my-0 rounded-md" loading="lazy" src="./images/agent-workflow-kv-growth.svg" alt="图：一个 Coding Agent 任务的执行过程，以及每次 Model Call 的上下文长度和 GPU 负载变化" />
+      
+    </figure>
+</p>
+<p>上图按时间从左到右展开。上半部分是各个角色的执行顺序：主 Agent 的 Model Call 和 Tool Call 交替进行，中途 Fan Out 出两个 Sub-agent，主 Agent 在虚线框内等待。中间的柱状图是每次 Model Call 时的上下文长度，也就是这次推理需要用到的 KV Cache 长度：它只增不减，从 45.7k 一路涨到 141.5k。最下面一行是 GPU 的忙闲状态：Tool Call 期间 GPU 空闲，Sub-agent 同时启动时又出现一个并发洪峰。</p>
+
+
+<h3 class="relative group">2.2 Agentic Workload 的特点 
+    <div id="22-agentic-workload-%E7%9A%84%E7%89%B9%E7%82%B9" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#22-agentic-workload-%E7%9A%84%E7%89%B9%E7%82%B9" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>从上面的例子可以归纳出三个特点：</p>
+<ul>
+<li><strong>一个任务是多轮迭代、多个模型共同完成的</strong>：主 Agent 和 Sub-agent 各自推理，某些 Sub-agent 还可能使用更快、更轻量的模型去执行简单任务；</li>
+<li><strong>上下文越滚越长</strong>：每一轮推理都会带上之前的全部上下文，新增的只是工具结果和少量用户输入，因此相邻两轮之间绝大部分前缀是相同的；</li>
+<li><strong>GPU 忽忙忽闲</strong>：Agent 执行 Tool Call 时，对应的推理请求处于空闲状态；Agent 同时 Fan Out 大量 Sub-agent 时，多个推理请求一起涌入，出现负载洪峰。</li>
+</ul>
+<p>AMD 在 <a href="https://www.amd.com/en/developer/resources/technical-articles/2026/rebuilding-agentic-ai-for-amd-gpu.html" target="_blank">Rebuilding Agentic AI for AMD GPU</a> 一文中把这些特点和 Chat 时代的假设逐条做了对比，很有参考价值：</p>
+<table>
+  <thead>
+      <tr>
+          <th>Agentic 负载的特点</th>
+          <th>被打破的 Chat 时代假设</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>多轮会话，上下文随轮数线性增长</td>
+          <td>Prefill 是一次性开销</td>
+      </tr>
+      <tr>
+          <td>理论 KV Cache 命中率极高</td>
+          <td>全部重算也无所谓</td>
+      </tr>
+      <tr>
+          <td>Tool Call 之间存在大量短间隔</td>
+          <td>延迟约等于 TTFT / TPOT</td>
+      </tr>
+      <tr>
+          <td>短生命周期的 Sub-agent 带来突发流量</td>
+          <td>流量是平稳的</td>
+      </tr>
+      <tr>
+          <td>上下文长度超出 HBM 容量</td>
+          <td>KV Cache 能放进 GPU 显存</td>
+      </tr>
+  </tbody>
+</table>
+
+
+<h3 class="relative group">2.3 Agentic 推理面临的挑战 
+    <div id="23-agentic-%E6%8E%A8%E7%90%86%E9%9D%A2%E4%B8%B4%E7%9A%84%E6%8C%91%E6%88%98" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#23-agentic-%E6%8E%A8%E7%90%86%E9%9D%A2%E4%B8%B4%E7%9A%84%E6%8C%91%E6%88%98" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p><strong>挑战一：重复的超长上下文。</strong>——每一轮推理都要 Prefill 大量重复的历史上下文。如果每次都从头重算，TTFT 会随着轮数增长越来越长，用户体验很差。因此必须依赖 Prefix Caching 尽量复用已经算好的 KV，KV Cache 命中率成了 Agentic 场景下最关键的指标之一。Prefill 完成后进入 Decode（吐字）阶段，这时用户感受到的是 Interactivity，即每个用户每秒能拿到多少个输出 Token。</p>
+<p><strong>挑战二：突发的高并发。</strong>——主 Agent 同时 Fan Out 大量 Sub-agent 时，GPU 的计算压力会突然变大，引擎从“少量请求、Memory-Bound 的 Decode”切换到“大并发、Compute-Bound”的状态。与此同时，主 Agent 虽然在等待，但它已经算好的 KV Cache 还不能删（Keep It Warm），因为 Sub-agent 全部返回后，主 Agent 还要在原来的上下文上继续推理，否则就得重算整个前缀。这意味着显存既要容纳 Sub-agent 的新上下文，又要保住主 Agent 的旧上下文。对 Kernel 来说，它要求在小并发和大并发下都有好的性能，泛化性要好。</p>
+<p>因此，面对 Agentic Workload，我们应该重点关注下面几件事：</p>
+<ul>
+<li><strong>核心性能指标发生变化</strong>：大多数轮次等待的是 Tool Call 而不是人，单看 TTFT 或 TPOT 意义有限，更应该在 P90 端到端延迟约束下，比较每卡 Token 吞吐和每百万 Token 的 TCO；</li>
+<li><strong>KV Cache Offloading 成为必选项</strong>：上下文长度超出 HBM 能容纳的范围后，KV Cache 必须下沉到 CPU DRAM 乃至 NVMe SSD，问题不再是“要不要 Offload”，而是怎样以低成本、正确地 Offload；</li>
+<li><strong>调度器要能“看见”KV Cache 在哪</strong>：一个前缀从所有引擎的 HBM 中被淘汰后，可能还躺在某个节点的 DRAM 或 SSD 里，只有调度器知道它在哪、取回来要多久，才能把它变成真正的命中，而不是又一次重算。</li>
+</ul>
+
+
+<h2 class="relative group">三、怎么评估 Agentic 推理的性能？ 
+    <div id="%E4%B8%89%E6%80%8E%E4%B9%88%E8%AF%84%E4%BC%B0-agentic-%E6%8E%A8%E7%90%86%E7%9A%84%E6%80%A7%E8%83%BD" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E4%B8%89%E6%80%8E%E4%B9%88%E8%AF%84%E4%BC%B0-agentic-%E6%8E%A8%E7%90%86%E7%9A%84%E6%80%A7%E8%83%BD" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<p>在介绍具体优化之前，先来看下怎么衡量“优化有没有用”。传统的固定输入输出长度 Benchmark 很难反映上面这些特点，SemiAnalysis 因此推出了 <a href="https://inferencex.semianalysis.com/agentx" target="_blank">InferenceX AgentX</a>：一个基于真实 Agentic Coding Trace、支持 1M 上下文的多轮推理 Benchmark，以 Apache 2.0 协议开源，并在 1000 多张加速卡上持续运行、公开结果。</p>
+
+
+<h3 class="relative group">3.1 AgentX 的数据集 
+    <div id="31-agentx-%E7%9A%84%E6%95%B0%E6%8D%AE%E9%9B%86" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#31-agentx-%E7%9A%84%E6%95%B0%E6%8D%AE%E9%9B%86" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>AgentX 默认使用的数据集是 <code>semianalysis_cc_traces_weka_062126</code>，其中的 <code>cc</code> 指 Claude Code：它由 SemiAnalysis 内部的匿名 Claude Code 会话 Trace 构建，脱敏时保留了前缀复用的模式，测试时由 AIPerf 按原始的请求节奏回放。根据 vLLM 的 <a href="https://vllm.ai/blog/2026-09-08-vllm-agentx" target="_blank">AgentX 博客</a>，这批 Trace 有以下特征：</p>
+<ul>
+<li>每个会话的轮数中位数为 <strong>43</strong> 轮；</li>
+<li>单个请求的输入长度中位数为 <strong>142K</strong> Tokens，输出长度中位数仅为 <strong>444</strong> Tokens；</li>
+<li>理论 Prefix Cache 命中率超过 <strong>96%</strong>；</li>
+<li><strong>44%</strong> 的会话包含 Sub-agent，中位数为 <strong>4</strong> 个。</li>
+</ul>
+<p>输入 142K、输出 444，两者相差两个数量级以上。也就是说，这类负载的主要成本不在 Decode（生成），而在于反复地处理、保存和复用超长上下文。</p>
+
+
+<h3 class="relative group">3.2 怎么看 AgentX 榜单？ 
+    <div id="32-%E6%80%8E%E4%B9%88%E7%9C%8B-agentx-%E6%A6%9C%E5%8D%95" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#32-%E6%80%8E%E4%B9%88%E7%9C%8B-agentx-%E6%A6%9C%E5%8D%95" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>AgentX 榜单上的每一条曲线，代表某个推理引擎（如 vLLM、SGLang）在某种硬件上运行某个模型（如 DeepSeek-V4-Pro），在不同并发点下测得的性能连线。每个点对应一个并发数：并发越高，系统总吞吐越高，但分到每个用户头上的速度越慢，所以曲线通常从左上方向右下方延伸。</p>
+<p>
+    <figure>
+      <img class="my-0 rounded-md" loading="lazy" src="./images/pareto-frontier.svg" alt="图：AgentX 榜单的读法：每条曲线是一组配置在不同并发下的帕累托前沿，越靠右上越好" />
+      
+    </figure>
+</p>
+<p>这条曲线就是帕累托前沿（Pareto Frontier）：在曲线上的每一点，想让单用户更快就必须牺牲总吞吐，反之亦然，无法在不损失一方的情况下改善另一方。比较两组配置时，看谁的曲线更靠右上：</p>
+<ul>
+<li><strong>向上</strong>：同样的单用户速度下，每张卡能处理更多 Token，挑战在于存下并复用更多的历史 KV；</li>
+<li><strong>向右</strong>：同样的吞吐下，每个用户更快，挑战在于调度和计算效率。</li>
+</ul>
+<p>实际比较时，通常会先画一条 SLO 线（如上图中的“P90 Interactivity ≥ 50 tok/s”），再看各条曲线在这条线上能达到多高的吞吐。vLLM 的 AgentX 博客就是以 P90 &gt; 50 tok/s 为门槛报告结果的。</p>
+
+
+<h3 class="relative group">3.3 核心指标 
+    <div id="33-%E6%A0%B8%E5%BF%83%E6%8C%87%E6%A0%87" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#33-%E6%A0%B8%E5%BF%83%E6%8C%87%E6%A0%87" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>榜单的两个坐标轴，分别对应两类人最关心的指标：</p>
+<ul>
+<li><strong>横轴面向用户体验</strong>：P90 Interactivity，即第 90 百分位的单用户输出速度（tok/s/user），代表大部分用户实际感受到的推理速度；</li>
+<li><strong>纵轴面向服务提供方和硬件厂商</strong>：每张 GPU 每秒处理的总 Token 数（Total Tokens per GPU-second），其中同时计入输入 Token、输出 Token 和命中缓存的 Token；也可以按 TCO 折算成“每美元能提供多少 Token”。</li>
+</ul>
+<p>TCO 是 Total Cost of Ownership（总拥有成本）的缩写，指拥有并运行一套系统的全部成本，除了买 GPU 服务器的钱，还包括电力、机房、网络和运维等开销，最终折算成“每小时多少美元”。对于服务提供方，真正有意义的是“单位成本、单位时间能提供多少 Token”，所以纵轴最终要落到 TCO 上。</p>
+<p>举个具体的数字：vLLM 在 12 张 GB300 上运行 DeepSeek-V4-Pro，256 个并发 Agent 会话下，P90 Interactivity 为 58.3 tok/s，每卡每秒处理约 83K 个 Token。按 GPU TCO 每小时 27.72 美元计算，同样的 Token 量如果调用 Opus 5 API，每小时约需 2926 美元，相差约 106 倍。</p>
+
+
+<h2 class="relative group">四、显存优化：存下并复用更多的 KV 
+    <div id="%E5%9B%9B%E6%98%BE%E5%AD%98%E4%BC%98%E5%8C%96%E5%AD%98%E4%B8%8B%E5%B9%B6%E5%A4%8D%E7%94%A8%E6%9B%B4%E5%A4%9A%E7%9A%84-kv" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E5%9B%9B%E6%98%BE%E5%AD%98%E4%BC%98%E5%8C%96%E5%AD%98%E4%B8%8B%E5%B9%B6%E5%A4%8D%E7%94%A8%E6%9B%B4%E5%A4%9A%E7%9A%84-kv" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+
+
+<h3 class="relative group">4.1 Prefix 复用与 KV Cache Offloading 
+    <div id="41-prefix-%E5%A4%8D%E7%94%A8%E4%B8%8E-kv-cache-offloading" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#41-prefix-%E5%A4%8D%E7%94%A8%E4%B8%8E-kv-cache-offloading" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>既然 Agentic 负载的理论命中率超过 96%，最直接的优化就是：算过的 KV 尽量不要再算。vLLM 的 Prefix Caching 会以 Block 为单位对前缀做哈希，命中的 Block 直接复用。问题在于 HBM 容量有限：上下文动辄上百 K，再加上主 Agent 等待 Sub-agent 时需要 Keep Warm 的那部分 KV，HBM 很快就会被占满，此时旧的 Block 会被淘汰，下一轮又得重算。</p>
+<p>KV Cache Offloading 的思路是把被挤出 HBM 的 KV 下沉到容量更大、成本更低的存储层，命中时再加载回来，用存储换计算。vLLM 通过 KV Connector 接入了多种 Offloading 方案，如：</p>
+<ul>
+<li><strong>LMCache</strong>：<code>LMCacheConnectorV1</code> / <code>LMCacheMPConnector</code>；</li>
+<li><strong>Mooncake Store</strong>：<code>MooncakeStoreConnector</code>，支持 CPU 内存和磁盘多级缓存，vLLM 的 AgentX 实验就以它作为分布式 KV 缓存池；</li>
+<li><strong>UMBP</strong>：<code>UMBPStoreConnector</code>，基于 AMD MoRI 库，是本节重点介绍的对象。</li>
+</ul>
+<p>以 AMD MI355X 服务器为例，一个典型的三级 KV 缓存架构如下图所示：</p>
+<p>
+    <figure>
+      <img class="my-0 rounded-md" loading="lazy" src="./images/kv-cache-tiers-mi355x.svg" alt="图：以 MI355X 为例的 GPU HBM / CPU DRAM / NVMe SSD 三级 KV 缓存架构" />
+      
+    </figure>
+</p>
+<p>从上往下看，容量越来越大，带宽越来越低：</p>
+<table>
+  <thead>
+      <tr>
+          <th>层级</th>
+          <th>介质</th>
+          <th>容量</th>
+          <th>带宽</th>
+          <th>与上一级的传输方式</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>L1</td>
+          <td>GPU HBM3E</td>
+          <td>每卡 288 GB，8 卡共约 2.3 TB</td>
+          <td>每卡峰值 8 TB/s</td>
+          <td>—</td>
+      </tr>
+      <tr>
+          <td>L2</td>
+          <td>CPU DRAM</td>
+          <td>每节点 TB 级（AMD 实验中 KV 预算为 1 TB）</td>
+          <td>本地 memcpy 实测上限约 104 GB/s</td>
+          <td>PCIe 5.0 x16（单向理论 64 GB/s），SDMA 回填实测约 51 GB/s</td>
+      </tr>
+      <tr>
+          <td>L3</td>
+          <td>NVMe SSD</td>
+          <td>数 TB 到数十 TB，取决于盘数</td>
+          <td>单盘 PCIe 5.0 x4 理论约 16 GB/s</td>
+          <td>NVMe 读写，GPU Direct Storage 等直连路径在规划中</td>
+      </tr>
+      <tr>
+          <td>远端</td>
+          <td>其他节点的 DRAM / SSD</td>
+          <td>随节点数扩展</td>
+          <td>Pollara 400G NIC，RDMA 实测约 42 GB/s</td>
+          <td>RDMA</td>
+      </tr>
+  </tbody>
+</table>
+<p>其中 HBM 的规格来自 AMD 官方参数，L2 和远端的实测带宽来自 AMD 文章中的回填链路测试，SSD 的数字是按 PCIe 规格估算的理论值。可以看到，L2 → L1 这一跳只有约 51 GB/s，和 HBM 的 8 TB/s 相差两个数量级。因此，Offloading 能不能有收益，关键在于加载能不能和模型的前向计算重叠：如果加载卡在关键路径上，只是把“重算”换成了“等待”。</p>
+
+
+<h3 class="relative group">4.2 UMBP：调度器感知的多级 KV 缓存 
+    <div id="42-umbp%E8%B0%83%E5%BA%A6%E5%99%A8%E6%84%9F%E7%9F%A5%E7%9A%84%E5%A4%9A%E7%BA%A7-kv-%E7%BC%93%E5%AD%98" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#42-umbp%E8%B0%83%E5%BA%A6%E5%99%A8%E6%84%9F%E7%9F%A5%E7%9A%84%E5%A4%9A%E7%BA%A7-kv-%E7%BC%93%E5%AD%98" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>UMBP（Unified Memory &amp; Bandwidth Pool）是 AMD MoRI 库中负责分级存储和分布式 KV 的组件。它管理一个横跨 HBM → Host DRAM → UMBP DRAM Pool → SSD 的逻辑缓存，并把自己掌握的信息暴露给做路由决策的那一层。</p>
+<p>AMD 认为，目前大多数 L3 KV 后端（文件存储、Mooncake、NIXL、HF3FS 等）都是“被动的字节仓库”：HBM 满了就往下推，命中了就往上拉，但哪个节点有哪个前缀、每个 Block 有多热、从哪个副本取最快，这些信息都锁在存储层里，调度器看不到。这对 Chat 流量问题不大，但对 Agentic 流量恰好相反：一个 Sub-agent 的前缀已经不在 HBM 里时，应该本地重算，还是去别的节点取？去哪个副本取？这完全取决于放置位置、热度和取回成本。UMBP 的设计围绕四个要点展开：</p>
+<ul>
+<li><strong>调度友好</strong>：UMBP Master 是一个覆盖所有层级的集群级 KV 放置目录，除了“谁有这个前缀”，还提供历史访问次数、最近访问时间、各节点容量和利用率、带宽和 RPC 延迟等信号，路由器可以据此构建代价模型，把请求发给“能最快服务它”的节点；</li>
+<li><strong>策略可定制</strong>：Offload、Load、淘汰和（规划中的）复制都是可插拔的策略接口，可以针对特定 Agentic 负载的回访模式调优，而不是写死一个 LRU；</li>
+<li><strong>Agent 感知的提示（WIP）</strong>：TTL、Session 固定、优先级等提示可以从服务 API 一路传到 UMBP，例如告诉它“Sub-agent 的父上下文很快会再用到”；</li>
+<li><strong>与 AMD 硬件深度协同</strong>：数据面基于 IBGDA、SDMA、GPU Direct Storage 等能力设计，在层间或节点间搬运 KV 的开销尽量逼近硬件极限。</li>
+</ul>
+<p>具体到 Agentic 负载，UMBP 有以下几个优势：</p>
+<ul>
+<li><strong>Reload 不占用 CU（计算单元）</strong>：L2 → L1 的回填可以走 SDMA 拷贝引擎，在零 CU 占用的情况下跑满约 51 GB/s 的 H2D 带宽，把 CU 留给 Prefill；</li>
+<li><strong>前缀可以跨节点复用</strong>：请求被路由到另一个节点时（如原节点过载、滚动升级、Sticky Session 丢失），前缀可以通过 RDMA 从远端取回，而不是重算；</li>
+<li><strong>提升的是冷启动和长尾</strong>：AMD 用 Kimi-K2.6-MXFP4（1P2D、128 并发）做的实验显示，把一部分 L2 切成可共享的 L3 后，累计命中率几乎不变（88.5% → 87.5%），但恢复会话的首次调用命中率明显提升，再配合加载预取优化，TTFT P99 从 17.3s 降到 5.4s（约 3.2 倍），总 Token 吞吐提升 7.7%。</li>
+</ul>
+<p>在 vLLM 中，UMBP 以 <code>UMBPStoreConnector</code> 的形式接入，目前主线支持 Embedded 模式：每个 Worker 在自己的进程内维护一块私有的 DRAM 池，配置方式如下（取自 <code>docs/features/umbp_store_connector_usage.md</code>）：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">vllm serve &lt;model&gt; <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  --enable-prefix-caching <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  --kv-transfer-config <span class="s1">&#39;{
+</span></span></span><span class="line"><span class="cl"><span class="s1">    &#34;kv_connector&#34;: &#34;UMBPStoreConnector&#34;,
+</span></span></span><span class="line"><span class="cl"><span class="s1">    &#34;kv_role&#34;: &#34;kv_both&#34;,
+</span></span></span><span class="line"><span class="cl"><span class="s1">    &#34;kv_load_failure_policy&#34;: &#34;recompute&#34;,
+</span></span></span><span class="line"><span class="cl"><span class="s1">    &#34;kv_connector_extra_config&#34;: {
+</span></span></span><span class="line"><span class="cl"><span class="s1">      &#34;mode&#34;: &#34;embedded&#34;,
+</span></span></span><span class="line"><span class="cl"><span class="s1">      &#34;total_capacity_bytes&#34;: 68719476736
+</span></span></span><span class="line"><span class="cl"><span class="s1">    }
+</span></span></span><span class="line"><span class="cl"><span class="s1">  }&#39;</span>
+</span></span></code></pre></div><p><code>load_async</code> 默认开启，命中的 KV 在后台加载，请求等待加载完成后再参与调度；<code>kv_load_failure_policy</code> 设为 <code>recompute</code> 后，对象在查询和加载之间被淘汰时会退化为重算，而不是让请求失败。多个引擎共享同一个节点级 DRAM 池的 Standalone 模式，目前还在社区推进中。</p>
+
+
+<h3 class="relative group">4.3 DCP：用通信换显存 
+    <div id="43-dcp%E7%94%A8%E9%80%9A%E4%BF%A1%E6%8D%A2%E6%98%BE%E5%AD%98" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#43-dcp%E7%94%A8%E9%80%9A%E4%BF%A1%E6%8D%A2%E6%98%BE%E5%AD%98" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>Offloading 解决的是“HBM 装不下时放哪”，而 DCP 解决的是另一个问题：在 MLA 模型上，纯 TP 部署本身就在浪费 HBM。</p>
+
+
+<h4 class="relative group">4.3.1 为什么纯 TP 下 MLA 会复制 KV？ 
+    <div id="431-%E4%B8%BA%E4%BB%80%E4%B9%88%E7%BA%AF-tp-%E4%B8%8B-mla-%E4%BC%9A%E5%A4%8D%E5%88%B6-kv" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#431-%E4%B8%BA%E4%BB%80%E4%B9%88%E7%BA%AF-tp-%E4%B8%8B-mla-%E4%BC%9A%E5%A4%8D%E5%88%B6-kv" aria-label="Anchor">#</a>
+    </span>        
+    
+</h4>
+<p>TP 切分 Attention 的方式是按 Head 切：每张卡负责一部分 Attention Head，以及这些 Head 对应的 KV。对于普通的 MHA，每个 Head 都有自己的 K、V，按 Head 切分 KV 天然成立。</p>
+<p>但 GQA 和 MLA 不一样：</p>
+<ul>
+<li>GQA 只有少量 KV Head，当 TP 数超过 KV Head 数时，KV 无法再继续切分，只能在多张卡上重复存储；</li>
+<li>MLA 走得更远，它把 K 和 V 压缩成一个所有 Query Head 共享的低秩 Latent 向量（如 DeepSeek 系列的 <code>c_KV</code> 加上 RoPE 部分的 <code>k_rope</code>）。既然每个 Head 都要用完整的 Latent，TP 的每张卡就都得存一份完整的 Latent KV Cache。</li>
+</ul>
+<p>以一个 128 个 Query Head 的 MLA 模型（如 DeepSeek-R1）在 TP8 下部署为例，每张卡负责 16 个 Head，但每张卡上都存着全部 Token 的 Latent KV，8 张卡上是 8 份一模一样的副本：</p>
+<p>
+    <figure>
+      <img class="my-0 rounded-md" loading="lazy" src="./images/tp-vs-dcp-kv-layout.svg" alt="图：纯 TP8 与 TP8 &#43; DCP8 下 MLA Latent KV Cache 在 8 张卡上的分布" />
+      
+    </figure>
+</p>
+<p>DCP 换了一个切分维度：不再按 Head 切，而是按序列（Token）维度切 KV。默认的 <code>cp_kv_cache_interleave_size = 1</code> 表示逐 Token 交错存储，第 <code>i</code> 个 Token 存在第 <code>i % 8</code> 张卡上。这样每张卡只存 1/8 的 KV，卡数越多，单卡的 KV 占用越小。</p>
+
+
+<h4 class="relative group">4.3.2 TP 与 DCP 的对比 
+    <div id="432-tp-%E4%B8%8E-dcp-%E7%9A%84%E5%AF%B9%E6%AF%94" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#432-tp-%E4%B8%8E-dcp-%E7%9A%84%E5%AF%B9%E6%AF%94" aria-label="Anchor">#</a>
+    </span>        
+    
+</h4>
+<table>
+  <thead>
+      <tr>
+          <th></th>
+          <th>纯 TP</th>
+          <th>TP + DCP</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>KV 切分方式</td>
+          <td>按 Head</td>
+          <td>按 Token（序列）</td>
+      </tr>
+      <tr>
+          <td>MLA 下单卡 KV 占用</td>
+          <td>完整副本</td>
+          <td>1 / DCP 数</td>
+      </tr>
+      <tr>
+          <td>单卡 Attention 需要读的 KV</td>
+          <td>全部 Token</td>
+          <td>1 / DCP 数的 Token</td>
+      </tr>
+      <tr>
+          <td>额外通信</td>
+          <td>无</td>
+          <td>每层 AllGather Q，以及部分结果的合并通信</td>
+      </tr>
+      <tr>
+          <td>适合场景</td>
+          <td>短上下文、KV 压力小</td>
+          <td>长上下文、KV 是瓶颈</td>
+      </tr>
+  </tbody>
+</table>
+<p>DCP 的代价是每层多出的通信，收益是两方面的：一是 KV 容量变成原来的 N 倍，能同时容纳更多序列；二是 Decode 时每张卡的 Attention 只需扫描 1/N 的 KV，而在长上下文下 Memory-Bound 的 Attention 占 Decode Step 的比例越来越大，所以 Decode 延迟也会下降。</p>
+<p>这正是 Agentic 负载需要的：上下文长、要 Keep Warm 的 KV 多、命中率决定成败。KV 容量翻倍后，更多历史前缀能留在 HBM 里，被淘汰后重算的次数自然就少了，本质上是用通信换显存，再用显存换计算。vLLM 的 <a href="https://vllm.ai/blog/2026-08-07-decode-context-parallelism" target="_blank">DCP 博客</a> 在 8 张 B200 上运行 Kimi K2.6（NVFP4）、输入中位数约 67K 的 Agentic Trace：纯 TP 在 64 并发时就把 KV 显存用满（100%），最高约 1863 tok/s/GPU；开启 DCP 后可以跑到 512 并发，KV 占用为 82%，吞吐达到约 6091 tok/s/GPU。</p>
+<p>值得注意的是，DCP 并不是万能的。vLLM 的 AgentX 博客提到，DCP 对纯 MLA 模型（DeepSeek-R1、Kimi K2.5/K2.7）和混合 MLA 模型（Kimi K3）效果很好，但在 Attention 结构更复杂的 DeepSeek-V4 上，即使做了大量通信计算重叠和 Kernel 优化，DCP 也只是追平而没有超过 DEP（Data + Expert Parallelism）。并行策略必须跟着模型结构走。</p>
+
+
+<h4 class="relative group">4.3.3 TP8 + DCP8 下的通信流程 
+    <div id="433-tp8--dcp8-%E4%B8%8B%E7%9A%84%E9%80%9A%E4%BF%A1%E6%B5%81%E7%A8%8B" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#433-tp8--dcp8-%E4%B8%8B%E7%9A%84%E9%80%9A%E4%BF%A1%E6%B5%81%E7%A8%8B" aria-label="Anchor">#</a>
+    </span>        
+    
+</h4>
+<p>在 TP8 + DCP8 部署下，DCP 复用 TP 的 8 个 Rank（<code>decode_context_parallel_size</code> 必须整除 <code>tensor_parallel_size</code>）。一次 Decode 中 Attention 部分的通信流程如下：</p>
+<p>
+    <figure>
+      <img class="my-0 rounded-md" loading="lazy" src="./images/dcp-communication-flow.svg" alt="图：TP8 &#43; DCP8 部署下，DCP 每层 Attention 的通信流程" />
+      
+    </figure>
+</p>
+<ol>
+<li><strong>TP 计算 Q</strong>：每张卡按 TP 只算出自己负责的 16 个 Head 的 Query，Shape 为 <code>[B, 16, D]</code>；</li>
+<li><strong>AllGather Q</strong>：在 DCP 组内 AllGather，每张卡拿到全部 128 个 Head 的 Query <code>[B, 128, D]</code>。Decode 时每个请求只有一个 Token，这一步的通信量很小；<code>dcp_q_replicate</code> 还可以在加载时把 Query 投影复制到组内每张卡上，直接跳过这次 AllGather；</li>
+<li><strong>本地 Attention</strong>：每张卡用全部 128 个 Head 的 Query，对自己那 1/8 的 KV 做 Attention，得到部分结果 <code>O_i [B, 128, D]</code> 和对应的 LSE（Log-Sum-Exp）<code>[B, 128]</code>；</li>
+<li><strong>交换并合并</strong>：各卡的部分结果需要按 Online Softmax 的方式用 LSE 加权合并。当 <code>dcp_comm_backend = &quot;a2a&quot;</code> 时，各卡按 Head 切片做一次 All-to-All，GPU j 收到所有卡上第 <code>[16j, 16j + 16)</code> 个 Head 的部分结果和 LSE，再由 Triton Kernel 合并得到 <code>[B, 16, D]</code>；</li>
+<li><strong>回到 TP 路径</strong>：合并后的输出又回到了“每张卡负责 16 个 Head”的 TP 布局，接着做 <code>o_proj</code> 即可。</li>
+</ol>
+<p><code>dcp_comm_backend</code> 默认是 <code>&quot;ag_rs&quot;</code>，即先 AllGather 各卡的部分结果和 LSE，合并后再 ReduceScatter 回各卡的 Head 切片（<code>cp_lse_ag_out_rs()</code>）。根据 <code>vllm/config/parallel.py</code> 中的注释，<code>&quot;a2a&quot;</code> 把 MLA 模型每层的 NCCL 调用从 3 次减少到 2 次。实现位于 <code>vllm/v1/attention/ops/dcp.py</code> 的 <code>dcp_a2a_lse_reduce()</code>，在支持的平台上还会使用基于对称内存的直连 A2A 实现。vLLM 的 AgentX 博客中提到，在 Kimi K3 上把 GPU 间的写入直接融合进 Attention Kernel 后，每层延迟比默认的 DCP8 实现降低约 13%。</p>
+
+
+<h2 class="relative group">五、计算优化：Mono Decode Kernel 
+    <div id="%E4%BA%94%E8%AE%A1%E7%AE%97%E4%BC%98%E5%8C%96mono-decode-kernel" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E4%BA%94%E8%AE%A1%E7%AE%97%E4%BC%98%E5%8C%96mono-decode-kernel" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+
+
+<h3 class="relative group">5.1 为什么需要 Mono Kernel？ 
+    <div id="51-%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81-mono-kernel" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#51-%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81-mono-kernel" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>回到第二节的例子：主 Agent 在单个用户的会话里一轮一轮地推理，大部分时间并发很低。此时 Decode 每一步只有很少几行 Token，每个算子的计算量都很小，GPU 的时间大量花在 Kernel 启动间隙、中间结果写回 HBM 再读出、以及 TP All-Reduce 的同步上，是典型的 Memory-Bound（甚至 Launch-Bound）场景。而用户恰好在等这些 Token，这部分延迟直接决定了 Interactivity，也就是帕累托图上“向右”的那个方向。</p>
+<p>Mono Kernel 的思路是极致的融合：把一个 Decoder Layer 中尽可能多的计算塞进少数几个常驻（Persistent）Kernel 里，Kernel 内部的各个阶段通过设备端的标志位同步，TP 的 All-Reduce 也在 Kernel 内部完成，不再需要逐个启动、逐个落盘。</p>
+
+
+<h3 class="relative group">5.2 每层两个 Kernel 
+    <div id="52-%E6%AF%8F%E5%B1%82%E4%B8%A4%E4%B8%AA-kernel" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#52-%E6%AF%8F%E5%B1%82%E4%B8%A4%E4%B8%AA-kernel" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>vLLM 目前在 MI355X 上为 DeepSeek-V4.1-Flash 和 DeepSeek-V4-Pro（TP8）实现了 Mono Decode Layer，通过 <code>--monokernel</code> 开启。下面以 DeepSeek-V4-Pro 为例（PR <a href="https://github.com/vllm-project/vllm/pull/61482" target="_blank">#61482</a>，代码位于 <code>vllm/models/deepseek_v4/amd/mono/</code>），它基于 FlyDSL 编写，参考了 ROCm/ATOM 中 DeepSeek-V4.1 的 Mono Decode 设计：</p>
+<p>
+    <figure>
+      <img class="my-0 rounded-md" loading="lazy" src="./images/mono-decode-kernels.svg" alt="图：默认路径与 Mono Decode 路径下一个 DeepSeek-V4-Pro Decoder Layer 的 Kernel 组成对比" />
+      
+    </figure>
+</p>
+<p>左边是默认路径的示意：一个 Decoder Layer 由 mHC Seam、各种投影 GEMM、Norm、RoPE、KV 写入、稀疏 Attention、All-Reduce、Router、Shared Expert、Routed Experts 等大量细粒度 Kernel 串联而成。</p>
+<p>右边是 Mono Decode 路径，每层只有两次 Kernel 启动：</p>
+<ul>
+<li><strong>K1</strong>：Attention 前的 mHC Seam（Gate、Sinkhorn、Norm），以及 Attention 的前半部分（<code>wqkv</code> 投影、Q / KV Norm 和 KV 写入、<code>wq_b</code> 投影和 RoPE），并把 Normed Input 和 <code>qr</code> 交给 vLLM；</li>
+<li><strong>K1 与 K2 之间</strong>：vLLM 原有的 Compressor 在 K1 的 Normed Input 上运行；如果是 CSA 层，Indexer 还会根据 <code>qr</code> 选出 Top-k；</li>
+<li><strong>K2</strong>：根据 Top-k 构建 Key Table，然后完成 Attention 的后半部分（Split Attention、Combine、逆 RoPE、<code>wo_a</code> / <code>wo_b</code>）、核内 TP All-Reduce、FFN Seam、MoE（Router、Shared Expert、Routed Experts）和第二次核内 TP All-Reduce，直接输出这一层的结果。</li>
+</ul>
+<p>在执行模型上，每次启动 256 个 CTA，每个 CU 常驻一个；每个阶段是一张 Task 表，CTA 按编号领取任务，后面的阶段只等待前面阶段的结果，因此不会死锁。GEMV 任务会先发起权重加载，再去轮询激活值是否就绪，把等待时间和访存重叠起来。跨卡方面，每个 Rank 有一块对称的 Uncached 缓冲区，各卡直接把 (Value, Tag) 对写到对端，Tag 由 Step 的 Epoch 决定，这样不需要每步清零，也不需要 Host 侧的钩子，整个过程可以被 CUDA Graph（HIP Graph）完整捕获。</p>
+
+
+<h3 class="relative group">5.3 为什么主要用于小并发？ 
+    <div id="53-%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%BB%E8%A6%81%E7%94%A8%E4%BA%8E%E5%B0%8F%E5%B9%B6%E5%8F%91" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#53-%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%BB%E8%A6%81%E7%94%A8%E4%BA%8E%E5%B0%8F%E5%B9%B6%E5%8F%91" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>Mono Kernel 有明确的生效条件：只在纯 Decode Step、每步不超过 64 行（如 8 个请求 × 每请求 7 个 DSpark Token 再留一点余量）、TP8 部署下启用，Prefill 和混合 Step 仍然走原来的路径，两条路径在层边界共享同样的 Tensor，可以自由交替。</p>
+<p>这个设计取舍背后的原因是：小并发时 Decode 是 Memory-Bound 的，融合省掉的启动开销和 HBM 往返在总时间中占比很高；大并发时 Batch 变大，GEMM 已经能把算力吃满，进入 Compute-Bound 区间，融合带来的收益就很有限了。PR #61482 在 8 张 MI355X（TP8）上跑 AgentX 的结果也印证了这一点：</p>
+<table>
+  <thead>
+      <tr>
+          <th>并发</th>
+          <th>P50 单用户速度（tok/s/user）</th>
+          <th>输出吞吐提升</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>1</td>
+          <td>221.45 → 285.03</td>
+          <td>+28.7%</td>
+      </tr>
+      <tr>
+          <td>4</td>
+          <td>205.30 → 259.79</td>
+          <td>+26.5%</td>
+      </tr>
+      <tr>
+          <td>8</td>
+          <td>181.00 → 202.48</td>
+          <td>+11.9%</td>
+      </tr>
+  </tbody>
+</table>
+<p>并发越低收益越大，到 8 并发时收益已经明显收窄。所以 Mono Kernel 优化的是 Agent 推理中“少量会话、用户在等结果”的场景，主要把帕累托曲线的右下段往右推。类似的思路在 vLLM 中也已经扩展到 Kimi K3、MiniMax M3 等模型的 AMD 路径上。</p>
+
+
+<h2 class="relative group">六、调度优化：<code>--prefill-schedule-interval</code> 
+    <div id="%E5%85%AD%E8%B0%83%E5%BA%A6%E4%BC%98%E5%8C%96--prefill-schedule-interval" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E5%85%AD%E8%B0%83%E5%BA%A6%E4%BC%98%E5%8C%96--prefill-schedule-interval" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+
+
+<h3 class="relative group">6.1 Agentic 流量在调度上的问题 
+    <div id="61-agentic-%E6%B5%81%E9%87%8F%E5%9C%A8%E8%B0%83%E5%BA%A6%E4%B8%8A%E7%9A%84%E9%97%AE%E9%A2%98" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#61-agentic-%E6%B5%81%E9%87%8F%E5%9C%A8%E8%B0%83%E5%BA%A6%E4%B8%8A%E7%9A%84%E9%97%AE%E9%A2%98" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>Agentic 流量是“长短混合”的：既有刚启动的 Sub-agent 带来的长 Prefill，又有大量 Tool Call 返回后只追加几百到几千 Token 的短 Prefill，还有一直在 Decode 的请求。vLLM 的 AgentX 博客把调度优化分成两个层面：</p>
+<ul>
+<li><strong>单个引擎内</strong>：默认的 Chunked Prefill 调度是 FIFO 的，一个长 Prefill 可能每一步都占满 Token 预算，排在后面的短请求迟迟调度不上（队头阻塞）。<code>--long-prefill-token-threshold</code> 可以限制单个请求每步最多调度的 Token 数，设为 512 时，DeepSeek-V4-Pro 在 B300 上的总吞吐最多提升 93%，P90 Interactivity 提升约 2.3 倍，代价是长请求的 TTFT 变高；</li>
+<li><strong>多个 DP Rank 之间</strong>：这就是本节要介绍的 <code>--prefill-schedule-interval</code>。</li>
+</ul>
+
+
+<h3 class="relative group">6.2 为什么要延迟 Prefill？ 
+    <div id="62-%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%BB%B6%E8%BF%9F-prefill" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#62-%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%BB%B6%E8%BF%9F-prefill" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>在 MoE 模型的 DEP（Attention DP + MoE EP）部署中，每一层 MoE 都要做跨 Rank 的 All-to-All，这迫使所有 DP Rank 必须步调一致地前进：只要有一个 Rank 在这一步做了 Prefill，其他只做 Decode 的 Rank 也必须陪它等。如果 Prefill 恰好分散在不同 Rank 的不同 Step 上到达（Sub-agent Fan Out、Tool Call 陆续返回都会造成这种情况），就会有很多 Step 被拖慢，Decode 的 ITL（Inter-Token Latency）反复抖动。</p>
+<p><code>--prefill-schedule-interval N</code> 的做法是：只在每 N 个 Engine Step 中的一个放行 Prefill，中间的 Step 只做 Decode。用于判断的 <code>step_counter</code> 在各个 DP Rank 之间是一致的，因此所有 Rank 的 Prefill 会被对齐到同一批 Step 上：</p>
+<p>
+    <figure>
+      <img class="my-0 rounded-md" loading="lazy" src="./images/prefill-schedule-interval.svg" alt="图：4 个 DP Rank 在 &ndash;prefill-schedule-interval=1 和 =4 下的 Prefill 分布与 Step 耗时" />
+      
+    </figure>
+</p>
+<p>上图中，默认情况下（interval = 1）6 个 Prefill 分散在 6 个不同的 Step 上，8 个 Step 里有 6 个被拖慢；设为 4 后，Prefill 被攒到 <code>step 0</code> 和 <code>step 4</code> 一起做，只有 2 个 Step 被拖慢，其余都是快速的纯 Decode Step。</p>
+<p>这也回答了“为什么攒一批做一次 Prefill，比分开做多次单个 Prefill 更好”：在步调一致的 DP 部署下，一个 Step 的耗时由最慢的 Rank 决定，Prefill 带来的“拖慢”是按 Step 计算的。把 Prefill 对齐到同一个 Step，相当于多个 Rank 共同分摊一次等待，而不是轮流让所有 Rank 各等一次；同时，攒在一起的 Prefill 也让每个 Rank 的 Batch 更大，GEMM 的计算效率更高。</p>
+
+
+<h3 class="relative group">6.3 实现细节 
+    <div id="63-%E5%AE%9E%E7%8E%B0%E7%BB%86%E8%8A%82" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#63-%E5%AE%9E%E7%8E%B0%E7%BB%86%E8%8A%82" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>参数定义在 <code>vllm/config/scheduler.py</code> 中，默认值为 1，即每一步都放行 Prefill：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">prefill_schedule_interval</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ge</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;&#34;&#34;Only admit prefill once every N engine steps, leaving the steps in
+</span></span></span><span class="line"><span class="cl"><span class="s2">between to decode alone. 1 (the default) admits prefill on every step.
+</span></span></span><span class="line"><span class="cl"><span class="s2">...
+</span></span></span></code></pre></div><p>对于 MoE 的 DP 部署，<code>DPEngineCoreProc</code> 根据 DP Rank 间同步的 <code>step_counter</code> 判断当前 Step 是否需要节流（<code>vllm/v1/engine/core.py</code>）：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">_should_throttle_prefills</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># Throttle new prefills to cadence-aligned steps for DP balancing.</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># step_counter is identical across DP ranks. On a fresh wave the</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># counter is 0, so prefills are admitted immediately after idle.</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">prefill_schedule_interval</span> <span class="o">&gt;</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">        <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">step_counter</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">prefill_schedule_interval</span> <span class="o">!=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span>
+</span></span></code></pre></div><p>结果作为 <code>throttle_prefills</code> 参数传给 <code>Scheduler.schedule()</code>。Scheduler 在节流的 Step 上会推迟所有 Prefill 计算，包括已经在做的 Chunked Prefill 的后续 Chunk。</p>
+<p>为了避免副作用，这里还有两个保护条件：</p>
+<ul>
+<li>只有当前存在正在 Decode 的请求时才推迟 Prefill，否则推迟没有意义，只会白白浪费一个 Step；</li>
+<li>容量保护（<code>prefill_capacity_bound</code>）：如果上一个放行 Step 都没能把等待队列清空，说明系统已经饱和，此时停止节流，否则 Prefill 能力会被压到原来的 1/N，等待队列会无限增长。</li>
+</ul>
+<p>对于没有 DP 协调的引擎（不开 DP 或稠密模型的 DP），Scheduler 会在本地按“距离上一次 Prefill 的已执行 Step 数”应用同样的节拍。</p>
+
+
+<h3 class="relative group">6.4 适用场景与代价 
+    <div id="64-%E9%80%82%E7%94%A8%E5%9C%BA%E6%99%AF%E4%B8%8E%E4%BB%A3%E4%BB%B7" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#64-%E9%80%82%E7%94%A8%E5%9C%BA%E6%99%AF%E4%B8%8E%E4%BB%A3%E4%BB%B7" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>这个参数优化的是 Decode 的稳定性，即 ITL 和 Interactivity，同时让 Decode-only 的 Step 占比更高。PR <a href="https://github.com/vllm-project/vllm/pull/44558" target="_blank">#44558</a> 在 2 × GB200 上以 DP8 / TP1 + EP 运行 DeepSeek-R1-0528 FP4，输入 1k、输出 200、请求速率 24 req/s：interval 设为 2 后，P50 ITL 从 274.9ms 降到 32.1ms，平均 TTFT 从 813ms 降到 502ms，吞吐基本不变。</p>
+<p>代价也很明确：一个被推迟的 Step 不做任何 Prefill，长 Prompt 完成 Prefill 所需的 Step 数最多会变成原来的 N 倍。在 Prefill 很重的负载下（同一 PR 中 16k 输入、200 输出的测试），节流会把 Prefill 能力减半，在未饱和的负载区间反而会让 TTFT 变差。interval 取 2 在该 PR 的测试中是比较均衡的选择，更大的值能进一步压低 ITL，但 TTFT 的长尾也会上升。Agentic 负载的命中率很高、每轮真正需要计算的新 Token 不多，属于比较适合这个参数的场景，但具体取值仍需要结合自己的 Trace 来调。</p>
+
+
+<h2 class="relative group">七、总结 
+    <div id="%E4%B8%83%E6%80%BB%E7%BB%93" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E4%B8%83%E6%80%BB%E7%BB%93" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<p>本文从一个 Coding Agent 任务的执行过程出发，梳理了 Agentic Workload 的特点：上下文越滚越长、前缀复用率极高、GPU 忽忙忽闲，并介绍了如何用 InferenceX AgentX 的帕累托曲线来评估推理引擎在这类负载下的表现。在优化方面，KV Cache Offloading（以 UMBP 为例）和 DCP 解决的是“存下并复用更多的 KV”，<strong>把曲线往上推</strong>；Mono Decode Kernel 解决的是小并发下的 Decode 效率，<code>--prefill-schedule-interval</code> 解决的是多 DP Rank 下 Prefill 对 Decode 的干扰，它们主要<strong>把曲线往右推</strong>。</p>
+<p>可以看到，这些优化没有一个是“通吃”的：DCP 在 DeepSeek-V4 上只追平了 DEP，Mono Kernel 只在小并发下收益明显，Prefill 节流在 Prefill 很重的负载下会拖慢 TTFT。Agentic 推理优化的核心，还是要先看清自己的负载长什么样，再选择合适的组合。本文没有展开 P/D 分离下的配比、Session 感知的路由和投机解码等话题，感兴趣的读者可以从 vLLM 的 AgentX 博客继续阅读。</p>
+<blockquote>
+<p>Note：本文是先由我的 <a href="https://github.com/shen-shanshan/vllm-dev-skills/tree/master/skills/vllm-technical-blog-writer" target="_blank"><code>vllm-technical-blog-writer</code></a> Skill 根据我口述的要点生成初稿和配图，再由我微调完成的。</p>
+</blockquote>
+
+
+<h2 class="relative group">八、参考资料 
+    <div id="%E5%85%AB%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E5%85%AB%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<ul>
+<li><a href="https://vllm.ai/blog/2026-09-08-vllm-agentx" target="_blank">vLLM x AgentX: Optimizing for Real-World Agentic Serving</a></li>
+<li><a href="https://vllm.ai/blog/2026-08-07-decode-context-parallelism" target="_blank">Decode Context Parallelism in vLLM</a></li>
+<li><a href="https://www.amd.com/en/developer/resources/technical-articles/2026/rebuilding-agentic-ai-for-amd-gpu.html" target="_blank">Rebuilding Agentic AI for AMD GPU</a></li>
+<li><a href="https://newsletter.semianalysis.com/p/agentx-inferencexv3-does-cuda-moat" target="_blank">AgentX: InferenceX v3</a></li>
+<li><a href="https://github.com/SemiAnalysisAI/InferenceX" target="_blank">SemiAnalysisAI/InferenceX</a></li>
+<li><a href="https://www.amd.com/en/products/accelerators/instinct/mi350/mi355x.html" target="_blank">AMD Instinct™ MI355X GPUs</a></li>
+<li><a href="https://github.com/vllm-project/vllm/pull/44558" target="_blank">#44558 Add prefill step cadence for better non-PD DP balancing</a></li>
+<li><a href="https://github.com/vllm-project/vllm/pull/61482" target="_blank">#61482 Standalone mono decode layer for DeepSeek-V4-Pro on MI355X</a></li>
+<li><a href="https://github.com/vllm-project/vllm/pull/23734" target="_blank">#23734 Decode Context Parallel 初版实现</a></li>
+<li><a href="https://docs.vllm.ai/en/latest/serving/context_parallel_deployment/#decode-context-parallel" target="_blank">Context Parallel Deployment</a></li>
+<li><a href="https://github.com/vllm-project/vllm/blob/main/docs/features/umbp_store_connector_usage.md" target="_blank">UMBPStoreConnector Usage Guide</a></li>
+</ul>
+
+          
+          
+          
+        </div>
+        
+        
+
+          
+            
+            
+<div class="flex author">
+  
+    
+    
+      
+    
+    
+      
+        
+      
+      <img class="!mt-0 !mb-0 h-24 w-24 rounded-full ltr:mr-4 rtl:ml-4" width="96" height="96"
+      alt="Shanshan Shen" src="/images/logo_hu9373694138991197219.jpg" />
+    
+  
+  <div class="place-self-center">
+    
+    <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+      Author
+    </div>
+    <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+      Shanshan Shen
+    </div>
+    
+    
+    <div class="text-sm text-neutral-700 dark:text-neutral-400">A software engineer focusing on LLM/VLM inference and GPU/NPU computing.</div>
+    
+    <div class="text-2xl sm:text-lg">
+  <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500">
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://github.com/shen-shanshan"
+          target="_blank"
+          aria-label="Github"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom">
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+
+  </span>
+
+</span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://www.zhihu.com/people/sss-53-26"
+          target="_blank"
+          aria-label="Zhihu"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom">
+
+  <span class="relative block icon">
+    <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M170.5 148.1v217.5l23.4 0 7.7 26.4 42-26.4h49.5V148.1H170.5zm97.8 193.9h-27.9l-27.9 17.5-5.1-17.5-11.9 0V171.8h72.8v170.3zm-118.5-94.4H97.5c1.7-27.1 2.2-51.6 2.2-73.5h51.2s2-22.6-8.6-22.3h-88.5c3.5-13.1 7.9-26.7 13.1-40.7 0 0-24.1 0-32.3 21.6-3.4 8.9-13.2 43.1-30.7 78.1 5.9-.6 25.4-1.2 36.8-22.2 2.1-5.9 2.5-6.7 5.1-14.5h28.9c0 10.5-1.2 66.9-1.7 73.4H20.8c-11.7 0-15.6 23.6-15.6 23.6h65.6C66.5 321.1 42.8 363.1 0 396.3c20.5 5.9 40.9-.9 51-9.9 0 0 23-20.9 35.6-69.3l54 64.9s7.9-26.9-1.2-40c-7.6-8.9-28.1-33.1-36.8-41.8L87.9 312c4.4-14 7-27.6 7.9-40.7h61.7s-.1-23.6-7.6-23.6v0zm412-1.6c20.8-25.6 45-58.6 45-58.6s-18.7-14.8-27.4-4.1c-6 8.2-36.8 48.2-36.8 48.2l19.2 14.4zm-150.1-59.1c-9-8.3-25.9 2.1-25.9 2.1s39.5 55 41.1 57.5l19.5-13.7s-25.7-37.6-34.7-45.9h0zM640 258.4c-19.8 0-130.9 .9-131.1 .9v-101c4.8 0 12.4-.4 22.9-1.2 40.9-2.4 70.1-4 87.8-4.8 0 0 12.2-27.2-.6-33.4-3.1-1.2-23.2 4.6-23.2 4.6s-165.2 16.5-232.4 18.1c1.6 8.8 7.6 17.1 15.8 19.6 13.3 3.5 22.7 1.7 49.2 .9 24.8-1.6 43.7-2.4 56.5-2.4v99.8H351.4s2.8 22.3 25.5 22.9h107.9v70.9c0 14-11.2 22-24.5 21.1-14.1 .1-26.1-1.2-41.7-1.8 2 4 6.3 14.4 19.3 21.8 9.9 4.8 16.2 6.6 26 6.6 29.6 0 45.7-17.3 44.9-45.3v-73.3h122.4c9.7 0 8.7-23.8 8.7-23.8l0 0z"/></svg>
+  </span>
+
+</span></a
+        >
+      
+    
+  </div>
+
+</div>
+  </div>
+</div>
+
+          
+
+          
+
+          
+          <div class="mb-10"></div>
+          
+
+        
+
+        
+        
+
+        
+
+
+<h2 class="mt-8 text-2xl font-extrabold mb-10">Related</h2>
+<section class="w-full grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+  
+  
+
+  <a href="/articles/vllm-%E7%A4%BE%E5%8C%BA%E7%BB%B4%E6%8A%A4ai-native-pr-review-%E5%B7%A5%E4%BD%9C%E6%B5%81/" class="min-w-full">
+    
+    <div class="min-h-full border border-neutral-200 dark:border-neutral-700 border-2 rounded overflow-hidden shadow-2xl relative">
+        
+        <div class="w-full thumbnail_card_related nozoom" style="background-image:url(/articles/vllm-%E7%A4%BE%E5%8C%BA%E7%BB%B4%E6%8A%A4ai-native-pr-review-%E5%B7%A5%E4%BD%9C%E6%B5%81/featured_hu515409118694051596.png);"></div>
+        
+      
+
+      <div class="px-6 py-4">
+
+        
+        <div class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
+          href="/articles/vllm-%E7%A4%BE%E5%8C%BA%E7%BB%B4%E6%8A%A4ai-native-pr-review-%E5%B7%A5%E4%BD%9C%E6%B5%81/">vLLM 社区维护｜AI-Native PR Review 工作流</div>
+        
+
+        <div class="text-sm text-neutral-500 dark:text-neutral-400">
+          
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  <time datetime="2026-10-25T23:56:22&#43;08:00">2026-10-25</time>
+  
+
+  
+  
+</div>
+
+
+
+
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  
+  
+  
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/categories/%E6%8A%80%E6%9C%AF/&#34;,'_self');">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    技术
+  </span>
+</span>
+  </span>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/ai/&#34;,'_self');">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    AI
+  </span>
+</span>
+  </span>
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/agent/&#34;,'_self');">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Agent
+  </span>
+</span>
+  </span>
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%8E%A8%E7%90%86/&#34;,'_self');">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    大模型推理
+  </span>
+</span>
+  </span>
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/vllm/&#34;,'_self');">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    VLLM
+  </span>
+</span>
+  </span>
+  
+  
+  
+  
+</div>
+
+
+
+
+        </div>
+
+        
+        <div class="py-1 prose dark:prose-invert">
+          
+        </div>
+        
+      </div>
+      <div class="px-6 pt-4 pb-2">
+
+      </div>
+    </div>
+  </a>
+
+  
+  
+
+  <a href="/articles/vllm-dev-skills%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6%E5%BC%80%E5%8F%91%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/" class="min-w-full">
+    
+    <div class="min-h-full border border-neutral-200 dark:border-neutral-700 border-2 rounded overflow-hidden shadow-2xl relative">
+        
+        <div class="w-full thumbnail_card_related nozoom" style="background-image:url(/articles/vllm-dev-skills%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6%E5%BC%80%E5%8F%91%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/featured_hu515409118694051596.png);"></div>
+        
+      
+
+      <div class="px-6 py-4">
+
+        
+        <div class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
+          href="/articles/vllm-dev-skills%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6%E5%BC%80%E5%8F%91%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/">vLLM Dev Skills｜自动驾驶开发经验分享</div>
+        
+
+        <div class="text-sm text-neutral-500 dark:text-neutral-400">
+          
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  <time datetime="2026-04-26T15:25:14&#43;08:00">2026-04-26</time>
+  
+
+  
+  
+</div>
+
+
+
+
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  
+  
+  
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/categories/%E6%8A%80%E6%9C%AF/&#34;,'_self');">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    技术
+  </span>
+</span>
+  </span>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/ai/&#34;,'_self');">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    AI
+  </span>
+</span>
+  </span>
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/agent/&#34;,'_self');">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Agent
+  </span>
+</span>
+  </span>
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%8E%A8%E7%90%86/&#34;,'_self');">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    大模型推理
+  </span>
+</span>
+  </span>
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/vllm/&#34;,'_self');">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    VLLM
+  </span>
+</span>
+  </span>
+  
+  
+  
+  
+</div>
+
+
+
+
+        </div>
+
+        
+        <div class="py-1 prose dark:prose-invert">
+          
+        </div>
+        
+      </div>
+      <div class="px-6 pt-4 pb-2">
+
+      </div>
+    </div>
+  </a>
+
+  
+  
+
+  <a href="/articles/vllm-%E5%A4%9A%E6%A8%A1%E6%80%81%E6%8E%A8%E7%90%86vit-%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/" class="min-w-full">
+    
+    <div class="min-h-full border border-neutral-200 dark:border-neutral-700 border-2 rounded overflow-hidden shadow-2xl relative">
+        
+        <div class="w-full thumbnail_card_related nozoom" style="background-image:url(/articles/vllm-%E5%A4%9A%E6%A8%A1%E6%80%81%E6%8E%A8%E7%90%86vit-%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/featured_hu515409118694051596.png);"></div>
+        
+      
+
+      <div class="px-6 py-4">
+
+        
+        <div class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
+          href="/articles/vllm-%E5%A4%9A%E6%A8%A1%E6%80%81%E6%8E%A8%E7%90%86vit-%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/">vLLM 多模态推理｜ViT 性能优化</div>
+        
+
+        <div class="text-sm text-neutral-500 dark:text-neutral-400">
+          
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  <time datetime="2026-03-10T23:55:19&#43;08:00">2026-03-10</time>
+  
+
+  
+  
+</div>
+
+
+
+
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  
+  
+  
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/categories/%E6%8A%80%E6%9C%AF/&#34;,'_self');">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    技术
+  </span>
+</span>
+  </span>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/ai/&#34;,'_self');">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    AI
+  </span>
+</span>
+  </span>
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/llm/&#34;,'_self');">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    LLM
+  </span>
+</span>
+  </span>
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%8E%A8%E7%90%86/&#34;,'_self');">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    大模型推理
+  </span>
+</span>
+  </span>
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/%E5%A4%9A%E6%A8%A1%E6%80%81/&#34;,'_self');">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    多模态
+  </span>
+</span>
+  </span>
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/vllm/&#34;,'_self');">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    VLLM
+  </span>
+</span>
+  </span>
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/&#34;,'_self');">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    性能优化
+  </span>
+</span>
+  </span>
+  
+  
+  
+  
+</div>
+
+
+
+
+        </div>
+
+        
+        <div class="py-1 prose dark:prose-invert">
+          
+        </div>
+        
+      </div>
+      <div class="px-6 pt-4 pb-2">
+
+      </div>
+    </div>
+  </a>
+
+  
+</section>
+
+  
+      </div>
+     
+      
+      
+        
+        
+          
+          
+        
+      <script>
+        var oid = "views_posts\/【技术】vLLM Agentic 推理｜面向 Agent 负载的推理优化\/index.md"
+        var oid_likes = "likes_posts\/【技术】vLLM Agentic 推理｜面向 Agent 负载的推理优化\/index.md"
+      </script>
+      
+      
+      <script type="text/javascript" src="/js/page.min.0860cf4e04fa2d72cc33ddba263083464d48f67de06114529043cb4623319efed4f484fd7f1730df5abea0e2da6f3538855634081d02f2d6e920b956f063e823.js" integrity="sha512-CGDPTgT6LXLMM926JjCDRk1I9n3gYRRSkEPLRiMxnv7U9IT9fxcw31q&#43;oOLabzU4hVY0CB0C8tbpILlW8GPoIw=="></script>
+      
+  
+    </section>
+  <footer class="pt-8 max-w-prose print:hidden">
+
+    
+
+    
+  </footer>
+</article>
+
+      <div id="top-scroller" class="pointer-events-none absolute top-[110vh] bottom-0 w-12 ltr:right-0 rtl:left-0">
+  <a href="#the-top"
+    class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 mb-16 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="Scroll to top" title="Scroll to top">
+    &uarr;
+  </a>
+</div>
+    </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+  
+  <div class="flex items-center justify-between">
+
+    
+    
+    <p class="text-sm text-neutral-500 dark:text-neutral-400">
+      &copy;
+      2026
+      Shanshan Shen
+    </p>
+    
+
+    
+    
+    <p class="text-xs text-neutral-500 dark:text-neutral-400">
+      
+      
+      Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+        href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+        href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a>
+    </p>
+    
+
+  </div>
+  <script>
+    
+    mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+      margin: 24,
+      background: 'rgba(0,0,0,0.5)',
+      scrollOffset: 0,
+    })
+    
+  </script>
+  
+  
+  <script type="text/javascript" src="/js/process.min.ee03488f19c93c2efb199e2e3014ea5f3cb2ce7d45154adb3399a158cac27ca52831db249ede5bb602700ef87eb02434139de0858af1818ab0fb4182472204a4.js" integrity="sha512-7gNIjxnJPC77GZ4uMBTqXzyyzn1FFUrbM5mhWMrCfKUoMdsknt5btgJwDvh&#43;sCQ0E53ghYrxgYqw&#43;0GCRyIEpA=="></script>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh]"
+  data-url="http://localhost:1313/"
+  style="z-index:500"
+>
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800"
+  >
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          
+
+  <span class="relative block icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+
+  </span>
+
+
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0"
+        />
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)"
+      >
+        
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+
+  </span>
+
+
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+  </div>
+</body>
+
+</html>

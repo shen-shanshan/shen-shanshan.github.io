@@ -8,6 +8,14 @@ showRelatedContent: false
 showDate: false
 ---
 
+## AI-Native & Agent
+
+{{< article link="/articles/vllm-dev-skills%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6%E5%BC%80%E5%8F%91%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/" >}}
+
+<br>
+
+{{< article link="/articles/vllm-%E7%A4%BE%E5%8C%BA%E7%BB%B4%E6%8A%A4ai-native-pr-review-%E5%B7%A5%E4%BD%9C%E6%B5%81/" >}}
+
 ## 大模型推理
 
 {{< article link="/articles/vllm-v1-%E6%95%B4%E4%BD%93%E6%B5%81%E7%A8%8B%E4%BB%8E%E8%AF%B7%E6%B1%82%E5%88%B0%E7%AE%97%E5%AD%90%E6%89%A7%E8%A1%8C/" >}}
@@ -34,11 +42,7 @@ showDate: false
 
 <br>
 
-{{< article link="/articles/vllm-dev-skills%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6%E5%BC%80%E5%8F%91%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/" >}}
-
-<br>
-
-{{< article link="/articles/vllm-%E7%A4%BE%E5%8C%BA%E7%BB%B4%E6%8A%A4ai-native-pr-review-%E5%B7%A5%E4%BD%9C%E6%B5%81/" >}}
+{{< article link="/articles/vllm-agentic-%E6%8E%A8%E7%90%86%E9%9D%A2%E5%90%91-agent-%E8%B4%9F%E8%BD%BD%E7%9A%84%E6%8E%A8%E7%90%86%E4%BC%98%E5%8C%96/" >}}
 
 ## 大模型微调
 
@@ -47,10 +51,6 @@ showDate: false
 <br>
 
 {{< article link="/articles/%E5%A4%A7%E6%A8%A1%E5%9E%8B-lora-%E5%BE%AE%E8%B0%83%E5%8E%9F%E7%90%86%E8%AF%A6%E8%A7%A3/" >}}
-
-## 算子开发
-
-{{< article link="/articles/ascend-aclnn-%E7%AE%97%E5%AD%90%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/" >}}
 
 ## 硬件架构
 

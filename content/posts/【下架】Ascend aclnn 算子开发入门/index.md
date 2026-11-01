@@ -3,6 +3,7 @@ title: Ascend aclnn 算子开发入门
 date: 2024-10-23 15:52:36
 categories: "技术"
 tags: ["AI Infra", "算子开发", "Ascend", "NPU", "CANN"]
+draft: true
 ---
 
 ## 一、概述

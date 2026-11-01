@@ -112,7 +112,7 @@
     "keywords": ["AI","LLM","AI Infra"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "135"
+    "wordCount": "137"
   }]
   </script>
 
@@ -693,9 +693,9 @@
     class="min-w-[220px] py-2 border-dotted ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
+    <li><a href="#ai-native--agent">AI-Native &amp; Agent</a></li>
     <li><a href="#大模型推理">大模型推理</a></li>
     <li><a href="#大模型微调">大模型微调</a></li>
-    <li><a href="#算子开发">算子开发</a></li>
     <li><a href="#硬件架构">硬件架构</a></li>
   </ul>
 </nav>
@@ -710,9 +710,9 @@
     class="py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
+    <li><a href="#ai-native--agent">AI-Native &amp; Agent</a></li>
     <li><a href="#大模型推理">大模型推理</a></li>
     <li><a href="#大模型微调">大模型微调</a></li>
-    <li><a href="#算子开发">算子开发</a></li>
     <li><a href="#硬件架构">硬件架构</a></li>
   </ul>
 </nav>
@@ -796,6 +796,347 @@
 
         <div class="article-content max-w-prose mb-20">
           
+
+<h2 class="relative group">AI-Native &amp; Agent 
+    <div id="ai-native--agent" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#ai-native--agent" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+
+<section class="space-y-10 w-full">
+    
+    
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a class="flex flex-wrap article border border-neutral-200 dark:border-neutral-700 border-2 rounded-md overflow-hidden" href="/articles/vllm-dev-skills%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6%E5%BC%80%E5%8F%91%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/">
+    
+        
+        <div class="w-full md:w-auto h-full thumbnail nozoom " style="background-image:url(/articles/vllm-dev-skills%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6%E5%BC%80%E5%8F%91%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/featured_hu515409118694051596.png);"></div>
+        
+      <div class=" p-4">
+      <div class="items-center text-left text-xl font-semibold">
+        
+        <div class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
+          href="/articles/vllm-dev-skills%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6%E5%BC%80%E5%8F%91%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/">vLLM Dev Skills｜自动驾驶开发经验分享</div>
+        
+        
+        
+      </div>
+      <div class="text-sm text-neutral-500 dark:text-neutral-400">
+        
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  <time datetime="2026-04-26T15:25:14&#43;08:00">2026-04-26</time>
+  
+
+  
+  
+</div>
+
+
+
+
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  
+  
+  
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/categories/%E6%8A%80%E6%9C%AF/&#34;,'_self');">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    技术
+  </span>
+</span>
+  </span>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/ai/&#34;,'_self');">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    AI
+  </span>
+</span>
+  </span>
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/agent/&#34;,'_self');">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Agent
+  </span>
+</span>
+  </span>
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%8E%A8%E7%90%86/&#34;,'_self');">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    大模型推理
+  </span>
+</span>
+  </span>
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/vllm/&#34;,'_self');">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    VLLM
+  </span>
+</span>
+  </span>
+  
+  
+  
+  
+</div>
+
+
+
+
+      </div>
+      
+      <div class="py-1 max-w-fit prose dark:prose-invert">
+        
+      </div>
+      
+    </div>
+  </a>
+
+        
+    
+</section>
+<br>
+
+<section class="space-y-10 w-full">
+    
+    
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a class="flex flex-wrap article border border-neutral-200 dark:border-neutral-700 border-2 rounded-md overflow-hidden" href="/articles/vllm-%E7%A4%BE%E5%8C%BA%E7%BB%B4%E6%8A%A4ai-native-pr-review-%E5%B7%A5%E4%BD%9C%E6%B5%81/">
+    
+        
+        <div class="w-full md:w-auto h-full thumbnail nozoom " style="background-image:url(/articles/vllm-%E7%A4%BE%E5%8C%BA%E7%BB%B4%E6%8A%A4ai-native-pr-review-%E5%B7%A5%E4%BD%9C%E6%B5%81/featured_hu515409118694051596.png);"></div>
+        
+      <div class=" p-4">
+      <div class="items-center text-left text-xl font-semibold">
+        
+        <div class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
+          href="/articles/vllm-%E7%A4%BE%E5%8C%BA%E7%BB%B4%E6%8A%A4ai-native-pr-review-%E5%B7%A5%E4%BD%9C%E6%B5%81/">vLLM 社区维护｜AI-Native PR Review 工作流</div>
+        
+        
+        
+      </div>
+      <div class="text-sm text-neutral-500 dark:text-neutral-400">
+        
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  <time datetime="2026-10-25T23:56:22&#43;08:00">2026-10-25</time>
+  
+
+  
+  
+</div>
+
+
+
+
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  
+  
+  
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/categories/%E6%8A%80%E6%9C%AF/&#34;,'_self');">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    技术
+  </span>
+</span>
+  </span>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/ai/&#34;,'_self');">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    AI
+  </span>
+</span>
+  </span>
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/agent/&#34;,'_self');">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Agent
+  </span>
+</span>
+  </span>
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%8E%A8%E7%90%86/&#34;,'_self');">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    大模型推理
+  </span>
+</span>
+  </span>
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/vllm/&#34;,'_self');">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    VLLM
+  </span>
+</span>
+  </span>
+  
+  
+  
+  
+</div>
+
+
+
+
+      </div>
+      
+      <div class="py-1 max-w-fit prose dark:prose-invert">
+        
+      </div>
+      
+    </div>
+  </a>
+
+        
+    
+</section>
+
 
 <h2 class="relative group">大模型推理 
     <div id="%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%8E%A8%E7%90%86" class="anchor"></div>
@@ -1865,16 +2206,16 @@
 
 
 
-  <a class="flex flex-wrap article border border-neutral-200 dark:border-neutral-700 border-2 rounded-md overflow-hidden" href="/articles/vllm-dev-skills%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6%E5%BC%80%E5%8F%91%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/">
+  <a class="flex flex-wrap article border border-neutral-200 dark:border-neutral-700 border-2 rounded-md overflow-hidden" href="/articles/vllm-agentic-%E6%8E%A8%E7%90%86%E9%9D%A2%E5%90%91-agent-%E8%B4%9F%E8%BD%BD%E7%9A%84%E6%8E%A8%E7%90%86%E4%BC%98%E5%8C%96/">
     
         
-        <div class="w-full md:w-auto h-full thumbnail nozoom " style="background-image:url(/articles/vllm-dev-skills%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6%E5%BC%80%E5%8F%91%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/featured_hu515409118694051596.png);"></div>
+        <div class="w-full md:w-auto h-full thumbnail nozoom " style="background-image:url(/articles/vllm-agentic-%E6%8E%A8%E7%90%86%E9%9D%A2%E5%90%91-agent-%E8%B4%9F%E8%BD%BD%E7%9A%84%E6%8E%A8%E7%90%86%E4%BC%98%E5%8C%96/featured_hu515409118694051596.png);"></div>
         
       <div class=" p-4">
       <div class="items-center text-left text-xl font-semibold">
         
         <div class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
-          href="/articles/vllm-dev-skills%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6%E5%BC%80%E5%8F%91%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/">vLLM Dev Skills｜自动驾驶开发经验分享</div>
+          href="/articles/vllm-agentic-%E6%8E%A8%E7%90%86%E9%9D%A2%E5%90%91-agent-%E8%B4%9F%E8%BD%BD%E7%9A%84%E6%8E%A8%E7%90%86%E4%BC%98%E5%8C%96/">vLLM Agentic 推理｜面向 Agent 负载的推理优化</div>
         
         
         
@@ -1915,172 +2256,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2026-04-26T15:25:14&#43;08:00">2026-04-26</time>
-  
-
-  
-  
-</div>
-
-
-
-
-
-<div class="flex flex-row flex-wrap items-center">
-  
-  
-  
-  
-  
-  
-  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/categories/%E6%8A%80%E6%9C%AF/&#34;,'_self');">
-    <span class="flex" style="cursor: pointer;">
-  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    技术
-  </span>
-</span>
-  </span>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/ai/&#34;,'_self');">
-    <span class="flex" style="cursor: pointer;">
-  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    AI
-  </span>
-</span>
-  </span>
-  
-  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/agent/&#34;,'_self');">
-    <span class="flex" style="cursor: pointer;">
-  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    Agent
-  </span>
-</span>
-  </span>
-  
-  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%8E%A8%E7%90%86/&#34;,'_self');">
-    <span class="flex" style="cursor: pointer;">
-  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    大模型推理
-  </span>
-</span>
-  </span>
-  
-  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/vllm/&#34;,'_self');">
-    <span class="flex" style="cursor: pointer;">
-  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    VLLM
-  </span>
-</span>
-  </span>
-  
-  
-  
-  
-</div>
-
-
-
-
-      </div>
-      
-      <div class="py-1 max-w-fit prose dark:prose-invert">
-        
-      </div>
-      
-    </div>
-  </a>
-
-        
-    
-</section>
-<br>
-
-<section class="space-y-10 w-full">
-    
-    
-        
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <a class="flex flex-wrap article border border-neutral-200 dark:border-neutral-700 border-2 rounded-md overflow-hidden" href="/articles/vllm-%E7%A4%BE%E5%8C%BA%E7%BB%B4%E6%8A%A4ai-native-pr-review-%E5%B7%A5%E4%BD%9C%E6%B5%81/">
-    
-        
-        <div class="w-full md:w-auto h-full thumbnail nozoom " style="background-image:url(/articles/vllm-%E7%A4%BE%E5%8C%BA%E7%BB%B4%E6%8A%A4ai-native-pr-review-%E5%B7%A5%E4%BD%9C%E6%B5%81/featured_hu515409118694051596.png);"></div>
-        
-      <div class=" p-4">
-      <div class="items-center text-left text-xl font-semibold">
-        
-        <div class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
-          href="/articles/vllm-%E7%A4%BE%E5%8C%BA%E7%BB%B4%E6%8A%A4ai-native-pr-review-%E5%B7%A5%E4%BD%9C%E6%B5%81/">vLLM 社区维护｜AI-Native PR Review 工作流</div>
-        
-        
-        
-      </div>
-      <div class="text-sm text-neutral-500 dark:text-neutral-400">
-        
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="flex flex-row flex-wrap items-center">
-  
-  
-  <time datetime="2026-10-25T23:56:22&#43;08:00">2026-10-25</time>
+  <time datetime="2026-11-01T16:23:01&#43;08:00">2026-11-01</time>
   
 
   
@@ -2483,190 +2659,6 @@
     <span class="flex" style="cursor: pointer;">
   <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
     论文精读
-  </span>
-</span>
-  </span>
-  
-  
-  
-  
-</div>
-
-
-
-
-      </div>
-      
-      <div class="py-1 max-w-fit prose dark:prose-invert">
-        
-      </div>
-      
-    </div>
-  </a>
-
-        
-    
-</section>
-
-
-<h2 class="relative group">算子开发 
-    <div id="%E7%AE%97%E5%AD%90%E5%BC%80%E5%8F%91" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%E7%AE%97%E5%AD%90%E5%BC%80%E5%8F%91" aria-label="Anchor">#</a>
-    </span>        
-    
-</h2>
-
-<section class="space-y-10 w-full">
-    
-    
-        
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <a class="flex flex-wrap article border border-neutral-200 dark:border-neutral-700 border-2 rounded-md overflow-hidden" href="/articles/ascend-aclnn-%E7%AE%97%E5%AD%90%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/">
-    
-        
-        <div class="w-full md:w-auto h-full thumbnail nozoom " style="background-image:url(/articles/ascend-aclnn-%E7%AE%97%E5%AD%90%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/featured_hu9253359173625983682.jpg);"></div>
-        
-      <div class=" p-4">
-      <div class="items-center text-left text-xl font-semibold">
-        
-        <div class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
-          href="/articles/ascend-aclnn-%E7%AE%97%E5%AD%90%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/">Ascend aclnn 算子开发入门</div>
-        
-        
-        
-      </div>
-      <div class="text-sm text-neutral-500 dark:text-neutral-400">
-        
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="flex flex-row flex-wrap items-center">
-  
-  
-  <time datetime="2024-10-23T15:52:36&#43;00:00">2024-10-23</time>
-  
-
-  
-  
-</div>
-
-
-
-
-
-<div class="flex flex-row flex-wrap items-center">
-  
-  
-  
-  
-  
-  
-  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/categories/%E6%8A%80%E6%9C%AF/&#34;,'_self');">
-    <span class="flex" style="cursor: pointer;">
-  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    技术
-  </span>
-</span>
-  </span>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/ai-infra/&#34;,'_self');">
-    <span class="flex" style="cursor: pointer;">
-  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    AI Infra
-  </span>
-</span>
-  </span>
-  
-  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/%E7%AE%97%E5%AD%90%E5%BC%80%E5%8F%91/&#34;,'_self');">
-    <span class="flex" style="cursor: pointer;">
-  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    算子开发
-  </span>
-</span>
-  </span>
-  
-  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/ascend/&#34;,'_self');">
-    <span class="flex" style="cursor: pointer;">
-  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    Ascend
-  </span>
-</span>
-  </span>
-  
-  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/npu/&#34;,'_self');">
-    <span class="flex" style="cursor: pointer;">
-  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    NPU
-  </span>
-</span>
-  </span>
-  
-  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/cann/&#34;,'_self');">
-    <span class="flex" style="cursor: pointer;">
-  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    CANN
   </span>
 </span>
   </span>

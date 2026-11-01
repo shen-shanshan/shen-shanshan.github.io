@@ -12,9 +12,9 @@ showDate: false
 
 I am currently a senior software engineer working at [<u>AMD ROCm</u>](https://www.amd.com/en/products/software/rocm.html) (previously at [<u>Huawei Ascend</u>](https://www.hiascend.com/)), building vLLM inference engine for GPU/NPU software ecosystem.
 
-I am also a maintainer (member) of [vllm-project](https://github.com/vllm-project), mainly focusing on:
+I am also a maintainer/member of [vllm-project](https://github.com/vllm-project), mainly focusing on:
 
-- Performance optimization & bugfix for AMD Instinct GPUs.
+- Performance optimization for AMD Instinct GPUs (especially DeepSeek model family).
 - Multi-modality inference (especially ViT execution optimization).
 - Hardware portability (especially OOT device extensibility).
 
@@ -54,9 +54,9 @@ Studying at School of Electronic and Information Engineering, majoring in commun
 
 ## Open Source Contributions
 
-Overall, I have contributed [168 PRs](https://github.com/pulls?q=is%3Apr+author%3Ashen-shanshan+is%3Amerged+is%3Apublic+org%3Avllm-project) to the vLLM ecosystem. Find more details about all PRs I have contributed [here](https://github.com/pulls?q=is%3Apr+author%3Ashen-shanshan+is%3Amerged+is%3Apublic).
+Overall, I have contributed [170 PRs](https://github.com/pulls?q=is%3Apr+author%3Ashen-shanshan+is%3Amerged+is%3Apublic+org%3Avllm-project) to the vLLM ecosystem. Find more details about all PRs I have contributed [here](https://github.com/pulls?q=is%3Apr+author%3Ashen-shanshan+is%3Amerged+is%3Apublic).
 
-- Maintainer (member) of [vllm](https://github.com/vllm-project/vllm):
+- Maintainer of [vllm](https://github.com/vllm-project/vllm):
 
 {{< github repo="vllm-project/vllm" >}}
 
@@ -73,6 +73,10 @@ Overall, I have contributed [168 PRs](https://github.com/pulls?q=is%3Apr+author%
 <br>
 
 {{< github repo="shen-shanshan/vllm-dev-skills" >}}
+
+<br>
+
+{{< github repo="shen-shanshan/vllm-maintainer-shepherd-dashboard" >}}
 
 ---
 
